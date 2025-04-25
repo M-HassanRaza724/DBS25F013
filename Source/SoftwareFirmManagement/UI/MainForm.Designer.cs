@@ -850,7 +850,7 @@ namespace SoftwareFirmManagement
             // 
             // kryptonGroupBox1
             // 
-            this.kryptonGroupBox1.Location = new System.Drawing.Point(245, 101);
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(247, 96);
             this.kryptonGroupBox1.Name = "kryptonGroupBox1";
             // 
             // kryptonGroupBox1.Panel

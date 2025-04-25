@@ -86,7 +86,7 @@
             // btn_search
             // 
             this.btn_search.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_search.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom1;
+            this.btn_search.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
             this.btn_search.Location = new System.Drawing.Point(596, 20);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(120, 43);

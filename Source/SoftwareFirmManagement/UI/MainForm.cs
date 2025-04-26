@@ -44,5 +44,52 @@ namespace SoftwareFirmManagement
         {
 
         }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_size_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized) 
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.Size = new Size(800, 600);
+                this.btn_size.StateCommon.Back.Image = global::SoftwareFirmManagement.Properties.Resources.Full_Screen;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+                this.btn_size.StateCommon.Back.Image = global::SoftwareFirmManagement.Properties.Resources.Normal_Screen;
+
+            }
+
+
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void kryptonCheckButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonCheckButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbtn_test.Checked)
+            {
+                cbtn_test.Values.ExtraText = "▼";
+            }
+            else
+            {
+                cbtn_test.Values.ExtraText = "▲";
+            }
+
+        }
     }
+
 }

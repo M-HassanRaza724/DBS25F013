@@ -14,15 +14,15 @@ namespace SoftwareFirmManagement.BL
         private string name;
         private string phone;
         private DateTime joinedDate;
-        private int designationId;
+        private string designation;
 
-        public Employee(int userId, string username, string email, string password, int roleId, int employeeId, string name, string phone, DateTime joinedDate, int designationId) : base(userId, username, email, password, roleId)
+        public Employee(int userId, string username, string email, string password, string role, int employeeId, string name, string phone, DateTime joinedDate, string designation) : base(userId, username, email, password, role)
         {
             this.employeeId = employeeId;
             this.name = name;
             this.phone = phone;
             this.joinedDate = joinedDate;
-            this.designationId = designationId;
+            this.designation = designation;
         }
 
 
@@ -46,10 +46,10 @@ namespace SoftwareFirmManagement.BL
             get { return joinedDate; }
             set { joinedDate = value; }
         }
-        public int DesignationId
+        public string Designation
         {
-            get { return designationId; }
-            set { designationId = value; }
+            get { return designation; }
+            set { designation = value; }
         }
 
 

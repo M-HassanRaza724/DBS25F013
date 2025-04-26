@@ -9,19 +9,19 @@ namespace SoftwareFirmManagement.BL
 {
     public class User
     {
-        protected int userId; // only userId us to be passed to child classes
+        protected int userId; // only userId use to be passed to child classes
         private string username;
         private string email;
         private string password;
-        private int roleId;
+        private string role;
 
-        public User(int userId, string username, string email, string password, int roleId)
+        public User(int userId, string username, string email, string password, string role)
         {
             this.userId = userId;
             this.username = username;
             this.email = email;
             this.password = password;
-            this.roleId = roleId;
+            this.role = role;
         }
 
 
@@ -45,10 +45,10 @@ namespace SoftwareFirmManagement.BL
             get { return password; }
             set { password = value; }
         }
-        public int RoleId
+        public string Role
         {
-            get { return roleId; }
-            set { roleId = value; }
+            get { return role; }
+            set { role = value; }
         }
 
 

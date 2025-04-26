@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SoftwareFirmManagement.BL;
 
 namespace SoftwareFirmManagement
 {
@@ -11,6 +12,7 @@ namespace SoftwareFirmManagement
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        static User user = new User(0,"Anonymous","","","Customer");
         [STAThread]
         static void Main()
         {

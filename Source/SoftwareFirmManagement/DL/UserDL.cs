@@ -26,7 +26,7 @@ namespace SoftwareFirmManagement.DL
                     string email = data1[2].ToString();
                     string password = data1[3].ToString();
                     int roleId = data1.IsDBNull(4) ? 0 : data1.GetInt32(4);
-                    allUsers.Add(new User(userId, username, email, password, roleId));
+                    //allUsers.Add(new User(userId, username, email, password, roleId));
                 }
                 // adding admins
                 string query2 = "SELECT * FROM users NATURAL JOIN admins;";
@@ -42,7 +42,7 @@ namespace SoftwareFirmManagement.DL
                     string name = data2[6].ToString();
                     string phone = data2[7].ToString();
                     int adminRole = data2.IsDBNull(8) ? 0 : data2.GetInt32(8);
-                    allUsers.Add(new Admin(userId, username, email, password, roleId, adminId, name, phone, adminRole));
+                    //allUsers.Add(new Admin(userId, username, email, password, roleId, adminId, name, phone, adminRole));
                 }
                 // adding employees
                 string query3 = $"SELECT * FROM users NATURAL JOIN employees;";
@@ -59,7 +59,7 @@ namespace SoftwareFirmManagement.DL
                     string phone = data3[7].ToString();
                     DateTime joinedDate = DateTime.Parse(data3[8].ToString()).Date;
                     int designationId = data3.IsDBNull(9) ? 0 : data3.GetInt32(9);
-                    allUsers.Add(new Employee(userId, username, email, password, roleId, employeeId, name, phone, joinedDate, designationId));
+                    //allUsers.Add(new Employee(userId, username, email, password, roleId, employeeId, name, phone, joinedDate, designationId));
                 }
             }
             catch (MySql.Data.MySqlClient.MySqlException exception)
@@ -73,8 +73,8 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = $"INSERT INTO users VALUES ({user.UserId}, '{user.Username}', '{user.Email}', {user.Password}, {user.RoleId};)";
-                DatabaseHelper.Instance.Update(query);
+                //string query = $"INSERT INTO users VALUES ({user.UserId}, '{user.Username}', '{user.Email}', {user.Password}, {user.RoleId};)";
+                //DatabaseHelper.Instance.Update(query);
                 return true;
             }
             catch (MySql.Data.MySqlClient.MySqlException exception)

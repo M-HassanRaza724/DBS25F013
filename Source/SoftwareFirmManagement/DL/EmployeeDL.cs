@@ -15,8 +15,8 @@ namespace SoftwareFirmManagement.DL
             try
             {
                 string formattedDate = employee.JoinedDate.ToString("yyyy-MM-dd");
-                string query = $"INSERT INTO employees VALUES({employee.EmployeeId}, '{employee.Name}', '{employee.Phone}', '{formattedDate}', {employee.DesignationId}, {employee.UserId});";
-                DatabaseHelper.Instance.Update(query);
+                //string query = $"INSERT INTO employees VALUES({employee.EmployeeId}, '{employee.Name}', '{employee.Phone}', '{formattedDate}', {employee.DesignationId}, {employee.UserId});";
+                //DatabaseHelper.Instance.Update(query);
                 return true;
             }
             catch (MySql.Data.MySqlClient.MySqlException exception)

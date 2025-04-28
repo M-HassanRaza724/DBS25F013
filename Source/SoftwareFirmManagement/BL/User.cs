@@ -10,11 +10,11 @@ namespace SoftwareFirmManagement.BL
     public class User
     {
         protected int userId; // only userId use to be passed to child classes
-        private string username;
-        private string email;
-        private string password;
-        private int roleId;
-        protected string role;
+        protected string username;
+        protected string email;
+        protected string password;
+        protected int roleId;
+        private string role;
 
         public User(int userId, string username, string email, string password, int roleId)
         {

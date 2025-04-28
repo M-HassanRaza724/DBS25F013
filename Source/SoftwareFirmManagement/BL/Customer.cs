@@ -18,5 +18,11 @@ namespace SoftwareFirmManagement.BL
             this.name = name;
         }
 
+        public int CustomerId { get { return customerId; } set { customerId = value; } }
+
+        public string Name { get { return name; } set { name = value; } }
+
+
+
     }
 }

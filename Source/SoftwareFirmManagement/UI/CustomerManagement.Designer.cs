@@ -32,22 +32,25 @@ namespace SoftwareFirmManagement.UI
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbx_direction = new ComponentFactory.Krypton.Toolkit.KryptonGroup();
-            this.rdo_sort_descending = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
-            this.rdo_sort_ascending = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.rdo_sort_desc = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.rdo_sort_asc = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.gbx_sort_by = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.rdo_sort_username = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
-            this.rdo_username = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
-            this.rdo_customer_id = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.rdo_sort_customer_name = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.rdo_sort_customer_id = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.gbox_grd_users = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.grd_users = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_customers = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Details = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn();
             this.Delete = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel_filters = new System.Windows.Forms.TableLayoutPanel();
             this.cbx_sort = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
@@ -69,8 +72,8 @@ namespace SoftwareFirmManagement.UI
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_users.Panel)).BeginInit();
             this.gbox_grd_users.Panel.SuspendLayout();
             this.gbox_grd_users.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grd_users)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_customers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel_filters.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -111,48 +114,48 @@ namespace SoftwareFirmManagement.UI
             // 
             // gbx_direction.Panel
             // 
-            this.gbx_direction.Panel.Controls.Add(this.rdo_sort_descending);
-            this.gbx_direction.Panel.Controls.Add(this.rdo_sort_ascending);
+            this.gbx_direction.Panel.Controls.Add(this.rdo_sort_desc);
+            this.gbx_direction.Panel.Controls.Add(this.rdo_sort_asc);
             this.gbx_direction.Size = new System.Drawing.Size(149, 87);
             this.gbx_direction.TabIndex = 1;
             this.gbx_direction.Visible = false;
             // 
-            // rdo_sort_descending
+            // rdo_sort_desc
             // 
-            this.rdo_sort_descending.AutoCheck = false;
-            this.rdo_sort_descending.Images.CheckedNormal = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_descending.Images.CheckedPressed = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
-            this.rdo_sort_descending.Images.CheckedTracking = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_descending.Images.Common = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
-            this.rdo_sort_descending.Images.UncheckedNormal = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
-            this.rdo_sort_descending.Images.UncheckedPressed = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_descending.Images.UncheckedTracking = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
-            this.rdo_sort_descending.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
-            this.rdo_sort_descending.Location = new System.Drawing.Point(8, 37);
-            this.rdo_sort_descending.Name = "rdo_sort_descending";
-            this.rdo_sort_descending.Size = new System.Drawing.Size(96, 20);
-            this.rdo_sort_descending.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
-            this.rdo_sort_descending.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
-            this.rdo_sort_descending.TabIndex = 28;
-            this.rdo_sort_descending.Values.Text = "Descending";
+            this.rdo_sort_desc.AutoCheck = false;
+            this.rdo_sort_desc.Images.CheckedNormal = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
+            this.rdo_sort_desc.Images.CheckedPressed = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
+            this.rdo_sort_desc.Images.CheckedTracking = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
+            this.rdo_sort_desc.Images.Common = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
+            this.rdo_sort_desc.Images.UncheckedNormal = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
+            this.rdo_sort_desc.Images.UncheckedPressed = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
+            this.rdo_sort_desc.Images.UncheckedTracking = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
+            this.rdo_sort_desc.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
+            this.rdo_sort_desc.Location = new System.Drawing.Point(8, 37);
+            this.rdo_sort_desc.Name = "rdo_sort_desc";
+            this.rdo_sort_desc.Size = new System.Drawing.Size(101, 23);
+            this.rdo_sort_desc.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
+            this.rdo_sort_desc.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
+            this.rdo_sort_desc.TabIndex = 28;
+            this.rdo_sort_desc.Values.Text = "Descending";
             // 
-            // rdo_sort_ascending
+            // rdo_sort_asc
             // 
-            this.rdo_sort_ascending.Images.CheckedNormal = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_ascending.Images.CheckedPressed = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
-            this.rdo_sort_ascending.Images.CheckedTracking = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_ascending.Images.Common = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
-            this.rdo_sort_ascending.Images.UncheckedNormal = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
-            this.rdo_sort_ascending.Images.UncheckedPressed = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_ascending.Images.UncheckedTracking = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
-            this.rdo_sort_ascending.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
-            this.rdo_sort_ascending.Location = new System.Drawing.Point(8, 8);
-            this.rdo_sort_ascending.Name = "rdo_sort_ascending";
-            this.rdo_sort_ascending.Size = new System.Drawing.Size(88, 20);
-            this.rdo_sort_ascending.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
-            this.rdo_sort_ascending.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
-            this.rdo_sort_ascending.TabIndex = 27;
-            this.rdo_sort_ascending.Values.Text = "Ascending";
+            this.rdo_sort_asc.Images.CheckedNormal = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
+            this.rdo_sort_asc.Images.CheckedPressed = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
+            this.rdo_sort_asc.Images.CheckedTracking = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
+            this.rdo_sort_asc.Images.Common = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
+            this.rdo_sort_asc.Images.UncheckedNormal = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
+            this.rdo_sort_asc.Images.UncheckedPressed = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
+            this.rdo_sort_asc.Images.UncheckedTracking = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
+            this.rdo_sort_asc.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
+            this.rdo_sort_asc.Location = new System.Drawing.Point(8, 8);
+            this.rdo_sort_asc.Name = "rdo_sort_asc";
+            this.rdo_sort_asc.Size = new System.Drawing.Size(94, 23);
+            this.rdo_sort_asc.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
+            this.rdo_sort_asc.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
+            this.rdo_sort_asc.TabIndex = 27;
+            this.rdo_sort_asc.Values.Text = "Ascending";
             // 
             // gbx_sort_by
             // 
@@ -164,8 +167,8 @@ namespace SoftwareFirmManagement.UI
             // gbx_sort_by.Panel
             // 
             this.gbx_sort_by.Panel.Controls.Add(this.rdo_sort_username);
-            this.gbx_sort_by.Panel.Controls.Add(this.rdo_username);
-            this.gbx_sort_by.Panel.Controls.Add(this.rdo_customer_id);
+            this.gbx_sort_by.Panel.Controls.Add(this.rdo_sort_customer_name);
+            this.gbx_sort_by.Panel.Controls.Add(this.rdo_sort_customer_id);
             this.gbx_sort_by.Size = new System.Drawing.Size(133, 103);
             this.gbx_sort_by.TabIndex = 1;
             this.gbx_sort_by.Values.Heading = "";
@@ -184,48 +187,48 @@ namespace SoftwareFirmManagement.UI
             this.rdo_sort_username.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
             this.rdo_sort_username.Location = new System.Drawing.Point(-3, 54);
             this.rdo_sort_username.Name = "rdo_sort_username";
-            this.rdo_sort_username.Size = new System.Drawing.Size(86, 20);
+            this.rdo_sort_username.Size = new System.Drawing.Size(91, 23);
             this.rdo_sort_username.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
             this.rdo_sort_username.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
             this.rdo_sort_username.TabIndex = 27;
             this.rdo_sort_username.Values.Text = "Username";
             // 
-            // rdo_username
+            // rdo_sort_customer_name
             // 
-            this.rdo_username.AutoCheck = false;
-            this.rdo_username.Images.CheckedNormal = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_username.Images.CheckedPressed = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
-            this.rdo_username.Images.CheckedTracking = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_username.Images.Common = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
-            this.rdo_username.Images.UncheckedNormal = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
-            this.rdo_username.Images.UncheckedPressed = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_username.Images.UncheckedTracking = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
-            this.rdo_username.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
-            this.rdo_username.Location = new System.Drawing.Point(-3, 31);
-            this.rdo_username.Name = "rdo_username";
-            this.rdo_username.Size = new System.Drawing.Size(117, 20);
-            this.rdo_username.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
-            this.rdo_username.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
-            this.rdo_username.TabIndex = 26;
-            this.rdo_username.Values.Text = "CustomerName";
+            this.rdo_sort_customer_name.AutoCheck = false;
+            this.rdo_sort_customer_name.Images.CheckedNormal = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
+            this.rdo_sort_customer_name.Images.CheckedPressed = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
+            this.rdo_sort_customer_name.Images.CheckedTracking = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
+            this.rdo_sort_customer_name.Images.Common = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
+            this.rdo_sort_customer_name.Images.UncheckedNormal = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
+            this.rdo_sort_customer_name.Images.UncheckedPressed = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
+            this.rdo_sort_customer_name.Images.UncheckedTracking = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
+            this.rdo_sort_customer_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
+            this.rdo_sort_customer_name.Location = new System.Drawing.Point(-3, 31);
+            this.rdo_sort_customer_name.Name = "rdo_sort_customer_name";
+            this.rdo_sort_customer_name.Size = new System.Drawing.Size(124, 23);
+            this.rdo_sort_customer_name.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
+            this.rdo_sort_customer_name.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
+            this.rdo_sort_customer_name.TabIndex = 26;
+            this.rdo_sort_customer_name.Values.Text = "CustomerName";
             // 
-            // rdo_customer_id
+            // rdo_sort_customer_id
             // 
-            this.rdo_customer_id.Images.CheckedNormal = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_customer_id.Images.CheckedPressed = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
-            this.rdo_customer_id.Images.CheckedTracking = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_customer_id.Images.Common = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
-            this.rdo_customer_id.Images.UncheckedNormal = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
-            this.rdo_customer_id.Images.UncheckedPressed = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_customer_id.Images.UncheckedTracking = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
-            this.rdo_customer_id.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
-            this.rdo_customer_id.Location = new System.Drawing.Point(-3, 7);
-            this.rdo_customer_id.Name = "rdo_customer_id";
-            this.rdo_customer_id.Size = new System.Drawing.Size(95, 20);
-            this.rdo_customer_id.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
-            this.rdo_customer_id.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
-            this.rdo_customer_id.TabIndex = 25;
-            this.rdo_customer_id.Values.Text = "CustomerId";
+            this.rdo_sort_customer_id.Images.CheckedNormal = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
+            this.rdo_sort_customer_id.Images.CheckedPressed = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
+            this.rdo_sort_customer_id.Images.CheckedTracking = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
+            this.rdo_sort_customer_id.Images.Common = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
+            this.rdo_sort_customer_id.Images.UncheckedNormal = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
+            this.rdo_sort_customer_id.Images.UncheckedPressed = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
+            this.rdo_sort_customer_id.Images.UncheckedTracking = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
+            this.rdo_sort_customer_id.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
+            this.rdo_sort_customer_id.Location = new System.Drawing.Point(-3, 7);
+            this.rdo_sort_customer_id.Name = "rdo_sort_customer_id";
+            this.rdo_sort_customer_id.Size = new System.Drawing.Size(100, 23);
+            this.rdo_sort_customer_id.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
+            this.rdo_sort_customer_id.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
+            this.rdo_sort_customer_id.TabIndex = 25;
+            this.rdo_sort_customer_id.Values.Text = "CustomerId";
             // 
             // gbox_grd_users
             // 
@@ -237,65 +240,84 @@ namespace SoftwareFirmManagement.UI
             // 
             // gbox_grd_users.Panel
             // 
-            this.gbox_grd_users.Panel.Controls.Add(this.grd_users);
+            this.gbox_grd_users.Panel.Controls.Add(this.dgv_customers);
             this.gbox_grd_users.Size = new System.Drawing.Size(783, 434);
             this.gbox_grd_users.TabIndex = 1;
             this.gbox_grd_users.Values.Heading = "Users";
             // 
-            // grd_users
+            // dgv_customers
             // 
-            this.grd_users.AutoGenerateColumns = false;
-            this.grd_users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grd_users.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.userIdDataGridViewTextBoxColumn,
-            this.usernameDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn,
-            this.roleDataGridViewTextBoxColumn,
+            this.dgv_customers.AutoGenerateColumns = false;
+            this.dgv_customers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_customers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.FullName,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
             this.Details,
             this.Delete});
-            this.grd_users.DataSource = this.userBindingSource;
-            this.grd_users.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grd_users.Location = new System.Drawing.Point(0, 0);
-            this.grd_users.Name = "grd_users";
-            this.grd_users.Size = new System.Drawing.Size(779, 410);
-            this.grd_users.TabIndex = 0;
+            this.dgv_customers.DataSource = this.customerBindingSource;
+            this.dgv_customers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_customers.Location = new System.Drawing.Point(0, 0);
+            this.dgv_customers.Name = "dgv_customers";
+            this.dgv_customers.Size = new System.Drawing.Size(769, 401);
+            this.dgv_customers.TabIndex = 0;
             // 
-            // userIdDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.userIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
-            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
-            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "CustomerId";
+            this.dataGridViewTextBoxColumn1.HeaderText = "CustomerId";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // usernameDataGridViewTextBoxColumn
+            // FullName
             // 
-            this.usernameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            this.FullName.DataPropertyName = "Name";
+            this.FullName.HeaderText = "FullName";
+            this.FullName.Name = "FullName";
             // 
-            // emailDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "UserId";
+            this.dataGridViewTextBoxColumn3.HeaderText = "UserId";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Visible = false;
             // 
-            // passwordDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn4
             // 
-            this.passwordDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.Visible = false;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Username";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Username";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // roleDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn5
             // 
-            this.roleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.roleDataGridViewTextBoxColumn.DataPropertyName = "Role";
-            this.roleDataGridViewTextBoxColumn.HeaderText = "Role";
-            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Password";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Password";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "RoleId";
+            this.dataGridViewTextBoxColumn7.HeaderText = "RoleId";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Role";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Role";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Visible = false;
             // 
             // Details
             // 
@@ -304,19 +326,20 @@ namespace SoftwareFirmManagement.UI
             this.Details.HeaderText = "Update";
             this.Details.MinimumWidth = 100;
             this.Details.Name = "Details";
+            this.Details.UseColumnTextForButtonValue = true;
             // 
             // Delete
             // 
             this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Delete.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
+            this.Delete.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Alternate;
             this.Delete.HeaderText = "Delete";
             this.Delete.MinimumWidth = 100;
             this.Delete.Name = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
-            // userBindingSource
+            // customerBindingSource
             // 
-            this.userBindingSource.DataSource = typeof(SoftwareFirmManagement.BL.User);
+            this.customerBindingSource.DataSource = typeof(SoftwareFirmManagement.BL.Customer);
             // 
             // tableLayoutPanel2
             // 
@@ -362,7 +385,7 @@ namespace SoftwareFirmManagement.UI
             this.cbx_sort.TabIndex = 36;
             this.cbx_sort.Values.ExtraText = "▲";
             this.cbx_sort.Values.Text = "Sort By";
-            this.cbx_sort.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbx_sort_MouseClick);
+            this.cbx_sort.CheckedChanged += new System.EventHandler(this.cbx_sort_CheckedChanged);
             // 
             // cbtn_direction
             // 
@@ -374,15 +397,15 @@ namespace SoftwareFirmManagement.UI
             this.cbtn_direction.TabIndex = 35;
             this.cbtn_direction.Values.ExtraText = "▲";
             this.cbtn_direction.Values.Text = "Direction";
-            this.cbtn_direction.Click += new System.EventHandler(this.cbtn_direction_Click);
+            this.cbtn_direction.CheckedChanged += new System.EventHandler(this.cbtn_direction_CheckedChanged);
             // 
             // lbl_filter
             // 
             this.lbl_filter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_filter.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_filter.Location = new System.Drawing.Point(93, 10);
+            this.lbl_filter.Location = new System.Drawing.Point(104, 12);
             this.lbl_filter.Name = "lbl_filter";
-            this.lbl_filter.Size = new System.Drawing.Size(65, 29);
+            this.lbl_filter.Size = new System.Drawing.Size(54, 26);
             this.lbl_filter.TabIndex = 38;
             this.lbl_filter.Values.Text = "Filters";
             // 
@@ -432,8 +455,8 @@ namespace SoftwareFirmManagement.UI
             this.gbox_grd_users.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_users)).EndInit();
             this.gbox_grd_users.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grd_users)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_customers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel_filters.ResumeLayout(false);
             this.tableLayoutPanel_filters.PerformLayout();
@@ -445,30 +468,41 @@ namespace SoftwareFirmManagement.UI
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView grd_users;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dgv_customers;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox gbox_grd_users;
         private System.Windows.Forms.Panel panel1;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckButton cbtn_direction;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_filters;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckButton cbx_sort;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_filter;
-        private System.Windows.Forms.BindingSource userBindingSource;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox gbx_sort_by;
         private ComponentFactory.Krypton.Toolkit.KryptonGroup gbx_direction;
-        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_username;
-        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_customer_id;
-        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_descending;
-        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_ascending;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_customer_name;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_customer_id;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_desc;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_asc;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roleIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn roleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn Details;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn Delete;
-        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_username;
+        private System.Windows.Forms.BindingSource customerBindingSource;
     }
 }

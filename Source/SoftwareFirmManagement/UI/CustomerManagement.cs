@@ -8,19 +8,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SoftwareFirmManagement.BL;
+using System.Runtime.CompilerServices;
 
 namespace SoftwareFirmManagement.UI
 {
-    public partial class CustomerManagement: KryptonForm
+    public partial class CustomerManagement : KryptonForm
     {
         public CustomerManagement()
         {
             InitializeComponent();
         }
 
-        private void cbx_sort_MouseClick(object sender, MouseEventArgs e)
+
+        public void LoadData(string search)
         {
-            if (gbx_sort_by.Visible == false)
+            string sortby = null, direction = null;
+            if (search == "Search")
+                search = null;
+            if (rdo_sort_customer_id.Checked)
+                sortby = "customer_id";
+            else if (rdo_sort_username.Checked)
+                sortby = "username";
+            else if (rdo_sort_customer_name.Checked)
+                sortby = "name";
+
+            if (rdo_sort_asc.Checked)
+                direction = "DESC";
+            else if (rdo_sort_desc.Checked)
+                direction = "ASC";
+
+
+            customerBindingSource.DataSource = Customer.GetAllCustomers(search, sortby ,direction);
+            dgv_customers.DataSource = customerBindingSource;
+        }
+
+        private void cbx_sort_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbx_sort.Checked)
             {
                 gbx_sort_by.Visible = true;
             }
@@ -30,9 +55,9 @@ namespace SoftwareFirmManagement.UI
             }
         }
 
-        private void cbtn_direction_Click(object sender, EventArgs e)
+        private void cbtn_direction_CheckedChanged(object sender, EventArgs e)
         {
-            if(gbx_direction.Visible == false)
+            if(cbtn_direction.Checked)
             {
                 gbx_direction.Visible = true;
             }
@@ -40,7 +65,6 @@ namespace SoftwareFirmManagement.UI
             {
                 gbx_direction.Visible = false;
             }
-
         }
     }
 }

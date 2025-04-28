@@ -13,7 +13,7 @@ namespace SoftwareFirmManagement.BL
         protected string username;
         protected string email;
         protected string password;
-        protected int roleId;
+        private int roleId;
         private string role;
 
         public User(int userId, string username, string email, string password, int roleId)

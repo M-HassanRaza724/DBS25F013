@@ -120,11 +120,17 @@
     <Compile Include="DL\AdminDL.cs" />
     <Compile Include="DL\EmployeeDL.cs" />
     <Compile Include="DL\UserDL.cs" />
-    <Compile Include="UI\Form1.cs">
+    <Compile Include="UI\CustomerManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UI\CustomerManagement.Designer.cs">
+      <DependentUpon>CustomerManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DemoForm.Designer.cs">
+      <DependentUpon>DemoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
@@ -140,14 +146,35 @@
     <Compile Include="UI\Header.Designer.cs">
       <DependentUpon>Header.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Resize.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Resize.Designer.cs">
+      <DependentUpon>Resize.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\SidePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\SidePanel.Designer.cs">
       <DependentUpon>SidePanel.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UI\UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserUpdate.Designer.cs">
+      <DependentUpon>UserUpdate.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\CustomerManagement.resx">
+      <DependentUpon>CustomerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DemoForm.resx">
+      <DependentUpon>DemoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -160,12 +187,22 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\Header.resx">
       <DependentUpon>Header.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Resize.resx">
+      <DependentUpon>Resize.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\SidePanel.resx">
       <DependentUpon>SidePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserUpdate.resx">
+      <DependentUpon>UserUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -181,6 +218,22 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\checked-hover-small.png" />
+    <Content Include="Resources\checked-normal-small.png" />
+    <Content Include="Resources\Close.png" />
+    <Content Include="Resources\Close1.png" />
+    <Content Include="Resources\Cross Mark.png" />
+    <None Include="Resources\Slider.png" />
+    <None Include="Resources\Dashboard Layout%28filled%29.png" />
+    <Content Include="Resources\Full Screen.png" />
+    <Content Include="Resources\Horizontal Line.png" />
+    <Content Include="Resources\Minimize Window%28colored%29.png" />
+    <Content Include="Resources\Normal Screen.png" />
+    <Content Include="Resources\Search.png" />
+    <Content Include="Resources\unchecked-hover-small.png" />
+    <Content Include="Resources\unchecked-normal-small.png" />
+    <None Include="Resources\User Default%28small%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

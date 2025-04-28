@@ -1,7 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System.Drawing;
 
-namespace SoftwareFirmManagement
+namespace SoftwareFirmManagement.UI
 {
     partial class MainForm
     {
@@ -38,11 +38,22 @@ namespace SoftwareFirmManagement
             this.btn_close = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_max_min = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_size = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.cbtn_test = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
-            this.sidePanel1 = new SoftwareFirmManagement.UI.SidePanel();
+            this.pnl_main = new System.Windows.Forms.Panel();
+            this.pnl_user_management = new System.Windows.Forms.Panel();
+            this.btn_employee_management = new System.Windows.Forms.Button();
+            this.btn_admin_management = new System.Windows.Forms.Button();
+            this.btn_customer_management = new System.Windows.Forms.Button();
+            this.btn_user_management = new System.Windows.Forms.Button();
+            this.pnl_dashboard = new System.Windows.Forms.Panel();
+            this.btn_dashboard = new System.Windows.Forms.Button();
+            this.pnl_menu = new System.Windows.Forms.Panel();
+            this.btn_menu = new System.Windows.Forms.Button();
             this.header1 = new SoftwareFirmManagement.UI.Header();
-            this.kryptonCheckBox1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.sidePanel1 = new SoftwareFirmManagement.UI.SidePanel();
             this.panel1.SuspendLayout();
+            this.pnl_user_management.SuspendLayout();
+            this.pnl_dashboard.SuspendLayout();
+            this.pnl_menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainPalette
@@ -774,17 +785,18 @@ namespace SoftwareFirmManagement
             this.panel1.Controls.Add(this.btn_close);
             this.panel1.Controls.Add(this.btn_max_min);
             this.panel1.Controls.Add(this.btn_size);
+            this.panel1.Controls.Add(this.header1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(255, 0);
+            this.panel1.Location = new System.Drawing.Point(60, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(710, 50);
+            this.panel1.Size = new System.Drawing.Size(905, 50);
             this.panel1.TabIndex = 5;
             // 
             // btn_close
             // 
             this.btn_close.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_close.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Form;
-            this.btn_close.Location = new System.Drawing.Point(674, 12);
+            this.btn_close.Location = new System.Drawing.Point(869, 12);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(24, 24);
             this.btn_close.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
@@ -806,7 +818,7 @@ namespace SoftwareFirmManagement
             // 
             this.btn_max_min.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_max_min.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.ButtonSpec;
-            this.btn_max_min.Location = new System.Drawing.Point(598, 12);
+            this.btn_max_min.Location = new System.Drawing.Point(793, 12);
             this.btn_max_min.Name = "btn_max_min";
             this.btn_max_min.Size = new System.Drawing.Size(24, 24);
             this.btn_max_min.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
@@ -827,7 +839,7 @@ namespace SoftwareFirmManagement
             // 
             this.btn_size.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_size.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.ButtonSpec;
-            this.btn_size.Location = new System.Drawing.Point(636, 12);
+            this.btn_size.Location = new System.Drawing.Point(831, 12);
             this.btn_size.Name = "btn_size";
             this.btn_size.Size = new System.Drawing.Size(24, 24);
             this.btn_size.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
@@ -843,17 +855,150 @@ namespace SoftwareFirmManagement
             this.btn_size.Values.Text = "";
             this.btn_size.Click += new System.EventHandler(this.btn_size_Click);
             // 
-            // cbtn_test
+            // pnl_main
             // 
-            this.cbtn_test.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
-            this.cbtn_test.Location = new System.Drawing.Point(360, 235);
-            this.cbtn_test.Name = "cbtn_test";
-            this.cbtn_test.Size = new System.Drawing.Size(182, 42);
-            this.cbtn_test.TabIndex = 30;
-            this.cbtn_test.Values.ExtraText = "▲";
-            this.cbtn_test.Values.Text = "kryptonCheckButton1";
-            this.cbtn_test.CheckedChanged += new System.EventHandler(this.kryptonCheckButton1_CheckedChanged);
-            this.cbtn_test.Click += new System.EventHandler(this.kryptonCheckButton1_Click);
+            this.pnl_main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.pnl_main.Location = new System.Drawing.Point(60, 50);
+            this.pnl_main.Margin = new System.Windows.Forms.Padding(0);
+            this.pnl_main.Name = "pnl_main";
+            this.pnl_main.Size = new System.Drawing.Size(905, 485);
+            this.pnl_main.TabIndex = 6;
+            // 
+            // pnl_user_management
+            // 
+            this.pnl_user_management.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.pnl_user_management.Controls.Add(this.btn_employee_management);
+            this.pnl_user_management.Controls.Add(this.btn_admin_management);
+            this.pnl_user_management.Controls.Add(this.btn_customer_management);
+            this.pnl_user_management.Controls.Add(this.btn_user_management);
+            this.pnl_user_management.Location = new System.Drawing.Point(0, 100);
+            this.pnl_user_management.Margin = new System.Windows.Forms.Padding(0);
+            this.pnl_user_management.Name = "pnl_user_management";
+            this.pnl_user_management.Size = new System.Drawing.Size(60, 50);
+            this.pnl_user_management.TabIndex = 7;
+            // 
+            // btn_employee_management
+            // 
+            this.btn_employee_management.FlatAppearance.BorderSize = 0;
+            this.btn_employee_management.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_employee_management.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_employee_management.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.btn_employee_management.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_employee_management.Location = new System.Drawing.Point(0, 100);
+            this.btn_employee_management.Name = "btn_employee_management";
+            this.btn_employee_management.Size = new System.Drawing.Size(230, 50);
+            this.btn_employee_management.TabIndex = 3;
+            this.btn_employee_management.Text = "Employee Management";
+            this.btn_employee_management.UseVisualStyleBackColor = true;
+            // 
+            // btn_admin_management
+            // 
+            this.btn_admin_management.FlatAppearance.BorderSize = 0;
+            this.btn_admin_management.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_admin_management.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_admin_management.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.btn_admin_management.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_admin_management.Location = new System.Drawing.Point(0, 150);
+            this.btn_admin_management.Name = "btn_admin_management";
+            this.btn_admin_management.Size = new System.Drawing.Size(230, 50);
+            this.btn_admin_management.TabIndex = 2;
+            this.btn_admin_management.Text = "Admin Management";
+            this.btn_admin_management.UseVisualStyleBackColor = true;
+            this.btn_admin_management.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_customer_management
+            // 
+            this.btn_customer_management.FlatAppearance.BorderSize = 0;
+            this.btn_customer_management.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_customer_management.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_customer_management.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.btn_customer_management.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_customer_management.Location = new System.Drawing.Point(0, 50);
+            this.btn_customer_management.Name = "btn_customer_management";
+            this.btn_customer_management.Size = new System.Drawing.Size(230, 50);
+            this.btn_customer_management.TabIndex = 1;
+            this.btn_customer_management.Text = "Customer Management";
+            this.btn_customer_management.UseVisualStyleBackColor = true;
+            this.btn_customer_management.Click += new System.EventHandler(this.btn_customer_management_Click);
+            // 
+            // btn_user_management
+            // 
+            this.btn_user_management.FlatAppearance.BorderSize = 0;
+            this.btn_user_management.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_user_management.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_user_management.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.btn_user_management.Image = global::SoftwareFirmManagement.Properties.Resources.User_Default_small_;
+            this.btn_user_management.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_user_management.Location = new System.Drawing.Point(0, 0);
+            this.btn_user_management.Name = "btn_user_management";
+            this.btn_user_management.Size = new System.Drawing.Size(230, 50);
+            this.btn_user_management.TabIndex = 0;
+            this.btn_user_management.Text = "User Management";
+            this.btn_user_management.UseVisualStyleBackColor = true;
+            this.btn_user_management.Click += new System.EventHandler(this.btn_user_management_Click);
+            // 
+            // pnl_dashboard
+            // 
+            this.pnl_dashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.pnl_dashboard.Controls.Add(this.btn_dashboard);
+            this.pnl_dashboard.Location = new System.Drawing.Point(0, 50);
+            this.pnl_dashboard.Margin = new System.Windows.Forms.Padding(0);
+            this.pnl_dashboard.Name = "pnl_dashboard";
+            this.pnl_dashboard.Size = new System.Drawing.Size(60, 50);
+            this.pnl_dashboard.TabIndex = 8;
+            // 
+            // btn_dashboard
+            // 
+            this.btn_dashboard.FlatAppearance.BorderSize = 0;
+            this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_dashboard.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.btn_dashboard.Image = global::SoftwareFirmManagement.Properties.Resources.Dashboard_Layout_filled_;
+            this.btn_dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_dashboard.Location = new System.Drawing.Point(0, 0);
+            this.btn_dashboard.Name = "btn_dashboard";
+            this.btn_dashboard.Size = new System.Drawing.Size(230, 50);
+            this.btn_dashboard.TabIndex = 1;
+            this.btn_dashboard.Text = "Dashboard";
+            this.btn_dashboard.UseVisualStyleBackColor = true;
+            // 
+            // pnl_menu
+            // 
+            this.pnl_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.pnl_menu.Controls.Add(this.btn_menu);
+            this.pnl_menu.Location = new System.Drawing.Point(0, 0);
+            this.pnl_menu.Margin = new System.Windows.Forms.Padding(0);
+            this.pnl_menu.Name = "pnl_menu";
+            this.pnl_menu.Size = new System.Drawing.Size(60, 50);
+            this.pnl_menu.TabIndex = 9;
+            // 
+            // btn_menu
+            // 
+            this.btn_menu.FlatAppearance.BorderSize = 0;
+            this.btn_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_menu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.btn_menu.Image = global::SoftwareFirmManagement.Properties.Resources.Slider;
+            this.btn_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_menu.Location = new System.Drawing.Point(0, 0);
+            this.btn_menu.Name = "btn_menu";
+            this.btn_menu.Size = new System.Drawing.Size(230, 50);
+            this.btn_menu.TabIndex = 1;
+            this.btn_menu.Text = "Menu";
+            this.btn_menu.UseVisualStyleBackColor = true;
+            this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
+            // 
+            // header1
+            // 
+            this.header1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.header1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.header1.Location = new System.Drawing.Point(0, 0);
+            this.header1.Name = "header1";
+            this.header1.Size = new System.Drawing.Size(352, 50);
+            this.header1.TabIndex = 3;
             // 
             // sidePanel1
             // 
@@ -861,27 +1006,8 @@ namespace SoftwareFirmManagement
             this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidePanel1.Location = new System.Drawing.Point(0, 0);
             this.sidePanel1.Name = "sidePanel1";
-            this.sidePanel1.Size = new System.Drawing.Size(255, 535);
+            this.sidePanel1.Size = new System.Drawing.Size(60, 535);
             this.sidePanel1.TabIndex = 4;
-            // 
-            // header1
-            // 
-            this.header1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.header1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.header1.Location = new System.Drawing.Point(360, 173);
-            this.header1.Name = "header1";
-            this.header1.Size = new System.Drawing.Size(352, 56);
-            this.header1.TabIndex = 3;
-            // 
-            // kryptonCheckBox1
-            // 
-            this.kryptonCheckBox1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom3;
-            this.kryptonCheckBox1.Location = new System.Drawing.Point(548, 254);
-            this.kryptonCheckBox1.Name = "kryptonCheckBox1";
-            this.kryptonCheckBox1.Size = new System.Drawing.Size(134, 23);
-            this.kryptonCheckBox1.TabIndex = 31;
-            this.kryptonCheckBox1.Values.Text = "kryptonCheckBox1";
             // 
             // MainForm
             // 
@@ -889,11 +1015,12 @@ namespace SoftwareFirmManagement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(28)))));
             this.ClientSize = new System.Drawing.Size(965, 535);
-            this.Controls.Add(this.kryptonCheckBox1);
-            this.Controls.Add(this.cbtn_test);
+            this.Controls.Add(this.pnl_menu);
+            this.Controls.Add(this.pnl_dashboard);
+            this.Controls.Add(this.pnl_user_management);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.sidePanel1);
-            this.Controls.Add(this.header1);
+            this.Controls.Add(this.pnl_main);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
@@ -902,8 +1029,10 @@ namespace SoftwareFirmManagement
             this.Text = "SoftwareFirm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
+            this.pnl_user_management.ResumeLayout(false);
+            this.pnl_dashboard.ResumeLayout(false);
+            this.pnl_menu.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -916,8 +1045,16 @@ namespace SoftwareFirmManagement
         private KryptonButton btn_close;
         private KryptonButton btn_max_min;
         private KryptonButton btn_size;
-        private KryptonCheckButton cbtn_test;
-        private KryptonCheckBox kryptonCheckBox1;
+        private System.Windows.Forms.Panel pnl_main;
+        private System.Windows.Forms.Panel pnl_user_management;
+        private System.Windows.Forms.Button btn_user_management;
+        private System.Windows.Forms.Button btn_customer_management;
+        private System.Windows.Forms.Button btn_employee_management;
+        private System.Windows.Forms.Button btn_admin_management;
+        private System.Windows.Forms.Panel pnl_dashboard;
+        private System.Windows.Forms.Button btn_dashboard;
+        private System.Windows.Forms.Button btn_menu;
+        private System.Windows.Forms.Panel pnl_menu;
     }
 }
 

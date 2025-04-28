@@ -113,6 +113,16 @@ namespace SoftwareFirmManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dashboard_Layout_filled_ {
+            get {
+                object obj = ResourceManager.GetObject("Dashboard Layout(filled)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Full_Screen {
             get {
                 object obj = ResourceManager.GetObject("Full Screen", resourceCulture);
@@ -163,6 +173,16 @@ namespace SoftwareFirmManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Slider {
+            get {
+                object obj = ResourceManager.GetObject("Slider", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap unchecked_hover_small {
             get {
                 object obj = ResourceManager.GetObject("unchecked-hover-small", resourceCulture);
@@ -176,6 +196,16 @@ namespace SoftwareFirmManagement.Properties {
         internal static System.Drawing.Bitmap unchecked_normal_small {
             get {
                 object obj = ResourceManager.GetObject("unchecked-normal-small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_Default_small_ {
+            get {
+                object obj = ResourceManager.GetObject("User Default(small)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -12,9 +12,9 @@ namespace SoftwareFirmManagement.BL
         private int adminId;
         private string name;
         private string phone;
-        private string adminRole;
+        private int adminRole;
 
-        public Admin(int userId, string username, string email, string password, string role, int adminId, string name, string phone, string adminRole) : base(userId, username, email, password, role)
+        public Admin(int userId, string username, string email, string password, int role, int adminId, string name, string phone, int adminRole) : base(userId, username, email, password, role)
         {
             this.adminId = adminId;
             this.name = name;
@@ -41,7 +41,7 @@ namespace SoftwareFirmManagement.BL
             set { phone = value; }
         }
 
-        public string AdminRole
+        public int AdminRole
         {
             get { return adminRole; }
             set { adminRole = value; }

@@ -13,15 +13,16 @@ namespace SoftwareFirmManagement.BL
         private string username;
         private string email;
         private string password;
-        private string role;
+        private int roleId;
+        protected string role;
 
-        public User(int userId, string username, string email, string password, string role)
+        public User(int userId, string username, string email, string password, int roleId)
         {
             this.userId = userId;
             this.username = username;
             this.email = email;
             this.password = password;
-            this.role = role;
+            this.roleId = roleId;
         }
 
 
@@ -44,6 +45,11 @@ namespace SoftwareFirmManagement.BL
         {
             get { return password; }
             set { password = value; }
+        }
+        public int RoleId
+        {
+            get { return roleId; }
+            set { roleId = value; }
         }
         public string Role
         {

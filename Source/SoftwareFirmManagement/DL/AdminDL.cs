@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SoftwareFirmManagement.BL;
 
-namespace SoftwareFirmManagement.BL
+namespace SoftwareFirmManagement.DL
 {
     public class AdminDL
     {

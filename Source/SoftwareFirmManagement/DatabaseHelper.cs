@@ -15,7 +15,7 @@ namespace SoftwareFirmManagement
         private String port = "3306";
         private String databaseName = "midprojectdb";
         private String databaseUser = "root";
-        private String databasePassword = "1234567890-=1234567890-=";
+        private String databasePassword = "`1234567890-=";
 
         private DatabaseHelper() { }
 

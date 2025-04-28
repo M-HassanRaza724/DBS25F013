@@ -19,6 +19,10 @@
 -- Table structure for table `admins`
 --
 
+
+create DATABASE midprojectdb;
+use midprojectdb;
+
 DROP TABLE IF EXISTS `admins`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -227,10 +231,69 @@ CREATE TABLE `lookups` (
 -- Dumping data for table `lookups`
 --
 
+
 LOCK TABLES `lookups` WRITE;
-/*!40000 ALTER TABLE `lookups` DISABLE KEYS */;
-INSERT INTO `lookups` VALUES (1,'1','admin');
-/*!40000 ALTER TABLE `lookups` ENABLE KEYS */;
+ -- Default placeholder (lookup_id = 0)
+INSERT INTO Lookups (lookup_id, key_group, value) VALUES
+(0, 'default', 'default');   -- Reserved for orphaned references
+INSERT INTO Lookups (key_group, value) VALUES
+ -- Designations
+('designation', 'Deleted Employee'),
+('designation', 'Data Scientist'),
+('designation', 'Full Stack Developer'),
+('designation', 'FrontEnd Developer'),
+('designation', 'BackEnd Developer'),
+('designation', 'UI/UX Designer'),
+('designation', 'QA Engineer'),
+('designation', 'DevOps Engineer'),
+('designation', 'Project Manager'),
+('designation', 'Product Owner'),
+ -- user roles
+('user_role','Employee'),
+('user_role','Admin'),
+('user_role','Department Head'),
+ -- Platforms
+('platform', 'Web'),
+('platform', 'Android'),
+('platform', 'iOS'),
+('platform', 'Windows'),
+('platform', 'macOS'),
+('platform', 'Linux'),
+('platform', 'Cross-platform'),
+('platform', 'Hybrid'),
+ -- Order Statuses
+('status', 'Pending'),
+('status', 'In-Progress'),
+('status', 'Completed'),
+('status', 'Cancelled'),
+('status', 'On-Hold'),
+('status', 'Rejected'),
+-- initial budget
+('budget_type', '<$5000'),
+('budget_type', '$5000-$20000'),
+('budget_type', '$20000-$50000'),
+('budget_type', '$50000+'),
+ -- payment statuses
+('payment_status', 'Pending'),
+('payment_status', 'Partially Paid'),
+('payment_status', 'Paid'),
+('payment_status', 'Overdue'),
+('payment_status', 'Cancelled'),
+ -- Admin Roles
+('admin_role', 'Super Admin'),
+('admin_role', 'Support Admin'),
+('admin_role', 'Billing Admin'),
+ -- Service Categories (for filtering)
+('service_category', 'Development'),
+('service_category', 'Design'),
+('service_category', 'Testing'),
+('service_category', 'Consulting'),
+ -- Priority Levels (for orders/tasks)
+('priority', 'Low'),
+('priority', 'Medium'),
+('priority', 'High'),
+('priority', 'Critical');
+
 UNLOCK TABLES;
 
 --

@@ -40,8 +40,14 @@ namespace SoftwareFirmManagement.UI
             this.rdo_customer_id = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.gbox_grd_users = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.grd_users = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Details = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn();
             this.Delete = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel_filters = new System.Windows.Forms.TableLayoutPanel();
             this.cbx_sort = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
@@ -49,12 +55,6 @@ namespace SoftwareFirmManagement.UI
             this.lbl_filter = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbx_direction)).BeginInit();
@@ -70,10 +70,10 @@ namespace SoftwareFirmManagement.UI
             this.gbox_grd_users.Panel.SuspendLayout();
             this.gbox_grd_users.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd_users)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel_filters.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -130,7 +130,7 @@ namespace SoftwareFirmManagement.UI
             this.rdo_sort_descending.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
             this.rdo_sort_descending.Location = new System.Drawing.Point(8, 37);
             this.rdo_sort_descending.Name = "rdo_sort_descending";
-            this.rdo_sort_descending.Size = new System.Drawing.Size(101, 23);
+            this.rdo_sort_descending.Size = new System.Drawing.Size(96, 20);
             this.rdo_sort_descending.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
             this.rdo_sort_descending.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
             this.rdo_sort_descending.TabIndex = 28;
@@ -148,7 +148,7 @@ namespace SoftwareFirmManagement.UI
             this.rdo_sort_ascending.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
             this.rdo_sort_ascending.Location = new System.Drawing.Point(8, 8);
             this.rdo_sort_ascending.Name = "rdo_sort_ascending";
-            this.rdo_sort_ascending.Size = new System.Drawing.Size(94, 23);
+            this.rdo_sort_ascending.Size = new System.Drawing.Size(88, 20);
             this.rdo_sort_ascending.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
             this.rdo_sort_ascending.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
             this.rdo_sort_ascending.TabIndex = 27;
@@ -184,7 +184,7 @@ namespace SoftwareFirmManagement.UI
             this.rdo_sort_username.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
             this.rdo_sort_username.Location = new System.Drawing.Point(-3, 54);
             this.rdo_sort_username.Name = "rdo_sort_username";
-            this.rdo_sort_username.Size = new System.Drawing.Size(91, 23);
+            this.rdo_sort_username.Size = new System.Drawing.Size(86, 20);
             this.rdo_sort_username.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
             this.rdo_sort_username.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
             this.rdo_sort_username.TabIndex = 27;
@@ -203,7 +203,7 @@ namespace SoftwareFirmManagement.UI
             this.rdo_username.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
             this.rdo_username.Location = new System.Drawing.Point(-3, 31);
             this.rdo_username.Name = "rdo_username";
-            this.rdo_username.Size = new System.Drawing.Size(124, 23);
+            this.rdo_username.Size = new System.Drawing.Size(117, 20);
             this.rdo_username.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
             this.rdo_username.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
             this.rdo_username.TabIndex = 26;
@@ -221,7 +221,7 @@ namespace SoftwareFirmManagement.UI
             this.rdo_customer_id.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
             this.rdo_customer_id.Location = new System.Drawing.Point(-3, 7);
             this.rdo_customer_id.Name = "rdo_customer_id";
-            this.rdo_customer_id.Size = new System.Drawing.Size(100, 23);
+            this.rdo_customer_id.Size = new System.Drawing.Size(95, 20);
             this.rdo_customer_id.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
             this.rdo_customer_id.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
             this.rdo_customer_id.TabIndex = 25;
@@ -258,8 +258,44 @@ namespace SoftwareFirmManagement.UI
             this.grd_users.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grd_users.Location = new System.Drawing.Point(0, 0);
             this.grd_users.Name = "grd_users";
-            this.grd_users.Size = new System.Drawing.Size(769, 401);
+            this.grd_users.Size = new System.Drawing.Size(779, 410);
             this.grd_users.TabIndex = 0;
+            // 
+            // userIdDataGridViewTextBoxColumn
+            // 
+            this.userIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
+            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
+            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // roleDataGridViewTextBoxColumn
+            // 
+            this.roleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.roleDataGridViewTextBoxColumn.DataPropertyName = "Role";
+            this.roleDataGridViewTextBoxColumn.HeaderText = "Role";
+            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
             // 
             // Details
             // 
@@ -277,6 +313,10 @@ namespace SoftwareFirmManagement.UI
             this.Delete.MinimumWidth = 100;
             this.Delete.Name = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(SoftwareFirmManagement.BL.User);
             // 
             // tableLayoutPanel2
             // 
@@ -340,9 +380,9 @@ namespace SoftwareFirmManagement.UI
             // 
             this.lbl_filter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_filter.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_filter.Location = new System.Drawing.Point(104, 12);
+            this.lbl_filter.Location = new System.Drawing.Point(93, 10);
             this.lbl_filter.Name = "lbl_filter";
-            this.lbl_filter.Size = new System.Drawing.Size(54, 26);
+            this.lbl_filter.Size = new System.Drawing.Size(65, 29);
             this.lbl_filter.TabIndex = 38;
             this.lbl_filter.Values.Text = "Filters";
             // 
@@ -365,46 +405,6 @@ namespace SoftwareFirmManagement.UI
             this.kryptonButton1.Size = new System.Drawing.Size(142, 44);
             this.kryptonButton1.TabIndex = 0;
             this.kryptonButton1.Values.Text = "Add Customers";
-            // 
-            // userIdDataGridViewTextBoxColumn
-            // 
-            this.userIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
-            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
-            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // roleDataGridViewTextBoxColumn
-            // 
-            this.roleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.roleDataGridViewTextBoxColumn.DataPropertyName = "Role";
-            this.roleDataGridViewTextBoxColumn.HeaderText = "Role";
-            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
-            // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataSource = typeof(SoftwareFirmManagement.BL.User);
             // 
             // CustomerManagement
             // 
@@ -433,11 +433,11 @@ namespace SoftwareFirmManagement.UI
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_users)).EndInit();
             this.gbox_grd_users.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grd_users)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel_filters.ResumeLayout(false);
             this.tableLayoutPanel_filters.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

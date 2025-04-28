@@ -16,7 +16,7 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = "SELECT * FROM services s LEFT JOIN serviceinvolved LEFT JOIN servicetechnologies;";
+                string query = "SELECT * FROM services s LEFT JOIN serviceinvolved si ON si.service_id=s.service_id LEFT JOIN servicetechnologies st ON si.service_id=s.service_id";
                 var data = DatabaseHelper.Instance.GetData(query);
                 while (data.Read())
                 {
@@ -24,8 +24,8 @@ namespace SoftwareFirmManagement.DL
                     string name = data[1].ToString();
                     int categoryId = data.IsDBNull(2) ? 0 : data.GetInt32(2);
                     string description = data[3].ToString();
-                    string subserviceDescription = data.IsDBNull(4) ? "null" : data[4].ToString();
-                    string techDescription = data.IsDBNull(5) ? "null" : data[5].ToString();
+                    string subserviceDescription = data.IsDBNull(4) ? "null" : data[5].ToString();
+                    string techDescription = data.IsDBNull(5) ? "null" : data[7].ToString();
                     Service service = new Service(serviceId, name, categoryId, description);
                     if (subserviceDescription != "null")
                     {

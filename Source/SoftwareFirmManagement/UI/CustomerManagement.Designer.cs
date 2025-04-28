@@ -1,4 +1,4 @@
-﻿namespace SoftwareFirmManagement.UI
+namespace SoftwareFirmManagement.UI
 {
     partial class CustomerManagement
     {

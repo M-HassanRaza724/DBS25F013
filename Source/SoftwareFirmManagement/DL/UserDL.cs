@@ -16,19 +16,6 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                // adding users
-                string query1 = "SELECT * FROM users;";
-                var data1 = DatabaseHelper.Instance.GetData(query1);
-                while (data1.Read())
-                {
-                    int userId = data1.IsDBNull(0) ? 0 : data1.GetInt32(0);
-                    string username = data1[1].ToString();
-                    string email = data1[2].ToString();
-                    string password = data1[3].ToString();
-                    int roleId = data1.IsDBNull(4) ? 0 : data1.GetInt32(4);
-                    //allUsers.Add(new User(userId, username, email, password, roleId));
-                }
-                // adding admins
                 string query2 = "SELECT * FROM users NATURAL JOIN admins;";
                 var data2 = DatabaseHelper.Instance.GetData(query2);
                 while (data2.Read())
@@ -42,7 +29,13 @@ namespace SoftwareFirmManagement.DL
                     string name = data2[6].ToString();
                     string phone = data2[7].ToString();
                     int adminRole = data2.IsDBNull(8) ? 0 : data2.GetInt32(8);
-                    //allUsers.Add(new Admin(userId, username, email, password, roleId, adminId, name, phone, adminRole));
+                    Admin newAdmin = new Admin(userId, username, email, password, roleId, adminId, name, phone, adminRole);
+                    string role = LookupDL.allLookups
+                                  .Where(l => l.LookupId == roleId)
+                                  .Select(l => l.Value)
+                                  .FirstOrDefault();
+                    newAdmin.Role = role;
+                    allUsers.Add(newAdmin);
                 }
                 // adding employees
                 string query3 = $"SELECT * FROM users NATURAL JOIN employees;";
@@ -59,7 +52,32 @@ namespace SoftwareFirmManagement.DL
                     string phone = data3[7].ToString();
                     DateTime joinedDate = DateTime.Parse(data3[8].ToString()).Date;
                     int designationId = data3.IsDBNull(9) ? 0 : data3.GetInt32(9);
-                    //allUsers.Add(new Employee(userId, username, email, password, roleId, employeeId, name, phone, joinedDate, designationId));
+                    Employee newEmp = new Employee(userId, username, email, password, roleId, employeeId, name, phone, joinedDate, designationId);
+                    string role = LookupDL.allLookups
+                                  .Where(l => l.LookupId == roleId)
+                                  .Select(l => l.Value)
+                                  .FirstOrDefault();
+                    newEmp.Role = role;
+                    allUsers.Add(newEmp);
+                }
+                string query4 = "SELECT * FROM users NATURAL JOIN customers;";
+                var data4 = DatabaseHelper.Instance.GetData(query4);
+                while (data4.Read())
+                {
+                    int userId = data4.IsDBNull(0) ? 0 : data4.GetInt32(0);
+                    string username = data4[1].ToString();
+                    string email = data4[2].ToString();
+                    string password = data4[3].ToString();
+                    int roleId = data4.IsDBNull(4) ? 0 : data4.GetInt32(4);
+                    int customerId = data4.IsDBNull(5) ? 0 : data4.GetInt32(5);
+                    string name = data4.IsDBNull(6) ? "null" : data4[6].ToString();
+                    Customer newCust = new Customer(userId, username, email, password, roleId, customerId, name);
+                    string role = LookupDL.allLookups
+                                  .Where(l => l.LookupId == roleId)
+                                  .Select(l => l.Value)
+                                  .FirstOrDefault();
+                    newCust.Role = role;
+                    allUsers.Add(newCust);
                 }
             }
             catch (MySql.Data.MySqlClient.MySqlException exception)
@@ -73,8 +91,8 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                //string query = $"INSERT INTO users VALUES ({user.UserId}, '{user.Username}', '{user.Email}', {user.Password}, {user.RoleId};)";
-                //DatabaseHelper.Instance.Update(query);
+                string query = $"INSERT INTO users VALUES ({user.UserId}, '{user.Username}', '{user.Email}', {user.Password}, {user.RoleId};)";
+                DatabaseHelper.Instance.Update(query);
                 return true;
             }
             catch (MySql.Data.MySqlClient.MySqlException exception)

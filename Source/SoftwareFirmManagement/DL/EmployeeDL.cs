@@ -15,14 +15,13 @@ namespace SoftwareFirmManagement.DL
             try
             {
                 string formattedDate = employee.JoinedDate.ToString("yyyy-MM-dd");
-                //string query = $"INSERT INTO employees VALUES({employee.EmployeeId}, '{employee.Name}', '{employee.Phone}', '{formattedDate}', {employee.DesignationId}, {employee.UserId});";
-                //DatabaseHelper.Instance.Update(query);
+                string query = $"INSERT INTO employees VALUES({employee.EmployeeId}, '{employee.Name}', '{employee.Phone}', '{formattedDate}', {employee.DesignationId}, {employee.UserId});";
+                DatabaseHelper.Instance.Update(query);
                 return true;
             }
-            catch (MySql.Data.MySqlClient.MySqlException exception)
+            catch (MySql.Data.MySqlClient.MySqlException)
             {
-                MessageBox.Show($"Database error: {exception.Message}.", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                throw;
             }
         }
 
@@ -35,10 +34,9 @@ namespace SoftwareFirmManagement.DL
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }
-            catch (MySql.Data.MySqlClient.MySqlException exception)
+            catch (MySql.Data.MySqlClient.MySqlException)
             {
-                MessageBox.Show($"Database error: {exception.Message}.", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                throw;
             }
         }
 
@@ -51,10 +49,9 @@ namespace SoftwareFirmManagement.DL
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }
-            catch (MySql.Data.MySqlClient.MySqlException exception)
+            catch (MySql.Data.MySqlClient.MySqlException)
             {
-                MessageBox.Show($"Database error: {exception.Message}.", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                throw;
             }
         }
 

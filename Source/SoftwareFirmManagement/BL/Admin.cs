@@ -49,47 +49,68 @@ namespace SoftwareFirmManagement.BL
 
         public override bool Add(User user)
         {
-            if (user is Admin) // type checking
+            try
             {
-                Admin admin = (Admin)user; // type casting
-                bool userAdded = UserDL.AddUserToDatabase(user); // first user is added
-                if (!userAdded)
+                if (user is Admin) // type checking
                 {
-                    return false;
+                    Admin admin = (Admin)user; // type casting
+                    bool userAdded = UserDL.AddUserToDatabase(user); // first user is added
+                    if (!userAdded)
+                    {
+                        return false;
+                    }
+                    return AdminDL.AddAdminToDatabase(admin);
                 }
-                return AdminDL.AddAdminToDatabase(admin);
+                return false;
             }
-            return false;
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
         }
 
 
         public override bool Update(User user)
         {
-            if (user is Admin admin) // type casting and checking in a single line
+            try
             {
-                bool userUpdated = UserDL.UpdateUserToDatabse(user);
-                if (!userUpdated)
+                if (user is Admin admin) // type casting and checking in a single line
                 {
-                    return false;
+                    bool userUpdated = UserDL.UpdateUserToDatabse(user);
+                    if (!userUpdated)
+                    {
+                        return false;
+                    }
+                    return AdminDL.UpdateAdminToDatabase(admin);
                 }
-                return AdminDL.UpdateAdminToDatabase(admin);
+                return false;
             }
-            return false;
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
         }
 
 
         public override bool Delete(User user)
         {
-            if (user is Admin admin)
+            try
             {
-                bool adminDeleted = AdminDL.DeleteAdminFromDatabase(admin); // first, admin is deleted
-                if (!adminDeleted)
+                if (user is Admin admin)
                 {
-                    return false;
+                    bool adminDeleted = AdminDL.DeleteAdminFromDatabase(admin); // first, admin is deleted
+                    if (!adminDeleted)
+                    {
+                        return false;
+                    }
+                    return UserDL.DeleteUserFromDatabase(user);
                 }
-                return UserDL.DeleteUserFromDatabase(user);
+                return false;
             }
-            return false;
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
         }
 
     }

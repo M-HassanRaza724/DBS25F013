@@ -27,9 +27,9 @@ namespace SoftwareFirmManagement.DL
                 }
                 
             }
-            catch (MySql.Data.MySqlClient.MySqlException e)
+            catch (MySql.Data.MySqlClient.MySqlException)
             {
-                MessageBox.Show($"Database error: {e.Message}.");
+                throw;
             }
         }
 

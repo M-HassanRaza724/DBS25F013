@@ -56,5 +56,6 @@ E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\D
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.Resize.resources
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.UserManagement.resources
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.CustomerManagement.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.UserUpdate.resources
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.MainForm.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.AddUpdateCust.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.UserCredentials.resources

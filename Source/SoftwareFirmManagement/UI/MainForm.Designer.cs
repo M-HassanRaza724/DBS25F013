@@ -38,6 +38,7 @@ namespace SoftwareFirmManagement.UI
             this.btn_close = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_max_min = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_size = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.header1 = new SoftwareFirmManagement.UI.Header();
             this.pnl_main = new System.Windows.Forms.Panel();
             this.pnl_user_management = new System.Windows.Forms.Panel();
             this.btn_employee_management = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@ namespace SoftwareFirmManagement.UI
             this.btn_dashboard = new System.Windows.Forms.Button();
             this.pnl_menu = new System.Windows.Forms.Panel();
             this.btn_menu = new System.Windows.Forms.Button();
-            this.header1 = new SoftwareFirmManagement.UI.Header();
             this.sidePanel1 = new SoftwareFirmManagement.UI.SidePanel();
             this.panel1.SuspendLayout();
             this.pnl_user_management.SuspendLayout();
@@ -636,6 +636,13 @@ namespace SoftwareFirmManagement.UI
             this.MainPalette.ContextMenu.StateCommon.ItemTextStandard.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.MainPalette.ContextMenu.StateCommon.ItemTextStandard.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.MainPalette.ContextMenu.StateCommon.ItemTextStandard.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainPalette.ControlStyles.ControlAlternate.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.MainPalette.ControlStyles.ControlAlternate.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.MainPalette.ControlStyles.ControlAlternate.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.MainPalette.ControlStyles.ControlAlternate.StateCommon.Border.Rounding = 20;
+            this.MainPalette.ControlStyles.ControlAlternate.StateCommon.Border.Width = 3;
             this.MainPalette.ControlStyles.ControlCommon.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.MainPalette.ControlStyles.ControlCommon.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.MainPalette.ControlStyles.ControlCommon.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
@@ -700,6 +707,15 @@ namespace SoftwareFirmManagement.UI
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.MainPalette.GridStyles.GridCommon.StateCommon.HeaderRow.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.MainPalette.GridStyles.GridCommon.StateCommon.HeaderRow.Content.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.MainPalette.GridStyles.GridCommon.StateDisabled.Background.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.MainPalette.GridStyles.GridCommon.StateDisabled.Background.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.MainPalette.GridStyles.GridCommon.StateDisabled.DataCell.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.MainPalette.GridStyles.GridCommon.StateDisabled.DataCell.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.MainPalette.GridStyles.GridCommon.StateDisabled.HeaderColumn.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.MainPalette.GridStyles.GridCommon.StateDisabled.HeaderColumn.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.MainPalette.GridStyles.GridCommon.StateDisabled.HeaderColumn.Back.ColorAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Local;
+            this.MainPalette.GridStyles.GridCommon.StateDisabled.HeaderRow.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.MainPalette.GridStyles.GridCommon.StateDisabled.HeaderRow.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.MainPalette.GridStyles.GridCommon.StateSelected.DataCell.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.MainPalette.GridStyles.GridCommon.StateSelected.DataCell.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.MainPalette.GridStyles.GridList.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
@@ -855,6 +871,15 @@ namespace SoftwareFirmManagement.UI
             this.btn_size.Values.Text = "";
             this.btn_size.Click += new System.EventHandler(this.btn_size_Click);
             // 
+            // header1
+            // 
+            this.header1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.header1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.header1.Location = new System.Drawing.Point(0, 0);
+            this.header1.Name = "header1";
+            this.header1.Size = new System.Drawing.Size(352, 50);
+            this.header1.TabIndex = 3;
+            // 
             // pnl_main
             // 
             this.pnl_main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -990,15 +1015,6 @@ namespace SoftwareFirmManagement.UI
             this.btn_menu.Text = "Menu";
             this.btn_menu.UseVisualStyleBackColor = true;
             this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
-            // 
-            // header1
-            // 
-            this.header1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.header1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.header1.Location = new System.Drawing.Point(0, 0);
-            this.header1.Name = "header1";
-            this.header1.Size = new System.Drawing.Size(352, 50);
-            this.header1.TabIndex = 3;
             // 
             // sidePanel1
             // 

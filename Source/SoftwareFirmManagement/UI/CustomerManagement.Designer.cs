@@ -31,52 +31,57 @@ namespace SoftwareFirmManagement.UI
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.gbx_direction = new ComponentFactory.Krypton.Toolkit.KryptonGroup();
-            this.rdo_sort_desc = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
-            this.rdo_sort_asc = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
-            this.gbx_sort_by = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.rdo_sort_username = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
-            this.rdo_sort_customer_name = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
-            this.rdo_sort_customer_id = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.gbox_grd_users = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.dgv_customers = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Details = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn();
+            this.Delete = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel_filters = new System.Windows.Forms.TableLayoutPanel();
+            this.menuStrip_filters = new System.Windows.Forms.MenuStrip();
+            this.filter_item_sort_by = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.filter_item_direction = new System.Windows.Forms.ToolStripMenuItem();
+            this.ascendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.descendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lbl_filter = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonContextMenuItems1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
+            this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
+            this.contextMenuStrip_grd = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Details = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn();
-            this.Delete = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel_filters = new System.Windows.Forms.TableLayoutPanel();
-            this.cbx_sort = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
-            this.cbtn_direction = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
-            this.lbl_filter = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.txt_first_name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gbx_direction)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbx_direction.Panel)).BeginInit();
-            this.gbx_direction.Panel.SuspendLayout();
-            this.gbx_direction.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gbx_sort_by)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbx_sort_by.Panel)).BeginInit();
-            this.gbx_sort_by.Panel.SuspendLayout();
-            this.gbx_sort_by.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_users)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_users.Panel)).BeginInit();
             this.gbox_grd_users.Panel.SuspendLayout();
             this.gbox_grd_users.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_customers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel_filters.SuspendLayout();
+            this.menuStrip_filters.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.contextMenuStrip_grd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
+            this.kryptonGroupBox1.Panel.SuspendLayout();
+            this.kryptonGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -96,139 +101,12 @@ namespace SoftwareFirmManagement.UI
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.gbx_direction);
-            this.panel1.Controls.Add(this.gbx_sort_by);
             this.panel1.Controls.Add(this.gbox_grd_users);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 53);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 446);
             this.panel1.TabIndex = 2;
-            // 
-            // gbx_direction
-            // 
-            this.gbx_direction.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gbx_direction.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ButtonStandalone;
-            this.gbx_direction.Location = new System.Drawing.Point(609, 0);
-            this.gbx_direction.Name = "gbx_direction";
-            // 
-            // gbx_direction.Panel
-            // 
-            this.gbx_direction.Panel.Controls.Add(this.rdo_sort_desc);
-            this.gbx_direction.Panel.Controls.Add(this.rdo_sort_asc);
-            this.gbx_direction.Size = new System.Drawing.Size(149, 87);
-            this.gbx_direction.TabIndex = 1;
-            this.gbx_direction.Visible = false;
-            // 
-            // rdo_sort_desc
-            // 
-            this.rdo_sort_desc.AutoCheck = false;
-            this.rdo_sort_desc.Images.CheckedNormal = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_desc.Images.CheckedPressed = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
-            this.rdo_sort_desc.Images.CheckedTracking = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_desc.Images.Common = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
-            this.rdo_sort_desc.Images.UncheckedNormal = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
-            this.rdo_sort_desc.Images.UncheckedPressed = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_desc.Images.UncheckedTracking = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
-            this.rdo_sort_desc.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
-            this.rdo_sort_desc.Location = new System.Drawing.Point(8, 37);
-            this.rdo_sort_desc.Name = "rdo_sort_desc";
-            this.rdo_sort_desc.Size = new System.Drawing.Size(101, 23);
-            this.rdo_sort_desc.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
-            this.rdo_sort_desc.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
-            this.rdo_sort_desc.TabIndex = 28;
-            this.rdo_sort_desc.Values.Text = "Descending";
-            // 
-            // rdo_sort_asc
-            // 
-            this.rdo_sort_asc.Images.CheckedNormal = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_asc.Images.CheckedPressed = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
-            this.rdo_sort_asc.Images.CheckedTracking = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_asc.Images.Common = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
-            this.rdo_sort_asc.Images.UncheckedNormal = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
-            this.rdo_sort_asc.Images.UncheckedPressed = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_asc.Images.UncheckedTracking = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
-            this.rdo_sort_asc.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
-            this.rdo_sort_asc.Location = new System.Drawing.Point(8, 8);
-            this.rdo_sort_asc.Name = "rdo_sort_asc";
-            this.rdo_sort_asc.Size = new System.Drawing.Size(94, 23);
-            this.rdo_sort_asc.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
-            this.rdo_sort_asc.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
-            this.rdo_sort_asc.TabIndex = 27;
-            this.rdo_sort_asc.Values.Text = "Ascending";
-            // 
-            // gbx_sort_by
-            // 
-            this.gbx_sort_by.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gbx_sort_by.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ButtonStandalone;
-            this.gbx_sort_by.Location = new System.Drawing.Point(375, 0);
-            this.gbx_sort_by.Name = "gbx_sort_by";
-            // 
-            // gbx_sort_by.Panel
-            // 
-            this.gbx_sort_by.Panel.Controls.Add(this.rdo_sort_username);
-            this.gbx_sort_by.Panel.Controls.Add(this.rdo_sort_customer_name);
-            this.gbx_sort_by.Panel.Controls.Add(this.rdo_sort_customer_id);
-            this.gbx_sort_by.Size = new System.Drawing.Size(133, 103);
-            this.gbx_sort_by.TabIndex = 1;
-            this.gbx_sort_by.Values.Heading = "";
-            this.gbx_sort_by.Visible = false;
-            // 
-            // rdo_sort_username
-            // 
-            this.rdo_sort_username.AutoCheck = false;
-            this.rdo_sort_username.Images.CheckedNormal = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_username.Images.CheckedPressed = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
-            this.rdo_sort_username.Images.CheckedTracking = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_username.Images.Common = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
-            this.rdo_sort_username.Images.UncheckedNormal = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
-            this.rdo_sort_username.Images.UncheckedPressed = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_username.Images.UncheckedTracking = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
-            this.rdo_sort_username.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
-            this.rdo_sort_username.Location = new System.Drawing.Point(-3, 54);
-            this.rdo_sort_username.Name = "rdo_sort_username";
-            this.rdo_sort_username.Size = new System.Drawing.Size(91, 23);
-            this.rdo_sort_username.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
-            this.rdo_sort_username.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
-            this.rdo_sort_username.TabIndex = 27;
-            this.rdo_sort_username.Values.Text = "Username";
-            // 
-            // rdo_sort_customer_name
-            // 
-            this.rdo_sort_customer_name.AutoCheck = false;
-            this.rdo_sort_customer_name.Images.CheckedNormal = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_customer_name.Images.CheckedPressed = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
-            this.rdo_sort_customer_name.Images.CheckedTracking = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_customer_name.Images.Common = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
-            this.rdo_sort_customer_name.Images.UncheckedNormal = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
-            this.rdo_sort_customer_name.Images.UncheckedPressed = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_customer_name.Images.UncheckedTracking = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
-            this.rdo_sort_customer_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
-            this.rdo_sort_customer_name.Location = new System.Drawing.Point(-3, 31);
-            this.rdo_sort_customer_name.Name = "rdo_sort_customer_name";
-            this.rdo_sort_customer_name.Size = new System.Drawing.Size(124, 23);
-            this.rdo_sort_customer_name.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
-            this.rdo_sort_customer_name.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
-            this.rdo_sort_customer_name.TabIndex = 26;
-            this.rdo_sort_customer_name.Values.Text = "CustomerName";
-            // 
-            // rdo_sort_customer_id
-            // 
-            this.rdo_sort_customer_id.Images.CheckedNormal = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_customer_id.Images.CheckedPressed = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
-            this.rdo_sort_customer_id.Images.CheckedTracking = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_customer_id.Images.Common = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
-            this.rdo_sort_customer_id.Images.UncheckedNormal = global::SoftwareFirmManagement.Properties.Resources.unchecked_normal_small;
-            this.rdo_sort_customer_id.Images.UncheckedPressed = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
-            this.rdo_sort_customer_id.Images.UncheckedTracking = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
-            this.rdo_sort_customer_id.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
-            this.rdo_sort_customer_id.Location = new System.Drawing.Point(-3, 7);
-            this.rdo_sort_customer_id.Name = "rdo_sort_customer_id";
-            this.rdo_sort_customer_id.Size = new System.Drawing.Size(100, 23);
-            this.rdo_sort_customer_id.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
-            this.rdo_sort_customer_id.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
-            this.rdo_sort_customer_id.TabIndex = 25;
-            this.rdo_sort_customer_id.Values.Text = "CustomerId";
             // 
             // gbox_grd_users
             // 
@@ -240,6 +118,7 @@ namespace SoftwareFirmManagement.UI
             // 
             // gbox_grd_users.Panel
             // 
+            this.gbox_grd_users.Panel.Controls.Add(this.kryptonGroupBox1);
             this.gbox_grd_users.Panel.Controls.Add(this.dgv_customers);
             this.gbox_grd_users.Size = new System.Drawing.Size(783, 434);
             this.gbox_grd_users.TabIndex = 1;
@@ -266,58 +145,14 @@ namespace SoftwareFirmManagement.UI
             this.dgv_customers.Name = "dgv_customers";
             this.dgv_customers.Size = new System.Drawing.Size(769, 401);
             this.dgv_customers.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "CustomerId";
-            this.dataGridViewTextBoxColumn1.HeaderText = "CustomerId";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dgv_customers.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_customers_CellMouseDown);
             // 
             // FullName
             // 
+            this.FullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.FullName.DataPropertyName = "Name";
             this.FullName.HeaderText = "FullName";
             this.FullName.Name = "FullName";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "UserId";
-            this.dataGridViewTextBoxColumn3.HeaderText = "UserId";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Username";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Username";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Email";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Password";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Password";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "RoleId";
-            this.dataGridViewTextBoxColumn7.HeaderText = "RoleId";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Role";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Role";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Visible = false;
             // 
             // Details
             // 
@@ -337,15 +172,11 @@ namespace SoftwareFirmManagement.UI
             this.Delete.Name = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataSource = typeof(SoftwareFirmManagement.BL.Customer);
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel_filters, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -359,51 +190,97 @@ namespace SoftwareFirmManagement.UI
             // 
             // tableLayoutPanel_filters
             // 
-            this.tableLayoutPanel_filters.ColumnCount = 3;
-            this.tableLayoutPanel_filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel_filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
-            this.tableLayoutPanel_filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
-            this.tableLayoutPanel_filters.Controls.Add(this.cbx_sort, 1, 0);
-            this.tableLayoutPanel_filters.Controls.Add(this.cbtn_direction, 2, 0);
+            this.tableLayoutPanel_filters.ColumnCount = 2;
+            this.tableLayoutPanel_filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel_filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel_filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel_filters.Controls.Add(this.menuStrip_filters, 1, 0);
             this.tableLayoutPanel_filters.Controls.Add(this.lbl_filter, 0, 0);
             this.tableLayoutPanel_filters.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel_filters.Location = new System.Drawing.Point(161, 0);
+            this.tableLayoutPanel_filters.Location = new System.Drawing.Point(322, 0);
             this.tableLayoutPanel_filters.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel_filters.Name = "tableLayoutPanel_filters";
             this.tableLayoutPanel_filters.RowCount = 1;
             this.tableLayoutPanel_filters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel_filters.Size = new System.Drawing.Size(646, 50);
+            this.tableLayoutPanel_filters.Size = new System.Drawing.Size(485, 50);
             this.tableLayoutPanel_filters.TabIndex = 3;
             // 
-            // cbx_sort
+            // menuStrip_filters
             // 
-            this.cbx_sort.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbx_sort.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
-            this.cbx_sort.Location = new System.Drawing.Point(214, 6);
-            this.cbx_sort.Name = "cbx_sort";
-            this.cbx_sort.Size = new System.Drawing.Size(136, 38);
-            this.cbx_sort.TabIndex = 36;
-            this.cbx_sort.Values.ExtraText = "▲";
-            this.cbx_sort.Values.Text = "Sort By";
-            this.cbx_sort.CheckedChanged += new System.EventHandler(this.cbx_sort_CheckedChanged);
+            this.menuStrip_filters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.menuStrip_filters.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menuStrip_filters.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.menuStrip_filters.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filter_item_sort_by,
+            this.filter_item_direction});
+            this.menuStrip_filters.Location = new System.Drawing.Point(194, 0);
+            this.menuStrip_filters.Name = "menuStrip_filters";
+            this.menuStrip_filters.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip_filters.Size = new System.Drawing.Size(291, 50);
+            this.menuStrip_filters.TabIndex = 1;
+            this.menuStrip_filters.Text = "Filters";
             // 
-            // cbtn_direction
+            // filter_item_sort_by
             // 
-            this.cbtn_direction.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbtn_direction.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
-            this.cbtn_direction.Location = new System.Drawing.Point(448, 6);
-            this.cbtn_direction.Name = "cbtn_direction";
-            this.cbtn_direction.Size = new System.Drawing.Size(152, 38);
-            this.cbtn_direction.TabIndex = 35;
-            this.cbtn_direction.Values.ExtraText = "▲";
-            this.cbtn_direction.Values.Text = "Direction";
-            this.cbtn_direction.CheckedChanged += new System.EventHandler(this.cbtn_direction_CheckedChanged);
+            this.filter_item_sort_by.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.customerNameToolStripMenuItem,
+            this.userNameToolStripMenuItem});
+            this.filter_item_sort_by.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.filter_item_sort_by.Name = "filter_item_sort_by";
+            this.filter_item_sort_by.Size = new System.Drawing.Size(56, 46);
+            this.filter_item_sort_by.Text = "Sort By";
+            // 
+            // customerNameToolStripMenuItem
+            // 
+            this.customerNameToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.customerNameToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.customerNameToolStripMenuItem.Name = "customerNameToolStripMenuItem";
+            this.customerNameToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.customerNameToolStripMenuItem.Text = "CustomerName";
+            this.customerNameToolStripMenuItem.Click += new System.EventHandler(this.customerNameToolStripMenuItem_Click);
+            // 
+            // userNameToolStripMenuItem
+            // 
+            this.userNameToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.userNameToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.userNameToolStripMenuItem.Name = "userNameToolStripMenuItem";
+            this.userNameToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.userNameToolStripMenuItem.Text = "UserName";
+            this.userNameToolStripMenuItem.Click += new System.EventHandler(this.userNameToolStripMenuItem_Click);
+            // 
+            // filter_item_direction
+            // 
+            this.filter_item_direction.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ascendingToolStripMenuItem,
+            this.descendingToolStripMenuItem});
+            this.filter_item_direction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.filter_item_direction.Name = "filter_item_direction";
+            this.filter_item_direction.Size = new System.Drawing.Size(67, 46);
+            this.filter_item_direction.Text = "Direction";
+            // 
+            // ascendingToolStripMenuItem
+            // 
+            this.ascendingToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.ascendingToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.ascendingToolStripMenuItem.Name = "ascendingToolStripMenuItem";
+            this.ascendingToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.ascendingToolStripMenuItem.Text = "Ascending";
+            this.ascendingToolStripMenuItem.Click += new System.EventHandler(this.ascendingToolStripMenuItem_Click);
+            // 
+            // descendingToolStripMenuItem
+            // 
+            this.descendingToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.descendingToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.descendingToolStripMenuItem.Name = "descendingToolStripMenuItem";
+            this.descendingToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.descendingToolStripMenuItem.Text = "Descending";
+            this.descendingToolStripMenuItem.Click += new System.EventHandler(this.descendingToolStripMenuItem_Click);
             // 
             // lbl_filter
             // 
             this.lbl_filter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_filter.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_filter.Location = new System.Drawing.Point(104, 12);
+            this.lbl_filter.Location = new System.Drawing.Point(137, 12);
             this.lbl_filter.Name = "lbl_filter";
             this.lbl_filter.Size = new System.Drawing.Size(54, 26);
             this.lbl_filter.TabIndex = 38;
@@ -411,23 +288,156 @@ namespace SoftwareFirmManagement.UI
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.kryptonTextBox1);
             this.panel2.Controls.Add(this.kryptonButton1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(161, 50);
+            this.panel2.Size = new System.Drawing.Size(322, 50);
             this.panel2.TabIndex = 4;
+            // 
+            // kryptonTextBox1
+            // 
+            this.kryptonTextBox1.Location = new System.Drawing.Point(167, 0);
+            this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.Size = new System.Drawing.Size(138, 38);
+            this.kryptonTextBox1.TabIndex = 1;
+            this.kryptonTextBox1.Text = "kryptonTextBox1";
             // 
             // kryptonButton1
             // 
             this.kryptonButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.kryptonButton1.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
-            this.kryptonButton1.Location = new System.Drawing.Point(12, 3);
+            this.kryptonButton1.Location = new System.Drawing.Point(19, 3);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.Size = new System.Drawing.Size(142, 44);
             this.kryptonButton1.TabIndex = 0;
             this.kryptonButton1.Values.Text = "Add Customers";
+            // 
+            // kryptonContextMenuItems1
+            // 
+            this.kryptonContextMenuItems1.Items.AddRange(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] {
+            this.kryptonContextMenuItem1});
+            // 
+            // kryptonContextMenuItem1
+            // 
+            this.kryptonContextMenuItem1.Text = "Menu Item";
+            // 
+            // contextMenuStrip_grd
+            // 
+            this.contextMenuStrip_grd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.contextMenuStrip_grd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.contextMenuStrip_grd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.contextMenuStrip_grd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.contextMenuStrip_grd.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.contextMenuStrip_grd.Name = "contextMenuStrip_grd";
+            this.contextMenuStrip_grd.Size = new System.Drawing.Size(113, 48);
+            this.contextMenuStrip_grd.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_grd_Opening);
+            this.contextMenuStrip_grd.PaddingChanged += new System.EventHandler(this.contextMenuStrip_grd_PaddingChanged);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.deleteToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Trash;
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // kryptonGroupBox1
+            // 
+            this.kryptonGroupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.kryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlAlternate;
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(166, 3);
+            this.kryptonGroupBox1.Name = "kryptonGroupBox1";
+            // 
+            // kryptonGroupBox1.Panel
+            // 
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonTextBox3);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txt_first_name);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(495, 306);
+            this.kryptonGroupBox1.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "CustomerId";
+            this.dataGridViewTextBoxColumn1.HeaderText = "CustomerId";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "UserId";
+            this.dataGridViewTextBoxColumn3.HeaderText = "UserId";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Username";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Username";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Password";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Password";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "RoleId";
+            this.dataGridViewTextBoxColumn7.HeaderText = "RoleId";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Role";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Role";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Visible = false;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataSource = typeof(SoftwareFirmManagement.BL.Customer);
+            // 
+            // txt_first_name
+            // 
+            this.txt_first_name.Location = new System.Drawing.Point(52, 48);
+            this.txt_first_name.Name = "txt_first_name";
+            this.txt_first_name.Size = new System.Drawing.Size(190, 38);
+            this.txt_first_name.TabIndex = 0;
+            this.txt_first_name.Text = "FirstName";
+            // 
+            // kryptonTextBox3
+            // 
+            this.kryptonTextBox3.Location = new System.Drawing.Point(143, 116);
+            this.kryptonTextBox3.Name = "kryptonTextBox3";
+            this.kryptonTextBox3.Size = new System.Drawing.Size(190, 38);
+            this.kryptonTextBox3.TabIndex = 1;
+            this.kryptonTextBox3.Text = "kryptonTextBox3";
             // 
             // CustomerManagement
             // 
@@ -437,30 +447,31 @@ namespace SoftwareFirmManagement.UI
             this.ClientSize = new System.Drawing.Size(807, 502);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MainMenuStrip = this.menuStrip_filters;
             this.Name = "CustomerManagement";
             this.Text = "UserManagement";
+            this.Load += new System.EventHandler(this.CustomerManagement_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gbx_direction.Panel)).EndInit();
-            this.gbx_direction.Panel.ResumeLayout(false);
-            this.gbx_direction.Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gbx_direction)).EndInit();
-            this.gbx_direction.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gbx_sort_by.Panel)).EndInit();
-            this.gbx_sort_by.Panel.ResumeLayout(false);
-            this.gbx_sort_by.Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gbx_sort_by)).EndInit();
-            this.gbx_sort_by.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_users.Panel)).EndInit();
             this.gbox_grd_users.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_users)).EndInit();
             this.gbox_grd_users.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_customers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel_filters.ResumeLayout(false);
             this.tableLayoutPanel_filters.PerformLayout();
+            this.menuStrip_filters.ResumeLayout(false);
+            this.menuStrip_filters.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.contextMenuStrip_grd.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
+            this.kryptonGroupBox1.Panel.ResumeLayout(false);
+            this.kryptonGroupBox1.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
+            this.kryptonGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -471,20 +482,11 @@ namespace SoftwareFirmManagement.UI
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dgv_customers;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox gbox_grd_users;
         private System.Windows.Forms.Panel panel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonCheckButton cbtn_direction;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_filters;
-        private ComponentFactory.Krypton.Toolkit.KryptonCheckButton cbx_sort;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_filter;
-        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox gbx_sort_by;
-        private ComponentFactory.Krypton.Toolkit.KryptonGroup gbx_direction;
-        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_customer_name;
-        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_customer_id;
-        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_desc;
-        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_asc;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
-        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_username;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIdDataGridViewTextBoxColumn;
@@ -493,6 +495,7 @@ namespace SoftwareFirmManagement.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn roleIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn roleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource customerBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -503,6 +506,21 @@ namespace SoftwareFirmManagement.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn Details;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn Delete;
-        private System.Windows.Forms.BindingSource customerBindingSource;
+        private System.Windows.Forms.MenuStrip menuStrip_filters;
+        private System.Windows.Forms.ToolStripMenuItem filter_item_sort_by;
+        private System.Windows.Forms.ToolStripMenuItem customerNameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem userNameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filter_item_direction;
+        private System.Windows.Forms.ToolStripMenuItem ascendingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem descendingToolStripMenuItem;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems kryptonContextMenuItems1;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip_grd;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txt_first_name;
     }
 }

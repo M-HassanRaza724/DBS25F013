@@ -22,7 +22,7 @@ namespace SoftwareFirmManagement.BL
 
         public string Name { get { return name; } set { name = value; } }
 
-        public static List<Customer> GetAllCustomers(string name, string sortby, string direction)
+        public static List<Customer> GetAllCustomers(string name = null, string sortby = null, string direction = null)
         {
             // replace with DL logic
             List<Customer> customers = new List<Customer>
@@ -34,5 +34,14 @@ namespace SoftwareFirmManagement.BL
             return customers;
         }
 
+        internal static void DeleteCustomer(int v)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static void UpdateCustomer(int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

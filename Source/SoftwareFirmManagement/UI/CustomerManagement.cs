@@ -27,7 +27,7 @@ namespace SoftwareFirmManagement.UI
         {
             if (search == "Search")
                 search = null;
-            customerBindingSource.DataSource = Customer.GetAllCustomers(search, sortby, direction);
+            customerBindingSource.DataSource = CustomerDL.GetAllCustomers(search, sortby, direction);
             dgv_customers.DataSource = customerBindingSource;
         }
 
@@ -78,7 +78,7 @@ namespace SoftwareFirmManagement.UI
                 try
                 {
                     Customer customer = new Customer(Convert.ToInt32(currentContextRow.Cells["UserIdColumn"].Value), userCredentials1.Username, userCredentials1.Email, userCredentials1.Password, LookupDL.GetLookupId("user_role", "Customer"), Convert.ToInt32(currentContextRow.Cells["CustomerIdColumn"].Value), txt_full_name.TextBoxText);
-                    Customer.UpdateCustomer(customer);
+                    customer.Update(customer);
                 }
                 catch (Exception ex)
                 {
@@ -91,7 +91,7 @@ namespace SoftwareFirmManagement.UI
                 try
                 {
                     Customer customer = new Customer(userCredentials1.Username, userCredentials1.Email, userCredentials1.Password, LookupDL.GetLookupId("user_role", "Customer"), txt_full_name.TextBoxText);
-                    Customer.AddCustomer(customer);
+                    customer.Add(customer);
                 }
                 catch (Exception ex)
                 {
@@ -138,8 +138,11 @@ namespace SoftwareFirmManagement.UI
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int custId = Convert.ToInt32(currentContextRow.Cells["CustomerIdColumn"].Value);
+            Customer c = new Customer();
+            c.CustomerId = custId;
+           
             if (DialogResult.Yes == MessageBox.Show($"Are you sure you want to delete {currentContextRow.Cells["FullNameColumn"].Value.ToString()}?", "Warning", MessageBoxButtons.YesNo))
-                Customer.DeleteCustomer(custId);
+            c.Delete(c);
         }
 
   

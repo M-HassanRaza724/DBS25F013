@@ -1,10 +1,7 @@
 ﻿using SoftwareFirmManagement.BL;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using ZstdSharp.Unsafe;
 
 namespace SoftwareFirmManagement.DL
 {
@@ -37,6 +34,20 @@ namespace SoftwareFirmManagement.DL
             {
                 throw;
             }
+        }
+        public static List<Customer> GetAllCustomers(string search = null ,string sortby = null, string direction = "ASC")
+        {
+            List<Customer> list = new List<Customer>();
+
+
+            foreach (User u in UserDL.allUsers)
+            {
+                if (u is Customer)
+                {
+                    list.Add((Customer)u);
+                }
+            }
+            return list;
         }
 
 

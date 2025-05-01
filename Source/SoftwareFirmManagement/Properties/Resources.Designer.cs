@@ -63,6 +63,16 @@ namespace SoftwareFirmManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Available_Updates {
+            get {
+                object obj = ResourceManager.GetObject("Available Updates", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap checked_hover_small {
             get {
                 object obj = ResourceManager.GetObject("checked-hover-small", resourceCulture);

@@ -330,6 +330,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Available Updates.png" />
     <Content Include="Resources\checked-hover-small.png" />
     <Content Include="Resources\checked-normal-small.png" />
     <Content Include="Resources\Close.png" />

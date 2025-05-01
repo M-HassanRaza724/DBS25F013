@@ -60,9 +60,6 @@ E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\D
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\Software.768A07E0.Up2Date
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.exe
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.pdb
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.DemoForm.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.Resize.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.UserManagement.resources
 C:\##Semester 2\ClonedFromGitHubDesktop\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.csproj.AssemblyReference.cache
 C:\##Semester 2\ClonedFromGitHubDesktop\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\SoftwareFirmManagement.exe.config
 C:\##Semester 2\ClonedFromGitHubDesktop\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\SoftwareFirmManagement.exe

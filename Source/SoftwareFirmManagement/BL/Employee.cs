@@ -55,46 +55,67 @@ namespace SoftwareFirmManagement.BL
 
         public override bool Add(User user)
         {
-            if (user is Employee emp)
+            try
             {
-                bool userAdded = base.Add(user);
-                if (!userAdded)
+                if (user is Employee emp)
                 {
-                    return false;
+                    bool userAdded = UserDL.AddUserToDatabase(user);
+                    if (!userAdded)
+                    {
+                        return false;
+                    }
+                    return EmployeeDL.AddEmployeeToDatabase(emp);
                 }
-                return EmployeeDL.AddEmployeeToDatabase(emp);
+                return false;
             }
-            return false;
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
         }
 
 
         public override bool Update(User user)
         {
-            if (user is Employee emp)
+            try
             {
-                bool userUpdated = base.Update(user);
-                if (userUpdated == false)
+                if (user is Employee emp)
                 {
-                    return false;
+                    bool userUpdated = UserDL.UpdateUserToDatabse(user);
+                    if (userUpdated == false)
+                    {
+                        return false;
+                    }
+                    return EmployeeDL.UpdateEmployeeToDatabase(emp);
                 }
-                return EmployeeDL.UpdateEmployeeToDatabase(emp);
+                return false;
             }
-            return false;
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
         }
 
 
         public override bool Delete(User user)
         {
-            if (user is Employee emp)
+            try
             {
-                bool empDeleted = EmployeeDL.DeleteEmployeeFromDatabase(emp); // first, delete employee
-                if (!empDeleted)
+                if (user is Employee emp)
                 {
-                    return false;
+                    bool empDeleted = EmployeeDL.DeleteEmployeeFromDatabase(emp); // first, delete employee
+                    if (!empDeleted)
+                    {
+                        return false;
+                    }
+                    return UserDL.DeleteUserFromDatabase(user); // then delete user
                 }
-                return base.Delete(user); // then delete user
+                return false;
             }
-            return false;
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
         }
 
     }

@@ -75,19 +75,40 @@ namespace SoftwareFirmManagement.BL
 
         public bool Add()
         {
-            return ServiceDL.AddServiceToDatabase(this);
+            try
+            {
+                return ServiceDL.AddServiceToDatabase(this);
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
         }
 
 
         public bool Update()
         {
-            return ServiceDL.UpdateServiceToDatabase(this);
+            try
+            {
+                return ServiceDL.UpdateServiceToDatabase(this);
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
         }
 
 
         public bool Delete()
         {
-            return ServiceDL.DeleteServiceFromDatabase(this);
+            try
+            {
+                return ServiceDL.DeleteServiceFromDatabase(this);
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
         }
 
     }

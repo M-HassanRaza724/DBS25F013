@@ -7,7 +7,7 @@ using SoftwareFirmManagement.DL;
 
 namespace SoftwareFirmManagement.BL
 {
-    public class User
+    public abstract class User // abstraction
     {
         protected int userId; // only userId use to be passed to child classes
         protected string username;
@@ -65,22 +65,9 @@ namespace SoftwareFirmManagement.BL
         }
 
 
-        public virtual bool Add(User user)
-        {
-            return UserDL.AddUserToDatabase(user);
-        }
-
-
-        public virtual bool Update(User user)
-        {
-            return UserDL.UpdateUserToDatabse(user);
-        }
-
-
-        public virtual bool Delete(User user)
-        {
-            return UserDL.DeleteUserFromDatabase(user);
-        }
+        public abstract bool Add(User user);
+        public abstract bool Update(User user);
+        public abstract bool Delete(User user);
 
     }
 }

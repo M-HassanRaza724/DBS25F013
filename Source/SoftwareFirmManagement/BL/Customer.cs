@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoftwareFirmManagement.DL;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -24,48 +25,85 @@ namespace SoftwareFirmManagement.BL
             this.name = name;
         }
 
-        public int CustomerId { get { return customerId; } set { customerId = value; } }
-
-        public string Name { get { return name; } set { name = value; } }
-
-        public static List<Customer> GetAllCustomers(string name = null, string sortby = null, string direction = null)
+        public int CustomerId
         {
-            // replace with DL logic
-            List<Customer> customers = new List<Customer>
+            get { return customerId; }
+            set { customerId = value; }
+        }
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+
+
+        public override bool Add(User user)
+        {
+            try
             {
-                { new Customer(0,"ali12","ali@gmail.com","123###",0,0,"Ali Zahid") },
-                { new Customer(0,"umer12","umer@gmail.com","123###",0,0,"chota umer") },
-                { new Customer(0,"saadi12","asaad@gmail.com","123###",0,0,"Saad nadeem")}
-            };
-            return customers;
+                if (user is Customer customer)
+                {
+                    bool userAdded = UserDL.AddUserToDatabase(user);
+                    if (!userAdded)
+                    {
+                        return false;
+                    }
+                    return CustomerDL.AddCustomerToDatabase(customer);
+                }
+                return false;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
         }
 
-        internal static void DeleteCustomer(int custId)
+
+        public override bool Update(User user)
         {
-            MessageBox.Show("dummy customerDeleted");
-
-            //throw new NotImplementedException();
+            try
+            {
+                if (user is Customer customer)
+                {
+                    bool userUpdated = UserDL.UpdateUserToDatabse(user);
+                    if (!userUpdated)
+                    {
+                        return false;
+                    }
+                    return CustomerDL.UpdateCustomerToDatabase(customer);
+                }
+                return false;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
         }
 
-        internal static Customer GetCustomer(int custId)
+
+
+        public override bool Delete(User user)
         {
-            MessageBox.Show("dummy customerDeleted");
-
-            //throw new NotImplementedException();
-            return null;
+            try
+            {
+                if (user is Customer customer)
+                {
+                    bool customerDeleted = CustomerDL.DeleteCustomerFromDatabase(customer);
+                    if (!customerDeleted)
+                    {
+                        return false;
+                    }
+                    return CustomerDL.DeleteCustomerFromDatabase(customer);
+                }
+                return false;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
         }
 
-        internal static void UpdateCustomer(Customer c)
-        {
-            MessageBox.Show("dummy customerUpdated");
-            //throw new NotImplementedException();
-        }
-
-        internal static void AddCustomer(Customer customer)
-        {
-            MessageBox.Show("dummy customer added");
-
-            //throw new NotImplementedException();
-        }
     }
 }

@@ -16,6 +16,7 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
+                allServices.Clear();
                 string query = "SELECT * FROM services s LEFT JOIN serviceinvolved si ON si.service_id = s.service_id LEFT JOIN servicetechnologies st ON st.service_id = s.service_id;";
                 var data = DatabaseHelper.Instance.GetData(query);
                 while (data.Read())
@@ -45,20 +46,25 @@ namespace SoftwareFirmManagement.DL
         }
 
 
-        public static bool AddServiceToDatabase(Service service)
+        public static bool AddServiceToDatabase(Service service) // service name must be unique
         {
             try
             {
                 string query1 = $"INSERT INTO services VALUES ({service.ServiceId}, '{service.Name}', {service.CategoryId}, '{service.Description}');";
                 DatabaseHelper.Instance.Update(query1);
+                LoadAllServices();
+                int serviceId = allServices
+                                .Where(s => s.Name == service.Name)
+                                .Select(s => s.ServiceId)
+                                .FirstOrDefault();
                 if (service.Subservice != null)
                 {
-                    string query = $"INSERT INTO serviceinvolved VALUES ({service.ServiceId}, '{service.Subservice.Description}');";
+                    string query = $"INSERT INTO serviceinvolved VALUES ({serviceId}, '{service.Subservice.Description}');";
                     DatabaseHelper.Instance.Update(query);
                 }
                 if (service.Technology != null)
                 {
-                    string query = $"INSERT INTO servicetechnologies VALUES ({service.ServiceId}, '{service.Technology.Description}');";
+                    string query = $"INSERT INTO servicetechnologies VALUES ({serviceId}, '{service.Technology.Description}');";
                     DatabaseHelper.Instance.Update (query);
                 }
                 return true;

@@ -64,12 +64,14 @@ namespace SoftwareFirmManagement.BL
         public void AddSubservice(string description)
         {
             subservice = new SubService(serviceId, description);
+            ServiceDL.LoadAllServices();
         }
 
 
         public void AddTechnology(string description)
         {
             technology = new Technology(serviceId, description);
+            ServiceDL.LoadAllServices();
         }
 
 
@@ -77,7 +79,9 @@ namespace SoftwareFirmManagement.BL
         {
             try
             {
-                return ServiceDL.AddServiceToDatabase(this);
+                bool status = ServiceDL.AddServiceToDatabase(this);
+                ServiceDL.LoadAllServices();
+                return status;
             }
             catch (MySql.Data.MySqlClient.MySqlException)
             {
@@ -90,7 +94,9 @@ namespace SoftwareFirmManagement.BL
         {
             try
             {
-                return ServiceDL.UpdateServiceToDatabase(this);
+                bool status = ServiceDL.UpdateServiceToDatabase(this);
+                ServiceDL.LoadAllServices();
+                return status;
             }
             catch (MySql.Data.MySqlClient.MySqlException)
             {
@@ -103,7 +109,9 @@ namespace SoftwareFirmManagement.BL
         {
             try
             {
-                return ServiceDL.DeleteServiceFromDatabase(this);
+                bool status = ServiceDL.DeleteServiceFromDatabase(this);
+                ServiceDL.LoadAllServices();
+                return status;
             }
             catch (MySql.Data.MySqlClient.MySqlException)
             {

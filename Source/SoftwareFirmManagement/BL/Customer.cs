@@ -14,17 +14,24 @@ namespace SoftwareFirmManagement.BL
         private int customerId;
         private string name;
 
+
         public Customer(int userId, string username, string email, string password, int roleId, int customerId, string name) : base(userId, username, email, password, roleId)
         {
             this.customerId = customerId;
             this.name = name;
         }
+
+
         public Customer(string username, string email, string password, int roleId, string name) : base(username, email, password, roleId)
         {
             this.name = name;
         }
 
+
+
         public Customer() { }
+
+
         public int CustomerId
         {
             get { return customerId; }
@@ -50,7 +57,16 @@ namespace SoftwareFirmManagement.BL
                     {
                         return false;
                     }
-                    return CustomerDL.AddCustomerToDatabase(customer);
+                    // if we don't ask UserId from UI, we have to figure out the UserId the DB has assigned (through auto-increment)
+                    List<Customer> onlyUsers = CustomerDL.GetOnlyUsersFromDatabase();
+                    int userId = onlyUsers
+                                 .Where(c => c.Username == user.Username)
+                                 .Select(c => c.UserId)
+                                 .FirstOrDefault();
+                    customer.UserId = userId;
+                    bool status = CustomerDL.AddCustomerToDatabase(customer);
+                    UserDL.LoadAllUsers();
+                    return status;
                 }
                 return false;
             }
@@ -72,7 +88,9 @@ namespace SoftwareFirmManagement.BL
                     {
                         return false;
                     }
-                    return CustomerDL.UpdateCustomerToDatabase(customer);
+                    bool status = CustomerDL.UpdateCustomerToDatabase(customer);
+                    UserDL.LoadAllUsers();
+                    return status;
                 }
                 return false;
             }
@@ -95,7 +113,9 @@ namespace SoftwareFirmManagement.BL
                     {
                         return false;
                     }
-                    return CustomerDL.DeleteCustomerFromDatabase(customer);
+                    bool status = CustomerDL.DeleteCustomerFromDatabase(customer);
+                    UserDL.LoadAllUsers();
+                    return status;
                 }
                 return false;
             }

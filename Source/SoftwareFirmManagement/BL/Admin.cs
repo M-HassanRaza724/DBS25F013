@@ -59,7 +59,15 @@ namespace SoftwareFirmManagement.BL
                     {
                         return false;
                     }
-                    return AdminDL.AddAdminToDatabase(admin);
+                    List<Admin> onlyUsers = AdminDL.GetOnlyUsersFromDatabase();
+                    int userId = onlyUsers
+                                 .Where(u => u.Username == user.Username)
+                                 .Select(u => u.UserId)
+                                 .FirstOrDefault();
+                    admin.UserId = userId;
+                    bool status = AdminDL.AddAdminToDatabase(admin);
+                    UserDL.LoadAllUsers();
+                    return status;
                 }
                 return false;
             }
@@ -81,7 +89,9 @@ namespace SoftwareFirmManagement.BL
                     {
                         return false;
                     }
-                    return AdminDL.UpdateAdminToDatabase(admin);
+                    bool status = AdminDL.UpdateAdminToDatabase(admin);
+                    UserDL.LoadAllUsers();
+                    return status;
                 }
                 return false;
             }
@@ -103,7 +113,9 @@ namespace SoftwareFirmManagement.BL
                     {
                         return false;
                     }
-                    return UserDL.DeleteUserFromDatabase(user);
+                    bool status = UserDL.DeleteUserFromDatabase(user);
+                    UserDL.LoadAllUsers();
+                    return status;
                 }
                 return false;
             }

@@ -16,6 +16,7 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
+                allUsers.Clear();
                 string query2 = "SELECT * FROM users NATURAL JOIN admins;";
                 var data2 = DatabaseHelper.Instance.GetData(query2);
                 while (data2.Read())
@@ -91,7 +92,7 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = $"INSERT INTO users VALUES ({user.UserId}, '{user.Username}', '{user.Email}', {user.Password}, {user.RoleId};)";
+                string query = $"INSERT INTO users VALUES ({user.UserId}, '{user.Username}', '{user.Email}', '{user.Password}', {user.RoleId});";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }

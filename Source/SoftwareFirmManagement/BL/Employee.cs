@@ -64,7 +64,15 @@ namespace SoftwareFirmManagement.BL
                     {
                         return false;
                     }
-                    return EmployeeDL.AddEmployeeToDatabase(emp);
+                    List<Employee> onlyUsers = new List<Employee>();
+                    int userId = onlyUsers
+                                 .Where(e => e.Username == user.Username)
+                                 .Select(e => e.UserId)
+                                 .FirstOrDefault();
+                    emp.UserId = userId;
+                    bool status = EmployeeDL.AddEmployeeToDatabase(emp);
+                    UserDL.LoadAllUsers();
+                    return status;
                 }
                 return false;
             }
@@ -86,7 +94,9 @@ namespace SoftwareFirmManagement.BL
                     {
                         return false;
                     }
-                    return EmployeeDL.UpdateEmployeeToDatabase(emp);
+                    bool status = EmployeeDL.UpdateEmployeeToDatabase(emp);
+                    UserDL.LoadAllUsers();
+                    return status;
                 }
                 return false;
             }
@@ -108,7 +118,9 @@ namespace SoftwareFirmManagement.BL
                     {
                         return false;
                     }
-                    return UserDL.DeleteUserFromDatabase(user); // then delete user
+                    bool status = UserDL.DeleteUserFromDatabase(user); // then delete user
+                    UserDL.LoadAllUsers();
+                    return status;
                 }
                 return false;
             }

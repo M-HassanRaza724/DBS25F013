@@ -32,10 +32,15 @@ namespace SoftwareFirmManagement.DL
                 throw;
             }
         }
+
+
         public static int GetLookupId(string keyGroup, string value)
         {
-            // dl logic please
-            return 0;
+            int lookupId = LookupDL.allLookups
+                           .Where(l => l.KeyGroup == keyGroup && l.Value == value)
+                           .Select(l => l.LookupId)
+                           .FirstOrDefault();
+            return lookupId;
         }
 
     }

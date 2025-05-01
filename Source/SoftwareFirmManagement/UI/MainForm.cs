@@ -16,7 +16,7 @@ namespace SoftwareFirmManagement.UI
         public MainForm()
         {
             InitializeComponent();
-
+            //this.ContextMenuStrip = contextMenuStrip1;
         }
 
         private void kryptonPalette1_PalettePaint(object sender, PaletteLayoutEventArgs e)
@@ -172,6 +172,11 @@ namespace SoftwareFirmManagement.UI
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
 
         }

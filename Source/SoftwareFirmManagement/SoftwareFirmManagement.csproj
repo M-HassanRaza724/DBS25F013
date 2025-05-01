@@ -127,6 +127,12 @@
     <Compile Include="DL\LookupDL.cs" />
     <Compile Include="DL\ServiceDL.cs" />
     <Compile Include="DL\UserDL.cs" />
+    <Compile Include="UI\AddUpdateCust.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\AddUpdateCust.Designer.cs">
+      <DependentUpon>AddUpdateCust.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\CustomerManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,18 +171,27 @@
     <Compile Include="UI\SidePanel.Designer.cs">
       <DependentUpon>SidePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TextBoxWithPlaceHolder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\TextBoxWithPlaceHolder.Designer.cs">
+      <DependentUpon>TextBoxWithPlaceHolder.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UserManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\UserManagement.Designer.cs">
       <DependentUpon>UserManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\UserUpdate.cs">
+    <Compile Include="UI\UserCredentials.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\UserUpdate.Designer.cs">
-      <DependentUpon>UserUpdate.cs</DependentUpon>
+    <Compile Include="UI\UserCredentials.Designer.cs">
+      <DependentUpon>UserCredentials.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\AddUpdateCust.resx">
+      <DependentUpon>AddUpdateCust.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\CustomerManagement.resx">
       <DependentUpon>CustomerManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,11 +220,14 @@
     <EmbeddedResource Include="UI\SidePanel.resx">
       <DependentUpon>SidePanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\TextBoxWithPlaceHolder.resx">
+      <DependentUpon>TextBoxWithPlaceHolder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\UserManagement.resx">
       <DependentUpon>UserManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\UserUpdate.resx">
-      <DependentUpon>UserUpdate.cs</DependentUpon>
+    <EmbeddedResource Include="UI\UserCredentials.resx">
+      <DependentUpon>UserCredentials.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="packages\BouncyCastle.Cryptography.2.5.1\.signature.p7s" />
@@ -305,6 +323,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SoftwareFirmManagement.BL.Customer.datasource" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -322,6 +341,7 @@
     <Content Include="Resources\Minimize Window%28colored%29.png" />
     <Content Include="Resources\Normal Screen.png" />
     <Content Include="Resources\Search.png" />
+    <None Include="Resources\Trash.png" />
     <Content Include="Resources\unchecked-hover-small.png" />
     <Content Include="Resources\unchecked-normal-small.png" />
     <None Include="Resources\User Default%28small%29.png" />

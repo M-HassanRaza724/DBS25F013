@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DemoForm));
             this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -43,12 +44,30 @@
             this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonRadioButton2 = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.cbtn_ = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
+            this.cbtn_direction = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
+            this.gbx_direction = new ComponentFactory.Krypton.Toolkit.KryptonGroup();
+            this.rdo_sort_desc = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.rdo_sort_asc = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.cbx_sort = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
+            this.gbx_sort_by = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.rdo_sort_username = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.rdo_sort_customer_name = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.rdo_sort_customer_id = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.textBoxWithPlaceHolder1 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
             this.kryptonGroupBox1.Panel.SuspendLayout();
             this.kryptonGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_direction)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_direction.Panel)).BeginInit();
+            this.gbx_direction.Panel.SuspendLayout();
+            this.gbx_direction.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_sort_by)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_sort_by.Panel)).BeginInit();
+            this.gbx_sort_by.Panel.SuspendLayout();
+            this.gbx_sort_by.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonButton5
@@ -220,12 +239,174 @@
             this.cbtn_.Values.ExtraText = "▲";
             this.cbtn_.Values.Text = "kryptonCheckButton1";
             // 
+            // cbtn_direction
+            // 
+            this.cbtn_direction.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbtn_direction.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
+            this.cbtn_direction.Location = new System.Drawing.Point(540, 274);
+            this.cbtn_direction.Name = "cbtn_direction";
+            this.cbtn_direction.Size = new System.Drawing.Size(152, 38);
+            this.cbtn_direction.TabIndex = 39;
+            this.cbtn_direction.Values.ExtraText = "▲";
+            this.cbtn_direction.Values.Text = "Direction";
+            // 
+            // gbx_direction
+            // 
+            this.gbx_direction.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gbx_direction.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ButtonStandalone;
+            this.gbx_direction.Location = new System.Drawing.Point(701, 268);
+            this.gbx_direction.Name = "gbx_direction";
+            // 
+            // gbx_direction.Panel
+            // 
+            this.gbx_direction.Panel.Controls.Add(this.rdo_sort_desc);
+            this.gbx_direction.Panel.Controls.Add(this.rdo_sort_asc);
+            this.gbx_direction.Size = new System.Drawing.Size(149, 87);
+            this.gbx_direction.TabIndex = 37;
+            this.gbx_direction.Visible = false;
+            // 
+            // rdo_sort_desc
+            // 
+            this.rdo_sort_desc.AutoCheck = false;
+            this.rdo_sort_desc.Images.CheckedNormal = ((System.Drawing.Image)(resources.GetObject("rdo_sort_desc.Images.CheckedNormal")));
+            this.rdo_sort_desc.Images.CheckedPressed = ((System.Drawing.Image)(resources.GetObject("rdo_sort_desc.Images.CheckedPressed")));
+            this.rdo_sort_desc.Images.CheckedTracking = ((System.Drawing.Image)(resources.GetObject("rdo_sort_desc.Images.CheckedTracking")));
+            this.rdo_sort_desc.Images.Common = ((System.Drawing.Image)(resources.GetObject("rdo_sort_desc.Images.Common")));
+            this.rdo_sort_desc.Images.UncheckedNormal = ((System.Drawing.Image)(resources.GetObject("rdo_sort_desc.Images.UncheckedNormal")));
+            this.rdo_sort_desc.Images.UncheckedPressed = ((System.Drawing.Image)(resources.GetObject("rdo_sort_desc.Images.UncheckedPressed")));
+            this.rdo_sort_desc.Images.UncheckedTracking = ((System.Drawing.Image)(resources.GetObject("rdo_sort_desc.Images.UncheckedTracking")));
+            this.rdo_sort_desc.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
+            this.rdo_sort_desc.Location = new System.Drawing.Point(8, 37);
+            this.rdo_sort_desc.Name = "rdo_sort_desc";
+            this.rdo_sort_desc.Size = new System.Drawing.Size(101, 23);
+            this.rdo_sort_desc.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
+            this.rdo_sort_desc.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
+            this.rdo_sort_desc.TabIndex = 28;
+            this.rdo_sort_desc.Values.Text = "Descending";
+            // 
+            // rdo_sort_asc
+            // 
+            this.rdo_sort_asc.Images.CheckedNormal = ((System.Drawing.Image)(resources.GetObject("rdo_sort_asc.Images.CheckedNormal")));
+            this.rdo_sort_asc.Images.CheckedPressed = ((System.Drawing.Image)(resources.GetObject("rdo_sort_asc.Images.CheckedPressed")));
+            this.rdo_sort_asc.Images.CheckedTracking = ((System.Drawing.Image)(resources.GetObject("rdo_sort_asc.Images.CheckedTracking")));
+            this.rdo_sort_asc.Images.Common = ((System.Drawing.Image)(resources.GetObject("rdo_sort_asc.Images.Common")));
+            this.rdo_sort_asc.Images.UncheckedNormal = ((System.Drawing.Image)(resources.GetObject("rdo_sort_asc.Images.UncheckedNormal")));
+            this.rdo_sort_asc.Images.UncheckedPressed = ((System.Drawing.Image)(resources.GetObject("rdo_sort_asc.Images.UncheckedPressed")));
+            this.rdo_sort_asc.Images.UncheckedTracking = ((System.Drawing.Image)(resources.GetObject("rdo_sort_asc.Images.UncheckedTracking")));
+            this.rdo_sort_asc.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
+            this.rdo_sort_asc.Location = new System.Drawing.Point(8, 8);
+            this.rdo_sort_asc.Name = "rdo_sort_asc";
+            this.rdo_sort_asc.Size = new System.Drawing.Size(94, 23);
+            this.rdo_sort_asc.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
+            this.rdo_sort_asc.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
+            this.rdo_sort_asc.TabIndex = 27;
+            this.rdo_sort_asc.Values.Text = "Ascending";
+            // 
+            // cbx_sort
+            // 
+            this.cbx_sort.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbx_sort.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
+            this.cbx_sort.Location = new System.Drawing.Point(306, 274);
+            this.cbx_sort.Name = "cbx_sort";
+            this.cbx_sort.Size = new System.Drawing.Size(136, 38);
+            this.cbx_sort.TabIndex = 40;
+            this.cbx_sort.Values.ExtraText = "▲";
+            this.cbx_sort.Values.Text = "Sort By";
+            // 
+            // gbx_sort_by
+            // 
+            this.gbx_sort_by.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gbx_sort_by.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ButtonStandalone;
+            this.gbx_sort_by.Location = new System.Drawing.Point(467, 268);
+            this.gbx_sort_by.Name = "gbx_sort_by";
+            // 
+            // gbx_sort_by.Panel
+            // 
+            this.gbx_sort_by.Panel.Controls.Add(this.rdo_sort_username);
+            this.gbx_sort_by.Panel.Controls.Add(this.rdo_sort_customer_name);
+            this.gbx_sort_by.Panel.Controls.Add(this.rdo_sort_customer_id);
+            this.gbx_sort_by.Size = new System.Drawing.Size(133, 103);
+            this.gbx_sort_by.TabIndex = 38;
+            this.gbx_sort_by.Values.Heading = "";
+            this.gbx_sort_by.Visible = false;
+            // 
+            // rdo_sort_username
+            // 
+            this.rdo_sort_username.AutoCheck = false;
+            this.rdo_sort_username.Images.CheckedNormal = ((System.Drawing.Image)(resources.GetObject("rdo_sort_username.Images.CheckedNormal")));
+            this.rdo_sort_username.Images.CheckedPressed = ((System.Drawing.Image)(resources.GetObject("rdo_sort_username.Images.CheckedPressed")));
+            this.rdo_sort_username.Images.CheckedTracking = ((System.Drawing.Image)(resources.GetObject("rdo_sort_username.Images.CheckedTracking")));
+            this.rdo_sort_username.Images.Common = ((System.Drawing.Image)(resources.GetObject("rdo_sort_username.Images.Common")));
+            this.rdo_sort_username.Images.UncheckedNormal = ((System.Drawing.Image)(resources.GetObject("rdo_sort_username.Images.UncheckedNormal")));
+            this.rdo_sort_username.Images.UncheckedPressed = ((System.Drawing.Image)(resources.GetObject("rdo_sort_username.Images.UncheckedPressed")));
+            this.rdo_sort_username.Images.UncheckedTracking = ((System.Drawing.Image)(resources.GetObject("rdo_sort_username.Images.UncheckedTracking")));
+            this.rdo_sort_username.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
+            this.rdo_sort_username.Location = new System.Drawing.Point(-3, 54);
+            this.rdo_sort_username.Name = "rdo_sort_username";
+            this.rdo_sort_username.Size = new System.Drawing.Size(91, 23);
+            this.rdo_sort_username.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
+            this.rdo_sort_username.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
+            this.rdo_sort_username.TabIndex = 27;
+            this.rdo_sort_username.Values.Text = "Username";
+            // 
+            // rdo_sort_customer_name
+            // 
+            this.rdo_sort_customer_name.AutoCheck = false;
+            this.rdo_sort_customer_name.Images.CheckedNormal = ((System.Drawing.Image)(resources.GetObject("rdo_sort_customer_name.Images.CheckedNormal")));
+            this.rdo_sort_customer_name.Images.CheckedPressed = ((System.Drawing.Image)(resources.GetObject("rdo_sort_customer_name.Images.CheckedPressed")));
+            this.rdo_sort_customer_name.Images.CheckedTracking = ((System.Drawing.Image)(resources.GetObject("rdo_sort_customer_name.Images.CheckedTracking")));
+            this.rdo_sort_customer_name.Images.Common = ((System.Drawing.Image)(resources.GetObject("rdo_sort_customer_name.Images.Common")));
+            this.rdo_sort_customer_name.Images.UncheckedNormal = ((System.Drawing.Image)(resources.GetObject("rdo_sort_customer_name.Images.UncheckedNormal")));
+            this.rdo_sort_customer_name.Images.UncheckedPressed = ((System.Drawing.Image)(resources.GetObject("rdo_sort_customer_name.Images.UncheckedPressed")));
+            this.rdo_sort_customer_name.Images.UncheckedTracking = ((System.Drawing.Image)(resources.GetObject("rdo_sort_customer_name.Images.UncheckedTracking")));
+            this.rdo_sort_customer_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
+            this.rdo_sort_customer_name.Location = new System.Drawing.Point(-3, 31);
+            this.rdo_sort_customer_name.Name = "rdo_sort_customer_name";
+            this.rdo_sort_customer_name.Size = new System.Drawing.Size(124, 23);
+            this.rdo_sort_customer_name.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
+            this.rdo_sort_customer_name.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
+            this.rdo_sort_customer_name.TabIndex = 26;
+            this.rdo_sort_customer_name.Values.Text = "CustomerName";
+            // 
+            // rdo_sort_customer_id
+            // 
+            this.rdo_sort_customer_id.Images.CheckedNormal = ((System.Drawing.Image)(resources.GetObject("rdo_sort_customer_id.Images.CheckedNormal")));
+            this.rdo_sort_customer_id.Images.CheckedPressed = ((System.Drawing.Image)(resources.GetObject("rdo_sort_customer_id.Images.CheckedPressed")));
+            this.rdo_sort_customer_id.Images.CheckedTracking = ((System.Drawing.Image)(resources.GetObject("rdo_sort_customer_id.Images.CheckedTracking")));
+            this.rdo_sort_customer_id.Images.Common = ((System.Drawing.Image)(resources.GetObject("rdo_sort_customer_id.Images.Common")));
+            this.rdo_sort_customer_id.Images.UncheckedNormal = ((System.Drawing.Image)(resources.GetObject("rdo_sort_customer_id.Images.UncheckedNormal")));
+            this.rdo_sort_customer_id.Images.UncheckedPressed = ((System.Drawing.Image)(resources.GetObject("rdo_sort_customer_id.Images.UncheckedPressed")));
+            this.rdo_sort_customer_id.Images.UncheckedTracking = ((System.Drawing.Image)(resources.GetObject("rdo_sort_customer_id.Images.UncheckedTracking")));
+            this.rdo_sort_customer_id.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
+            this.rdo_sort_customer_id.Location = new System.Drawing.Point(-3, 7);
+            this.rdo_sort_customer_id.Name = "rdo_sort_customer_id";
+            this.rdo_sort_customer_id.Size = new System.Drawing.Size(100, 23);
+            this.rdo_sort_customer_id.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
+            this.rdo_sort_customer_id.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
+            this.rdo_sort_customer_id.TabIndex = 25;
+            this.rdo_sort_customer_id.Values.Text = "CustomerId";
+            // 
+            // textBoxWithPlaceHolder1
+            // 
+            this.textBoxWithPlaceHolder1.BackColor = System.Drawing.Color.Transparent;
+            this.textBoxWithPlaceHolder1.Location = new System.Drawing.Point(183, 351);
+            this.textBoxWithPlaceHolder1.Name = "textBoxWithPlaceHolder1";
+            this.textBoxWithPlaceHolder1.PlaceHolder = "place holder";
+            this.textBoxWithPlaceHolder1.Size = new System.Drawing.Size(237, 40);
+            this.textBoxWithPlaceHolder1.Style = "Standalone";
+            this.textBoxWithPlaceHolder1.TabIndex = 41;
+            // 
             // DemoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(941, 442);
+            this.Controls.Add(this.textBoxWithPlaceHolder1);
+            this.Controls.Add(this.cbtn_direction);
+            this.Controls.Add(this.gbx_direction);
+            this.Controls.Add(this.cbx_sort);
+            this.Controls.Add(this.gbx_sort_by);
             this.Controls.Add(this.cbtn_);
             this.Controls.Add(this.kryptonButton5);
             this.Controls.Add(this.kryptonButton6);
@@ -247,6 +428,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
             this.kryptonGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_direction.Panel)).EndInit();
+            this.gbx_direction.Panel.ResumeLayout(false);
+            this.gbx_direction.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_direction)).EndInit();
+            this.gbx_direction.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_sort_by.Panel)).EndInit();
+            this.gbx_sort_by.Panel.ResumeLayout(false);
+            this.gbx_sort_by.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_sort_by)).EndInit();
+            this.gbx_sort_by.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,5 +460,15 @@
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton kryptonRadioButton2;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckButton cbtn_;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckButton cbtn_direction;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroup gbx_direction;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_desc;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_asc;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckButton cbx_sort;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox gbx_sort_by;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_username;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_customer_name;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_customer_id;
+        private TextBoxWithPlaceHolder textBoxWithPlaceHolder1;
     }
 }

@@ -13,12 +13,19 @@ namespace SoftwareFirmManagement.BL
         protected string username;
         protected string email;
         protected string password;
-        protected int roleId;
+        private int roleId;
         private string role;
 
         public User(int userId, string username, string email, string password, int roleId)
         {
             this.userId = userId;
+            this.username = username;
+            this.email = email;
+            this.password = password;
+            this.roleId = roleId;
+        }
+        public User(string username, string email, string password, int roleId)
+        {
             this.username = username;
             this.email = email;
             this.password = password;

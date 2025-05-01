@@ -32,6 +32,11 @@ namespace SoftwareFirmManagement.DL
                 MessageBox.Show($"Database error: {e.Message}.");
             }
         }
+        public static int GetLookupId(string keyGroup, string value)
+        {
+            // dl logic please
+            return 0;
+        }
 
     }
 }

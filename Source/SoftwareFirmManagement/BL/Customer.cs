@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SoftwareFirmManagement.BL
 {
@@ -17,12 +18,54 @@ namespace SoftwareFirmManagement.BL
             this.customerId = customerId;
             this.name = name;
         }
+        public Customer(string username, string email, string password, int roleId, string name) : base(username, email, password, roleId)
+        {
+            this.customerId = customerId;
+            this.name = name;
+        }
 
         public int CustomerId { get { return customerId; } set { customerId = value; } }
 
         public string Name { get { return name; } set { name = value; } }
 
+        public static List<Customer> GetAllCustomers(string name = null, string sortby = null, string direction = null)
+        {
+            // replace with DL logic
+            List<Customer> customers = new List<Customer>
+            {
+                { new Customer(0,"ali12","ali@gmail.com","123###",0,0,"Ali Zahid") },
+                { new Customer(0,"umer12","umer@gmail.com","123###",0,0,"chota umer") },
+                { new Customer(0,"saadi12","asaad@gmail.com","123###",0,0,"Saad nadeem")}
+            };
+            return customers;
+        }
 
+        internal static void DeleteCustomer(int custId)
+        {
+            MessageBox.Show("dummy customerDeleted");
 
+            //throw new NotImplementedException();
+        }
+
+        internal static Customer GetCustomer(int custId)
+        {
+            MessageBox.Show("dummy customerDeleted");
+
+            //throw new NotImplementedException();
+            return null;
+        }
+
+        internal static void UpdateCustomer(Customer c)
+        {
+            MessageBox.Show("dummy customerUpdated");
+            //throw new NotImplementedException();
+        }
+
+        internal static void AddCustomer(Customer customer)
+        {
+            MessageBox.Show("dummy customer added");
+
+            //throw new NotImplementedException();
+        }
     }
 }

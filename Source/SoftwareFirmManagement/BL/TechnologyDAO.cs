@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SoftwareFirmManagement.BL
 {
-    public class SubService
+    public class TechnologyDAO
     {
-        private int serviceId;
+        private int serviceID;
         private string description;
 
         public string Description
@@ -17,12 +17,13 @@ namespace SoftwareFirmManagement.BL
             set { description = value; }
         }
 
-        public SubService() { }
+
+        public TechnologyDAO() { }
 
 
-        public SubService(int serviceId, string description)
+        public TechnologyDAO(int serviceID, string description)
         {
-            this.serviceId = serviceId;
+            this.serviceID = serviceID;
             this.description = description;
         }
     }

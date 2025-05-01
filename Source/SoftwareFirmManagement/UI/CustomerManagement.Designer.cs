@@ -32,10 +32,12 @@ namespace SoftwareFirmManagement.UI
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbox_grd_users = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.gbx_add_update_cust = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.btn_cancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_add_update_cust = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.lbl_last_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lbl_full_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.dgv_customers = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Details = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn();
-            this.Delete = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel_filters = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip_filters = new System.Windows.Forms.MenuStrip();
@@ -47,40 +49,39 @@ namespace SoftwareFirmManagement.UI
             this.descendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbl_filter = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_add_cust = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonContextMenuItems1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
             this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.contextMenuStrip_grd = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userCredentials1 = new SoftwareFirmManagement.UI.UserCredentials();
+            this.txt_full_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.CustomerIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsernameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PasswordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.txt_first_name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_users)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_users.Panel)).BeginInit();
             this.gbox_grd_users.Panel.SuspendLayout();
             this.gbox_grd_users.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_cust)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_cust.Panel)).BeginInit();
+            this.gbx_add_update_cust.Panel.SuspendLayout();
+            this.gbx_add_update_cust.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_customers)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel_filters.SuspendLayout();
             this.menuStrip_filters.SuspendLayout();
             this.panel2.SuspendLayout();
             this.contextMenuStrip_grd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
-            this.kryptonGroupBox1.Panel.SuspendLayout();
-            this.kryptonGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,27 +119,85 @@ namespace SoftwareFirmManagement.UI
             // 
             // gbox_grd_users.Panel
             // 
-            this.gbox_grd_users.Panel.Controls.Add(this.kryptonGroupBox1);
+            this.gbox_grd_users.Panel.Controls.Add(this.gbx_add_update_cust);
             this.gbox_grd_users.Panel.Controls.Add(this.dgv_customers);
             this.gbox_grd_users.Size = new System.Drawing.Size(783, 434);
             this.gbox_grd_users.TabIndex = 1;
             this.gbox_grd_users.Values.Heading = "Users";
+            // 
+            // gbx_add_update_cust
+            // 
+            this.gbx_add_update_cust.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gbx_add_update_cust.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlAlternate;
+            this.gbx_add_update_cust.Location = new System.Drawing.Point(174, 3);
+            this.gbx_add_update_cust.Name = "gbx_add_update_cust";
+            // 
+            // gbx_add_update_cust.Panel
+            // 
+            this.gbx_add_update_cust.Panel.Controls.Add(this.btn_cancel);
+            this.gbx_add_update_cust.Panel.Controls.Add(this.btn_add_update_cust);
+            this.gbx_add_update_cust.Panel.Controls.Add(this.userCredentials1);
+            this.gbx_add_update_cust.Panel.Controls.Add(this.lbl_last_name);
+            this.gbx_add_update_cust.Panel.Controls.Add(this.lbl_full_name);
+            this.gbx_add_update_cust.Panel.Controls.Add(this.txt_full_name);
+            this.gbx_add_update_cust.Size = new System.Drawing.Size(389, 398);
+            this.gbx_add_update_cust.TabIndex = 1;
+            this.gbx_add_update_cust.Values.Heading = "Add Customer";
+            this.gbx_add_update_cust.Visible = false;
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_cancel.Location = new System.Drawing.Point(49, 292);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(150, 50);
+            this.btn_cancel.TabIndex = 13;
+            this.btn_cancel.Values.Text = "Cancel";
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
+            // btn_add_update_cust
+            // 
+            this.btn_add_update_cust.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_add_update_cust.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
+            this.btn_add_update_cust.Location = new System.Drawing.Point(205, 292);
+            this.btn_add_update_cust.Name = "btn_add_update_cust";
+            this.btn_add_update_cust.Size = new System.Drawing.Size(150, 50);
+            this.btn_add_update_cust.TabIndex = 2;
+            this.btn_add_update_cust.Values.Text = "Add Customer";
+            this.btn_add_update_cust.Click += new System.EventHandler(this.btn_add_update_cust_Click);
+            // 
+            // lbl_last_name
+            // 
+            this.lbl_last_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.lbl_last_name.Location = new System.Drawing.Point(6, 72);
+            this.lbl_last_name.Name = "lbl_last_name";
+            this.lbl_last_name.Size = new System.Drawing.Size(6, 4);
+            this.lbl_last_name.TabIndex = 9;
+            this.lbl_last_name.Values.Text = "";
+            // 
+            // lbl_full_name
+            // 
+            this.lbl_full_name.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_full_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.lbl_full_name.Location = new System.Drawing.Point(41, 12);
+            this.lbl_full_name.Name = "lbl_full_name";
+            this.lbl_full_name.Size = new System.Drawing.Size(77, 26);
+            this.lbl_full_name.TabIndex = 8;
+            this.lbl_full_name.Values.Text = "FullName";
             // 
             // dgv_customers
             // 
             this.dgv_customers.AutoGenerateColumns = false;
             this.dgv_customers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_customers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.FullName,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
+            this.CustomerIdColumn,
+            this.UserIdColumn,
+            this.FullNameColumn,
+            this.UsernameColumn,
+            this.EmailColumn,
+            this.PasswordColumn,
             this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.Details,
-            this.Delete});
+            this.dataGridViewTextBoxColumn8});
             this.dgv_customers.DataSource = this.customerBindingSource;
             this.dgv_customers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_customers.Location = new System.Drawing.Point(0, 0);
@@ -146,31 +205,6 @@ namespace SoftwareFirmManagement.UI
             this.dgv_customers.Size = new System.Drawing.Size(769, 401);
             this.dgv_customers.TabIndex = 0;
             this.dgv_customers.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_customers_CellMouseDown);
-            // 
-            // FullName
-            // 
-            this.FullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FullName.DataPropertyName = "Name";
-            this.FullName.HeaderText = "FullName";
-            this.FullName.Name = "FullName";
-            // 
-            // Details
-            // 
-            this.Details.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Details.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
-            this.Details.HeaderText = "Update";
-            this.Details.MinimumWidth = 100;
-            this.Details.Name = "Details";
-            this.Details.UseColumnTextForButtonValue = true;
-            // 
-            // Delete
-            // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Delete.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Alternate;
-            this.Delete.HeaderText = "Delete";
-            this.Delete.MinimumWidth = 100;
-            this.Delete.Name = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
             // 
             // tableLayoutPanel2
             // 
@@ -288,8 +322,7 @@ namespace SoftwareFirmManagement.UI
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.kryptonTextBox1);
-            this.panel2.Controls.Add(this.kryptonButton1);
+            this.panel2.Controls.Add(this.btn_add_cust);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
@@ -297,23 +330,16 @@ namespace SoftwareFirmManagement.UI
             this.panel2.Size = new System.Drawing.Size(322, 50);
             this.panel2.TabIndex = 4;
             // 
-            // kryptonTextBox1
+            // btn_add_cust
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(167, 0);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(138, 38);
-            this.kryptonTextBox1.TabIndex = 1;
-            this.kryptonTextBox1.Text = "kryptonTextBox1";
-            // 
-            // kryptonButton1
-            // 
-            this.kryptonButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.kryptonButton1.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
-            this.kryptonButton1.Location = new System.Drawing.Point(19, 3);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(142, 44);
-            this.kryptonButton1.TabIndex = 0;
-            this.kryptonButton1.Values.Text = "Add Customers";
+            this.btn_add_cust.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_add_cust.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
+            this.btn_add_cust.Location = new System.Drawing.Point(19, 3);
+            this.btn_add_cust.Name = "btn_add_cust";
+            this.btn_add_cust.Size = new System.Drawing.Size(142, 44);
+            this.btn_add_cust.TabIndex = 0;
+            this.btn_add_cust.Values.Text = "Add Customers";
+            this.btn_add_cust.Click += new System.EventHandler(this.btn_add_cust_Click);
             // 
             // kryptonContextMenuItems1
             // 
@@ -335,8 +361,6 @@ namespace SoftwareFirmManagement.UI
             this.contextMenuStrip_grd.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.contextMenuStrip_grd.Name = "contextMenuStrip_grd";
             this.contextMenuStrip_grd.Size = new System.Drawing.Size(113, 48);
-            this.contextMenuStrip_grd.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_grd_Opening);
-            this.contextMenuStrip_grd.PaddingChanged += new System.EventHandler(this.contextMenuStrip_grd_PaddingChanged);
             // 
             // updateToolStripMenuItem
             // 
@@ -355,55 +379,74 @@ namespace SoftwareFirmManagement.UI
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
-            // kryptonGroupBox1
+            // FullNameColumn
             // 
-            this.kryptonGroupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.kryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlAlternate;
-            this.kryptonGroupBox1.Location = new System.Drawing.Point(166, 3);
-            this.kryptonGroupBox1.Name = "kryptonGroupBox1";
+            this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FullNameColumn.DataPropertyName = "Name";
+            this.FullNameColumn.HeaderText = "FullName";
+            this.FullNameColumn.Name = "FullNameColumn";
             // 
-            // kryptonGroupBox1.Panel
+            // userCredentials1
             // 
-            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonTextBox3);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.txt_first_name);
-            this.kryptonGroupBox1.Size = new System.Drawing.Size(495, 306);
-            this.kryptonGroupBox1.TabIndex = 1;
+            this.userCredentials1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.userCredentials1.BackColor = System.Drawing.Color.Transparent;
+            this.userCredentials1.Email = "Email";
+            this.userCredentials1.EmailPlaceHolder = "Email";
+            this.userCredentials1.Location = new System.Drawing.Point(38, 79);
+            this.userCredentials1.Name = "userCredentials1";
+            this.userCredentials1.Password = "Password";
+            this.userCredentials1.PasswordPlaceHolder = "Password";
+            this.userCredentials1.Size = new System.Drawing.Size(287, 189);
+            this.userCredentials1.TabIndex = 12;
+            this.userCredentials1.Username = "Username";
+            this.userCredentials1.UsernamePlaceHolder = "Username";
             // 
-            // dataGridViewTextBoxColumn1
+            // txt_full_name
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "CustomerId";
-            this.dataGridViewTextBoxColumn1.HeaderText = "CustomerId";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.txt_full_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_full_name.BackColor = System.Drawing.Color.Transparent;
+            this.txt_full_name.Location = new System.Drawing.Point(38, 29);
+            this.txt_full_name.Name = "txt_full_name";
+            this.txt_full_name.PlaceHolder = "FullName";
+            this.txt_full_name.Size = new System.Drawing.Size(287, 42);
+            this.txt_full_name.Style = "Standalone";
+            this.txt_full_name.TabIndex = 3;
+            this.txt_full_name.TextBoxText = "FullName";
             // 
-            // dataGridViewTextBoxColumn3
+            // CustomerIdColumn
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "UserId";
-            this.dataGridViewTextBoxColumn3.HeaderText = "UserId";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Visible = false;
+            this.CustomerIdColumn.DataPropertyName = "CustomerId";
+            this.CustomerIdColumn.HeaderText = "CustomerId";
+            this.CustomerIdColumn.Name = "CustomerIdColumn";
+            this.CustomerIdColumn.Visible = false;
             // 
-            // dataGridViewTextBoxColumn4
+            // UserIdColumn
             // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Username";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Username";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.UserIdColumn.DataPropertyName = "UserId";
+            this.UserIdColumn.HeaderText = "UserId";
+            this.UserIdColumn.Name = "UserIdColumn";
+            this.UserIdColumn.Visible = false;
             // 
-            // dataGridViewTextBoxColumn5
+            // UsernameColumn
             // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Email";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.UsernameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.UsernameColumn.DataPropertyName = "Username";
+            this.UsernameColumn.HeaderText = "Username";
+            this.UsernameColumn.Name = "UsernameColumn";
             // 
-            // dataGridViewTextBoxColumn6
+            // EmailColumn
             // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Password";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Password";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Visible = false;
+            this.EmailColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EmailColumn.DataPropertyName = "Email";
+            this.EmailColumn.HeaderText = "Email";
+            this.EmailColumn.Name = "EmailColumn";
+            // 
+            // PasswordColumn
+            // 
+            this.PasswordColumn.DataPropertyName = "Password";
+            this.PasswordColumn.HeaderText = "Password";
+            this.PasswordColumn.Name = "PasswordColumn";
+            this.PasswordColumn.Visible = false;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -423,22 +466,6 @@ namespace SoftwareFirmManagement.UI
             // 
             this.customerBindingSource.DataSource = typeof(SoftwareFirmManagement.BL.Customer);
             // 
-            // txt_first_name
-            // 
-            this.txt_first_name.Location = new System.Drawing.Point(52, 48);
-            this.txt_first_name.Name = "txt_first_name";
-            this.txt_first_name.Size = new System.Drawing.Size(190, 38);
-            this.txt_first_name.TabIndex = 0;
-            this.txt_first_name.Text = "FirstName";
-            // 
-            // kryptonTextBox3
-            // 
-            this.kryptonTextBox3.Location = new System.Drawing.Point(143, 116);
-            this.kryptonTextBox3.Name = "kryptonTextBox3";
-            this.kryptonTextBox3.Size = new System.Drawing.Size(190, 38);
-            this.kryptonTextBox3.TabIndex = 1;
-            this.kryptonTextBox3.Text = "kryptonTextBox3";
-            // 
             // CustomerManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -457,6 +484,11 @@ namespace SoftwareFirmManagement.UI
             this.gbox_grd_users.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_users)).EndInit();
             this.gbox_grd_users.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_cust.Panel)).EndInit();
+            this.gbx_add_update_cust.Panel.ResumeLayout(false);
+            this.gbx_add_update_cust.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_cust)).EndInit();
+            this.gbx_add_update_cust.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_customers)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel_filters.ResumeLayout(false);
@@ -464,13 +496,7 @@ namespace SoftwareFirmManagement.UI
             this.menuStrip_filters.ResumeLayout(false);
             this.menuStrip_filters.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.contextMenuStrip_grd.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
-            this.kryptonGroupBox1.Panel.ResumeLayout(false);
-            this.kryptonGroupBox1.Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
-            this.kryptonGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -486,7 +512,7 @@ namespace SoftwareFirmManagement.UI
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_filter;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel2;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_add_cust;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIdDataGridViewTextBoxColumn;
@@ -495,17 +521,6 @@ namespace SoftwareFirmManagement.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn roleIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn roleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource customerBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn Details;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn Delete;
         private System.Windows.Forms.MenuStrip menuStrip_filters;
         private System.Windows.Forms.ToolStripMenuItem filter_item_sort_by;
         private System.Windows.Forms.ToolStripMenuItem customerNameToolStripMenuItem;
@@ -518,9 +533,21 @@ namespace SoftwareFirmManagement.UI
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip_grd;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txt_first_name;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox gbx_add_update_cust;
+        private TextBoxWithPlaceHolder txt_full_name;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_last_name;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_full_name;
+        private UserCredentials userCredentials1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_cancel;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_add_update_cust;
+        private System.Windows.Forms.BindingSource customerBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerIdColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserIdColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullNameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UsernameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmailColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PasswordColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }

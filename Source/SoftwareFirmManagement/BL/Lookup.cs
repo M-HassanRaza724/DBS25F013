@@ -34,6 +34,5 @@ namespace SoftwareFirmManagement.BL
             get { return value; }
             set { this.value = value; }
         }
-
     }
 }

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SoftwareFirmManagement.BL;
 using System.Runtime.CompilerServices;
+using SoftwareFirmManagement.DL;
 
 namespace SoftwareFirmManagement.UI
 {
@@ -20,21 +21,17 @@ namespace SoftwareFirmManagement.UI
         public CustomerManagement()
         {
             InitializeComponent();
-            
-            //this.dgv_customers.ContextMenuStrip = contextMenuStrip_grd;
-            //dgv_customers.Rows.ContextMenuStrip = contextMenuStrip_grd;
         }
-
 
         public void LoadData(string search = null) // search argument is used only when a search button calls this function.
         {
             if (search == "Search")
                 search = null;
-            customerBindingSource.DataSource = Customer.GetAllCustomers(search, sortby ,direction);
+            customerBindingSource.DataSource = Customer.GetAllCustomers(search, sortby, direction);
             dgv_customers.DataSource = customerBindingSource;
         }
 
-     
+
 
         private void CustomerManagement_Load(object sender, EventArgs e)
         {
@@ -63,16 +60,6 @@ namespace SoftwareFirmManagement.UI
             LoadData();
         }
 
-        private void contextMenuStrip_grd_PaddingChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void contextMenuStrip_grd_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
         private void dgv_customers_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right && e.RowIndex >= 0)
@@ -84,15 +71,89 @@ namespace SoftwareFirmManagement.UI
             }
         }
 
+        private void btn_add_update_cust_Click(object sender, EventArgs e)
+        {
+            if (btn_add_update_cust.Text == "Update")
+            {
+                try
+                {
+                    Customer customer = new Customer(Convert.ToInt32(currentContextRow.Cells["UserIdColumn"].Value), userCredentials1.Username, userCredentials1.Email, userCredentials1.Password, LookupDL.GetLookupId("user_role", "Customer"), Convert.ToInt32(currentContextRow.Cells["CustomerIdColumn"].Value), txt_full_name.TextBoxText);
+                    Customer.UpdateCustomer(customer);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+
+                try
+                {
+                    Customer customer = new Customer(userCredentials1.Username, userCredentials1.Email, userCredentials1.Password, LookupDL.GetLookupId("user_role", "Customer"), txt_full_name.TextBoxText);
+                    Customer.AddCustomer(customer);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            LoadData();
+            disableGroupBox();
+        }
+        void enableGroupBox(int custId = -1)
+        {
+            gbx_add_update_cust.Enabled = true;
+            gbx_add_update_cust.Visible = true;
+            if (custId != -1)
+            {
+                txt_full_name.TextBoxText = currentContextRow.Cells["FullNameColumn"].Value.ToString();
+                userCredentials1.Username = currentContextRow.Cells["UsernameColumn"].Value.ToString();
+                userCredentials1.Email = currentContextRow.Cells["EmailColumn"].Value.ToString();
+                userCredentials1.Password= currentContextRow.Cells["PasswordColumn"].Value.ToString();
+
+                btn_add_update_cust.Text = "Update";
+                gbx_add_update_cust.Text = "Update Customer";
+            }
+        }
+        void disableGroupBox()
+        {
+            gbx_add_update_cust.Enabled = false;
+            gbx_add_update_cust.Visible = false;
+            txt_full_name.PlaceHolder = "FirstName";
+            userCredentials1.UsernamePlaceHolder = "Username";
+            userCredentials1.EmailPlaceHolder = "Email";
+            userCredentials1.PasswordPlaceHolder = "Password";
+            btn_add_update_cust.Text = "Add";
+            gbx_add_update_cust.Text = "Add Customer";
+        }
+
+ 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Customer.UpdateCustomer(Convert.ToInt32(currentContextRow.Cells["dataGridViewTextBoxColumn1"].Value));
+            enableGroupBox(Convert.ToInt32(currentContextRow.Cells["CustomerIdColumn"].Value));
+            //Customer.UpdateCustomer(Convert.ToInt32(currentContextRow.Cells["dataGridViewTextBoxColumn1"].Value));
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Customer.DeleteCustomer(Convert.ToInt32(currentContextRow.Cells["dataGridViewTextBoxColumn1"].Value));
+            int custId = Convert.ToInt32(currentContextRow.Cells["CustomerIdColumn"].Value);
+            if (DialogResult.Yes == MessageBox.Show($"Are you sure you want to delete {currentContextRow.Cells["FullNameColumn"].Value.ToString()}?", "Warning", MessageBoxButtons.YesNo))
+                Customer.DeleteCustomer(custId);
+        }
 
+  
+
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            disableGroupBox();
+
+        }
+
+        private void btn_add_cust_Click(object sender, EventArgs e)
+        {
+            enableGroupBox();
         }
 
         private void customerNameToolStripMenuItem_Click(object sender, EventArgs e)
@@ -102,8 +163,6 @@ namespace SoftwareFirmManagement.UI
             MessageBox.Show($"Sort by {sortby}");
             LoadData();
         }
-
-
 
     }
 }

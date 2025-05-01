@@ -34,12 +34,14 @@
             // TextBox
             // 
             this.TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TextBox.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
             this.TextBox.Location = new System.Drawing.Point(0, 0);
+            this.TextBox.Margin = new System.Windows.Forms.Padding(0);
             this.TextBox.Name = "TextBox";
-            this.TextBox.Size = new System.Drawing.Size(225, 39);
+            this.TextBox.Size = new System.Drawing.Size(237, 39);
+            this.TextBox.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.TextBox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(3, 3, -1, 3);
             this.TextBox.TabIndex = 0;
-            this.TextBox.Text = "Text";
+            this.TextBox.Text = "Place holder";
             this.TextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // TextBoxWithPlaceHolder
@@ -49,7 +51,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.TextBox);
             this.Name = "TextBoxWithPlaceHolder";
-            this.Size = new System.Drawing.Size(225, 42);
+            this.Size = new System.Drawing.Size(237, 41);
             this.ResumeLayout(false);
             this.PerformLayout();
 

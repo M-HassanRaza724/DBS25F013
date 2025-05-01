@@ -24,6 +24,13 @@ namespace SoftwareFirmManagement.BL
             this.password = password;
             this.roleId = roleId;
         }
+        public User(string username, string email, string password, int roleId)
+        {
+            this.username = username;
+            this.email = email;
+            this.password = password;
+            this.roleId = roleId;
+        }
 
 
         public int UserId

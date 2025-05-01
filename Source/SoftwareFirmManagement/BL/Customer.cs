@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SoftwareFirmManagement.BL
 {
@@ -13,6 +14,11 @@ namespace SoftwareFirmManagement.BL
         private string name;
 
         public Customer(int userId, string username, string email, string password, int roleId, int customerId, string name) : base(userId, username, email, password, roleId)
+        {
+            this.customerId = customerId;
+            this.name = name;
+        }
+        public Customer(string username, string email, string password, int roleId, string name) : base(username, email, password, roleId)
         {
             this.customerId = customerId;
             this.name = name;
@@ -34,14 +40,32 @@ namespace SoftwareFirmManagement.BL
             return customers;
         }
 
-        internal static void DeleteCustomer(int v)
+        internal static void DeleteCustomer(int custId)
         {
-            throw new NotImplementedException();
+            MessageBox.Show("dummy customerDeleted");
+
+            //throw new NotImplementedException();
         }
 
-        internal static void UpdateCustomer(int v)
+        internal static Customer GetCustomer(int custId)
         {
-            throw new NotImplementedException();
+            MessageBox.Show("dummy customerDeleted");
+
+            //throw new NotImplementedException();
+            return null;
+        }
+
+        internal static void UpdateCustomer(Customer c)
+        {
+            MessageBox.Show("dummy customerUpdated");
+            //throw new NotImplementedException();
+        }
+
+        internal static void AddCustomer(Customer customer)
+        {
+            MessageBox.Show("dummy customer added");
+
+            //throw new NotImplementedException();
         }
     }
 }

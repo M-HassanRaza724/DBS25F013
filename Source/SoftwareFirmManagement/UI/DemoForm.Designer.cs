@@ -53,6 +53,7 @@
             this.rdo_sort_username = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.rdo_sort_customer_name = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.rdo_sort_customer_id = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.textBoxWithPlaceHolder1 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
@@ -385,12 +386,23 @@
             this.rdo_sort_customer_id.TabIndex = 25;
             this.rdo_sort_customer_id.Values.Text = "CustomerId";
             // 
+            // textBoxWithPlaceHolder1
+            // 
+            this.textBoxWithPlaceHolder1.BackColor = System.Drawing.Color.Transparent;
+            this.textBoxWithPlaceHolder1.Location = new System.Drawing.Point(183, 351);
+            this.textBoxWithPlaceHolder1.Name = "textBoxWithPlaceHolder1";
+            this.textBoxWithPlaceHolder1.PlaceHolder = "place holder";
+            this.textBoxWithPlaceHolder1.Size = new System.Drawing.Size(237, 40);
+            this.textBoxWithPlaceHolder1.Style = "Standalone";
+            this.textBoxWithPlaceHolder1.TabIndex = 41;
+            // 
             // DemoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(941, 442);
+            this.Controls.Add(this.textBoxWithPlaceHolder1);
             this.Controls.Add(this.cbtn_direction);
             this.Controls.Add(this.gbx_direction);
             this.Controls.Add(this.cbx_sort);
@@ -457,5 +469,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_username;
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_customer_name;
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_customer_id;
+        private TextBoxWithPlaceHolder textBoxWithPlaceHolder1;
     }
 }

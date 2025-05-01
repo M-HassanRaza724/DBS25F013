@@ -35,9 +35,20 @@ namespace SoftwareFirmManagement.UI
             this.gbx_add_update_cust = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.btn_cancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_add_update_cust = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.userCredentials1 = new SoftwareFirmManagement.UI.UserCredentials();
             this.lbl_last_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_full_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txt_full_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.dgv_customers = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.CustomerIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsernameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PasswordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel_filters = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip_filters = new System.Windows.Forms.MenuStrip();
@@ -55,17 +66,6 @@ namespace SoftwareFirmManagement.UI
             this.contextMenuStrip_grd = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userCredentials1 = new SoftwareFirmManagement.UI.UserCredentials();
-            this.txt_full_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
-            this.CustomerIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UsernameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PasswordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_users)).BeginInit();
@@ -77,12 +77,12 @@ namespace SoftwareFirmManagement.UI
             this.gbx_add_update_cust.Panel.SuspendLayout();
             this.gbx_add_update_cust.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_customers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel_filters.SuspendLayout();
             this.menuStrip_filters.SuspendLayout();
             this.panel2.SuspendLayout();
             this.contextMenuStrip_grd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -129,7 +129,7 @@ namespace SoftwareFirmManagement.UI
             // 
             this.gbx_add_update_cust.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbx_add_update_cust.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlAlternate;
-            this.gbx_add_update_cust.Location = new System.Drawing.Point(174, 3);
+            this.gbx_add_update_cust.Location = new System.Drawing.Point(169, -2);
             this.gbx_add_update_cust.Name = "gbx_add_update_cust";
             // 
             // gbx_add_update_cust.Panel
@@ -148,7 +148,7 @@ namespace SoftwareFirmManagement.UI
             // btn_cancel
             // 
             this.btn_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_cancel.Location = new System.Drawing.Point(49, 292);
+            this.btn_cancel.Location = new System.Drawing.Point(33, 280);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(150, 50);
             this.btn_cancel.TabIndex = 13;
@@ -159,12 +159,27 @@ namespace SoftwareFirmManagement.UI
             // 
             this.btn_add_update_cust.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_add_update_cust.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
-            this.btn_add_update_cust.Location = new System.Drawing.Point(205, 292);
+            this.btn_add_update_cust.Location = new System.Drawing.Point(189, 280);
             this.btn_add_update_cust.Name = "btn_add_update_cust";
             this.btn_add_update_cust.Size = new System.Drawing.Size(150, 50);
             this.btn_add_update_cust.TabIndex = 2;
             this.btn_add_update_cust.Values.Text = "Add Customer";
             this.btn_add_update_cust.Click += new System.EventHandler(this.btn_add_update_cust_Click);
+            // 
+            // userCredentials1
+            // 
+            this.userCredentials1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.userCredentials1.BackColor = System.Drawing.Color.Transparent;
+            this.userCredentials1.Email = "Email";
+            this.userCredentials1.EmailPlaceHolder = "Email";
+            this.userCredentials1.Location = new System.Drawing.Point(38, 73);
+            this.userCredentials1.Name = "userCredentials1";
+            this.userCredentials1.Password = "Password";
+            this.userCredentials1.PasswordPlaceHolder = "Password";
+            this.userCredentials1.Size = new System.Drawing.Size(271, 189);
+            this.userCredentials1.TabIndex = 12;
+            this.userCredentials1.Username = "Username";
+            this.userCredentials1.UsernamePlaceHolder = "Username";
             // 
             // lbl_last_name
             // 
@@ -179,11 +194,23 @@ namespace SoftwareFirmManagement.UI
             // 
             this.lbl_full_name.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_full_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_full_name.Location = new System.Drawing.Point(41, 12);
+            this.lbl_full_name.Location = new System.Drawing.Point(41, 6);
             this.lbl_full_name.Name = "lbl_full_name";
             this.lbl_full_name.Size = new System.Drawing.Size(77, 26);
             this.lbl_full_name.TabIndex = 8;
             this.lbl_full_name.Values.Text = "FullName";
+            // 
+            // txt_full_name
+            // 
+            this.txt_full_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_full_name.BackColor = System.Drawing.Color.Transparent;
+            this.txt_full_name.Location = new System.Drawing.Point(38, 23);
+            this.txt_full_name.Name = "txt_full_name";
+            this.txt_full_name.PlaceHolder = "FullName";
+            this.txt_full_name.Size = new System.Drawing.Size(271, 42);
+            this.txt_full_name.Style = "Standalone";
+            this.txt_full_name.TabIndex = 3;
+            this.txt_full_name.TextBoxText = "FullName";
             // 
             // dgv_customers
             // 
@@ -205,6 +232,66 @@ namespace SoftwareFirmManagement.UI
             this.dgv_customers.Size = new System.Drawing.Size(769, 401);
             this.dgv_customers.TabIndex = 0;
             this.dgv_customers.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_customers_CellMouseDown);
+            // 
+            // CustomerIdColumn
+            // 
+            this.CustomerIdColumn.DataPropertyName = "CustomerId";
+            this.CustomerIdColumn.HeaderText = "CustomerId";
+            this.CustomerIdColumn.Name = "CustomerIdColumn";
+            this.CustomerIdColumn.Visible = false;
+            // 
+            // UserIdColumn
+            // 
+            this.UserIdColumn.DataPropertyName = "UserId";
+            this.UserIdColumn.HeaderText = "UserId";
+            this.UserIdColumn.Name = "UserIdColumn";
+            this.UserIdColumn.Visible = false;
+            // 
+            // FullNameColumn
+            // 
+            this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FullNameColumn.DataPropertyName = "Name";
+            this.FullNameColumn.HeaderText = "FullName";
+            this.FullNameColumn.Name = "FullNameColumn";
+            // 
+            // UsernameColumn
+            // 
+            this.UsernameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.UsernameColumn.DataPropertyName = "Username";
+            this.UsernameColumn.HeaderText = "Username";
+            this.UsernameColumn.Name = "UsernameColumn";
+            // 
+            // EmailColumn
+            // 
+            this.EmailColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EmailColumn.DataPropertyName = "Email";
+            this.EmailColumn.HeaderText = "Email";
+            this.EmailColumn.Name = "EmailColumn";
+            // 
+            // PasswordColumn
+            // 
+            this.PasswordColumn.DataPropertyName = "Password";
+            this.PasswordColumn.HeaderText = "Password";
+            this.PasswordColumn.Name = "PasswordColumn";
+            this.PasswordColumn.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "RoleId";
+            this.dataGridViewTextBoxColumn7.HeaderText = "RoleId";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Role";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Role";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Visible = false;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataSource = typeof(SoftwareFirmManagement.BL.Customer);
             // 
             // tableLayoutPanel2
             // 
@@ -360,13 +447,14 @@ namespace SoftwareFirmManagement.UI
             this.deleteToolStripMenuItem});
             this.contextMenuStrip_grd.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.contextMenuStrip_grd.Name = "contextMenuStrip_grd";
-            this.contextMenuStrip_grd.Size = new System.Drawing.Size(113, 48);
+            this.contextMenuStrip_grd.Size = new System.Drawing.Size(181, 70);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.updateToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Available_Updates;
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
@@ -375,96 +463,9 @@ namespace SoftwareFirmManagement.UI
             this.deleteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.deleteToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Trash;
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
-            // 
-            // FullNameColumn
-            // 
-            this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FullNameColumn.DataPropertyName = "Name";
-            this.FullNameColumn.HeaderText = "FullName";
-            this.FullNameColumn.Name = "FullNameColumn";
-            // 
-            // userCredentials1
-            // 
-            this.userCredentials1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.userCredentials1.BackColor = System.Drawing.Color.Transparent;
-            this.userCredentials1.Email = "Email";
-            this.userCredentials1.EmailPlaceHolder = "Email";
-            this.userCredentials1.Location = new System.Drawing.Point(38, 79);
-            this.userCredentials1.Name = "userCredentials1";
-            this.userCredentials1.Password = "Password";
-            this.userCredentials1.PasswordPlaceHolder = "Password";
-            this.userCredentials1.Size = new System.Drawing.Size(287, 189);
-            this.userCredentials1.TabIndex = 12;
-            this.userCredentials1.Username = "Username";
-            this.userCredentials1.UsernamePlaceHolder = "Username";
-            // 
-            // txt_full_name
-            // 
-            this.txt_full_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_full_name.BackColor = System.Drawing.Color.Transparent;
-            this.txt_full_name.Location = new System.Drawing.Point(38, 29);
-            this.txt_full_name.Name = "txt_full_name";
-            this.txt_full_name.PlaceHolder = "FullName";
-            this.txt_full_name.Size = new System.Drawing.Size(287, 42);
-            this.txt_full_name.Style = "Standalone";
-            this.txt_full_name.TabIndex = 3;
-            this.txt_full_name.TextBoxText = "FullName";
-            // 
-            // CustomerIdColumn
-            // 
-            this.CustomerIdColumn.DataPropertyName = "CustomerId";
-            this.CustomerIdColumn.HeaderText = "CustomerId";
-            this.CustomerIdColumn.Name = "CustomerIdColumn";
-            this.CustomerIdColumn.Visible = false;
-            // 
-            // UserIdColumn
-            // 
-            this.UserIdColumn.DataPropertyName = "UserId";
-            this.UserIdColumn.HeaderText = "UserId";
-            this.UserIdColumn.Name = "UserIdColumn";
-            this.UserIdColumn.Visible = false;
-            // 
-            // UsernameColumn
-            // 
-            this.UsernameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.UsernameColumn.DataPropertyName = "Username";
-            this.UsernameColumn.HeaderText = "Username";
-            this.UsernameColumn.Name = "UsernameColumn";
-            // 
-            // EmailColumn
-            // 
-            this.EmailColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.EmailColumn.DataPropertyName = "Email";
-            this.EmailColumn.HeaderText = "Email";
-            this.EmailColumn.Name = "EmailColumn";
-            // 
-            // PasswordColumn
-            // 
-            this.PasswordColumn.DataPropertyName = "Password";
-            this.PasswordColumn.HeaderText = "Password";
-            this.PasswordColumn.Name = "PasswordColumn";
-            this.PasswordColumn.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "RoleId";
-            this.dataGridViewTextBoxColumn7.HeaderText = "RoleId";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Role";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Role";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Visible = false;
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataSource = typeof(SoftwareFirmManagement.BL.Customer);
             // 
             // CustomerManagement
             // 
@@ -490,6 +491,7 @@ namespace SoftwareFirmManagement.UI
             ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_cust)).EndInit();
             this.gbx_add_update_cust.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_customers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel_filters.ResumeLayout(false);
             this.tableLayoutPanel_filters.PerformLayout();
@@ -497,7 +499,6 @@ namespace SoftwareFirmManagement.UI
             this.menuStrip_filters.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.contextMenuStrip_grd.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -31,7 +31,7 @@ namespace SoftwareFirmManagement.BL
             this.password = password;
             this.roleId = roleId;
         }
-
+        public User() { }
 
         public int UserId
         {

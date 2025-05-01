@@ -1,4 +1,4 @@
-﻿using SoftwareFirmManagement.DL;
+using SoftwareFirmManagement.DL;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -21,10 +21,10 @@ namespace SoftwareFirmManagement.BL
         }
         public Customer(string username, string email, string password, int roleId, string name) : base(username, email, password, roleId)
         {
-            this.customerId = customerId;
             this.name = name;
         }
 
+        public Customer() { }
         public int CustomerId
         {
             get { return customerId; }

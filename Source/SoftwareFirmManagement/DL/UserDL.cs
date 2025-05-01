@@ -80,9 +80,9 @@ namespace SoftwareFirmManagement.DL
                     allUsers.Add(newCust);
                 }
             }
-            catch (MySql.Data.MySqlClient.MySqlException exception)
+            catch (MySql.Data.MySqlClient.MySqlException)
             {
-                MessageBox.Show($"Database error: {exception.Message}.", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
             }
         }
 

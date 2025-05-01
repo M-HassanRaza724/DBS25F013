@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +16,7 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = "SELECT * FROM services s LEFT JOIN serviceinvolved si ON si.service_id=s.service_id LEFT JOIN servicetechnologies st ON si.service_id=s.service_id";
+                string query = "SELECT * FROM services s LEFT JOIN serviceinvolved si ON si.service_id = s.service_id LEFT JOIN servicetechnologies st ON st.service_id = s.service_id;";
                 var data = DatabaseHelper.Instance.GetData(query);
                 while (data.Read())
                 {
@@ -38,9 +38,9 @@ namespace SoftwareFirmManagement.DL
                     allServices.Add(service);
                 }
             }
-            catch (MySql.Data.MySqlClient.MySqlException exception)
+            catch (MySql.Data.MySqlClient.MySqlException)
             {
-                MessageBox.Show($"Database error: {exception.Message}.", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
             }
         }
 
@@ -63,10 +63,9 @@ namespace SoftwareFirmManagement.DL
                 }
                 return true;
             }
-            catch (MySql.Data.MySqlClient.MySqlException exception)
+            catch (MySql.Data.MySqlClient.MySqlException)
             {
-                MessageBox.Show($"Database error: {exception.Message}.", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                throw;
             }
         }
 
@@ -89,10 +88,9 @@ namespace SoftwareFirmManagement.DL
                 }
                 return true;
             }
-            catch (MySql.Data.MySqlClient.MySqlException exception)
+            catch (MySql.Data.MySqlClient.MySqlException)
             {
-                MessageBox.Show($"Database error: {exception.Message}.", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                throw;
             }
         }
 
@@ -115,10 +113,9 @@ namespace SoftwareFirmManagement.DL
                 }
                 return true;
             }
-            catch (MySql.Data.MySqlClient.MySqlException exception)
+            catch (MySql.Data.MySqlClient.MySqlException)
             {
-                MessageBox.Show($"Database error: {exception.Message}.", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                throw;
             }
 
         }

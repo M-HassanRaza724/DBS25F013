@@ -1,20 +1,20 @@
-﻿using System;
+﻿using SoftwareFirmManagement.BL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SoftwareFirmManagement.BL;
 
 namespace SoftwareFirmManagement.DL
 {
-    public class AdminDL
+    public class CustomerDL
     {
-        public static bool AddAdminToDatabase(Admin admin)
+        public static bool AddCustomerToDatabase(Customer customer)
         {
             try
             {
-                string query = $"INSERT INTO admins VALUES ({admin.AdminId}, {admin.UserId}, '{admin.Name}', '{admin.Phone}', {admin.AdminRole});";
+                string query = $"INSERT INTO customers VALUES({customer.CustomerId}, {customer.UserId}, {customer.Name});";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }
@@ -25,12 +25,12 @@ namespace SoftwareFirmManagement.DL
         }
 
 
-        public static bool UpdateAdminToDatabase(Admin updatedAdmin) // only name and phone are updatable
+        public static bool UpdateCustomerToDatabase(Customer updatedCustomer)
         {
             try
             {
-                string query = $"UPDATE admins SET name = '{updatedAdmin.Name}', phone = '{updatedAdmin.Phone}') WHERE admin_id = {updatedAdmin.AdminId};";
-                DatabaseHelper.Instance.Update(query);
+                string query = $"UPDATE customers SET name = '{updatedCustomer.Name}' WHERE customer_id = {updatedCustomer.CustomerId};";
+
                 return true;
             }
             catch (MySql.Data.MySqlClient.MySqlException)
@@ -40,11 +40,11 @@ namespace SoftwareFirmManagement.DL
         }
 
 
-        public static bool DeleteAdminFromDatabase(Admin admin)
+        public static bool DeleteCustomerFromDatabase(Customer customer)
         {
             try
             {
-                string query = $"DELETE FROM admins WHERE admin_id = {admin.AdminId};";
+                string query = $"DELETE FROM customers WHERE customer_id = {customer.CustomerId};";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }
@@ -53,6 +53,7 @@ namespace SoftwareFirmManagement.DL
                 throw;
             }
         }
+
 
     }
 }

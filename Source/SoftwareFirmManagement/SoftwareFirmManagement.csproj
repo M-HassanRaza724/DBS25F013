@@ -123,6 +123,7 @@
     <Compile Include="BL\User.cs" />
     <Compile Include="DatabaseHelper.cs" />
     <Compile Include="DL\AdminDL.cs" />
+    <Compile Include="DL\CustomerDL.cs" />
     <Compile Include="DL\EmployeeDL.cs" />
     <Compile Include="DL\LookupDL.cs" />
     <Compile Include="DL\ServiceDL.cs" />

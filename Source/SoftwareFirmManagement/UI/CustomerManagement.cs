@@ -27,7 +27,7 @@ namespace SoftwareFirmManagement.UI
         {
             if (search == "Search")
                 search = null;
-            customerBindingSource.DataSource = CustomerDL.GetAllCustomers(search, sortby, direction);
+            customerBindingSource.DataSource = CustomerDL.GetCustomersByFilter(search, sortby, direction);
             dgv_customers.DataSource = customerBindingSource;
         }
 

@@ -71,11 +71,17 @@ namespace SoftwareFirmManagement.DL
 
         public static List<Customer> GetCustomersByFilter(string search = null ,string sortby = null, string direction = "ASC")
         {
+            if (search == null || sortby == null)
+            {
+                return UserDL.allUsers
+                       .OfType<Customer>()
+                       .OrderBy(l => l.Username)
+                       .ToList();
+            }
             List<Customer> filtered = UserDL.allUsers
                                       .OfType<Customer>()
                                       .Where(cust => cust.Username.Contains(search) || cust.Name.Contains(search))
                                       .ToList();
-
             if (direction == "DESC" && sortby == "username")
             {
                 filtered = filtered

@@ -36,10 +36,13 @@ namespace SoftwareFirmManagement.DL
 
         public static int GetLookupId(string keyGroup, string value)
         {
-            int lookupId = LookupDL.allLookups
-                           .Where(l => l.KeyGroup == keyGroup && l.Value == value)
-                           .Select(l => l.LookupId)
-                           .FirstOrDefault();
+            //int lookupId = LookupDL.allLookups
+            //               .Where(l => l.KeyGroup == keyGroup && l.Value == value)
+            //               .Select(l => l.LookupId)
+            //               .FirstOrDefault();
+            string query = $"CALL sp_get_lookup_id('{keyGroup}', '{value}');";
+            var data = DatabaseHelper.Instance.GetData(query);
+            int lookupId = data.GetInt32(0);
             return lookupId;
         }
 

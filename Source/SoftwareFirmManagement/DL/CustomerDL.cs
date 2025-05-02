@@ -43,7 +43,7 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = $"INSERT INTO customers(customer_id, user_id, name) VALUES({customer.CustomerId}, {customer.UserId}, '{customer.Name}');";
+                string query = $"CALL sp_manage_customer('add', {customer.CustomerId}, {customer.UserId}, '{customer.Name}');";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }
@@ -58,8 +58,8 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = $"UPDATE customers SET name = '{updatedCustomer.Name}' WHERE customer_id = {updatedCustomer.CustomerId};";
-
+                string query = $"CALL sp_manage_customer('update', {updatedCustomer.CustomerId}, {updatedCustomer.UserId}, '{updatedCustomer.Name}');";
+                DatabaseHelper.Instance.Update(query);
                 return true;
             }
             catch (MySql.Data.MySqlClient.MySqlException)
@@ -102,7 +102,7 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = $"DELETE FROM customers WHERE customer_id = {customer.CustomerId};";
+                string query = $"CALL sp_manage_customer('delete', {customer.CustomerId}, {customer.UserId}, '{customer.Name}');";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }

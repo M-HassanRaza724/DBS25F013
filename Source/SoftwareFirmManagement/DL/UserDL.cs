@@ -17,7 +17,7 @@ namespace SoftwareFirmManagement.DL
             try
             {
                 allUsers.Clear();
-                string query2 = "SELECT * FROM users NATURAL JOIN admins;";
+                string query2 = "CALL sp_get_user_by_role('admin');"; // using stored procedure sp_get_user_by_role
                 var data2 = DatabaseHelper.Instance.GetData(query2);
                 while (data2.Read())
                 {
@@ -39,7 +39,7 @@ namespace SoftwareFirmManagement.DL
                     allUsers.Add(newAdmin);
                 }
                 // adding employees
-                string query3 = $"SELECT * FROM users NATURAL JOIN employees;";
+                string query3 = $"CALL sp_get_user_by_role('employee');";
                 var data3 = DatabaseHelper.Instance.GetData(query3);
                 while (data3.Read())
                 {
@@ -61,7 +61,7 @@ namespace SoftwareFirmManagement.DL
                     newEmp.Role = role;
                     allUsers.Add(newEmp);
                 }
-                string query4 = "SELECT * FROM users NATURAL JOIN customers;";
+                string query4 = "CALL sp_get_user_by_role('customer')";
                 var data4 = DatabaseHelper.Instance.GetData(query4);
                 while (data4.Read())
                 {
@@ -92,7 +92,9 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = $"INSERT INTO users VALUES ({user.UserId}, '{user.Username}', '{user.Email}', '{user.Password}', {user.RoleId});";
+                // stored procedure for add, update, del
+                // the first arguement "add" is operation_type
+                string query = $"CALL sp_manage_user('add', {user.UserId}, '{user.Username}', '{user.Email}', '{user.Password}', {user.RoleId});";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }
@@ -108,7 +110,7 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = $"UPDATE users SET password = '{updatedUser.Password}') WHERE user_id = {updatedUser.UserId};";
+                string query = $"CALL sp_manage_user('update', {updatedUser.UserId}, '{updatedUser.Username}', '{updatedUser.Email}', '{updatedUser.Password}', {updatedUser.RoleId});";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }
@@ -124,7 +126,7 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = $"DELETE FROM users WHERE user_id = {userToDelete.UserId};";
+                string query = $"CALL sp_manage_user('delete', {userToDelete.UserId}, '{userToDelete.Username}', '{userToDelete.Email}', '{userToDelete.Password}', {userToDelete.RoleId});";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }

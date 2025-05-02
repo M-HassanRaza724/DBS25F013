@@ -17,7 +17,7 @@ namespace SoftwareFirmManagement.DL
             try
             {
                 allServices.Clear();
-                string query = "SELECT * FROM services s LEFT JOIN serviceinvolved si ON si.service_id = s.service_id LEFT JOIN servicetechnologies st ON st.service_id = s.service_id;";
+                string query = "SELECT * FROM get_services;"; // get_services is a view
                 var data = DatabaseHelper.Instance.GetData(query);
                 while (data.Read())
                 {
@@ -50,7 +50,7 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query1 = $"INSERT INTO services VALUES ({service.ServiceId}, '{service.Name}', {service.CategoryId}, '{service.Description}');";
+                string query1 = $"CALL sp_manage_service('add', {service.ServiceId}, '{service.Name}', {service.CategoryId}, '{service.Description}');";
                 DatabaseHelper.Instance.Update(query1);
                 LoadAllServices();
                 int serviceId = allServices
@@ -59,12 +59,12 @@ namespace SoftwareFirmManagement.DL
                                 .FirstOrDefault();
                 if (service.Subservice != null)
                 {
-                    string query = $"INSERT INTO serviceinvolved VALUES ({serviceId}, '{service.Subservice.Description}');";
+                    string query = $"CALL sp_manage_subservice('add', {serviceId}, '{service.Subservice.Description}');";
                     DatabaseHelper.Instance.Update(query);
                 }
                 if (service.Technology != null)
                 {
-                    string query = $"INSERT INTO servicetechnologies VALUES ({serviceId}, '{service.Technology.Description}');";
+                    string query = $"CALL sp_manage_technology('add', {serviceId}, '{service.Technology.Description}')";
                     DatabaseHelper.Instance.Update (query);
                 }
                 return true;
@@ -80,16 +80,16 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = $"UPDATE services SET name = '{service.Name}', description = '{service.Description}' WHERE service_id = {service.ServiceId};";
+                string query = $"CALL sp_manage_service('update', {service.ServiceId}, '{service.Name}', {service.CategoryId}, '{service.Description}');";
                 DatabaseHelper.Instance.Update(query);
                 if (service.Technology != null)
                 {
-                    string query2 = $"UPDATE servicetechnologies SET technology = '{service.Technology.Description}' WHERE service_id = {service.ServiceId};";
+                    string query2 = $"CALL sp_manage_technology('update', {service.ServiceId}, '{service.Technology.Description}')";
                     DatabaseHelper.Instance.Update(query2);
                 }
                 if (service.Subservice != null)
                 {
-                    string query3 = $"UPDATE serviceinvolved SET service_involved = '{service.Subservice.Description}' WHERE service_id = {service.ServiceId};";
+                    string query3 = $"CALL sp_manage_subservice('update', {service.ServiceId}, '{service.Subservice.Description}');";
                     DatabaseHelper.Instance.Update(query3);
                 }
                 return true;
@@ -105,16 +105,16 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = $"DELETE FROM services WHERE service_id = {service.ServiceId};";
+                string query = $"CALL sp_manage_service('delete', {service.ServiceId}, '{service.Name}', {service.CategoryId}, '{service.Description}');";
                 DatabaseHelper.Instance.Update(query);
                 if (service.Technology != null)
                 {
-                    string query1 = $"DELETE FROM servicetechnologies WHERE service_id = {service.ServiceId};";
+                    string query1 = $"CALL sp_manage_technology('delete', {service.ServiceId}, '{service.Technology.Description}')";
                     DatabaseHelper.Instance.Update(query1);
                 }
-                if (service.Technology != null)
+                if (service.Subservice != null)
                 {
-                    string query2 = $"DELETE FROM serviceinvolved WHERE service_id = {service.ServiceId};";
+                    string query2 = $"CALL sp_manage_subservice('add', {service.ServiceId}, '{service.Subservice.Description}');";
                     DatabaseHelper.Instance.Update(query2);
                 }
                 return true;

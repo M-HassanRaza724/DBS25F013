@@ -45,7 +45,7 @@ namespace SoftwareFirmManagement.DL
             try
             {
                 string formattedDate = employee.JoinedDate.ToString("yyyy-MM-dd");
-                string query = $"INSERT INTO employees VALUES({employee.EmployeeId}, '{employee.Name}', '{employee.Phone}', '{formattedDate}', {employee.DesignationId}, {employee.UserId});";
+                string query = $"CALL sp_manage_employee('add', {employee.EmployeeId}, '{employee.Name}', '{employee.Phone}', '{formattedDate}', {employee.DesignationId}, {employee.UserId});";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }
@@ -60,7 +60,8 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = $"UPDATE employees SET name = '{employee.Name}', phone = '{employee.Phone}' WHERE employee_id = {employee.EmployeeId};";
+                string formattedDate = employee.JoinedDate.ToString("yyyy-MM-dd");
+                string query = $"CALL sp_manage_employee('update', {employee.EmployeeId}, '{employee.Name}', '{employee.Phone}', '{formattedDate}', {employee.DesignationId}, {employee.UserId});";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }
@@ -75,7 +76,8 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = $"DELETE FROM employees WHERE employee_id = {employee.EmployeeId};";
+                string formattedDate = employee.JoinedDate.ToString("yyyy-MM-dd");
+                string query = $"CALL sp_manage_employee('delete', {employee.EmployeeId}, '{employee.Name}', '{employee.Phone}', '{formattedDate}', {employee.DesignationId}, {employee.UserId});";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }

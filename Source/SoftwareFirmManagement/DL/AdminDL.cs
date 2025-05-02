@@ -44,7 +44,7 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = $"INSERT INTO admins VALUES ({admin.AdminId}, {admin.UserId}, '{admin.Name}', '{admin.Phone}', {admin.AdminRole});";
+                string query = $"CALL sp_manage_admin('add', {admin.AdminId}, {admin.UserId}, '{admin.Name}', '{admin.Phone}', {admin.AdminRole});";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }
@@ -59,7 +59,7 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = $"UPDATE admins SET name = '{updatedAdmin.Name}', phone = '{updatedAdmin.Phone}') WHERE admin_id = {updatedAdmin.AdminId};";
+                string query = $"CALL sp_manage_admin('update', {updatedAdmin.AdminId}, {updatedAdmin.UserId}, '{updatedAdmin.Name}', '{updatedAdmin.Phone}', {updatedAdmin.AdminRole});";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }
@@ -74,7 +74,7 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = $"DELETE FROM admins WHERE admin_id = {admin.AdminId};";
+                string query = $"CALL sp_manage_admin('delete', {admin.AdminId}, {admin.UserId}, '{admin.Name}', '{admin.Phone}', {admin.AdminRole});";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }

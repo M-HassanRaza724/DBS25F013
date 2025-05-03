@@ -119,6 +119,7 @@
     <Compile Include="BL\Lookup.cs" />
     <Compile Include="BL\OrderDTO.cs" />
     <Compile Include="BL\ReviewDAO.cs" />
+    <Compile Include="BL\Salary.cs" />
     <Compile Include="BL\ServiceDTO.cs" />
     <Compile Include="BL\SubServiceDAO.cs" />
     <Compile Include="BL\TechnologyDAO.cs" />
@@ -131,6 +132,7 @@
     <Compile Include="DL\OrderDL.cs" />
     <Compile Include="DL\ReviewDL.cs" />
     <Compile Include="DL\ReviewDL.cs" />
+    <Compile Include="DL\SalaryDL.cs" />
     <Compile Include="DL\ServiceDL.cs" />
     <Compile Include="DL\UserDL.cs" />
     <Compile Include="UI\AddUpdateCust.cs">

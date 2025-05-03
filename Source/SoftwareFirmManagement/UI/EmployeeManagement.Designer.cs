@@ -47,28 +47,28 @@
             this.contextMenuStrip_grd = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbx_add_update_employee = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.lblPhonenum = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lbl_full_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblPhonenum = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.cmbDesignations = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.txt_Phone = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.txt_full_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.userCredentials1 = new SoftwareFirmManagement.UI.UserCredentials();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.btn_cancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_add_update_employee = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lbl_last_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.lbl_full_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbox_grd_users = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.dgv_employees = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.txt_Phone = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
-            this.txt_full_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
-            this.userCredentials1 = new SoftwareFirmManagement.UI.UserCredentials();
             this.EmployeeIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UsernameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PasswordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,7 +84,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_employee.Panel)).BeginInit();
             this.gbx_add_update_employee.Panel.SuspendLayout();
             this.gbx_add_update_employee.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDesignations)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_users)).BeginInit();
@@ -92,11 +97,6 @@
             this.gbox_grd_users.Panel.SuspendLayout();
             this.gbox_grd_users.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_employees)).BeginInit();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -219,9 +219,9 @@
             // 
             this.lbl_filter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_filter.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_filter.Location = new System.Drawing.Point(135, 12);
+            this.lbl_filter.Location = new System.Drawing.Point(124, 10);
             this.lbl_filter.Name = "lbl_filter";
-            this.lbl_filter.Size = new System.Drawing.Size(54, 26);
+            this.lbl_filter.Size = new System.Drawing.Size(65, 29);
             this.lbl_filter.TabIndex = 38;
             this.lbl_filter.Values.Text = "Filters";
             // 
@@ -294,14 +294,62 @@
             this.gbx_add_update_employee.Values.Heading = "Add Customer";
             this.gbx_add_update_employee.Visible = false;
             // 
-            // lblPhonenum
+            // lbl_full_name
             // 
-            this.lblPhonenum.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lblPhonenum.Location = new System.Drawing.Point(10, 87);
-            this.lblPhonenum.Name = "lblPhonenum";
-            this.lblPhonenum.Size = new System.Drawing.Size(55, 26);
-            this.lblPhonenum.TabIndex = 28;
-            this.lblPhonenum.Values.Text = "Phone";
+            this.lbl_full_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.lbl_full_name.Location = new System.Drawing.Point(10, 20);
+            this.lbl_full_name.Name = "lbl_full_name";
+            this.lbl_full_name.Size = new System.Drawing.Size(96, 29);
+            this.lbl_full_name.TabIndex = 8;
+            this.lbl_full_name.Values.Text = "FullName";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panel5, 0, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(572, 309);
+            this.tableLayoutPanel3.TabIndex = 29;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.panel3, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.panel4, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 241F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(566, 241);
+            this.tableLayoutPanel4.TabIndex = 3;
+            this.tableLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel4_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.kryptonLabel1);
+            this.panel3.Controls.Add(this.lblPhonenum);
+            this.panel3.Controls.Add(this.cmbDesignations);
+            this.panel3.Controls.Add(this.txt_Phone);
+            this.panel3.Controls.Add(this.txt_full_name);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(277, 235);
+            this.panel3.TabIndex = 0;
             // 
             // kryptonLabel1
             // 
@@ -311,6 +359,15 @@
             this.kryptonLabel1.Size = new System.Drawing.Size(93, 26);
             this.kryptonLabel1.TabIndex = 15;
             this.kryptonLabel1.Values.Text = "Designation";
+            // 
+            // lblPhonenum
+            // 
+            this.lblPhonenum.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.lblPhonenum.Location = new System.Drawing.Point(10, 87);
+            this.lblPhonenum.Name = "lblPhonenum";
+            this.lblPhonenum.Size = new System.Drawing.Size(55, 26);
+            this.lblPhonenum.TabIndex = 28;
+            this.lblPhonenum.Values.Text = "Phone";
             // 
             // cmbDesignations
             // 
@@ -330,10 +387,71 @@
             this.cmbDesignations.TabIndex = 26;
             this.cmbDesignations.Text = "Designations";
             // 
+            // txt_Phone
+            // 
+            this.txt_Phone.BackColor = System.Drawing.Color.Transparent;
+            this.txt_Phone.Location = new System.Drawing.Point(10, 100);
+            this.txt_Phone.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Phone.Name = "txt_Phone";
+            this.txt_Phone.PlaceHolder = "Phone";
+            this.txt_Phone.Size = new System.Drawing.Size(250, 42);
+            this.txt_Phone.Style = "Standalone";
+            this.txt_Phone.TabIndex = 27;
+            this.txt_Phone.TextBoxText = "Phone";
+            this.txt_Phone.Load += new System.EventHandler(this.txt_Phone_Load);
+            // 
+            // txt_full_name
+            // 
+            this.txt_full_name.BackColor = System.Drawing.Color.Transparent;
+            this.txt_full_name.Location = new System.Drawing.Point(10, 29);
+            this.txt_full_name.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_full_name.Name = "txt_full_name";
+            this.txt_full_name.PlaceHolder = "FullName";
+            this.txt_full_name.Size = new System.Drawing.Size(250, 42);
+            this.txt_full_name.Style = "Standalone";
+            this.txt_full_name.TabIndex = 3;
+            this.txt_full_name.TextBoxText = "FullName";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.userCredentials1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(286, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(277, 235);
+            this.panel4.TabIndex = 1;
+            // 
+            // userCredentials1
+            // 
+            this.userCredentials1.BackColor = System.Drawing.Color.Transparent;
+            this.userCredentials1.Email = "Email";
+            this.userCredentials1.EmailPlaceHolder = "Email";
+            this.userCredentials1.Location = new System.Drawing.Point(8, 18);
+            this.userCredentials1.Margin = new System.Windows.Forms.Padding(4);
+            this.userCredentials1.Name = "userCredentials1";
+            this.userCredentials1.Password = "Password";
+            this.userCredentials1.PasswordPlaceHolder = "Password";
+            this.userCredentials1.Size = new System.Drawing.Size(250, 189);
+            this.userCredentials1.TabIndex = 12;
+            this.userCredentials1.Username = "Username";
+            this.userCredentials1.UsernamePlaceHolder = "Username";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.Controls.Add(this.btn_cancel);
+            this.panel5.Controls.Add(this.btn_add_update_employee);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(3, 250);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(566, 56);
+            this.panel5.TabIndex = 4;
+            // 
             // btn_cancel
             // 
             this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_cancel.Location = new System.Drawing.Point(216, 1);
+            this.btn_cancel.Location = new System.Drawing.Point(232, 2);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(150, 50);
             this.btn_cancel.TabIndex = 13;
@@ -344,7 +462,7 @@
             // 
             this.btn_add_update_employee.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_add_update_employee.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
-            this.btn_add_update_employee.Location = new System.Drawing.Point(386, 1);
+            this.btn_add_update_employee.Location = new System.Drawing.Point(402, 2);
             this.btn_add_update_employee.Name = "btn_add_update_employee";
             this.btn_add_update_employee.Size = new System.Drawing.Size(150, 50);
             this.btn_add_update_employee.TabIndex = 2;
@@ -356,18 +474,9 @@
             this.lbl_last_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_last_name.Location = new System.Drawing.Point(6, 72);
             this.lbl_last_name.Name = "lbl_last_name";
-            this.lbl_last_name.Size = new System.Drawing.Size(6, 4);
+            this.lbl_last_name.Size = new System.Drawing.Size(6, 2);
             this.lbl_last_name.TabIndex = 9;
             this.lbl_last_name.Values.Text = "";
-            // 
-            // lbl_full_name
-            // 
-            this.lbl_full_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_full_name.Location = new System.Drawing.Point(10, 20);
-            this.lbl_full_name.Name = "lbl_full_name";
-            this.lbl_full_name.Size = new System.Drawing.Size(77, 26);
-            this.lbl_full_name.TabIndex = 8;
-            this.lbl_full_name.Values.Text = "FullName";
             // 
             // tableLayoutPanel1
             // 
@@ -427,126 +536,9 @@
             this.dgv_employees.Location = new System.Drawing.Point(0, 0);
             this.dgv_employees.Name = "dgv_employees";
             this.dgv_employees.RowHeadersWidth = 51;
-            this.dgv_employees.Size = new System.Drawing.Size(764, 404);
+            this.dgv_employees.Size = new System.Drawing.Size(774, 413);
             this.dgv_employees.TabIndex = 0;
             this.dgv_employees.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_employees_CellMouseDown);
-            // 
-            // FullNameColumn
-            // 
-            this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FullNameColumn.DataPropertyName = "Name";
-            this.FullNameColumn.HeaderText = "FullName";
-            this.FullNameColumn.MinimumWidth = 6;
-            this.FullNameColumn.Name = "FullNameColumn";
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.panel5, 0, 1);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(556, 297);
-            this.tableLayoutPanel3.TabIndex = 29;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.panel3, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.panel4, 1, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 231F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(550, 231);
-            this.tableLayoutPanel4.TabIndex = 3;
-            this.tableLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel4_Paint);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.kryptonLabel1);
-            this.panel3.Controls.Add(this.lblPhonenum);
-            this.panel3.Controls.Add(this.cmbDesignations);
-            this.panel3.Controls.Add(this.txt_Phone);
-            this.panel3.Controls.Add(this.txt_full_name);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(269, 225);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.userCredentials1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(278, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(269, 225);
-            this.panel4.TabIndex = 1;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Controls.Add(this.btn_cancel);
-            this.panel5.Controls.Add(this.btn_add_update_employee);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 240);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(550, 54);
-            this.panel5.TabIndex = 4;
-            // 
-            // txt_Phone
-            // 
-            this.txt_Phone.BackColor = System.Drawing.Color.Transparent;
-            this.txt_Phone.Location = new System.Drawing.Point(10, 100);
-            this.txt_Phone.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_Phone.Name = "txt_Phone";
-            this.txt_Phone.PlaceHolder = "Phone";
-            this.txt_Phone.Size = new System.Drawing.Size(250, 42);
-            this.txt_Phone.Style = "Standalone";
-            this.txt_Phone.TabIndex = 27;
-            this.txt_Phone.TextBoxText = "Phone";
-            this.txt_Phone.Load += new System.EventHandler(this.txt_Phone_Load);
-            // 
-            // txt_full_name
-            // 
-            this.txt_full_name.BackColor = System.Drawing.Color.Transparent;
-            this.txt_full_name.Location = new System.Drawing.Point(10, 29);
-            this.txt_full_name.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_full_name.Name = "txt_full_name";
-            this.txt_full_name.PlaceHolder = "FullName";
-            this.txt_full_name.Size = new System.Drawing.Size(250, 42);
-            this.txt_full_name.Style = "Standalone";
-            this.txt_full_name.TabIndex = 3;
-            this.txt_full_name.TextBoxText = "FullName";
-            // 
-            // userCredentials1
-            // 
-            this.userCredentials1.BackColor = System.Drawing.Color.Transparent;
-            this.userCredentials1.Email = "Email";
-            this.userCredentials1.EmailPlaceHolder = "Email";
-            this.userCredentials1.Location = new System.Drawing.Point(8, 18);
-            this.userCredentials1.Margin = new System.Windows.Forms.Padding(4);
-            this.userCredentials1.Name = "userCredentials1";
-            this.userCredentials1.Password = "Password";
-            this.userCredentials1.PasswordPlaceHolder = "Password";
-            this.userCredentials1.Size = new System.Drawing.Size(250, 189);
-            this.userCredentials1.TabIndex = 12;
-            this.userCredentials1.Username = "Username";
-            this.userCredentials1.UsernamePlaceHolder = "Username";
             // 
             // EmployeeIdColumn
             // 
@@ -565,6 +557,14 @@
             this.UserIdColumn.Name = "UserIdColumn";
             this.UserIdColumn.Visible = false;
             this.UserIdColumn.Width = 125;
+            // 
+            // FullNameColumn
+            // 
+            this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FullNameColumn.DataPropertyName = "Name";
+            this.FullNameColumn.HeaderText = "FullName";
+            this.FullNameColumn.MinimumWidth = 6;
+            this.FullNameColumn.Name = "FullNameColumn";
             // 
             // UsernameColumn
             // 
@@ -622,7 +622,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip_filters;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EmployeeManagement";
             this.Text = "EmployeeManagement";
             this.Load += new System.EventHandler(this.EmployeeManagement_Load);
@@ -638,7 +638,13 @@
             this.gbx_add_update_employee.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_employee)).EndInit();
             this.gbx_add_update_employee.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDesignations)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_users.Panel)).EndInit();
@@ -646,12 +652,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_users)).EndInit();
             this.gbox_grd_users.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_employees)).EndInit();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeBindingSource)).EndInit();
             this.ResumeLayout(false);
 

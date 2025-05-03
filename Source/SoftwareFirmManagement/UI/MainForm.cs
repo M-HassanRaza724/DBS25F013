@@ -180,5 +180,10 @@ namespace SoftwareFirmManagement.UI
         {
 
         }
+
+        private void btn_employee_management_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(new EmployeeManagement());
+        }
     }
 }

@@ -117,3 +117,4 @@ C:\##Semester 2\ClonedFromGitHubDesktop\DBS25F013\Source\SoftwareFirmManagement\
 C:\##Semester 2\ClonedFromGitHubDesktop\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.MainForm.resources
 C:\##Semester 2\ClonedFromGitHubDesktop\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.TextBoxWithPlaceHolder.resources
 C:\##Semester 2\ClonedFromGitHubDesktop\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.UserCredentials.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.EmployeeManagement.resources

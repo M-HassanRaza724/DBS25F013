@@ -55,7 +55,6 @@ namespace SoftwareFirmManagement.DL
             }
         }
 
-
         public static bool UpdateEmployeeToDatabase(Employee employee) // only name and phone are updatable
         {
             try

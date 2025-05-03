@@ -38,7 +38,6 @@ namespace SoftwareFirmManagement.UI
             this.btn_close = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_max_min = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_size = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.header1 = new SoftwareFirmManagement.UI.Header();
             this.pnl_main = new System.Windows.Forms.Panel();
             this.pnl_user_management = new System.Windows.Forms.Panel();
             this.btn_employee_management = new System.Windows.Forms.Button();
@@ -49,6 +48,7 @@ namespace SoftwareFirmManagement.UI
             this.btn_dashboard = new System.Windows.Forms.Button();
             this.pnl_menu = new System.Windows.Forms.Panel();
             this.btn_menu = new System.Windows.Forms.Button();
+            this.header1 = new SoftwareFirmManagement.UI.Header();
             this.sidePanel1 = new SoftwareFirmManagement.UI.SidePanel();
             this.panel1.SuspendLayout();
             this.pnl_user_management.SuspendLayout();
@@ -871,15 +871,6 @@ namespace SoftwareFirmManagement.UI
             this.btn_size.Values.Text = "";
             this.btn_size.Click += new System.EventHandler(this.btn_size_Click);
             // 
-            // header1
-            // 
-            this.header1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.header1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.header1.Location = new System.Drawing.Point(0, 0);
-            this.header1.Name = "header1";
-            this.header1.Size = new System.Drawing.Size(352, 50);
-            this.header1.TabIndex = 3;
-            // 
             // pnl_main
             // 
             this.pnl_main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -918,6 +909,7 @@ namespace SoftwareFirmManagement.UI
             this.btn_employee_management.TabIndex = 3;
             this.btn_employee_management.Text = "Employee Management";
             this.btn_employee_management.UseVisualStyleBackColor = true;
+            this.btn_employee_management.Click += new System.EventHandler(this.btn_employee_management_Click);
             // 
             // btn_admin_management
             // 
@@ -1015,6 +1007,15 @@ namespace SoftwareFirmManagement.UI
             this.btn_menu.Text = "Menu";
             this.btn_menu.UseVisualStyleBackColor = true;
             this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
+            // 
+            // header1
+            // 
+            this.header1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.header1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.header1.Location = new System.Drawing.Point(0, 0);
+            this.header1.Name = "header1";
+            this.header1.Size = new System.Drawing.Size(352, 50);
+            this.header1.TabIndex = 3;
             // 
             // sidePanel1
             // 

@@ -3,16 +3,56 @@
   "WorkspaceRootPath": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|e:\\cs\\2ndsemester\\dbprojects\\final\\dbs25f013\\source\\softwarefirmmanagement\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|e:\\cs\\2ndsemester\\dbprojects\\final\\dbs25f013\\source\\softwarefirmmanagement\\ui\\employeemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\employeemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|e:\\cs\\2ndsemester\\dbprojects\\final\\dbs25f013\\source\\softwarefirmmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|e:\\cs\\2ndsemester\\dbprojects\\final\\dbs25f013\\source\\softwarefirmmanagement\\ui\\employeemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\employeemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|e:\\cs\\2ndsemester\\dbprojects\\final\\dbs25f013\\source\\softwarefirmmanagement\\ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\bl\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:bl\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|e:\\cs\\2ndsemester\\dbprojects\\final\\dbs25f013\\source\\softwarefirmmanagement\\dl\\customerdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:dl\\customerdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\dl\\servicedl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:dl\\servicedl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\bl\\lookup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:bl\\lookup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\dl\\userdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:dl\\userdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\dl\\lookupdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:dl\\lookupdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\bl\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:bl\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\ui\\usercredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\usercredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\ui\\usercredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\usercredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,25 +61,77 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "DockedHeight": 200,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DatabaseHelper.cs",
-              "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DatabaseHelper.cs",
-              "RelativeDocumentMoniker": "DatabaseHelper.cs",
-              "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DatabaseHelper.cs*",
-              "RelativeToolTip": "DatabaseHelper.cs*",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBEAAAAsAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\MainForm.cs",
+              "RelativeDocumentMoniker": "UI\\MainForm.cs",
+              "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\MainForm.cs [Design]",
+              "RelativeToolTip": "UI\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T08:56:46.677Z",
+              "WhenOpened": "2025-04-28T16:09:34.881Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\BL\\Customer.cs",
+              "RelativeDocumentMoniker": "BL\\Customer.cs",
+              "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\BL\\Customer.cs",
+              "RelativeToolTip": "BL\\Customer.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA5wDYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T05:02:17.702Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\MainForm.cs",
+              "RelativeDocumentMoniker": "UI\\MainForm.cs",
+              "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\MainForm.cs",
+              "RelativeToolTip": "UI\\MainForm.cs",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAswLkAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:25:32.37Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "EmployeeManagement.cs",
+              "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\EmployeeManagement.cs",
+              "RelativeDocumentMoniker": "UI\\EmployeeManagement.cs",
+              "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\EmployeeManagement.cs",
+              "RelativeToolTip": "UI\\EmployeeManagement.cs",
+              "ViewState": "AgIAANoAAAAAAAAAAAAewOYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:03:49.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeManagement.cs [Design]",
+              "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\EmployeeManagement.cs",
+              "RelativeDocumentMoniker": "UI\\EmployeeManagement.cs",
+              "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\EmployeeManagement.cs [Design]",
+              "RelativeToolTip": "UI\\EmployeeManagement.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T09:55:00.567Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -52,16 +144,86 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CustomerDL.cs",
-              "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\CustomerDL.cs",
-              "RelativeDocumentMoniker": "DL\\CustomerDL.cs",
-              "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\CustomerDL.cs",
-              "RelativeToolTip": "DL\\CustomerDL.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowBgAAABIAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "ServiceDL.cs",
+              "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\ServiceDL.cs",
+              "RelativeDocumentMoniker": "DL\\ServiceDL.cs",
+              "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\ServiceDL.cs",
+              "RelativeToolTip": "DL\\ServiceDL.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAD4vxEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T08:52:29.569Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-01T08:06:28.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LookupDL.cs",
+              "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\LookupDL.cs",
+              "RelativeDocumentMoniker": "DL\\LookupDL.cs",
+              "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\LookupDL.cs",
+              "RelativeToolTip": "DL\\LookupDL.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T07:55:48.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Lookup.cs",
+              "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\BL\\Lookup.cs",
+              "RelativeDocumentMoniker": "BL\\Lookup.cs",
+              "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\BL\\Lookup.cs",
+              "RelativeToolTip": "BL\\Lookup.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAiwCMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T07:53:46.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserDL.cs",
+              "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\UserDL.cs",
+              "RelativeDocumentMoniker": "DL\\UserDL.cs",
+              "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\UserDL.cs",
+              "RelativeToolTip": "DL\\UserDL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T07:51:59.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\BL\\User.cs",
+              "RelativeDocumentMoniker": "BL\\User.cs",
+              "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\BL\\User.cs",
+              "RelativeToolTip": "BL\\User.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T07:50:53.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserCredentials.cs",
+              "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\UserCredentials.cs",
+              "RelativeDocumentMoniker": "UI\\UserCredentials.cs",
+              "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\UserCredentials.cs",
+              "RelativeToolTip": "UI\\UserCredentials.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAqwCUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T05:36:13.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserCredentials.cs [Design]",
+              "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\UserCredentials.cs",
+              "RelativeDocumentMoniker": "UI\\UserCredentials.cs",
+              "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\UserCredentials.cs [Design]",
+              "RelativeToolTip": "UI\\UserCredentials.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T05:35:13.875Z"
             }
           ]
         },

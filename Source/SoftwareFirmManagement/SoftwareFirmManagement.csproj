@@ -130,6 +130,7 @@
     <Compile Include="DL\LookupDL.cs" />
     <Compile Include="DL\OrderDL.cs" />
     <Compile Include="DL\ReviewDL.cs" />
+    <Compile Include="DL\ReviewDL.cs" />
     <Compile Include="DL\ServiceDL.cs" />
     <Compile Include="DL\UserDL.cs" />
     <Compile Include="UI\AddUpdateCust.cs">
@@ -149,6 +150,12 @@
     </Compile>
     <Compile Include="UI\DemoForm.Designer.cs">
       <DependentUpon>DemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EmployeeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\EmployeeManagement.Designer.cs">
+      <DependentUpon>EmployeeManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
@@ -202,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DemoForm.resx">
       <DependentUpon>DemoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\EmployeeManagement.resx">
+      <DependentUpon>EmployeeManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -329,6 +339,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="SoftwareFirmManagement.BL.Customer.datasource" />
+    <None Include="SoftwareFirmManagement.BL.Employee.datasource" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

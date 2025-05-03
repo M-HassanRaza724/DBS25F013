@@ -1,4 +1,4 @@
-﻿using SoftwareFirmManagement.BL;
+using SoftwareFirmManagement.BL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -89,6 +89,12 @@ namespace SoftwareFirmManagement.DL
         public static List<Lookup> GetAllLookups()
         {
             return allLookups;
+        }
+        public static List<Lookup> GetDesignations()
+        {
+            List<Lookup> designations = new List<Lookup>();
+            return designations;
+            // DL logic
         }
 
 

@@ -47,27 +47,27 @@
             this.contextMenuStrip_grd = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbx_add_update_employee = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btn_cancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_add_update_employee = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.userCredentials1 = new SoftwareFirmManagement.UI.UserCredentials();
             this.lbl_last_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_full_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txt_full_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbox_grd_users = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.dgv_employees = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userCredentials1 = new SoftwareFirmManagement.UI.UserCredentials();
-            this.txt_full_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.EmployeeIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UsernameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PasswordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoleIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.cmbDesignations = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel_filters.SuspendLayout();
             this.menuStrip_filters.SuspendLayout();
@@ -85,7 +85,7 @@
             this.gbox_grd_users.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_employees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbDesignations)).BeginInit();
             this.SuspendLayout();
             // 
             // updateToolStripMenuItem
@@ -276,8 +276,8 @@
             // 
             // gbx_add_update_employee.Panel
             // 
-            this.gbx_add_update_employee.Panel.Controls.Add(this.kryptonComboBox1);
             this.gbx_add_update_employee.Panel.Controls.Add(this.kryptonLabel1);
+            this.gbx_add_update_employee.Panel.Controls.Add(this.cmbDesignations);
             this.gbx_add_update_employee.Panel.Controls.Add(this.btn_cancel);
             this.gbx_add_update_employee.Panel.Controls.Add(this.btn_add_update_employee);
             this.gbx_add_update_employee.Panel.Controls.Add(this.userCredentials1);
@@ -288,6 +288,17 @@
             this.gbx_add_update_employee.TabIndex = 1;
             this.gbx_add_update_employee.Values.Heading = "Add Customer";
             this.gbx_add_update_employee.Visible = false;
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.kryptonLabel1.Location = new System.Drawing.Point(55, 327);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(115, 31);
+            this.kryptonLabel1.TabIndex = 15;
+            this.kryptonLabel1.Values.Text = "Designation";
             // 
             // btn_cancel
             // 
@@ -312,6 +323,22 @@
             this.btn_add_update_employee.Values.Text = "Add Employee";
             this.btn_add_update_employee.Click += new System.EventHandler(this.btn_add_update_employee_Click);
             // 
+            // userCredentials1
+            // 
+            this.userCredentials1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.userCredentials1.BackColor = System.Drawing.Color.Transparent;
+            this.userCredentials1.Email = "Email";
+            this.userCredentials1.EmailPlaceHolder = "Email";
+            this.userCredentials1.Location = new System.Drawing.Point(51, 94);
+            this.userCredentials1.Margin = new System.Windows.Forms.Padding(5);
+            this.userCredentials1.Name = "userCredentials1";
+            this.userCredentials1.Password = "Password";
+            this.userCredentials1.PasswordPlaceHolder = "Password";
+            this.userCredentials1.Size = new System.Drawing.Size(367, 233);
+            this.userCredentials1.TabIndex = 12;
+            this.userCredentials1.Username = "Username";
+            this.userCredentials1.UsernamePlaceHolder = "Username";
+            // 
             // lbl_last_name
             // 
             this.lbl_last_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
@@ -332,6 +359,19 @@
             this.lbl_full_name.Size = new System.Drawing.Size(95, 31);
             this.lbl_full_name.TabIndex = 8;
             this.lbl_full_name.Values.Text = "FullName";
+            // 
+            // txt_full_name
+            // 
+            this.txt_full_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_full_name.BackColor = System.Drawing.Color.Transparent;
+            this.txt_full_name.Location = new System.Drawing.Point(51, 32);
+            this.txt_full_name.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_full_name.Name = "txt_full_name";
+            this.txt_full_name.PlaceHolder = "FullName";
+            this.txt_full_name.Size = new System.Drawing.Size(367, 52);
+            this.txt_full_name.Style = "Standalone";
+            this.txt_full_name.TabIndex = 3;
+            this.txt_full_name.TextBoxText = "FullName";
             // 
             // tableLayoutPanel1
             // 
@@ -399,43 +439,6 @@
             this.dgv_employees.TabIndex = 0;
             this.dgv_employees.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_employees_CellMouseDown);
             // 
-            // FullNameColumn
-            // 
-            this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FullNameColumn.DataPropertyName = "Name";
-            this.FullNameColumn.HeaderText = "FullName";
-            this.FullNameColumn.MinimumWidth = 6;
-            this.FullNameColumn.Name = "FullNameColumn";
-            // 
-            // userCredentials1
-            // 
-            this.userCredentials1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.userCredentials1.BackColor = System.Drawing.Color.Transparent;
-            this.userCredentials1.Email = "Email";
-            this.userCredentials1.EmailPlaceHolder = "Email";
-            this.userCredentials1.Location = new System.Drawing.Point(51, 94);
-            this.userCredentials1.Margin = new System.Windows.Forms.Padding(5);
-            this.userCredentials1.Name = "userCredentials1";
-            this.userCredentials1.Password = "Password";
-            this.userCredentials1.PasswordPlaceHolder = "Password";
-            this.userCredentials1.Size = new System.Drawing.Size(367, 233);
-            this.userCredentials1.TabIndex = 12;
-            this.userCredentials1.Username = "Username";
-            this.userCredentials1.UsernamePlaceHolder = "Username";
-            // 
-            // txt_full_name
-            // 
-            this.txt_full_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_full_name.BackColor = System.Drawing.Color.Transparent;
-            this.txt_full_name.Location = new System.Drawing.Point(51, 32);
-            this.txt_full_name.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_full_name.Name = "txt_full_name";
-            this.txt_full_name.PlaceHolder = "FullName";
-            this.txt_full_name.Size = new System.Drawing.Size(367, 52);
-            this.txt_full_name.Style = "Standalone";
-            this.txt_full_name.TabIndex = 3;
-            this.txt_full_name.TextBoxText = "FullName";
-            // 
             // EmployeeIdColumn
             // 
             this.EmployeeIdColumn.DataPropertyName = "EmployeeId";
@@ -453,6 +456,14 @@
             this.UserIdColumn.Name = "UserIdColumn";
             this.UserIdColumn.Visible = false;
             this.UserIdColumn.Width = 125;
+            // 
+            // FullNameColumn
+            // 
+            this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FullNameColumn.DataPropertyName = "Name";
+            this.FullNameColumn.HeaderText = "FullName";
+            this.FullNameColumn.MinimumWidth = 6;
+            this.FullNameColumn.Name = "FullNameColumn";
             // 
             // UsernameColumn
             // 
@@ -501,26 +512,25 @@
             // 
             this.EmployeeBindingSource.DataSource = typeof(SoftwareFirmManagement.BL.Employee);
             // 
-            // kryptonLabel1
+            // cmbDesignations
             // 
-            this.kryptonLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonLabel1.Location = new System.Drawing.Point(55, 326);
-            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(115, 31);
-            this.kryptonLabel1.TabIndex = 15;
-            this.kryptonLabel1.Values.Text = "Designation";
-            // 
-            // kryptonComboBox1
-            // 
-            this.kryptonComboBox1.DropDownWidth = 357;
-            this.kryptonComboBox1.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
-            this.kryptonComboBox1.Location = new System.Drawing.Point(55, 352);
-            this.kryptonComboBox1.Name = "kryptonComboBox1";
-            this.kryptonComboBox1.Size = new System.Drawing.Size(369, 40);
-            this.kryptonComboBox1.TabIndex = 2;
-            this.kryptonComboBox1.Text = "Designation";
+            this.cmbDesignations.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList;
+            this.cmbDesignations.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
+            this.cmbDesignations.DropDownWidth = 188;
+            this.cmbDesignations.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
+            this.cmbDesignations.Items.AddRange(new object[] {
+            "item 1",
+            "item 2",
+            "item 3",
+            "item 4",
+            "item 5",
+            "item 6"});
+            this.cmbDesignations.Location = new System.Drawing.Point(55, 349);
+            this.cmbDesignations.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbDesignations.Name = "cmbDesignations";
+            this.cmbDesignations.Size = new System.Drawing.Size(353, 42);
+            this.cmbDesignations.TabIndex = 26;
+            this.cmbDesignations.Text = "Designations";
             // 
             // EmployeeManagement
             // 
@@ -554,7 +564,7 @@
             this.gbox_grd_users.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_employees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbDesignations)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -599,6 +609,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RoleIdColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoleColumn;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbDesignations;
     }
 }

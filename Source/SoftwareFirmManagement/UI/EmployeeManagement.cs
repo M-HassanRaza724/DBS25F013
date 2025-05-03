@@ -63,36 +63,7 @@ namespace SoftwareFirmManagement.UI
                 contextMenuStrip_grd.Show(dgv_employees, dgv_employees.PointToClient(Cursor.Position));
             }
         }
-        private void btn_add_update_employee_Click(object sender, EventArgs e)
-        {
-            if (btn_add_update_employee.Text == "Update")
-            {
-                try
-                {
-                    //Employee employee = new Employee (Convert.ToInt32(currentContextRow.Cells["UserIdColumn"].Value), userCredentials1.Username, userCredentials1.Email, userCredentials1.Password, LookupDL.GetLookupId("user_role", "Employee"), Convert.ToInt32(currentContextRow.Cells["EmployeeIdColumn"].Value), txt_full_name.TextBoxText);
-                    //employee.Update(employee);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
 
-                try
-                {
-                    //Employee employee = new Employee (userCredentials1.Username, userCredentials1.Email, userCredentials1.Password, LookupDL.GetLookupId("user_role", "Employee"), txt_full_name.TextBoxText);
-                    //employee.Add(employee);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            LoadData();
-            disableGroupBox();
-        }
         void enableGroupBox(int custId = -1)
         {
             gbx_add_update_employee.Enabled = true;
@@ -127,11 +98,11 @@ namespace SoftwareFirmManagement.UI
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int employeeId = Convert.ToInt32(currentContextRow.Cells["EmployeeIdColumn"].Value);
-            Employee e = new Employee();
-            e.EmployeeId = employeeId;
+            Employee employee = new Employee();
+            employee.EmployeeId = employeeId;
 
             if (DialogResult.Yes == MessageBox.Show($"Are you sure you want to delete {currentContextRow.Cells["FullNameColumn"].Value.ToString()}?", "Warning", MessageBoxButtons.YesNo))
-                e.Delete(e);
+                employee.Delete(employee);
         }
         private void btn_add_employee_Click(object sender, EventArgs e)
         {
@@ -151,6 +122,37 @@ namespace SoftwareFirmManagement.UI
         }
         private void loadDesignations()
         {
+        }
+        private void btn_add_update_employee_Click(object sender, EventArgs e)
+        {
+            if (btn_add_update_employee.Text == "Update")
+            {
+                try
+                {
+                    //    Employee employee = new Employee(Convert.ToInt32(currentContextRow.Cells["UserIdColumn"].Value), userCredentials1.Username, userCredentials1.Email, userCredentials1.Password, LookupDL.GetLookupId("user_role", "Employee"), Convert.ToInt32(currentContextRow.Cells["EmployeeIdColumn"].Value), txt_full_name.TextBoxText);
+                    //    employee.Update(employee);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+
+                try
+                {
+                    //Employee employee = new Employee(userCredentials1.Username, userCredentials1.Email, userCredentials1.Password, LookupDL.GetLookupId("user_role", "Employee"), txt_full_name.TextBoxText);
+                    //employee.Add(employee);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            LoadData();
+            disableGroupBox();
         }
     }
 }

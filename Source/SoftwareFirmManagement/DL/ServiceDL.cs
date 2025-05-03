@@ -16,6 +16,7 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
+                allServices.Clear();
                 string query = "SELECT * FROM services s LEFT JOIN serviceinvolved si ON si.service_id = s.service_id LEFT JOIN servicetechnologies st ON st.service_id = s.service_id;";
                 var data = DatabaseHelper.Instance.GetData(query);
                 while (data.Read())

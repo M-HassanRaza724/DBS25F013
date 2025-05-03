@@ -37,6 +37,52 @@ namespace SoftwareFirmManagement.DL
             // dl logic please
             return 0;
         }
+        public static string GetLookupValue(string keyGroup, int lookupId)
+        {
+            // dl logic please
+            return "";
+        }
+        public static List<Lookup> GetLookupsByKeyGroup(string keyGroup)
+        {
+            List<Lookup> lookups = new List<Lookup>();
+            foreach (var lookup in allLookups)
+            {
+                if (lookup.KeyGroup == keyGroup)
+                {
+                    lookups.Add(lookup);
+                }
+            }
+            return lookups;
+        }
+        public static List<string> GetLookupValuesByKeyGroup(string keyGroup)
+        {
+            List<string> values = new List<string>();
+            foreach (var lookup in allLookups)
+            {
+                if (lookup.KeyGroup == keyGroup)
+                {
+                    values.Add(lookup.Value);
+                }
+            }
+            return values;
+        }
+        public static List<int> GetLookupIdsByKeyGroup(string keyGroup)
+        {
+            List<int> ids = new List<int>();
+            foreach (var lookup in allLookups)
+            {
+                if (lookup.KeyGroup == keyGroup)
+                {
+                    ids.Add(lookup.LookupId);
+                }
+            }
+            return ids;
+        }
+        public static List<Lookup> GetAllLookups()
+        {
+            return allLookups;
+        }
+
 
     }
 }

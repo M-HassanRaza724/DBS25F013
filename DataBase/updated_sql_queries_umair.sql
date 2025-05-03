@@ -149,7 +149,7 @@ DELIMITER ;
 
 DELIMITER //
 CREATE PROCEDURE sp_manage_employee(
-	IN operation_type INT,
+	IN operation_type VARCHAR(20),
     IN p_employee_id INT,
     IN p_name VARCHAR(255),
     IN p_phone VARCHAR(20),
@@ -165,5 +165,37 @@ BEGIN
 	ELSEIF operation_type = 'delete' THEN
 		DELETE FROM employees WHERE employee_id = p_employee_id;
 	END IF;
+END //
+DELIMITER ;
+
+
+
+DELIMITER //
+CREATE PROCEDURE sp_manage_salary(
+	IN operation_type VARCHAR (20),
+    IN p_salary_id INT,
+    IN p_employee_id INT,
+    IN p_pay_date DATE,
+    IN p_amount DECIMAL(12, 2),
+    IN p_bonus DECIMAL(10, 2)
+)
+BEGIN 
+	IF operation_type = 'add' THEN	
+		INSERT INTO salary(employee_id, pay_date, amount, bonus) VALUES (p_employee_id, p_pay_date, p_amount, p_bonus);
+	ELSEIF operation_type = 'update' THEN
+		UPDATE salary SET pay_date = p_pay_date, amount = p_amount, bonus = p_bonus WHERE salary_id = p_salary_id;
+	ELSEIF operation_type = 'delete' THEN
+		DELETE FROM salary WHERE salary_id = p_salary_id;
+	END IF;
+END //
+DELIMITER ;
+
+
+DELIMITER //
+CREATE PROCEDURE sp_get_employee_salary(IN p_employee_id INT)
+BEGIN
+	SELECT *
+    FROM salary s
+    WHERE s.employee_id = p_employee_id;
 END //
 DELIMITER ;

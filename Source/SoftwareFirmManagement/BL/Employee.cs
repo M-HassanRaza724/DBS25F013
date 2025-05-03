@@ -15,6 +15,7 @@ namespace SoftwareFirmManagement.BL
         private string phone;
         private DateTime joinedDate;
         private int designationId;
+        private Salary salary;
 
         //public Employee(int userId, string username, string email, string password, int role, int employeeId, string name, string phone, DateTime joinedDate, int designationId) : base(userId, username, email, password, role)
         //{
@@ -39,6 +40,7 @@ namespace SoftwareFirmManagement.BL
             this.phone = phone;
             this.joinedDate = joinedDate;
             this.designationId = designationId;
+            salary = new Salary();
         }
         public Employee()
         { } 
@@ -76,6 +78,76 @@ namespace SoftwareFirmManagement.BL
         {
             get { return designationId; }
             set { designationId = value; }
+        }
+
+
+        public Salary GetSalary()
+        {
+            return salary;
+        }
+
+
+        public bool SetSalary(int salaryId, DateTime date, double amount, double bonus) // overload when salaryId is passed, like when reading from db
+        {
+            try
+            {
+                salary = new Salary(salaryId, employeeId, date, amount, bonus);
+                bool status = SalaryDL.AddSalaryToDatabase(salary);
+                UserDL.LoadAllUsers();
+                return status;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+        public bool SetSalary(DateTime date, double amount, double bonus) // overload when salaryId is not passed, like when setting salary from UI
+        {
+            try
+            {
+                salary = new Salary(employeeId, date, amount, bonus);
+                bool status = SalaryDL.AddSalaryToDatabase(salary);
+                UserDL.LoadAllUsers();
+                return status;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+        public bool UpdateSalary(DateTime payDate, double amount, double bonus)
+        {
+            try
+            {
+                salary = new Salary(EmployeeId, payDate, amount, bonus);
+                bool status = SalaryDL.UpdateSalaryToDatabase(salary);
+                UserDL.LoadAllUsers();
+                return status;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+        public bool DeleteSalary()
+        {
+            try
+            {
+                bool status = SalaryDL.DeleteSalaryFromDatabase(salary);
+                salary = new Salary();
+                UserDL.LoadAllUsers();
+                return status;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
 

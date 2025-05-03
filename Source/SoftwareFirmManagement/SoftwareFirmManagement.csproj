@@ -117,15 +117,18 @@
     <Compile Include="BL\Customer.cs" />
     <Compile Include="BL\Employee.cs" />
     <Compile Include="BL\Lookup.cs" />
-    <Compile Include="BL\Service.cs" />
-    <Compile Include="BL\SubService.cs" />
-    <Compile Include="BL\Technology.cs" />
+    <Compile Include="BL\OrderDTO.cs" />
+    <Compile Include="BL\ReviewDAO.cs" />
+    <Compile Include="BL\ServiceDTO.cs" />
+    <Compile Include="BL\SubServiceDAO.cs" />
+    <Compile Include="BL\TechnologyDAO.cs" />
     <Compile Include="BL\User.cs" />
     <Compile Include="DatabaseHelper.cs" />
     <Compile Include="DL\AdminDL.cs" />
     <Compile Include="DL\CustomerDL.cs" />
     <Compile Include="DL\EmployeeDL.cs" />
     <Compile Include="DL\LookupDL.cs" />
+    <Compile Include="DL\ReviewDL.cs" />
     <Compile Include="DL\ServiceDL.cs" />
     <Compile Include="DL\UserDL.cs" />
     <Compile Include="UI\AddUpdateCust.cs">
@@ -145,6 +148,12 @@
     </Compile>
     <Compile Include="UI\DemoForm.Designer.cs">
       <DependentUpon>DemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EmployeeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\EmployeeManagement.Designer.cs">
+      <DependentUpon>EmployeeManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
@@ -198,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DemoForm.resx">
       <DependentUpon>DemoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\EmployeeManagement.resx">
+      <DependentUpon>EmployeeManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -325,6 +337,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="SoftwareFirmManagement.BL.Customer.datasource" />
+    <None Include="SoftwareFirmManagement.BL.Employee.datasource" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

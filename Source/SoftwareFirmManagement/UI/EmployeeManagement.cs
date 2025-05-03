@@ -215,6 +215,17 @@ namespace SoftwareFirmManagement.UI
             }
             return 0; 
         }
+
+        private void txt_Phone_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void btn_add_update_employee_Click(object sender, EventArgs e)
         {
             if (cmbDesignations.SelectedIndex == -1)

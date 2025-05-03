@@ -37,6 +37,10 @@ namespace SoftwareFirmManagement.DL
             // dl logic please
             return 0;
         }
+        //public static List<Lookup> GetLookupsByGroup(string groupName)
+        //{
+        //    return 0; 
+        //}
 
     }
 }

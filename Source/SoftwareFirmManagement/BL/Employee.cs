@@ -24,7 +24,8 @@ namespace SoftwareFirmManagement.BL
             this.joinedDate = joinedDate;
             this.designationId = designationId;
         }
-
+        public Employee()
+        { } 
 
         public int EmployeeId
         {

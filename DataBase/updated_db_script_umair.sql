@@ -19,10 +19,6 @@
 -- Table structure for table `admins`
 --
 
-
-create DATABASE midprojectdb;
-use midprojectdb;
-
 DROP TABLE IF EXISTS `admins`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -57,13 +53,13 @@ DROP TABLE IF EXISTS `customers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `customers` (
-  `customer_id` int NOT NULL,
+  `customer_id` int NOT NULL AUTO_INCREMENT,
   `user_id` int DEFAULT NULL,
   `name` varchar(45) NOT NULL,
   PRIMARY KEY (`customer_id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `customers_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,6 +68,7 @@ CREATE TABLE `customers` (
 
 LOCK TABLES `customers` WRITE;
 /*!40000 ALTER TABLE `customers` DISABLE KEYS */;
+INSERT INTO `customers` VALUES (1,7,'Shahid'),(2,9,'Kamran'),(3,10,'Sarah'),(4,11,'Junaid');
 /*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -181,6 +178,23 @@ LOCK TABLES `employees` WRITE;
 UNLOCK TABLES;
 
 --
+-- Temporary view structure for view `get_services`
+--
+
+DROP TABLE IF EXISTS `get_services`;
+/*!50001 DROP VIEW IF EXISTS `get_services`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `get_services` AS SELECT 
+ 1 AS `service_id`,
+ 1 AS `name`,
+ 1 AS `category_id`,
+ 1 AS `description`,
+ 1 AS `service_involved`,
+ 1 AS `technology`*/;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Table structure for table `invoice`
 --
 
@@ -231,69 +245,10 @@ CREATE TABLE `lookups` (
 -- Dumping data for table `lookups`
 --
 
-
 LOCK TABLES `lookups` WRITE;
- -- Default placeholder (lookup_id = 0)
-INSERT INTO Lookups (lookup_id, key_group, value) VALUES
-(0, 'default', 'default');   -- Reserved for orphaned references
-INSERT INTO Lookups (key_group, value) VALUES
- -- Designations
-('designation', 'Deleted Employee'),
-('designation', 'Data Scientist'),
-('designation', 'Full Stack Developer'),
-('designation', 'FrontEnd Developer'),
-('designation', 'BackEnd Developer'),
-('designation', 'UI/UX Designer'),
-('designation', 'QA Engineer'),
-('designation', 'DevOps Engineer'),
-('designation', 'Project Manager'),
-('designation', 'Product Owner'),
- -- user roles
-('user_role','Employee'),
-('user_role','Admin'),
-('user_role','Department Head'),
- -- Platforms
-('platform', 'Web'),
-('platform', 'Android'),
-('platform', 'iOS'),
-('platform', 'Windows'),
-('platform', 'macOS'),
-('platform', 'Linux'),
-('platform', 'Cross-platform'),
-('platform', 'Hybrid'),
- -- Order Statuses
-('status', 'Pending'),
-('status', 'In-Progress'),
-('status', 'Completed'),
-('status', 'Cancelled'),
-('status', 'On-Hold'),
-('status', 'Rejected'),
--- initial budget
-('budget_type', '<$5000'),
-('budget_type', '$5000-$20000'),
-('budget_type', '$20000-$50000'),
-('budget_type', '$50000+'),
- -- payment statuses
-('payment_status', 'Pending'),
-('payment_status', 'Partially Paid'),
-('payment_status', 'Paid'),
-('payment_status', 'Overdue'),
-('payment_status', 'Cancelled'),
- -- Admin Roles
-('admin_role', 'Super Admin'),
-('admin_role', 'Support Admin'),
-('admin_role', 'Billing Admin'),
- -- Service Categories (for filtering)
-('service_category', 'Development'),
-('service_category', 'Design'),
-('service_category', 'Testing'),
-('service_category', 'Consulting'),
- -- Priority Levels (for orders/tasks)
-('priority', 'Low'),
-('priority', 'Medium'),
-('priority', 'High'),
-('priority', 'Critical');
-
+/*!40000 ALTER TABLE `lookups` DISABLE KEYS */;
+INSERT INTO `lookups` VALUES (1,'1','admin'),(2,'user_role','Customer');
+/*!40000 ALTER TABLE `lookups` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -442,6 +397,7 @@ CREATE TABLE `serviceinvolved` (
 
 LOCK TABLES `serviceinvolved` WRITE;
 /*!40000 ALTER TABLE `serviceinvolved` DISABLE KEYS */;
+INSERT INTO `serviceinvolved` VALUES (1,'website building using Python Flask');
 /*!40000 ALTER TABLE `serviceinvolved` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -461,7 +417,7 @@ CREATE TABLE `services` (
   UNIQUE KEY `name` (`name`),
   KEY `idx_services_category` (`category_id`),
   CONSTRAINT `services_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `lookups` (`lookup_id`) ON DELETE SET NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -470,6 +426,7 @@ CREATE TABLE `services` (
 
 LOCK TABLES `services` WRITE;
 /*!40000 ALTER TABLE `services` DISABLE KEYS */;
+INSERT INTO `services` VALUES (1,'web services',1,'services for website building');
 /*!40000 ALTER TABLE `services` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -541,7 +498,7 @@ CREATE TABLE `users` (
   KEY `role_id` (`role_id`),
   KEY `idx_username` (`username`),
   CONSTRAINT `users_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `lookups` (`lookup_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -550,8 +507,279 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (2,'ali123','ali123@gmail.com','123456',2),(4,'2e','2l','2d',2),(5,'ahmad123','ahmad@gmail.com','123456',2),(6,'asghar123','asghar123@gmail.com','123456',2),(7,'shahid123','shahid@gmail.com','123456',2),(8,'rehan123','rehan123@gmail.com','123456',2),(9,'kamran123','kamran123@gmail.com','123456',2),(10,'sarah123','sarah123@gmail.com','123456d',2),(11,'junaid123','junaid123@gmail.com','123456',2),(19,'farhan','farhn@gmail.com','1',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping events for database 'db_final_project'
+--
+
+--
+-- Dumping routines for database 'db_final_project'
+--
+/*!50003 DROP PROCEDURE IF EXISTS `sp_get_lookup_id` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_get_lookup_id`(IN p_key_group VARCHAR (100), IN p_value VARCHAR(100))
+BEGIN
+	SELECT lookup_id
+    FROM lookups
+    WHERE key_group = p_key_group AND value = p_value;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_get_user_by_role` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_get_user_by_role`(IN user_role VARCHAR(50))
+BEGIN
+	IF user_role = 'admin' THEN
+		SELECT * FROM users NATURAL JOIN admins;
+	ELSEIF user_role = 'employee' THEN
+		SELECT * FROM users NATURAL JOIN employees;
+	ELSEIF user_role = 'customer' THEN
+		SELECT * FROM users NATURAL JOIN customers;
+	END IF;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_manage_admin` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_manage_admin`(
+	IN operation_type VARCHAR(20),
+    IN p_admin_id INT,
+    IN p_user_id INT,
+    IN p_name VARCHAR(255),
+    IN p_phone VARCHAR(20),
+    IN p_admin_role INT
+)
+BEGIN
+	IF operation_type = 'add' THEN
+		INSERT INTO admins VALUES (p_admin_id, p_user_id, p_name, p_phone, p_admin_role);
+	ELSEIF operation_type = 'update' THEN
+		UPDATE admins SET name = p_name, phone = p_phone WHERE admin_id = p_admin_id;
+	ELSEIF operation_type = 'delete' THEN
+		DELETE FROM admins WHERE admin_id = p_admin_id;
+	END IF;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_manage_customer` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_manage_customer`(
+	IN operation_type VARCHAR(20),
+    IN p_customer_id INT,
+    IN p_user_id INT, 
+    IN p_name VARCHAR(45)
+)
+BEGIN
+	IF operation_type = 'add' THEN 
+		INSERT INTO customers(customer_id, user_id, name) VALUES(p_customer_id, p_user_id, p_name);
+	ELSEIF operation_type = 'update' THEN
+		UPDATE customers SET name = p_name WHERE customer_id = p_customer_id;
+	ELSEIF operation_type = 'delete' THEN
+		DELETE FROM customers WHERE customer_id = p_customer_id;
+	END IF;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_manage_employee` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_manage_employee`(
+	IN operation_type INT,
+    IN p_employee_id INT,
+    IN p_name VARCHAR(255),
+    IN p_phone VARCHAR(20),
+    IN p_joined_date DATE,
+    IN p_designation_id INT,
+    IN p_user_id INT
+)
+BEGIN
+	IF operation_type = 'add' THEN
+		INSERT INTO employees VALUES(p_employee_id, p_name, p_phone, p_joined_date, p_designation_id, p_user_id);
+	ELSEIF operation_type = 'update' THEN
+		UPDATE employees SET name = p_name, phone = p_phone WHERE employee_id = p_employee_id;
+	ELSEIF operation_type = 'delete' THEN
+		DELETE FROM employees WHERE employee_id = p_employee_id;
+	END IF;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_manage_service` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_manage_service`(
+	IN operation_type VARCHAR(20),
+    IN p_service_id INT,
+    IN p_name VARCHAR(255),
+    IN p_category_id INT,
+    IN p_description TEXT
+)
+BEGIN 
+	IF operation_type = 'add' THEN
+		INSERT INTO services VALUES (p_service_id, p_name, p_category_id, p_description);
+	ELSEIF operation_type = 'update' THEN 
+		UPDATE services SET name = p_name, description = p_description WHERE service_id = p_service_id;
+	ELSEIF operation_type = 'delete' THEN
+		DELETE FROM services WHERE service_id = p_service_id;
+	END IF;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_manage_subservice` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_manage_subservice`(
+	IN operation_type VARCHAR(20),
+    IN p_service_id INT,
+    IN p_service_involved VARCHAR(255)
+)
+BEGIN
+	IF operation_type = 'add' THEN
+		INSERT INTO serviceinvolved VALUES (p_service_id, p_service_involved);
+	ELSEIF operation_type = 'update' THEN
+		UPDATE serviceinvolved SET service_involved = p_service_involved WHERE service_id = p_service_id;
+	ELSEIF operation_type = 'delete' THEN
+		DELETE FROM serviceinvolved WHERE service_id = p_service_id;
+	END IF;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_manage_technology` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_manage_technology`(
+	IN operation_type VARCHAR(20),
+    IN p_service_id INT,
+    IN p_technology VARCHAR(255)
+)
+BEGIN
+	IF operation_type = 'add' THEN 
+		INSERT INTO servicetechnologies VALUES (p_service_id, p_technology);
+	ELSEIF operation_type = 'update' THEN
+		UPDATE servicetechnologies SET technology = p_technology WHERE service_id = p_service_id;
+	ELSEIF operation_type = 'delete' THEN 
+		DELETE FROM servicetechnologies WHERE service_id = p_service_id;
+	END IF;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_manage_user` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_manage_user`(
+	IN operation_type VARCHAR(20),
+    IN p_user_id INT,
+    IN p_username VARCHAR(255),
+    IN p_email VARCHAR(255),
+    IN p_password VARCHAR(255),
+    IN p_role_id INT
+)
+BEGIN
+	IF operation_type = 'add' THEN
+		INSERT INTO users VALUES (p_user_id, p_username, p_email, p_password, p_role_id);
+	ELSEIF operation_type = 'update' THEN
+		UPDATE users SET users.password = p_password WHERE users.user_id = p_user_id;
+	ELSEIF operation_type = 'delete' THEN
+		DELETE FROM users WHERE users.user_id = p_user_id;
+	END IF;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 
 --
 -- Final view structure for view `departmentoverview`
@@ -570,6 +798,24 @@ UNLOCK TABLES;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `get_services`
+--
+
+/*!50001 DROP VIEW IF EXISTS `get_services`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `get_services` AS select `s`.`service_id` AS `service_id`,`s`.`name` AS `name`,`s`.`category_id` AS `category_id`,`s`.`description` AS `description`,`si`.`service_involved` AS `service_involved`,`st`.`technology` AS `technology` from ((`services` `s` left join `serviceinvolved` `si` on((`si`.`service_id` = `s`.`service_id`))) left join `servicetechnologies` `st` on((`st`.`service_id` = `s`.`service_id`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -580,4 +826,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-28 18:17:30
+-- Dump completed on 2025-05-03  1:47:05

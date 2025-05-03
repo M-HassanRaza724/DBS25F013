@@ -23,6 +23,14 @@ namespace SoftwareFirmManagement.BL
         }
 
 
+        public Admin(int userId, string username, string email, string password, int role, string name, string phone, int adminRole) : base(userId, username, email, password, role)
+        {
+            this.name = name;
+            this.phone = phone;
+            this.adminRole = adminRole;
+        }
+
+
         public int AdminId
         {
             get { return adminId; }
@@ -59,7 +67,15 @@ namespace SoftwareFirmManagement.BL
                     {
                         return false;
                     }
-                    return AdminDL.AddAdminToDatabase(admin);
+                    List<Admin> onlyUsers = AdminDL.GetOnlyUsersFromDatabase();
+                    int userId = onlyUsers
+                                 .Where(u => u.Username == user.Username)
+                                 .Select(u => u.UserId)
+                                 .FirstOrDefault();
+                    admin.UserId = userId;
+                    bool status = AdminDL.AddAdminToDatabase(admin);
+                    UserDL.LoadAllUsers();
+                    return status;
                 }
                 return false;
             }
@@ -81,7 +97,9 @@ namespace SoftwareFirmManagement.BL
                     {
                         return false;
                     }
-                    return AdminDL.UpdateAdminToDatabase(admin);
+                    bool status = AdminDL.UpdateAdminToDatabase(admin);
+                    UserDL.LoadAllUsers();
+                    return status;
                 }
                 return false;
             }
@@ -103,7 +121,9 @@ namespace SoftwareFirmManagement.BL
                     {
                         return false;
                     }
-                    return UserDL.DeleteUserFromDatabase(user);
+                    bool status = UserDL.DeleteUserFromDatabase(user);
+                    UserDL.LoadAllUsers();
+                    return status;
                 }
                 return false;
             }

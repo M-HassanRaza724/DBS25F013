@@ -1,17 +1,49 @@
 ﻿using SoftwareFirmManagement.BL;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using ZstdSharp.Unsafe;
 
 namespace SoftwareFirmManagement.DL
 {
     public class CustomerDL
     {
+        public static List<Customer> GetOnlyUsersFromDatabase()
+        {
+            try
+            {
+                List<Customer> onlyUsers = new List<Customer>();
+                string query = $"SELECT * FROM users;";
+                var data = DatabaseHelper.Instance.GetData(query);
+                while (data.Read())
+                {
+                    int userId = data.IsDBNull(0) ? 0 : data.GetInt32(0);
+                    string username = data[1].ToString();
+                    string email = data[2].ToString();
+                    string password = data[3].ToString();
+                    int roleId = data.IsDBNull(4) ? 0 : data.GetInt32(4);
+                    Customer user = new Customer(userId, username, email, password, roleId, 0, "no_name");
+                    user.Role = LookupDL.allLookups
+                                .Where(l => l.LookupId == roleId)
+                                .Select(l => l.Value)
+                                .FirstOrDefault();
+                    onlyUsers.Add(user);
+                }
+                return onlyUsers;
+
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
+        }
+
+
         public static bool AddCustomerToDatabase(Customer customer)
         {
             try
             {
-                string query = $"INSERT INTO customers VALUES({customer.CustomerId}, {customer.UserId}, {customer.Name});";
+                string query = $"CALL sp_manage_customer('add', {customer.CustomerId}, {customer.UserId}, '{customer.Name}');";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }
@@ -26,8 +58,8 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = $"UPDATE customers SET name = '{updatedCustomer.Name}' WHERE customer_id = {updatedCustomer.CustomerId};";
-
+                string query = $"CALL sp_manage_customer('update', {updatedCustomer.CustomerId}, {updatedCustomer.UserId}, '{updatedCustomer.Name}');";
+                DatabaseHelper.Instance.Update(query);
                 return true;
             }
             catch (MySql.Data.MySqlClient.MySqlException)
@@ -35,19 +67,34 @@ namespace SoftwareFirmManagement.DL
                 throw;
             }
         }
-        public static List<Customer> GetAllCustomers(string search = null ,string sortby = null, string direction = "ASC")
+
+
+        public static List<Customer> GetCustomersByFilter(string search = null ,string sortby = null, string direction = "ASC")
         {
-            List<Customer> list = new List<Customer>();
-
-
-            foreach (User u in UserDL.allUsers)
+            if (search == null || sortby == null)
             {
-                if (u is Customer)
-                {
-                    list.Add((Customer)u);
-                }
+                return UserDL.allUsers
+                       .OfType<Customer>()
+                       .OrderBy(l => l.Username)
+                       .ToList();
             }
-            return list;
+            List<Customer> filtered = UserDL.allUsers
+                                      .OfType<Customer>()
+                                      .Where(cust => cust.Username.Contains(search) || cust.Name.Contains(search))
+                                      .ToList();
+            if (direction == "DESC" && sortby == "username")
+            {
+                filtered = filtered
+                           .OrderByDescending(l => l.Username)
+                           .ToList();
+            }
+            else if (sortby == "username")
+            {
+                filtered = filtered
+                           .OrderBy(l => l.Username)
+                           .ToList();
+            }
+            return filtered;
         }
 
 
@@ -55,7 +102,7 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                string query = $"DELETE FROM customers WHERE customer_id = {customer.CustomerId};";
+                string query = $"CALL sp_manage_customer('delete', {customer.CustomerId}, {customer.UserId}, '{customer.Name}');";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }

@@ -35,20 +35,10 @@ namespace SoftwareFirmManagement.UI
             this.gbx_add_update_cust = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.btn_cancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_add_update_cust = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.userCredentials1 = new SoftwareFirmManagement.UI.UserCredentials();
             this.lbl_last_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_full_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txt_full_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.dgv_customers = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.CustomerIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UsernameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PasswordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel_filters = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip_filters = new System.Windows.Forms.MenuStrip();
@@ -66,6 +56,16 @@ namespace SoftwareFirmManagement.UI
             this.contextMenuStrip_grd = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userCredentials1 = new SoftwareFirmManagement.UI.UserCredentials();
+            this.txt_full_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.CustomerIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsernameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PasswordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_users)).BeginInit();
@@ -77,12 +77,12 @@ namespace SoftwareFirmManagement.UI
             this.gbx_add_update_cust.Panel.SuspendLayout();
             this.gbx_add_update_cust.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_customers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel_filters.SuspendLayout();
             this.menuStrip_filters.SuspendLayout();
             this.panel2.SuspendLayout();
             this.contextMenuStrip_grd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -93,20 +93,22 @@ namespace SoftwareFirmManagement.UI
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(807, 502);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1210, 772);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.gbox_grd_users);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 53);
+            this.panel1.Location = new System.Drawing.Point(4, 82);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(801, 446);
+            this.panel1.Size = new System.Drawing.Size(1202, 685);
             this.panel1.TabIndex = 2;
             // 
             // gbox_grd_users
@@ -114,14 +116,15 @@ namespace SoftwareFirmManagement.UI
             this.gbox_grd_users.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbox_grd_users.Location = new System.Drawing.Point(9, 3);
+            this.gbox_grd_users.Location = new System.Drawing.Point(14, 5);
+            this.gbox_grd_users.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gbox_grd_users.Name = "gbox_grd_users";
             // 
             // gbox_grd_users.Panel
             // 
             this.gbox_grd_users.Panel.Controls.Add(this.gbx_add_update_cust);
             this.gbox_grd_users.Panel.Controls.Add(this.dgv_customers);
-            this.gbox_grd_users.Size = new System.Drawing.Size(783, 434);
+            this.gbox_grd_users.Size = new System.Drawing.Size(1174, 667);
             this.gbox_grd_users.TabIndex = 1;
             this.gbox_grd_users.Values.Heading = "Users";
             // 
@@ -129,7 +132,8 @@ namespace SoftwareFirmManagement.UI
             // 
             this.gbx_add_update_cust.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbx_add_update_cust.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlAlternate;
-            this.gbx_add_update_cust.Location = new System.Drawing.Point(169, -2);
+            this.gbx_add_update_cust.Location = new System.Drawing.Point(250, 0);
+            this.gbx_add_update_cust.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gbx_add_update_cust.Name = "gbx_add_update_cust";
             // 
             // gbx_add_update_cust.Panel
@@ -140,7 +144,7 @@ namespace SoftwareFirmManagement.UI
             this.gbx_add_update_cust.Panel.Controls.Add(this.lbl_last_name);
             this.gbx_add_update_cust.Panel.Controls.Add(this.lbl_full_name);
             this.gbx_add_update_cust.Panel.Controls.Add(this.txt_full_name);
-            this.gbx_add_update_cust.Size = new System.Drawing.Size(389, 398);
+            this.gbx_add_update_cust.Size = new System.Drawing.Size(584, 612);
             this.gbx_add_update_cust.TabIndex = 1;
             this.gbx_add_update_cust.Values.Heading = "Add Customer";
             this.gbx_add_update_cust.Visible = false;
@@ -148,9 +152,10 @@ namespace SoftwareFirmManagement.UI
             // btn_cancel
             // 
             this.btn_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_cancel.Location = new System.Drawing.Point(33, 280);
+            this.btn_cancel.Location = new System.Drawing.Point(36, 434);
+            this.btn_cancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(150, 50);
+            this.btn_cancel.Size = new System.Drawing.Size(225, 77);
             this.btn_cancel.TabIndex = 13;
             this.btn_cancel.Values.Text = "Cancel";
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
@@ -159,32 +164,19 @@ namespace SoftwareFirmManagement.UI
             // 
             this.btn_add_update_cust.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_add_update_cust.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
-            this.btn_add_update_cust.Location = new System.Drawing.Point(189, 280);
+            this.btn_add_update_cust.Location = new System.Drawing.Point(270, 434);
+            this.btn_add_update_cust.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_add_update_cust.Name = "btn_add_update_cust";
-            this.btn_add_update_cust.Size = new System.Drawing.Size(150, 50);
+            this.btn_add_update_cust.Size = new System.Drawing.Size(225, 77);
             this.btn_add_update_cust.TabIndex = 2;
             this.btn_add_update_cust.Values.Text = "Add Customer";
             this.btn_add_update_cust.Click += new System.EventHandler(this.btn_add_update_cust_Click);
             // 
-            // userCredentials1
-            // 
-            this.userCredentials1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.userCredentials1.BackColor = System.Drawing.Color.Transparent;
-            this.userCredentials1.Email = "Email";
-            this.userCredentials1.EmailPlaceHolder = "Email";
-            this.userCredentials1.Location = new System.Drawing.Point(38, 73);
-            this.userCredentials1.Name = "userCredentials1";
-            this.userCredentials1.Password = "Password";
-            this.userCredentials1.PasswordPlaceHolder = "Password";
-            this.userCredentials1.Size = new System.Drawing.Size(271, 189);
-            this.userCredentials1.TabIndex = 12;
-            this.userCredentials1.Username = "Username";
-            this.userCredentials1.UsernamePlaceHolder = "Username";
-            // 
             // lbl_last_name
             // 
             this.lbl_last_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_last_name.Location = new System.Drawing.Point(6, 72);
+            this.lbl_last_name.Location = new System.Drawing.Point(9, 111);
+            this.lbl_last_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lbl_last_name.Name = "lbl_last_name";
             this.lbl_last_name.Size = new System.Drawing.Size(6, 4);
             this.lbl_last_name.TabIndex = 9;
@@ -194,23 +186,12 @@ namespace SoftwareFirmManagement.UI
             // 
             this.lbl_full_name.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_full_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_full_name.Location = new System.Drawing.Point(41, 6);
+            this.lbl_full_name.Location = new System.Drawing.Point(62, 11);
+            this.lbl_full_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lbl_full_name.Name = "lbl_full_name";
-            this.lbl_full_name.Size = new System.Drawing.Size(77, 26);
+            this.lbl_full_name.Size = new System.Drawing.Size(112, 37);
             this.lbl_full_name.TabIndex = 8;
             this.lbl_full_name.Values.Text = "FullName";
-            // 
-            // txt_full_name
-            // 
-            this.txt_full_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_full_name.BackColor = System.Drawing.Color.Transparent;
-            this.txt_full_name.Location = new System.Drawing.Point(38, 23);
-            this.txt_full_name.Name = "txt_full_name";
-            this.txt_full_name.PlaceHolder = "FullName";
-            this.txt_full_name.Size = new System.Drawing.Size(271, 42);
-            this.txt_full_name.Style = "Standalone";
-            this.txt_full_name.TabIndex = 3;
-            this.txt_full_name.TextBoxText = "FullName";
             // 
             // dgv_customers
             // 
@@ -228,70 +209,20 @@ namespace SoftwareFirmManagement.UI
             this.dgv_customers.DataSource = this.customerBindingSource;
             this.dgv_customers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_customers.Location = new System.Drawing.Point(0, 0);
+            this.dgv_customers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_customers.Name = "dgv_customers";
-            this.dgv_customers.Size = new System.Drawing.Size(769, 401);
+            this.dgv_customers.RowHeadersWidth = 62;
+            this.dgv_customers.Size = new System.Drawing.Size(1160, 623);
             this.dgv_customers.TabIndex = 0;
             this.dgv_customers.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_customers_CellMouseDown);
-            // 
-            // CustomerIdColumn
-            // 
-            this.CustomerIdColumn.DataPropertyName = "CustomerId";
-            this.CustomerIdColumn.HeaderText = "CustomerId";
-            this.CustomerIdColumn.Name = "CustomerIdColumn";
-            this.CustomerIdColumn.Visible = false;
-            // 
-            // UserIdColumn
-            // 
-            this.UserIdColumn.DataPropertyName = "UserId";
-            this.UserIdColumn.HeaderText = "UserId";
-            this.UserIdColumn.Name = "UserIdColumn";
-            this.UserIdColumn.Visible = false;
             // 
             // FullNameColumn
             // 
             this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.FullNameColumn.DataPropertyName = "Name";
             this.FullNameColumn.HeaderText = "FullName";
+            this.FullNameColumn.MinimumWidth = 8;
             this.FullNameColumn.Name = "FullNameColumn";
-            // 
-            // UsernameColumn
-            // 
-            this.UsernameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.UsernameColumn.DataPropertyName = "Username";
-            this.UsernameColumn.HeaderText = "Username";
-            this.UsernameColumn.Name = "UsernameColumn";
-            // 
-            // EmailColumn
-            // 
-            this.EmailColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.EmailColumn.DataPropertyName = "Email";
-            this.EmailColumn.HeaderText = "Email";
-            this.EmailColumn.Name = "EmailColumn";
-            // 
-            // PasswordColumn
-            // 
-            this.PasswordColumn.DataPropertyName = "Password";
-            this.PasswordColumn.HeaderText = "Password";
-            this.PasswordColumn.Name = "PasswordColumn";
-            this.PasswordColumn.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "RoleId";
-            this.dataGridViewTextBoxColumn7.HeaderText = "RoleId";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Role";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Role";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Visible = false;
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataSource = typeof(SoftwareFirmManagement.BL.Customer);
             // 
             // tableLayoutPanel2
             // 
@@ -306,7 +237,7 @@ namespace SoftwareFirmManagement.UI
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(807, 50);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1210, 77);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // tableLayoutPanel_filters
@@ -314,16 +245,16 @@ namespace SoftwareFirmManagement.UI
             this.tableLayoutPanel_filters.ColumnCount = 2;
             this.tableLayoutPanel_filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel_filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel_filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel_filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel_filters.Controls.Add(this.menuStrip_filters, 1, 0);
             this.tableLayoutPanel_filters.Controls.Add(this.lbl_filter, 0, 0);
             this.tableLayoutPanel_filters.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel_filters.Location = new System.Drawing.Point(322, 0);
+            this.tableLayoutPanel_filters.Location = new System.Drawing.Point(484, 0);
             this.tableLayoutPanel_filters.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel_filters.Name = "tableLayoutPanel_filters";
             this.tableLayoutPanel_filters.RowCount = 1;
             this.tableLayoutPanel_filters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel_filters.Size = new System.Drawing.Size(485, 50);
+            this.tableLayoutPanel_filters.Size = new System.Drawing.Size(726, 77);
             this.tableLayoutPanel_filters.TabIndex = 3;
             // 
             // menuStrip_filters
@@ -331,13 +262,15 @@ namespace SoftwareFirmManagement.UI
             this.menuStrip_filters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.menuStrip_filters.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuStrip_filters.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.menuStrip_filters.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip_filters.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip_filters.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.filter_item_sort_by,
             this.filter_item_direction});
-            this.menuStrip_filters.Location = new System.Drawing.Point(194, 0);
+            this.menuStrip_filters.Location = new System.Drawing.Point(290, 0);
             this.menuStrip_filters.Name = "menuStrip_filters";
             this.menuStrip_filters.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip_filters.Size = new System.Drawing.Size(291, 50);
+            this.menuStrip_filters.Size = new System.Drawing.Size(436, 77);
             this.menuStrip_filters.TabIndex = 1;
             this.menuStrip_filters.Text = "Filters";
             // 
@@ -348,7 +281,7 @@ namespace SoftwareFirmManagement.UI
             this.userNameToolStripMenuItem});
             this.filter_item_sort_by.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.filter_item_sort_by.Name = "filter_item_sort_by";
-            this.filter_item_sort_by.Size = new System.Drawing.Size(56, 46);
+            this.filter_item_sort_by.Size = new System.Drawing.Size(60, 73);
             this.filter_item_sort_by.Text = "Sort By";
             // 
             // customerNameToolStripMenuItem
@@ -356,7 +289,7 @@ namespace SoftwareFirmManagement.UI
             this.customerNameToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.customerNameToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.customerNameToolStripMenuItem.Name = "customerNameToolStripMenuItem";
-            this.customerNameToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.customerNameToolStripMenuItem.Size = new System.Drawing.Size(188, 34);
             this.customerNameToolStripMenuItem.Text = "CustomerName";
             this.customerNameToolStripMenuItem.Click += new System.EventHandler(this.customerNameToolStripMenuItem_Click);
             // 
@@ -365,7 +298,7 @@ namespace SoftwareFirmManagement.UI
             this.userNameToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.userNameToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.userNameToolStripMenuItem.Name = "userNameToolStripMenuItem";
-            this.userNameToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.userNameToolStripMenuItem.Size = new System.Drawing.Size(188, 34);
             this.userNameToolStripMenuItem.Text = "UserName";
             this.userNameToolStripMenuItem.Click += new System.EventHandler(this.userNameToolStripMenuItem_Click);
             // 
@@ -376,7 +309,7 @@ namespace SoftwareFirmManagement.UI
             this.descendingToolStripMenuItem});
             this.filter_item_direction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.filter_item_direction.Name = "filter_item_direction";
-            this.filter_item_direction.Size = new System.Drawing.Size(67, 46);
+            this.filter_item_direction.Size = new System.Drawing.Size(71, 73);
             this.filter_item_direction.Text = "Direction";
             // 
             // ascendingToolStripMenuItem
@@ -384,7 +317,7 @@ namespace SoftwareFirmManagement.UI
             this.ascendingToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.ascendingToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.ascendingToolStripMenuItem.Name = "ascendingToolStripMenuItem";
-            this.ascendingToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.ascendingToolStripMenuItem.Size = new System.Drawing.Size(166, 34);
             this.ascendingToolStripMenuItem.Text = "Ascending";
             this.ascendingToolStripMenuItem.Click += new System.EventHandler(this.ascendingToolStripMenuItem_Click);
             // 
@@ -393,7 +326,7 @@ namespace SoftwareFirmManagement.UI
             this.descendingToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.descendingToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.descendingToolStripMenuItem.Name = "descendingToolStripMenuItem";
-            this.descendingToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.descendingToolStripMenuItem.Size = new System.Drawing.Size(166, 34);
             this.descendingToolStripMenuItem.Text = "Descending";
             this.descendingToolStripMenuItem.Click += new System.EventHandler(this.descendingToolStripMenuItem_Click);
             // 
@@ -401,9 +334,10 @@ namespace SoftwareFirmManagement.UI
             // 
             this.lbl_filter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_filter.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_filter.Location = new System.Drawing.Point(137, 12);
+            this.lbl_filter.Location = new System.Drawing.Point(208, 20);
+            this.lbl_filter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lbl_filter.Name = "lbl_filter";
-            this.lbl_filter.Size = new System.Drawing.Size(54, 26);
+            this.lbl_filter.Size = new System.Drawing.Size(78, 37);
             this.lbl_filter.TabIndex = 38;
             this.lbl_filter.Values.Text = "Filters";
             // 
@@ -414,16 +348,17 @@ namespace SoftwareFirmManagement.UI
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(322, 50);
+            this.panel2.Size = new System.Drawing.Size(484, 77);
             this.panel2.TabIndex = 4;
             // 
             // btn_add_cust
             // 
             this.btn_add_cust.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_add_cust.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
-            this.btn_add_cust.Location = new System.Drawing.Point(19, 3);
+            this.btn_add_cust.Location = new System.Drawing.Point(29, 5);
+            this.btn_add_cust.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_add_cust.Name = "btn_add_cust";
-            this.btn_add_cust.Size = new System.Drawing.Size(142, 44);
+            this.btn_add_cust.Size = new System.Drawing.Size(213, 68);
             this.btn_add_cust.TabIndex = 0;
             this.btn_add_cust.Values.Text = "Add Customers";
             this.btn_add_cust.Click += new System.EventHandler(this.btn_add_cust_Click);
@@ -442,19 +377,20 @@ namespace SoftwareFirmManagement.UI
             this.contextMenuStrip_grd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.contextMenuStrip_grd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.contextMenuStrip_grd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.contextMenuStrip_grd.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip_grd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip_grd.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.contextMenuStrip_grd.Name = "contextMenuStrip_grd";
-            this.contextMenuStrip_grd.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip_grd.Size = new System.Drawing.Size(121, 68);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.updateToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Available_Updates;
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(120, 32);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
@@ -463,19 +399,114 @@ namespace SoftwareFirmManagement.UI
             this.deleteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.deleteToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Trash;
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(120, 32);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
+            // userCredentials1
+            // 
+            this.userCredentials1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.userCredentials1.BackColor = System.Drawing.Color.Transparent;
+            this.userCredentials1.Email = "Email";
+            this.userCredentials1.EmailPlaceHolder = "Email";
+            this.userCredentials1.Location = new System.Drawing.Point(57, 114);
+            this.userCredentials1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.userCredentials1.Name = "userCredentials1";
+            this.userCredentials1.Password = "Password";
+            this.userCredentials1.PasswordPlaceHolder = "Password";
+            this.userCredentials1.Size = new System.Drawing.Size(392, 291);
+            this.userCredentials1.TabIndex = 12;
+            this.userCredentials1.Username = "Username";
+            this.userCredentials1.UsernamePlaceHolder = "Username";
+            // 
+            // txt_full_name
+            // 
+            this.txt_full_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_full_name.BackColor = System.Drawing.Color.Transparent;
+            this.txt_full_name.Location = new System.Drawing.Point(57, 37);
+            this.txt_full_name.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txt_full_name.Name = "txt_full_name";
+            this.txt_full_name.PlaceHolder = "FullName";
+            this.txt_full_name.Size = new System.Drawing.Size(392, 65);
+            this.txt_full_name.Style = "Standalone";
+            this.txt_full_name.TabIndex = 3;
+            this.txt_full_name.TextBoxText = "FullName";
+            // 
+            // CustomerIdColumn
+            // 
+            this.CustomerIdColumn.DataPropertyName = "CustomerId";
+            this.CustomerIdColumn.HeaderText = "CustomerId";
+            this.CustomerIdColumn.MinimumWidth = 8;
+            this.CustomerIdColumn.Name = "CustomerIdColumn";
+            this.CustomerIdColumn.Visible = false;
+            this.CustomerIdColumn.Width = 150;
+            // 
+            // UserIdColumn
+            // 
+            this.UserIdColumn.DataPropertyName = "UserId";
+            this.UserIdColumn.HeaderText = "UserId";
+            this.UserIdColumn.MinimumWidth = 8;
+            this.UserIdColumn.Name = "UserIdColumn";
+            this.UserIdColumn.Visible = false;
+            this.UserIdColumn.Width = 150;
+            // 
+            // UsernameColumn
+            // 
+            this.UsernameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.UsernameColumn.DataPropertyName = "Username";
+            this.UsernameColumn.HeaderText = "Username";
+            this.UsernameColumn.MinimumWidth = 8;
+            this.UsernameColumn.Name = "UsernameColumn";
+            // 
+            // EmailColumn
+            // 
+            this.EmailColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EmailColumn.DataPropertyName = "Email";
+            this.EmailColumn.HeaderText = "Email";
+            this.EmailColumn.MinimumWidth = 8;
+            this.EmailColumn.Name = "EmailColumn";
+            // 
+            // PasswordColumn
+            // 
+            this.PasswordColumn.DataPropertyName = "Password";
+            this.PasswordColumn.HeaderText = "Password";
+            this.PasswordColumn.MinimumWidth = 8;
+            this.PasswordColumn.Name = "PasswordColumn";
+            this.PasswordColumn.Visible = false;
+            this.PasswordColumn.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "RoleId";
+            this.dataGridViewTextBoxColumn7.HeaderText = "RoleId";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            this.dataGridViewTextBoxColumn7.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Role";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Role";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Visible = false;
+            this.dataGridViewTextBoxColumn8.Width = 150;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataSource = typeof(SoftwareFirmManagement.BL.Customer);
+            // 
             // CustomerManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.ClientSize = new System.Drawing.Size(807, 502);
+            this.ClientSize = new System.Drawing.Size(1210, 772);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip_filters;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CustomerManagement";
             this.Text = "UserManagement";
             this.Load += new System.EventHandler(this.CustomerManagement_Load);
@@ -491,7 +522,6 @@ namespace SoftwareFirmManagement.UI
             ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_cust)).EndInit();
             this.gbx_add_update_cust.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_customers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel_filters.ResumeLayout(false);
             this.tableLayoutPanel_filters.PerformLayout();
@@ -499,6 +529,7 @@ namespace SoftwareFirmManagement.UI
             this.menuStrip_filters.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.contextMenuStrip_grd.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

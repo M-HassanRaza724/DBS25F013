@@ -77,7 +77,9 @@ namespace SoftwareFirmManagement.BL
         {
             try
             {
-                return ServiceDL.AddServiceToDatabase(this);
+                bool status = ServiceDL.AddServiceToDatabase(this);
+                ServiceDL.LoadAllServices();
+                return status;
             }
             catch (MySql.Data.MySqlClient.MySqlException)
             {
@@ -90,7 +92,9 @@ namespace SoftwareFirmManagement.BL
         {
             try
             {
-                return ServiceDL.UpdateServiceToDatabase(this);
+                bool status = ServiceDL.UpdateServiceToDatabase(this);
+                ServiceDL.LoadAllServices();
+                return status;
             }
             catch (MySql.Data.MySqlClient.MySqlException)
             {
@@ -103,7 +107,9 @@ namespace SoftwareFirmManagement.BL
         {
             try
             {
-                return ServiceDL.DeleteServiceFromDatabase(this);
+                bool status = ServiceDL.DeleteServiceFromDatabase(this);
+                ServiceDL.LoadAllServices();
+                return status;
             }
             catch (MySql.Data.MySqlClient.MySqlException)
             {

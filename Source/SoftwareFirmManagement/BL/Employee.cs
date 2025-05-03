@@ -26,6 +26,15 @@ namespace SoftwareFirmManagement.BL
         }
 
 
+        public Employee(int userId, string username, string email, string password, int role, string name, string phone, DateTime joinedDate, int designationId) : base(userId, username, email, password, role)
+        {
+            this.name = name;
+            this.phone = phone;
+            this.joinedDate = joinedDate;
+            this.designationId = designationId;
+        }
+
+
         public int EmployeeId
         {
             get { return employeeId; }
@@ -64,7 +73,15 @@ namespace SoftwareFirmManagement.BL
                     {
                         return false;
                     }
-                    return EmployeeDL.AddEmployeeToDatabase(emp);
+                    List<Employee> onlyUsers = new List<Employee>();
+                    int userId = onlyUsers
+                                 .Where(e => e.Username == user.Username)
+                                 .Select(e => e.UserId)
+                                 .FirstOrDefault();
+                    emp.UserId = userId;
+                    bool status = EmployeeDL.AddEmployeeToDatabase(emp);
+                    UserDL.LoadAllUsers();
+                    return status;
                 }
                 return false;
             }
@@ -86,7 +103,9 @@ namespace SoftwareFirmManagement.BL
                     {
                         return false;
                     }
-                    return EmployeeDL.UpdateEmployeeToDatabase(emp);
+                    bool status = EmployeeDL.UpdateEmployeeToDatabase(emp);
+                    UserDL.LoadAllUsers();
+                    return status;
                 }
                 return false;
             }
@@ -108,7 +127,9 @@ namespace SoftwareFirmManagement.BL
                     {
                         return false;
                     }
-                    return UserDL.DeleteUserFromDatabase(user); // then delete user
+                    bool status = UserDL.DeleteUserFromDatabase(user); // then delete user
+                    UserDL.LoadAllUsers();
+                    return status;
                 }
                 return false;
             }

@@ -64,31 +64,71 @@ namespace SoftwareFirmManagement.UI
             }
         }
 
-        void enableGroupBox(int custId = -1)
+        //void enableGroupBox(int custId = -1)
+        //{
+        //    gbx_add_update_employee.Enabled = true;
+        //    gbx_add_update_employee.Visible = true;
+        //    if (custId != -1)
+        //    {
+        //        txt_full_name.TextBoxText = currentContextRow.Cells["FullNameColumn"].Value.ToString();
+        //        userCredentials1.Username = currentContextRow.Cells["UsernameColumn"].Value.ToString();
+        //        userCredentials1.Email = currentContextRow.Cells["EmailColumn"].Value.ToString();
+        //        userCredentials1.Password = currentContextRow.Cells["PasswordColumn"].Value.ToString();
+
+        //        btn_add_update_employee.Text = "Update";
+        //        gbx_add_update_employee.Text = "Update Customer";
+        //    }
+        //}
+        //void disableGroupBox()
+        //{
+        //    gbx_add_update_employee.Enabled = false;
+        //    gbx_add_update_employee.Visible = false;
+        //    txt_full_name.PlaceHolder = "FirstName";
+        //    userCredentials1.UsernamePlaceHolder = "Username";
+        //    userCredentials1.EmailPlaceHolder = "Email";
+        //    userCredentials1.PasswordPlaceHolder = "Password";
+        //    btn_add_update_employee.Text = "Add";
+        //    gbx_add_update_employee.Text = "Add Customer";
+            
+        //}
+        void enableGroupBox(int empId = -1)
         {
             gbx_add_update_employee.Enabled = true;
             gbx_add_update_employee.Visible = true;
-            if (custId != -1)
+
+            if (empId != -1)
             {
                 txt_full_name.TextBoxText = currentContextRow.Cells["FullNameColumn"].Value.ToString();
                 userCredentials1.Username = currentContextRow.Cells["UsernameColumn"].Value.ToString();
                 userCredentials1.Email = currentContextRow.Cells["EmailColumn"].Value.ToString();
                 userCredentials1.Password = currentContextRow.Cells["PasswordColumn"].Value.ToString();
 
+                string designation = currentContextRow.Cells["DesignationColumn"].Value.ToString();
+                cmbDesignations.SelectedItem = designation;
+
                 btn_add_update_employee.Text = "Update";
-                gbx_add_update_employee.Text = "Update Customer";
+                gbx_add_update_employee.Text = "Update Employee";
             }
         }
+
         void disableGroupBox()
         {
             gbx_add_update_employee.Enabled = false;
             gbx_add_update_employee.Visible = false;
-            txt_full_name.PlaceHolder = "FirstName";
+
+            txt_full_name.TextBoxText = "";
+            txt_full_name.PlaceHolder = "Full Name";
+            userCredentials1.Username = "";
             userCredentials1.UsernamePlaceHolder = "Username";
+            userCredentials1.Email = "";
             userCredentials1.EmailPlaceHolder = "Email";
+            userCredentials1.Password = "";
             userCredentials1.PasswordPlaceHolder = "Password";
+            cmbDesignations.SelectedIndex = -1;
+            cmbDesignations.Text = "Select Designation";
+
             btn_add_update_employee.Text = "Add";
-            gbx_add_update_employee.Text = "Add Customer";
+            gbx_add_update_employee.Text = "Add Employee";
         }
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {

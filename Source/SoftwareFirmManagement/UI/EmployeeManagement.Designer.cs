@@ -50,24 +50,26 @@
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btn_cancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_add_update_employee = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.userCredentials1 = new SoftwareFirmManagement.UI.UserCredentials();
             this.lbl_last_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_full_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txt_full_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbox_grd_users = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.dgv_employees = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbDesignations = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.userCredentials1 = new SoftwareFirmManagement.UI.UserCredentials();
+            this.txt_full_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.EmployeeIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UsernameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PasswordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoleIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cmbDesignations = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.lblPhonenum = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtPhone = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel_filters.SuspendLayout();
             this.menuStrip_filters.SuspendLayout();
@@ -84,8 +86,8 @@
             this.gbox_grd_users.Panel.SuspendLayout();
             this.gbox_grd_users.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_employees)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDesignations)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // updateToolStripMenuItem
@@ -110,7 +112,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1076, 61);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1076, 80);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // tableLayoutPanel_filters
@@ -127,7 +129,7 @@
             this.tableLayoutPanel_filters.Name = "tableLayoutPanel_filters";
             this.tableLayoutPanel_filters.RowCount = 1;
             this.tableLayoutPanel_filters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel_filters.Size = new System.Drawing.Size(646, 61);
+            this.tableLayoutPanel_filters.Size = new System.Drawing.Size(646, 80);
             this.tableLayoutPanel_filters.TabIndex = 3;
             // 
             // menuStrip_filters
@@ -142,7 +144,7 @@
             this.menuStrip_filters.Location = new System.Drawing.Point(258, 0);
             this.menuStrip_filters.Name = "menuStrip_filters";
             this.menuStrip_filters.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip_filters.Size = new System.Drawing.Size(388, 61);
+            this.menuStrip_filters.Size = new System.Drawing.Size(388, 80);
             this.menuStrip_filters.TabIndex = 1;
             this.menuStrip_filters.Text = "Filters";
             // 
@@ -153,7 +155,7 @@
             this.userNameToolStripMenuItem});
             this.filter_item_sort_by.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.filter_item_sort_by.Name = "filter_item_sort_by";
-            this.filter_item_sort_by.Size = new System.Drawing.Size(63, 57);
+            this.filter_item_sort_by.Size = new System.Drawing.Size(63, 76);
             this.filter_item_sort_by.Text = "Sort By";
             // 
             // EmployeeNameToolStripMenuItem
@@ -181,7 +183,7 @@
             this.descendingToolStripMenuItem});
             this.filter_item_direction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.filter_item_direction.Name = "filter_item_direction";
-            this.filter_item_direction.Size = new System.Drawing.Size(74, 57);
+            this.filter_item_direction.Size = new System.Drawing.Size(74, 76);
             this.filter_item_direction.Text = "Direction";
             // 
             // ascendingToolStripMenuItem
@@ -206,7 +208,7 @@
             // 
             this.lbl_filter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_filter.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_filter.Location = new System.Drawing.Point(188, 15);
+            this.lbl_filter.Location = new System.Drawing.Point(188, 24);
             this.lbl_filter.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_filter.Name = "lbl_filter";
             this.lbl_filter.Size = new System.Drawing.Size(66, 31);
@@ -220,14 +222,14 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(430, 61);
+            this.panel2.Size = new System.Drawing.Size(430, 80);
             this.panel2.TabIndex = 4;
             // 
             // btn_add_employee
             // 
             this.btn_add_employee.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_add_employee.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
-            this.btn_add_employee.Location = new System.Drawing.Point(26, 3);
+            this.btn_add_employee.Location = new System.Drawing.Point(26, 13);
             this.btn_add_employee.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add_employee.Name = "btn_add_employee";
             this.btn_add_employee.Size = new System.Drawing.Size(189, 54);
@@ -270,12 +272,14 @@
             // 
             this.gbx_add_update_employee.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbx_add_update_employee.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlAlternate;
-            this.gbx_add_update_employee.Location = new System.Drawing.Point(228, 3);
+            this.gbx_add_update_employee.Location = new System.Drawing.Point(228, 67);
             this.gbx_add_update_employee.Margin = new System.Windows.Forms.Padding(4);
             this.gbx_add_update_employee.Name = "gbx_add_update_employee";
             // 
             // gbx_add_update_employee.Panel
             // 
+            this.gbx_add_update_employee.Panel.Controls.Add(this.lblPhonenum);
+            this.gbx_add_update_employee.Panel.Controls.Add(this.txtPhone);
             this.gbx_add_update_employee.Panel.Controls.Add(this.kryptonLabel1);
             this.gbx_add_update_employee.Panel.Controls.Add(this.cmbDesignations);
             this.gbx_add_update_employee.Panel.Controls.Add(this.btn_cancel);
@@ -284,7 +288,7 @@
             this.gbx_add_update_employee.Panel.Controls.Add(this.lbl_last_name);
             this.gbx_add_update_employee.Panel.Controls.Add(this.lbl_full_name);
             this.gbx_add_update_employee.Panel.Controls.Add(this.txt_full_name);
-            this.gbx_add_update_employee.Size = new System.Drawing.Size(519, 535);
+            this.gbx_add_update_employee.Size = new System.Drawing.Size(519, 588);
             this.gbx_add_update_employee.TabIndex = 1;
             this.gbx_add_update_employee.Values.Heading = "Add Customer";
             this.gbx_add_update_employee.Visible = false;
@@ -293,7 +297,7 @@
             // 
             this.kryptonLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonLabel1.Location = new System.Drawing.Point(55, 327);
+            this.kryptonLabel1.Location = new System.Drawing.Point(55, 312);
             this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(115, 31);
@@ -303,7 +307,7 @@
             // btn_cancel
             // 
             this.btn_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_cancel.Location = new System.Drawing.Point(50, 399);
+            this.btn_cancel.Location = new System.Drawing.Point(50, 452);
             this.btn_cancel.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(200, 62);
@@ -315,29 +319,13 @@
             // 
             this.btn_add_update_employee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_add_update_employee.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
-            this.btn_add_update_employee.Location = new System.Drawing.Point(258, 399);
+            this.btn_add_update_employee.Location = new System.Drawing.Point(258, 452);
             this.btn_add_update_employee.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add_update_employee.Name = "btn_add_update_employee";
             this.btn_add_update_employee.Size = new System.Drawing.Size(200, 62);
             this.btn_add_update_employee.TabIndex = 2;
             this.btn_add_update_employee.Values.Text = "Add Employee";
             this.btn_add_update_employee.Click += new System.EventHandler(this.btn_add_update_employee_Click);
-            // 
-            // userCredentials1
-            // 
-            this.userCredentials1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.userCredentials1.BackColor = System.Drawing.Color.Transparent;
-            this.userCredentials1.Email = "Email";
-            this.userCredentials1.EmailPlaceHolder = "Email";
-            this.userCredentials1.Location = new System.Drawing.Point(51, 94);
-            this.userCredentials1.Margin = new System.Windows.Forms.Padding(5);
-            this.userCredentials1.Name = "userCredentials1";
-            this.userCredentials1.Password = "Password";
-            this.userCredentials1.PasswordPlaceHolder = "Password";
-            this.userCredentials1.Size = new System.Drawing.Size(367, 233);
-            this.userCredentials1.TabIndex = 12;
-            this.userCredentials1.Username = "Username";
-            this.userCredentials1.UsernamePlaceHolder = "Username";
             // 
             // lbl_last_name
             // 
@@ -353,25 +341,12 @@
             // 
             this.lbl_full_name.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_full_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_full_name.Location = new System.Drawing.Point(55, 11);
+            this.lbl_full_name.Location = new System.Drawing.Point(55, 13);
             this.lbl_full_name.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_full_name.Name = "lbl_full_name";
             this.lbl_full_name.Size = new System.Drawing.Size(95, 31);
             this.lbl_full_name.TabIndex = 8;
             this.lbl_full_name.Values.Text = "FullName";
-            // 
-            // txt_full_name
-            // 
-            this.txt_full_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_full_name.BackColor = System.Drawing.Color.Transparent;
-            this.txt_full_name.Location = new System.Drawing.Point(51, 32);
-            this.txt_full_name.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_full_name.Name = "txt_full_name";
-            this.txt_full_name.PlaceHolder = "FullName";
-            this.txt_full_name.Size = new System.Drawing.Size(367, 52);
-            this.txt_full_name.Style = "Standalone";
-            this.txt_full_name.TabIndex = 3;
-            this.txt_full_name.TextBoxText = "FullName";
             // 
             // tableLayoutPanel1
             // 
@@ -386,17 +361,17 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1076, 618);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1076, 800);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.gbox_grd_users);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(4, 65);
+            this.panel1.Location = new System.Drawing.Point(4, 84);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1068, 549);
+            this.panel1.Size = new System.Drawing.Size(1068, 712);
             this.panel1.TabIndex = 2;
             // 
             // gbox_grd_users
@@ -412,7 +387,7 @@
             // 
             this.gbox_grd_users.Panel.Controls.Add(this.gbx_add_update_employee);
             this.gbox_grd_users.Panel.Controls.Add(this.dgv_employees);
-            this.gbox_grd_users.Size = new System.Drawing.Size(1044, 534);
+            this.gbox_grd_users.Size = new System.Drawing.Size(1044, 697);
             this.gbox_grd_users.TabIndex = 1;
             this.gbox_grd_users.Values.Heading = "Users";
             // 
@@ -435,9 +410,66 @@
             this.dgv_employees.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_employees.Name = "dgv_employees";
             this.dgv_employees.RowHeadersWidth = 51;
-            this.dgv_employees.Size = new System.Drawing.Size(1030, 496);
+            this.dgv_employees.Size = new System.Drawing.Size(1030, 659);
             this.dgv_employees.TabIndex = 0;
             this.dgv_employees.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_employees_CellMouseDown);
+            // 
+            // FullNameColumn
+            // 
+            this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FullNameColumn.DataPropertyName = "Name";
+            this.FullNameColumn.HeaderText = "FullName";
+            this.FullNameColumn.MinimumWidth = 6;
+            this.FullNameColumn.Name = "FullNameColumn";
+            // 
+            // cmbDesignations
+            // 
+            this.cmbDesignations.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList;
+            this.cmbDesignations.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
+            this.cmbDesignations.DropDownWidth = 188;
+            this.cmbDesignations.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
+            this.cmbDesignations.Items.AddRange(new object[] {
+            "item 1",
+            "item 2",
+            "item 3",
+            "item 4",
+            "item 5",
+            "item 6"});
+            this.cmbDesignations.Location = new System.Drawing.Point(55, 330);
+            this.cmbDesignations.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbDesignations.Name = "cmbDesignations";
+            this.cmbDesignations.Size = new System.Drawing.Size(369, 42);
+            this.cmbDesignations.TabIndex = 26;
+            this.cmbDesignations.Text = "Designations";
+            // 
+            // userCredentials1
+            // 
+            this.userCredentials1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.userCredentials1.BackColor = System.Drawing.Color.Transparent;
+            this.userCredentials1.Email = "Email";
+            this.userCredentials1.EmailPlaceHolder = "Email";
+            this.userCredentials1.Location = new System.Drawing.Point(55, 87);
+            this.userCredentials1.Margin = new System.Windows.Forms.Padding(5);
+            this.userCredentials1.Name = "userCredentials1";
+            this.userCredentials1.Password = "Password";
+            this.userCredentials1.PasswordPlaceHolder = "Password";
+            this.userCredentials1.Size = new System.Drawing.Size(367, 233);
+            this.userCredentials1.TabIndex = 12;
+            this.userCredentials1.Username = "Username";
+            this.userCredentials1.UsernamePlaceHolder = "Username";
+            // 
+            // txt_full_name
+            // 
+            this.txt_full_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_full_name.BackColor = System.Drawing.Color.Transparent;
+            this.txt_full_name.Location = new System.Drawing.Point(51, 34);
+            this.txt_full_name.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_full_name.Name = "txt_full_name";
+            this.txt_full_name.PlaceHolder = "FullName";
+            this.txt_full_name.Size = new System.Drawing.Size(367, 52);
+            this.txt_full_name.Style = "Standalone";
+            this.txt_full_name.TabIndex = 3;
+            this.txt_full_name.TextBoxText = "FullName";
             // 
             // EmployeeIdColumn
             // 
@@ -456,14 +488,6 @@
             this.UserIdColumn.Name = "UserIdColumn";
             this.UserIdColumn.Visible = false;
             this.UserIdColumn.Width = 125;
-            // 
-            // FullNameColumn
-            // 
-            this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FullNameColumn.DataPropertyName = "Name";
-            this.FullNameColumn.HeaderText = "FullName";
-            this.FullNameColumn.MinimumWidth = 6;
-            this.FullNameColumn.Name = "FullNameColumn";
             // 
             // UsernameColumn
             // 
@@ -512,32 +536,36 @@
             // 
             this.EmployeeBindingSource.DataSource = typeof(SoftwareFirmManagement.BL.Employee);
             // 
-            // cmbDesignations
+            // lblPhonenum
             // 
-            this.cmbDesignations.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList;
-            this.cmbDesignations.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
-            this.cmbDesignations.DropDownWidth = 188;
-            this.cmbDesignations.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
-            this.cmbDesignations.Items.AddRange(new object[] {
-            "item 1",
-            "item 2",
-            "item 3",
-            "item 4",
-            "item 5",
-            "item 6"});
-            this.cmbDesignations.Location = new System.Drawing.Point(55, 349);
-            this.cmbDesignations.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbDesignations.Name = "cmbDesignations";
-            this.cmbDesignations.Size = new System.Drawing.Size(353, 42);
-            this.cmbDesignations.TabIndex = 26;
-            this.cmbDesignations.Text = "Designations";
+            this.lblPhonenum.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblPhonenum.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.lblPhonenum.Location = new System.Drawing.Point(55, 370);
+            this.lblPhonenum.Margin = new System.Windows.Forms.Padding(4);
+            this.lblPhonenum.Name = "lblPhonenum";
+            this.lblPhonenum.Size = new System.Drawing.Size(68, 31);
+            this.lblPhonenum.TabIndex = 28;
+            this.lblPhonenum.Values.Text = "Phone";
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPhone.BackColor = System.Drawing.Color.Transparent;
+            this.txtPhone.Location = new System.Drawing.Point(51, 391);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.PlaceHolder = "Phone";
+            this.txtPhone.Size = new System.Drawing.Size(367, 52);
+            this.txtPhone.Style = "Standalone";
+            this.txtPhone.TabIndex = 27;
+            this.txtPhone.TextBoxText = "Phone";
             // 
             // EmployeeManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.ClientSize = new System.Drawing.Size(1076, 618);
+            this.ClientSize = new System.Drawing.Size(1076, 800);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip_filters;
@@ -563,8 +591,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_users)).EndInit();
             this.gbox_grd_users.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_employees)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDesignations)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -610,5 +638,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RoleColumn;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbDesignations;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblPhonenum;
+        private TextBoxWithPlaceHolder txtPhone;
     }
 }

@@ -26,6 +26,15 @@ namespace SoftwareFirmManagement.BL
         }
 
 
+        public Employee(int userId, string username, string email, string password, int role, string name, string phone, DateTime joinedDate, int designationId) : base(userId, username, email, password, role)
+        {
+            this.name = name;
+            this.phone = phone;
+            this.joinedDate = joinedDate;
+            this.designationId = designationId;
+        }
+
+
         public int EmployeeId
         {
             get { return employeeId; }

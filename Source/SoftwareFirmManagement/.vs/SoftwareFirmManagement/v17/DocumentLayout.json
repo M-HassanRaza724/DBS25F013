@@ -3,23 +3,31 @@
   "WorkspaceRootPath": "C:\\##Semester 2\\ClonedFromGitHubDesktop\\DBS25F013\\Source\\SoftwareFirmManagement\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|c:\\##semester 2\\clonedfromgithubdesktop\\dbs25f013\\source\\softwarefirmmanagement\\bl\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:bl\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|c:\\##semester 2\\clonedfromgithubdesktop\\dbs25f013\\source\\softwarefirmmanagement\\ui\\customermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\customermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|c:\\##semester 2\\clonedfromgithubdesktop\\dbs25f013\\source\\softwarefirmmanagement\\dl\\employeedl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:dl\\employeedl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|c:\\##semester 2\\clonedfromgithubdesktop\\dbs25f013\\source\\softwarefirmmanagement\\dl\\admindl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|C:\\##Semester 2\\ClonedFromGitHubDesktop\\DBS25F013\\Source\\SoftwareFirmManagement\\dl\\admindl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:dl\\admindl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|c:\\##semester 2\\clonedfromgithubdesktop\\dbs25f013\\source\\softwarefirmmanagement\\dl\\lookupdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|C:\\##Semester 2\\ClonedFromGitHubDesktop\\DBS25F013\\Source\\SoftwareFirmManagement\\dl\\lookupdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:dl\\lookupdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|c:\\##semester 2\\clonedfromgithubdesktop\\dbs25f013\\source\\softwarefirmmanagement\\dl\\servicedl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|C:\\##Semester 2\\ClonedFromGitHubDesktop\\DBS25F013\\Source\\SoftwareFirmManagement\\dl\\servicedl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:dl\\servicedl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|c:\\##semester 2\\clonedfromgithubdesktop\\dbs25f013\\source\\softwarefirmmanagement\\dl\\userdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|C:\\##Semester 2\\ClonedFromGitHubDesktop\\DBS25F013\\Source\\SoftwareFirmManagement\\dl\\userdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:dl\\userdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,20 +58,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerManagement.cs",
+              "DocumentMoniker": "C:\\##Semester 2\\ClonedFromGitHubDesktop\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\CustomerManagement.cs",
+              "RelativeDocumentMoniker": "UI\\CustomerManagement.cs",
+              "ToolTip": "C:\\##Semester 2\\ClonedFromGitHubDesktop\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\CustomerManagement.cs",
+              "RelativeToolTip": "UI\\CustomerManagement.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAASwFwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T00:53:49.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\##Semester 2\\ClonedFromGitHubDesktop\\DBS25F013\\Source\\SoftwareFirmManagement\\BL\\Customer.cs",
+              "RelativeDocumentMoniker": "BL\\Customer.cs",
+              "ToolTip": "C:\\##Semester 2\\ClonedFromGitHubDesktop\\DBS25F013\\Source\\SoftwareFirmManagement\\BL\\Customer.cs",
+              "RelativeToolTip": "BL\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T00:53:16.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "EmployeeDL.cs",
               "DocumentMoniker": "C:\\##Semester 2\\ClonedFromGitHubDesktop\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\EmployeeDL.cs",
               "RelativeDocumentMoniker": "DL\\EmployeeDL.cs",
               "ToolTip": "C:\\##Semester 2\\ClonedFromGitHubDesktop\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\EmployeeDL.cs",
               "RelativeToolTip": "DL\\EmployeeDL.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAADQAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T20:31:57.211Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AdminDL.cs",
               "DocumentMoniker": "C:\\##Semester 2\\ClonedFromGitHubDesktop\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\AdminDL.cs",
               "RelativeDocumentMoniker": "DL\\AdminDL.cs",
@@ -71,12 +105,11 @@
               "RelativeToolTip": "DL\\AdminDL.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T20:21:39.776Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-02T20:21:39.776Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "LookupDL.cs",
               "DocumentMoniker": "C:\\##Semester 2\\ClonedFromGitHubDesktop\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\LookupDL.cs",
               "RelativeDocumentMoniker": "DL\\LookupDL.cs",
@@ -84,12 +117,11 @@
               "RelativeToolTip": "DL\\LookupDL.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAmwCwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T20:01:17.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-02T20:01:17.505Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ServiceDL.cs",
               "DocumentMoniker": "C:\\##Semester 2\\ClonedFromGitHubDesktop\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\ServiceDL.cs",
               "RelativeDocumentMoniker": "DL\\ServiceDL.cs",
@@ -97,12 +129,11 @@
               "RelativeToolTip": "DL\\ServiceDL.cs",
               "ViewState": "AgIAAEwAAAAAAAAAAAAYwHAAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T17:06:18.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-02T17:06:18.85Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "UserDL.cs",
               "DocumentMoniker": "C:\\##Semester 2\\ClonedFromGitHubDesktop\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\UserDL.cs",
               "RelativeDocumentMoniker": "DL\\UserDL.cs",
@@ -110,8 +141,7 @@
               "RelativeToolTip": "DL\\UserDL.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHwAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T17:04:48.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-02T17:04:48.62Z"
             }
           ]
         },

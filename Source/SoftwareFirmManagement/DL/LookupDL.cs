@@ -37,10 +37,12 @@ namespace SoftwareFirmManagement.DL
             // dl logic please
             return 0;
         }
-        //public static List<Lookup> GetLookupsByGroup(string groupName)
-        //{
-        //    return 0; 
-        //}
+        public static List<Lookup> GetDesignations()
+        {
+            List<Lookup> designations = new List<Lookup>();
+            return designations;
+            // DL logic
+        }
 
     }
 }

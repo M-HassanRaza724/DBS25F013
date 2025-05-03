@@ -91,6 +91,7 @@ namespace SoftwareFirmManagement.UI
         //    gbx_add_update_employee.Text = "Add Customer";
             
         //}
+
         void enableGroupBox(int empId = -1)
         {
             gbx_add_update_employee.Enabled = true;
@@ -99,25 +100,49 @@ namespace SoftwareFirmManagement.UI
             if (empId != -1)
             {
                 txt_full_name.TextBoxText = currentContextRow.Cells["FullNameColumn"].Value.ToString();
+                txt_Phone.TextBoxText = currentContextRow.Cells["PhoneColumn"].Value.ToString();
+
                 userCredentials1.Username = currentContextRow.Cells["UsernameColumn"].Value.ToString();
                 userCredentials1.Email = currentContextRow.Cells["EmailColumn"].Value.ToString();
                 userCredentials1.Password = currentContextRow.Cells["PasswordColumn"].Value.ToString();
 
-                string designation = currentContextRow.Cells["DesignationColumn"].Value.ToString();
-                cmbDesignations.SelectedItem = designation;
+                // Set designation
+                int designationId = Convert.ToInt32(currentContextRow.Cells["DesignationIdColumn"].Value);
+                for (int i = 0; i < designationsList.Count; i++)
+                {
+                    if (designationsList[i].LookupId == designationId)
+                    {
+                        cmbDesignations.SelectedIndex = i;
+                        break;
+                    }
+                }
 
                 btn_add_update_employee.Text = "Update";
                 gbx_add_update_employee.Text = "Update Employee";
             }
-        }
+            else
+            {
+                txt_full_name.TextBoxText = "";
+                txt_Phone.TextBoxText = "";  // Phone cleared
+                userCredentials1.Username = "";
+                userCredentials1.Email = "";
+                userCredentials1.Password = "";
+                cmbDesignations.SelectedIndex = -1;
 
+                btn_add_update_employee.Text = "Add";
+                gbx_add_update_employee.Text = "Add Employee";
+            }
+        }
         void disableGroupBox()
         {
             gbx_add_update_employee.Enabled = false;
             gbx_add_update_employee.Visible = false;
 
+            // Reset all fields including phone
             txt_full_name.TextBoxText = "";
             txt_full_name.PlaceHolder = "Full Name";
+            txt_Phone.TextBoxText = "";
+            txt_Phone.PlaceHolder = "Phone Number";
             userCredentials1.Username = "";
             userCredentials1.UsernamePlaceHolder = "Username";
             userCredentials1.Email = "";
@@ -160,17 +185,63 @@ namespace SoftwareFirmManagement.UI
             disableGroupBox();
 
         }
+        private List<Lookup> designationsList;
         private void loadDesignations()
         {
+            try
+            {
+                designationsList = LookupDL.GetDesignations();
+                cmbDesignations.Items.Clear();
+
+                foreach (Lookup d in designationsList)
+                {
+                    cmbDesignations.Items.Add(d.Value); 
+                }
+
+                if (cmbDesignations.Items.Count > 0)
+                    cmbDesignations.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private int GetSelectedDesignationId()
+        {
+            if (cmbDesignations.SelectedIndex >= 0 &&
+                cmbDesignations.SelectedIndex < designationsList.Count)
+            {
+                return designationsList[cmbDesignations.SelectedIndex].LookupId;
+            }
+            return 0; 
         }
         private void btn_add_update_employee_Click(object sender, EventArgs e)
         {
+            if (cmbDesignations.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a designation!");
+                return;
+            }
+
+            int designationId = GetSelectedDesignationId();
+
             if (btn_add_update_employee.Text == "Update")
             {
                 try
                 {
-                    //    Employee employee = new Employee(Convert.ToInt32(currentContextRow.Cells["UserIdColumn"].Value), userCredentials1.Username, userCredentials1.Email, userCredentials1.Password, LookupDL.GetLookupId("user_role", "Employee"), Convert.ToInt32(currentContextRow.Cells["EmployeeIdColumn"].Value), txt_full_name.TextBoxText);
-                    //    employee.Update(employee);
+                    Employee employee = new Employee(
+                        Convert.ToInt32(currentContextRow.Cells["UserIdColumn"].Value),
+                        userCredentials1.Username,
+                        userCredentials1.Email,
+                        userCredentials1.Password,
+                        LookupDL.GetLookupId("user_role", "Employee"),
+                        Convert.ToInt32(currentContextRow.Cells["EmployeeIdColumn"].Value),
+                        txt_full_name.TextBoxText,
+                        txt_Phone.TextBoxText,
+                        Convert.ToDateTime(currentContextRow.Cells["JoinedDateColumn"].Value),
+                        designationId  // Use the retrieved ID
+                    );
+                    employee.Update(employee);
                 }
                 catch (Exception ex)
                 {
@@ -179,12 +250,19 @@ namespace SoftwareFirmManagement.UI
             }
             else
             {
-
                 try
                 {
-                    //Employee employee = new Employee(userCredentials1.Username, userCredentials1.Email, userCredentials1.Password, LookupDL.GetLookupId("user_role", "Employee"), txt_full_name.TextBoxText);
-                    //employee.Add(employee);
-
+                    Employee employee = new Employee(
+                        userCredentials1.Username,
+                        userCredentials1.Email,
+                        userCredentials1.Password,
+                        LookupDL.GetLookupId("user_role", "Employee"),
+                        txt_full_name.TextBoxText,
+                        txt_Phone.TextBoxText,
+                        DateTime.Now,
+                        designationId  // Use the retrieved ID
+                    );
+                    employee.Add(employee);
                 }
                 catch (Exception ex)
                 {

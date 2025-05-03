@@ -69,7 +69,7 @@
             this.RoleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblPhonenum = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txtPhone = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.txt_Phone = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel_filters.SuspendLayout();
             this.menuStrip_filters.SuspendLayout();
@@ -279,7 +279,7 @@
             // gbx_add_update_employee.Panel
             // 
             this.gbx_add_update_employee.Panel.Controls.Add(this.lblPhonenum);
-            this.gbx_add_update_employee.Panel.Controls.Add(this.txtPhone);
+            this.gbx_add_update_employee.Panel.Controls.Add(this.txt_Phone);
             this.gbx_add_update_employee.Panel.Controls.Add(this.kryptonLabel1);
             this.gbx_add_update_employee.Panel.Controls.Add(this.cmbDesignations);
             this.gbx_add_update_employee.Panel.Controls.Add(this.btn_cancel);
@@ -547,18 +547,18 @@
             this.lblPhonenum.TabIndex = 28;
             this.lblPhonenum.Values.Text = "Phone";
             // 
-            // txtPhone
+            // txt_Phone
             // 
-            this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPhone.BackColor = System.Drawing.Color.Transparent;
-            this.txtPhone.Location = new System.Drawing.Point(51, 391);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(5);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.PlaceHolder = "Phone";
-            this.txtPhone.Size = new System.Drawing.Size(367, 52);
-            this.txtPhone.Style = "Standalone";
-            this.txtPhone.TabIndex = 27;
-            this.txtPhone.TextBoxText = "Phone";
+            this.txt_Phone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Phone.BackColor = System.Drawing.Color.Transparent;
+            this.txt_Phone.Location = new System.Drawing.Point(51, 391);
+            this.txt_Phone.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Phone.Name = "txt_Phone";
+            this.txt_Phone.PlaceHolder = "Phone";
+            this.txt_Phone.Size = new System.Drawing.Size(367, 52);
+            this.txt_Phone.Style = "Standalone";
+            this.txt_Phone.TabIndex = 27;
+            this.txt_Phone.TextBoxText = "Phone";
             // 
             // EmployeeManagement
             // 
@@ -639,6 +639,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbDesignations;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblPhonenum;
-        private TextBoxWithPlaceHolder txtPhone;
+        private TextBoxWithPlaceHolder txt_Phone;
     }
 }

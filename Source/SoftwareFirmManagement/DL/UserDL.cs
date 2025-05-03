@@ -65,12 +65,13 @@ namespace SoftwareFirmManagement.DL
                     // getting salary if exists
                     string salaryQuery = $"CALL sp_get_employee_salary({newEmp.EmployeeId});";
                     var salaryData = DatabaseHelper.Instance.GetData(salaryQuery);
+                    salaryData.Read();
                     if (!salaryData.IsDBNull(0))
                     {
                         int salaryId = salaryData.GetInt32(0);
-                        DateTime payDate = DateTime.Parse(salaryData.GetString(1)).Date;
-                        double amount = salaryData.GetDouble(2);
-                        double bonus = salaryData.GetDouble(3);
+                        DateTime payDate = DateTime.Parse(salaryData[2].ToString()).Date;
+                        double amount = salaryData.GetDouble(3);
+                        double bonus = salaryData.GetDouble(4);
                         newEmp.SetSalary(salaryId, payDate, amount, bonus);
                     }
 

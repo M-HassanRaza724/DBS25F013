@@ -117,6 +117,7 @@
     <Compile Include="BL\Customer.cs" />
     <Compile Include="BL\Employee.cs" />
     <Compile Include="BL\Lookup.cs" />
+    <Compile Include="BL\Salary.cs" />
     <Compile Include="BL\Service.cs" />
     <Compile Include="BL\SubService.cs" />
     <Compile Include="BL\Technology.cs" />
@@ -126,6 +127,7 @@
     <Compile Include="DL\CustomerDL.cs" />
     <Compile Include="DL\EmployeeDL.cs" />
     <Compile Include="DL\LookupDL.cs" />
+    <Compile Include="DL\SalaryDL.cs" />
     <Compile Include="DL\ServiceDL.cs" />
     <Compile Include="DL\UserDL.cs" />
     <Compile Include="UI\AddUpdateCust.cs">

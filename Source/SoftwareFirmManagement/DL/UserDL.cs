@@ -54,11 +54,26 @@ namespace SoftwareFirmManagement.DL
                     DateTime joinedDate = DateTime.Parse(data3[8].ToString()).Date;
                     int designationId = data3.IsDBNull(9) ? 0 : data3.GetInt32(9);
                     Employee newEmp = new Employee(userId, username, email, password, roleId, employeeId, name, phone, joinedDate, designationId);
+
+                    // getting role
                     string role = LookupDL.allLookups
                                   .Where(l => l.LookupId == roleId)
                                   .Select(l => l.Value)
                                   .FirstOrDefault();
                     newEmp.Role = role;
+
+                    // getting salary if exists
+                    string salaryQuery = $"CALL sp_get_employee_salary({newEmp.EmployeeId});";
+                    var salaryData = DatabaseHelper.Instance.GetData(salaryQuery);
+                    if (!salaryData.IsDBNull(0))
+                    {
+                        int salaryId = salaryData.GetInt32(0);
+                        DateTime payDate = DateTime.Parse(salaryData.GetString(1)).Date;
+                        double amount = salaryData.GetDouble(2);
+                        double bonus = salaryData.GetDouble(3);
+                        newEmp.SetSalary(salaryId, payDate, amount, bonus);
+                    }
+
                     allUsers.Add(newEmp);
                 }
                 string query4 = "CALL sp_get_user_by_role('customer')";

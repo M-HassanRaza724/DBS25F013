@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace SoftwareFirmManagement.BL
 {
-    public class Service
+    public class ServiceDTO
     {
         private int serviceId;
         private string name;
         private int categoryId;
         private string description;
-        private SubService subservice;
-        private Technology technology;
+        private SubServiceDAO subservice;
+        private TechnologyDAO technology;
 
         public int ServiceId
         {
@@ -37,12 +37,12 @@ namespace SoftwareFirmManagement.BL
             get { return categoryId; }
             set { categoryId = value; }
         }
-        public SubService Subservice
+        public SubServiceDAO Subservice
         {
             get { return subservice; }
             set { subservice = value; }
         }
-        public Technology Technology
+        public TechnologyDAO Technology
         {
             get { return technology; }
             set { technology = value; }
@@ -50,28 +50,26 @@ namespace SoftwareFirmManagement.BL
 
 
 
-        public Service(int serviceId, string name, int categoryId, string description)
+        public ServiceDTO(int serviceId, string name, int categoryId, string description)
         {
             this.serviceId = serviceId;
             this.name = name;
             this.categoryId = categoryId;
             this.description = description;
-            technology = new Technology(); // composition
-            subservice = new SubService(); // composition
+            technology = new TechnologyDAO(); // composition
+            subservice = new SubServiceDAO(); // composition
         }
 
 
         public void AddSubservice(string description)
         {
-            subservice = new SubService(serviceId, description);
-            ServiceDL.LoadAllServices();
+            subservice = new SubServiceDAO(serviceId, description);
         }
 
 
         public void AddTechnology(string description)
         {
-            technology = new Technology(serviceId, description);
-            ServiceDL.LoadAllServices();
+            technology = new TechnologyDAO(serviceId, description);
         }
 
 

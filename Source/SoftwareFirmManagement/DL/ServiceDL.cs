@@ -10,7 +10,7 @@ namespace SoftwareFirmManagement.DL
 {
     public class ServiceDL
     {
-        public static List<Service> allServices = new List<Service>();
+        public static List<ServiceDTO> allServices = new List<ServiceDTO>();
 
         public static void LoadAllServices()
         {
@@ -27,7 +27,7 @@ namespace SoftwareFirmManagement.DL
                     string description = data[3].ToString();
                     string subserviceDescription = data.IsDBNull(4) ? "null" : data[5].ToString();
                     string techDescription = data.IsDBNull(5) ? "null" : data[7].ToString();
-                    Service service = new Service(serviceId, name, categoryId, description);
+                    ServiceDTO service = new ServiceDTO(serviceId, name, categoryId, description);
                     if (subserviceDescription != "null")
                     {
                         service.AddSubservice(subserviceDescription);
@@ -46,7 +46,7 @@ namespace SoftwareFirmManagement.DL
         }
 
 
-        public static bool AddServiceToDatabase(Service service) // service name must be unique
+        public static bool AddServiceToDatabase(ServiceDTO service)
         {
             try
             {
@@ -76,7 +76,7 @@ namespace SoftwareFirmManagement.DL
         }
 
 
-        public static bool UpdateServiceToDatabase(Service service)
+        public static bool UpdateServiceToDatabase(ServiceDTO service)
         {
             try
             {
@@ -101,7 +101,7 @@ namespace SoftwareFirmManagement.DL
         }
 
 
-        public static bool DeleteServiceFromDatabase(Service service)
+        public static bool DeleteServiceFromDatabase(ServiceDTO service)
         {
             try
             {

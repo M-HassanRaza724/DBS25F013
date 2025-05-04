@@ -187,7 +187,7 @@ namespace SoftwareFirmManagement.UI
             this.lbl_last_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_last_name.Location = new System.Drawing.Point(6, 72);
             this.lbl_last_name.Name = "lbl_last_name";
-            this.lbl_last_name.Size = new System.Drawing.Size(6, 2);
+            this.lbl_last_name.Size = new System.Drawing.Size(6, 4);
             this.lbl_last_name.TabIndex = 9;
             this.lbl_last_name.Values.Text = "";
             // 
@@ -197,7 +197,7 @@ namespace SoftwareFirmManagement.UI
             this.lbl_full_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_full_name.Location = new System.Drawing.Point(41, -3);
             this.lbl_full_name.Name = "lbl_full_name";
-            this.lbl_full_name.Size = new System.Drawing.Size(96, 29);
+            this.lbl_full_name.Size = new System.Drawing.Size(77, 26);
             this.lbl_full_name.TabIndex = 8;
             this.lbl_full_name.Values.Text = "FullName";
             // 
@@ -232,7 +232,7 @@ namespace SoftwareFirmManagement.UI
             this.dgv_customers.Location = new System.Drawing.Point(0, 0);
             this.dgv_customers.Name = "dgv_customers";
             this.dgv_customers.RowHeadersWidth = 62;
-            this.dgv_customers.Size = new System.Drawing.Size(779, 411);
+            this.dgv_customers.Size = new System.Drawing.Size(769, 402);
             this.dgv_customers.TabIndex = 0;
             this.dgv_customers.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_customers_CellMouseDown);
             // 
@@ -419,9 +419,9 @@ namespace SoftwareFirmManagement.UI
             // 
             this.lbl_filter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_filter.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_filter.Location = new System.Drawing.Point(126, 10);
+            this.lbl_filter.Location = new System.Drawing.Point(137, 12);
             this.lbl_filter.Name = "lbl_filter";
-            this.lbl_filter.Size = new System.Drawing.Size(65, 29);
+            this.lbl_filter.Size = new System.Drawing.Size(54, 26);
             this.lbl_filter.TabIndex = 38;
             this.lbl_filter.Values.Text = "Filters";
             // 

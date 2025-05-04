@@ -49,6 +49,8 @@ namespace SoftwareFirmManagement.BL
         }
 
 
+        public ServiceDTO() { }
+
 
         public ServiceDTO(int serviceId, string name, int categoryId, string description)
         {

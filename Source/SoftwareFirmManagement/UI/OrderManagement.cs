@@ -26,7 +26,7 @@ namespace SoftwareFirmManagement.UI
         {
             if (search == "Search")
                 search = null;
-            //OrderBindingSource.DataSource = OrderDL.GetOrdersByFilter(search, sortby, direction);
+            OrderBindingSource.DataSource = OrderDTO.GetOrdersByFilter(search, sortby, direction);
             dgv_orders.DataSource = OrderBindingSource;
         }
         private void OrderManagement_Load(object sender, EventArgs e)
@@ -208,7 +208,8 @@ namespace SoftwareFirmManagement.UI
                     employee.EmployeeId = employeeId;
 
                     int statusId = LookupDL.GetLookupId("status", currentContextRow.Cells["Status"].Value.ToString());
-
+                    //int orderId, Employee employee, OrderDTO customer, DateTime createdAt, int statusId,
+                    //   ServiceDTO service, int initialBudgetId, int platformId, string description)
                     OrderDTO order = new OrderDTO(
                         orderId,
                         employee,

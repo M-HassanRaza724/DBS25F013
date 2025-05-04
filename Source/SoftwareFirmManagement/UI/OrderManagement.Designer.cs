@@ -46,37 +46,36 @@
             this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.contextMenuStrip_grd = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.OrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbox_grd_orders = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.lbl_note = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.gbx_add_update_order = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txtDescription = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.lblPlatform = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.cmbPlatform = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.lblInitialBudget = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txtInitialBudget = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.lblService = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.cmbService = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.btn_cancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_add_update_order = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lbl_last_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_Customer_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txt_customer_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.dgv_orders = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.txtDescription = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.txtInitialBudget = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.txt_customer_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createdAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serviceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbl_note = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.OrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel_filters.SuspendLayout();
             this.menuStrip_filters.SuspendLayout();
             this.panel2.SuspendLayout();
             this.contextMenuStrip_grd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OrderBindingSource)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_orders)).BeginInit();
@@ -90,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbPlatform)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbService)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_orders)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // updateToolStripMenuItem
@@ -211,9 +211,9 @@
             // 
             this.lbl_filter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_filter.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_filter.Location = new System.Drawing.Point(122, 12);
+            this.lbl_filter.Location = new System.Drawing.Point(136, 12);
             this.lbl_filter.Name = "lbl_filter";
-            this.lbl_filter.Size = new System.Drawing.Size(68, 27);
+            this.lbl_filter.Size = new System.Drawing.Size(54, 26);
             this.lbl_filter.TabIndex = 38;
             this.lbl_filter.Values.Text = "Filters";
             // 
@@ -269,10 +269,6 @@
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
-            // OrderBindingSource
-            // 
-            this.OrderBindingSource.DataSource = typeof(SoftwareFirmManagement.BL.OrderDTO);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
@@ -314,11 +310,20 @@
             this.gbox_grd_orders.TabIndex = 1;
             this.gbox_grd_orders.Values.Heading = "Users";
             // 
+            // lbl_note
+            // 
+            this.lbl_note.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.lbl_note.Location = new System.Drawing.Point(496, 154);
+            this.lbl_note.Name = "lbl_note";
+            this.lbl_note.Size = new System.Drawing.Size(144, 26);
+            this.lbl_note.TabIndex = 2;
+            this.lbl_note.Values.Text = "Under construction";
+            // 
             // gbx_add_update_order
             // 
             this.gbx_add_update_order.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbx_add_update_order.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlAlternate;
-            this.gbx_add_update_order.Location = new System.Drawing.Point(162, -1);
+            this.gbx_add_update_order.Location = new System.Drawing.Point(157, -6);
             this.gbx_add_update_order.Name = "gbx_add_update_order";
             // 
             // gbx_add_update_order.Panel
@@ -345,31 +350,18 @@
             // 
             this.kryptonLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonLabel1.Location = new System.Drawing.Point(41, 213);
+            this.kryptonLabel1.Location = new System.Drawing.Point(41, 207);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(130, 27);
+            this.kryptonLabel1.Size = new System.Drawing.Size(104, 26);
             this.kryptonLabel1.TabIndex = 34;
             this.kryptonLabel1.Values.Text = "Initial Budget";
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescription.BackColor = System.Drawing.Color.Transparent;
-            this.txtDescription.Location = new System.Drawing.Point(38, 230);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.PlaceHolder = "Description";
-            this.txtDescription.Size = new System.Drawing.Size(243, 57);
-            this.txtDescription.Style = "Standalone";
-            this.txtDescription.TabIndex = 33;
-            this.txtDescription.TextBoxText = "Description";
             // 
             // lblPlatform
             // 
             this.lblPlatform.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lblPlatform.Location = new System.Drawing.Point(41, 160);
             this.lblPlatform.Name = "lblPlatform";
-            this.lblPlatform.Size = new System.Drawing.Size(88, 27);
+            this.lblPlatform.Size = new System.Drawing.Size(72, 26);
             this.lblPlatform.TabIndex = 31;
             this.lblPlatform.Values.Text = "Platform";
             // 
@@ -395,31 +387,18 @@
             // 
             this.lblInitialBudget.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblInitialBudget.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lblInitialBudget.Location = new System.Drawing.Point(41, 48);
+            this.lblInitialBudget.Location = new System.Drawing.Point(41, 42);
             this.lblInitialBudget.Name = "lblInitialBudget";
-            this.lblInitialBudget.Size = new System.Drawing.Size(130, 27);
+            this.lblInitialBudget.Size = new System.Drawing.Size(104, 26);
             this.lblInitialBudget.TabIndex = 30;
             this.lblInitialBudget.Values.Text = "Initial Budget";
-            // 
-            // txtInitialBudget
-            // 
-            this.txtInitialBudget.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtInitialBudget.BackColor = System.Drawing.Color.Transparent;
-            this.txtInitialBudget.Location = new System.Drawing.Point(38, 65);
-            this.txtInitialBudget.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtInitialBudget.Name = "txtInitialBudget";
-            this.txtInitialBudget.PlaceHolder = "Initial Budget";
-            this.txtInitialBudget.Size = new System.Drawing.Size(243, 42);
-            this.txtInitialBudget.Style = "Standalone";
-            this.txtInitialBudget.TabIndex = 29;
-            this.txtInitialBudget.TextBoxText = "Initial Budget";
             // 
             // lblService
             // 
             this.lblService.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lblService.Location = new System.Drawing.Point(41, 105);
             this.lblService.Name = "lblService";
-            this.lblService.Size = new System.Drawing.Size(78, 27);
+            this.lblService.Size = new System.Drawing.Size(61, 26);
             this.lblService.TabIndex = 27;
             this.lblService.Values.Text = "Service";
             // 
@@ -444,7 +423,7 @@
             // btn_cancel
             // 
             this.btn_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_cancel.Location = new System.Drawing.Point(50, 305);
+            this.btn_cancel.Location = new System.Drawing.Point(34, 293);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(150, 50);
             this.btn_cancel.TabIndex = 13;
@@ -455,7 +434,7 @@
             // 
             this.btn_add_update_order.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_add_update_order.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
-            this.btn_add_update_order.Location = new System.Drawing.Point(206, 305);
+            this.btn_add_update_order.Location = new System.Drawing.Point(190, 293);
             this.btn_add_update_order.Name = "btn_add_update_order";
             this.btn_add_update_order.Size = new System.Drawing.Size(150, 50);
             this.btn_add_update_order.TabIndex = 2;
@@ -475,24 +454,11 @@
             // 
             this.lbl_Customer_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Customer_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_Customer_name.Location = new System.Drawing.Point(41, -1);
+            this.lbl_Customer_name.Location = new System.Drawing.Point(41, -7);
             this.lbl_Customer_name.Name = "lbl_Customer_name";
-            this.lbl_Customer_name.Size = new System.Drawing.Size(155, 27);
+            this.lbl_Customer_name.Size = new System.Drawing.Size(123, 26);
             this.lbl_Customer_name.TabIndex = 8;
             this.lbl_Customer_name.Values.Text = "Customer Name";
-            // 
-            // txt_customer_name
-            // 
-            this.txt_customer_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_customer_name.BackColor = System.Drawing.Color.Transparent;
-            this.txt_customer_name.Location = new System.Drawing.Point(38, 16);
-            this.txt_customer_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_customer_name.Name = "txt_customer_name";
-            this.txt_customer_name.PlaceHolder = "Customer Name";
-            this.txt_customer_name.Size = new System.Drawing.Size(243, 42);
-            this.txt_customer_name.Style = "Standalone";
-            this.txt_customer_name.TabIndex = 3;
-            this.txt_customer_name.TextBoxText = "Customer Name";
             // 
             // dgv_orders
             // 
@@ -509,9 +475,48 @@
             this.dgv_orders.Location = new System.Drawing.Point(0, 0);
             this.dgv_orders.Name = "dgv_orders";
             this.dgv_orders.RowHeadersWidth = 62;
-            this.dgv_orders.Size = new System.Drawing.Size(768, 415);
+            this.dgv_orders.Size = new System.Drawing.Size(768, 411);
             this.dgv_orders.TabIndex = 0;
             this.dgv_orders.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_orders_CellMouseDown);
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescription.BackColor = System.Drawing.Color.Transparent;
+            this.txtDescription.Location = new System.Drawing.Point(38, 224);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.PlaceHolder = "Description";
+            this.txtDescription.Size = new System.Drawing.Size(227, 57);
+            this.txtDescription.Style = "Standalone";
+            this.txtDescription.TabIndex = 33;
+            this.txtDescription.TextBoxText = "Description";
+            // 
+            // txtInitialBudget
+            // 
+            this.txtInitialBudget.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtInitialBudget.BackColor = System.Drawing.Color.Transparent;
+            this.txtInitialBudget.Location = new System.Drawing.Point(38, 59);
+            this.txtInitialBudget.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtInitialBudget.Name = "txtInitialBudget";
+            this.txtInitialBudget.PlaceHolder = "Initial Budget";
+            this.txtInitialBudget.Size = new System.Drawing.Size(227, 42);
+            this.txtInitialBudget.Style = "Standalone";
+            this.txtInitialBudget.TabIndex = 29;
+            this.txtInitialBudget.TextBoxText = "Initial Budget";
+            // 
+            // txt_customer_name
+            // 
+            this.txt_customer_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_customer_name.BackColor = System.Drawing.Color.Transparent;
+            this.txt_customer_name.Location = new System.Drawing.Point(38, 10);
+            this.txt_customer_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_customer_name.Name = "txt_customer_name";
+            this.txt_customer_name.PlaceHolder = "Customer Name";
+            this.txt_customer_name.Size = new System.Drawing.Size(227, 42);
+            this.txt_customer_name.Style = "Standalone";
+            this.txt_customer_name.TabIndex = 3;
+            this.txt_customer_name.TextBoxText = "Customer Name";
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
@@ -553,14 +558,9 @@
             this.serviceDataGridViewTextBoxColumn.Name = "serviceDataGridViewTextBoxColumn";
             this.serviceDataGridViewTextBoxColumn.Width = 125;
             // 
-            // lbl_note
+            // OrderBindingSource
             // 
-            this.lbl_note.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_note.Location = new System.Drawing.Point(496, 154);
-            this.lbl_note.Name = "lbl_note";
-            this.lbl_note.Size = new System.Drawing.Size(183, 27);
-            this.lbl_note.TabIndex = 2;
-            this.lbl_note.Values.Text = "Under construction";
+            this.OrderBindingSource.DataSource = typeof(SoftwareFirmManagement.BL.OrderDTO);
             // 
             // OrderManagement
             // 
@@ -582,7 +582,6 @@
             this.menuStrip_filters.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.contextMenuStrip_grd.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.OrderBindingSource)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_orders.Panel)).EndInit();
@@ -598,6 +597,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbPlatform)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbService)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_orders)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -14,7 +14,7 @@ namespace SoftwareFirmManagement.DL
             try
             {
                 string formattedDate = salary.Date.ToString("yyyy-MM-dd");
-                string query = $"CALL sp_manage_salary('add', {salary.EmployeeId}, '{formattedDate}', {salary.Amount}, {salary.Bonus});";
+                string query = $"CALL sp_manage_salary('add', {salary.SalaryId}, {salary.EmployeeId}, '{formattedDate}', {salary.Amount}, {salary.Bonus});";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }
@@ -30,7 +30,7 @@ namespace SoftwareFirmManagement.DL
             try
             {
                 string formattedDate = salary.Date.ToString("yyyy-MM-dd");
-                string query = $"CALL sp_manage_salary('update', {salary.EmployeeId}, '{formattedDate}', {salary.Amount}, {salary.Bonus}) ;";
+                string query = $"CALL sp_manage_salary('update', {salary.SalaryId}, {salary.EmployeeId}, '{formattedDate}', {salary.Amount}, {salary.Bonus}) ;";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }
@@ -46,7 +46,7 @@ namespace SoftwareFirmManagement.DL
             try
             {
                 string formattedDate = salary.Date.ToString("yyyy-MM-dd");
-                string query = $"CALL sp_manage_salary('delete', {salary.EmployeeId}, '{formattedDate}', {salary.Amount}, {salary.Bonus}) ;";
+                string query = $"CALL sp_manage_salary('delete', {salary.SalaryId}, {salary.EmployeeId}, '{formattedDate}', {salary.Amount}, {salary.Bonus}) ;";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }

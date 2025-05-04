@@ -92,9 +92,7 @@ namespace SoftwareFirmManagement.BL
             try
             {
                 salary = new Salary(salaryId, employeeId, date, amount, bonus);
-                bool status = SalaryDL.AddSalaryToDatabase(salary);
-                UserDL.LoadAllUsers();
-                return status;
+                return true;
             }
             catch (Exception)
             {

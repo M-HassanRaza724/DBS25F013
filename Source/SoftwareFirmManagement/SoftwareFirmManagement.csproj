@@ -173,6 +173,12 @@
     <Compile Include="UI\Header.Designer.cs">
       <DependentUpon>Header.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\OrderManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\OrderManagement.Designer.cs">
+      <DependentUpon>OrderManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Resize.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </Compile>
     <EmbeddedResource Include="UI\Header.resx">
       <DependentUpon>Header.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\OrderManagement.resx">
+      <DependentUpon>OrderManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Resize.resx">
       <DependentUpon>Resize.cs</DependentUpon>
@@ -342,6 +351,7 @@
     </Compile>
     <None Include="SoftwareFirmManagement.BL.Customer.datasource" />
     <None Include="SoftwareFirmManagement.BL.Employee.datasource" />
+    <None Include="SoftwareFirmManagement.BL.OrderDTO.datasource" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

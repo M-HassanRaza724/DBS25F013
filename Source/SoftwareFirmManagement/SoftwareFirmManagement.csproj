@@ -389,6 +389,7 @@
     <Content Include="Resources\Normal Screen.png" />
     <Content Include="Resources\Search.png" />
     <None Include="Resources\Trash.png" />
+    <None Include="Resources\Service.png" />
     <Content Include="Resources\unchecked-hover-small.png" />
     <Content Include="Resources\unchecked-normal-small.png" />
     <None Include="Resources\User Default%28small%29.png" />

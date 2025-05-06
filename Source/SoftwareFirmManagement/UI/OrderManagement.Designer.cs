@@ -97,7 +97,7 @@
             this.updateToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.updateToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Available_Updates;
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(135, 30);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(120, 30);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
@@ -251,21 +251,21 @@
             // 
             this.contextMenuStrip_grd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.contextMenuStrip_grd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.contextMenuStrip_grd.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.contextMenuStrip_grd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
             this.contextMenuStrip_grd.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip_grd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip_grd.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.contextMenuStrip_grd.Name = "contextMenuStrip_grd";
-            this.contextMenuStrip_grd.Size = new System.Drawing.Size(136, 64);
+            this.contextMenuStrip_grd.Size = new System.Drawing.Size(121, 64);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.deleteToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Trash;
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(135, 30);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(120, 30);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -323,7 +323,7 @@
             // 
             this.gbx_add_update_order.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbx_add_update_order.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlAlternate;
-            this.gbx_add_update_order.Location = new System.Drawing.Point(152, -11);
+            this.gbx_add_update_order.Location = new System.Drawing.Point(147, -16);
             this.gbx_add_update_order.Name = "gbx_add_update_order";
             // 
             // gbx_add_update_order.Panel
@@ -350,7 +350,7 @@
             // 
             this.kryptonLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonLabel1.Location = new System.Drawing.Point(41, 201);
+            this.kryptonLabel1.Location = new System.Drawing.Point(41, 195);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(104, 26);
             this.kryptonLabel1.TabIndex = 34;
@@ -360,11 +360,11 @@
             // 
             this.txtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescription.BackColor = System.Drawing.Color.Transparent;
-            this.txtDescription.Location = new System.Drawing.Point(38, 218);
+            this.txtDescription.Location = new System.Drawing.Point(38, 212);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PlaceHolder = "Description";
-            this.txtDescription.Size = new System.Drawing.Size(211, 57);
+            this.txtDescription.Size = new System.Drawing.Size(195, 57);
             this.txtDescription.Style = "Standalone";
             this.txtDescription.TabIndex = 33;
             this.txtDescription.TextBoxText = "Description";
@@ -400,7 +400,7 @@
             // 
             this.lblInitialBudget.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblInitialBudget.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lblInitialBudget.Location = new System.Drawing.Point(41, 36);
+            this.lblInitialBudget.Location = new System.Drawing.Point(41, 30);
             this.lblInitialBudget.Name = "lblInitialBudget";
             this.lblInitialBudget.Size = new System.Drawing.Size(104, 26);
             this.lblInitialBudget.TabIndex = 30;
@@ -410,11 +410,11 @@
             // 
             this.txtInitialBudget.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtInitialBudget.BackColor = System.Drawing.Color.Transparent;
-            this.txtInitialBudget.Location = new System.Drawing.Point(38, 53);
+            this.txtInitialBudget.Location = new System.Drawing.Point(38, 47);
             this.txtInitialBudget.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtInitialBudget.Name = "txtInitialBudget";
             this.txtInitialBudget.PlaceHolder = "Initial Budget";
-            this.txtInitialBudget.Size = new System.Drawing.Size(211, 42);
+            this.txtInitialBudget.Size = new System.Drawing.Size(195, 42);
             this.txtInitialBudget.Style = "Standalone";
             this.txtInitialBudget.TabIndex = 29;
             this.txtInitialBudget.TextBoxText = "Initial Budget";
@@ -449,7 +449,7 @@
             // btn_cancel
             // 
             this.btn_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_cancel.Location = new System.Drawing.Point(18, 281);
+            this.btn_cancel.Location = new System.Drawing.Point(2, 269);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(150, 50);
             this.btn_cancel.TabIndex = 13;
@@ -460,7 +460,7 @@
             // 
             this.btn_add_update_order.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_add_update_order.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
-            this.btn_add_update_order.Location = new System.Drawing.Point(174, 281);
+            this.btn_add_update_order.Location = new System.Drawing.Point(158, 269);
             this.btn_add_update_order.Name = "btn_add_update_order";
             this.btn_add_update_order.Size = new System.Drawing.Size(150, 50);
             this.btn_add_update_order.TabIndex = 2;
@@ -480,7 +480,7 @@
             // 
             this.lbl_Customer_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Customer_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_Customer_name.Location = new System.Drawing.Point(41, -13);
+            this.lbl_Customer_name.Location = new System.Drawing.Point(41, -19);
             this.lbl_Customer_name.Name = "lbl_Customer_name";
             this.lbl_Customer_name.Size = new System.Drawing.Size(123, 26);
             this.lbl_Customer_name.TabIndex = 8;
@@ -490,11 +490,11 @@
             // 
             this.txt_customer_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_customer_name.BackColor = System.Drawing.Color.Transparent;
-            this.txt_customer_name.Location = new System.Drawing.Point(38, 4);
+            this.txt_customer_name.Location = new System.Drawing.Point(38, -2);
             this.txt_customer_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_customer_name.Name = "txt_customer_name";
             this.txt_customer_name.PlaceHolder = "Customer Name";
-            this.txt_customer_name.Size = new System.Drawing.Size(211, 42);
+            this.txt_customer_name.Size = new System.Drawing.Size(195, 42);
             this.txt_customer_name.Style = "Standalone";
             this.txt_customer_name.TabIndex = 3;
             this.txt_customer_name.TextBoxText = "Customer Name";

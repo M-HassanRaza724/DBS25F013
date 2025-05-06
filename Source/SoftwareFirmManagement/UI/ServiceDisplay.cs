@@ -7,50 +7,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SoftwareFirmManagement.BL;
 
 namespace SoftwareFirmManagement.UI
 {
     public partial class ServiceDisplay: UserControl
     {
+        private ServiceDTO service;
 
-        private string serviceName;
+        public ServiceDTO Service
+        {
+            get { return service; }
+            set
+            {
+                service = value;
+                lbl_name_text.Text = value.Name;
+                lbl_description_text.Text = value.Description;
+                lbl_technologies_text.Text = value.Technology.Description;
+                lbl_sub_services_text.Text = value.Subservice.Description;
+            }
+        }
         public string ServiceName
         {
-            get { return serviceName; }
+            get { return service.Name; }
             set
             {
-                serviceName = value;
-                lbl_name_text.Text = serviceName;
+                service.Name = value;
+                lbl_name_text.Text = service.Name;
             }
         }
-        private string serviceDescription;
+        //private string service.Description;
         public string ServiceDescription
         {
-            get { return serviceDescription; }
+            get { return service.Description; }
             set
             {
-                serviceDescription = value;
-                lbl_description_text.Text = serviceDescription;
+                service.Description = value;
+                lbl_description_text.Text = service.Description;
             }
         }
-        private List<string> serviceTechnologies;
-        public List<string> ServiceTechnologies
+        //private TechnologyDAO service.Technology;
+        public TechnologyDAO ServiceTechnology
         {
-            get { return serviceTechnologies; }
+            get { return service.Technology; }
             set
             {
-                serviceTechnologies = value;
-                lbl_technologies_text.Text = String.Join(", ", serviceTechnologies);
+                service.Technology = value;
+                lbl_technologies_text.Text = service.Technology.Description;
             }
         }
-        private List<string> subServices;
-        public List<string> SubServices
+        //private SubServiceDAO service.Subservice;
+        public SubServiceDAO SubService
         {
-            get { return subServices; }
+            get { return service.Subservice; }
             set
             {
-                subServices = value;
-                lbl_sub_services_text.Text = String.Join(", ", subServices);
+                service.Subservice = value;
+                lbl_sub_services_text.Text = service.Subservice.Description;
             }
         }
         public ServiceDisplay()

@@ -139,10 +139,12 @@ namespace SoftwareFirmManagement.UI
             if (pnl_user_management.Height == 50)
             {
                 pnl_user_management.Height = 200;
+                pnl_services.Location = new System.Drawing.Point(0, 300);
             }
             else
             {
                 pnl_user_management.Height = 50;
+                pnl_services.Location = new System.Drawing.Point(0, 150);
             }
         }
 
@@ -154,6 +156,7 @@ namespace SoftwareFirmManagement.UI
                 pnl_dashboard.Width = 230;
                 pnl_menu.Width = 230;
                 pnl_user_management.Width = 230;
+                pnl_services.Width = 230;
 
             }
             else
@@ -163,6 +166,8 @@ namespace SoftwareFirmManagement.UI
                 pnl_dashboard.Width = 60;
                 pnl_menu.Width = 60;
                 pnl_user_management.Width = 60;
+                pnl_services.Width = 60;
+
             }
         }
 
@@ -184,6 +189,16 @@ namespace SoftwareFirmManagement.UI
         private void btn_employee_management_Click(object sender, EventArgs e)
         {
             ShowFormInPanel(new EmployeeManagement());
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_services_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(new ServiceManagement());
         }
     }
 }

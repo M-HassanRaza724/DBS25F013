@@ -76,5 +76,10 @@ namespace SoftwareFirmManagement.UI
         {
 
         }
+
+        private void deleteServiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

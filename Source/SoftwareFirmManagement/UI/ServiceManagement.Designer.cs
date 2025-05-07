@@ -35,6 +35,8 @@
             this.pnl_main = new System.Windows.Forms.Panel();
             this.menuStrip_filters = new System.Windows.Forms.MenuStrip();
             this.filter_item_sort_by = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbx_add_update_service = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.lbl_subservice = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txt_subservice = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
@@ -48,8 +50,7 @@
             this.lbl_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txt_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.vScrollBar = new System.Windows.Forms.VScrollBar();
-            this.customerNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.userNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_main.SuspendLayout();
             this.menuStrip_filters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_service)).BeginInit();
@@ -125,11 +126,31 @@
             // 
             this.filter_item_sort_by.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.customerNameToolStripMenuItem,
-            this.userNameToolStripMenuItem});
+            this.userNameToolStripMenuItem,
+            this.deleteServiceToolStripMenuItem});
             this.filter_item_sort_by.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.filter_item_sort_by.Name = "filter_item_sort_by";
             this.filter_item_sort_by.Size = new System.Drawing.Size(59, 22);
             this.filter_item_sort_by.Text = "Actions";
+            // 
+            // customerNameToolStripMenuItem
+            // 
+            this.customerNameToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.customerNameToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.customerNameToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Add;
+            this.customerNameToolStripMenuItem.Name = "customerNameToolStripMenuItem";
+            this.customerNameToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
+            this.customerNameToolStripMenuItem.Text = "Add Service";
+            this.customerNameToolStripMenuItem.Click += new System.EventHandler(this.customerNameToolStripMenuItem_Click);
+            // 
+            // userNameToolStripMenuItem
+            // 
+            this.userNameToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.userNameToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.userNameToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Edit;
+            this.userNameToolStripMenuItem.Name = "userNameToolStripMenuItem";
+            this.userNameToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
+            this.userNameToolStripMenuItem.Text = "Edit Service";
             // 
             // gbx_add_update_service
             // 
@@ -160,7 +181,7 @@
             // 
             this.lbl_subservice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_subservice.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_subservice.Location = new System.Drawing.Point(16, 214);
+            this.lbl_subservice.Location = new System.Drawing.Point(16, 208);
             this.lbl_subservice.Name = "lbl_subservice";
             this.lbl_subservice.Size = new System.Drawing.Size(93, 26);
             this.lbl_subservice.TabIndex = 19;
@@ -170,12 +191,12 @@
             // 
             this.txt_subservice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_subservice.BackColor = System.Drawing.Color.Transparent;
-            this.txt_subservice.Location = new System.Drawing.Point(13, 231);
+            this.txt_subservice.Location = new System.Drawing.Point(13, 225);
             this.txt_subservice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_subservice.MultiLine = true;
             this.txt_subservice.Name = "txt_subservice";
             this.txt_subservice.PlaceHolder = "SubServices";
-            this.txt_subservice.Size = new System.Drawing.Size(343, 42);
+            this.txt_subservice.Size = new System.Drawing.Size(327, 42);
             this.txt_subservice.Style = "Standalone";
             this.txt_subservice.TabIndex = 18;
             this.txt_subservice.TextBoxText = "SubServices";
@@ -184,7 +205,7 @@
             // 
             this.lbl_description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_description.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_description.Location = new System.Drawing.Point(13, 74);
+            this.lbl_description.Location = new System.Drawing.Point(13, 68);
             this.lbl_description.Name = "lbl_description";
             this.lbl_description.Size = new System.Drawing.Size(90, 26);
             this.lbl_description.TabIndex = 17;
@@ -194,12 +215,12 @@
             // 
             this.txt_description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_description.BackColor = System.Drawing.Color.Transparent;
-            this.txt_description.Location = new System.Drawing.Point(10, 91);
+            this.txt_description.Location = new System.Drawing.Point(10, 85);
             this.txt_description.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_description.MultiLine = true;
             this.txt_description.Name = "txt_description";
             this.txt_description.PlaceHolder = "Description";
-            this.txt_description.Size = new System.Drawing.Size(343, 42);
+            this.txt_description.Size = new System.Drawing.Size(327, 42);
             this.txt_description.Style = "Standalone";
             this.txt_description.TabIndex = 16;
             this.txt_description.TextBoxText = "Description";
@@ -208,7 +229,7 @@
             // 
             this.lbl_technology.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_technology.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_technology.Location = new System.Drawing.Point(13, 144);
+            this.lbl_technology.Location = new System.Drawing.Point(13, 138);
             this.lbl_technology.Name = "lbl_technology";
             this.lbl_technology.Size = new System.Drawing.Size(90, 26);
             this.lbl_technology.TabIndex = 15;
@@ -218,12 +239,12 @@
             // 
             this.txt_technology.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_technology.BackColor = System.Drawing.Color.Transparent;
-            this.txt_technology.Location = new System.Drawing.Point(10, 161);
+            this.txt_technology.Location = new System.Drawing.Point(10, 155);
             this.txt_technology.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_technology.MultiLine = true;
             this.txt_technology.Name = "txt_technology";
             this.txt_technology.PlaceHolder = "Technology";
-            this.txt_technology.Size = new System.Drawing.Size(343, 42);
+            this.txt_technology.Size = new System.Drawing.Size(327, 42);
             this.txt_technology.Style = "Standalone";
             this.txt_technology.TabIndex = 14;
             this.txt_technology.TextBoxText = "Technology";
@@ -231,7 +252,7 @@
             // btn_cancel
             // 
             this.btn_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_cancel.Location = new System.Drawing.Point(50, 301);
+            this.btn_cancel.Location = new System.Drawing.Point(34, 289);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(150, 50);
             this.btn_cancel.TabIndex = 13;
@@ -241,7 +262,7 @@
             // 
             this.btn_add_update_services.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_add_update_services.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
-            this.btn_add_update_services.Location = new System.Drawing.Point(206, 301);
+            this.btn_add_update_services.Location = new System.Drawing.Point(190, 289);
             this.btn_add_update_services.Name = "btn_add_update_services";
             this.btn_add_update_services.Size = new System.Drawing.Size(150, 50);
             this.btn_add_update_services.TabIndex = 2;
@@ -260,7 +281,7 @@
             // 
             this.lbl_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_name.Location = new System.Drawing.Point(13, 7);
+            this.lbl_name.Location = new System.Drawing.Point(13, 1);
             this.lbl_name.Name = "lbl_name";
             this.lbl_name.Size = new System.Drawing.Size(53, 26);
             this.lbl_name.TabIndex = 8;
@@ -270,12 +291,12 @@
             // 
             this.txt_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_name.BackColor = System.Drawing.Color.Transparent;
-            this.txt_name.Location = new System.Drawing.Point(10, 24);
+            this.txt_name.Location = new System.Drawing.Point(10, 18);
             this.txt_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_name.MultiLine = false;
             this.txt_name.Name = "txt_name";
             this.txt_name.PlaceHolder = "Name";
-            this.txt_name.Size = new System.Drawing.Size(343, 42);
+            this.txt_name.Size = new System.Drawing.Size(327, 42);
             this.txt_name.Style = "Standalone";
             this.txt_name.TabIndex = 3;
             this.txt_name.TextBoxText = "Name";
@@ -292,24 +313,15 @@
             this.vScrollBar.TabIndex = 0;
             this.vScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vScrollBar_Scroll);
             // 
-            // customerNameToolStripMenuItem
+            // deleteServiceToolStripMenuItem
             // 
-            this.customerNameToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.customerNameToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
-            this.customerNameToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Add;
-            this.customerNameToolStripMenuItem.Name = "customerNameToolStripMenuItem";
-            this.customerNameToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
-            this.customerNameToolStripMenuItem.Text = "Add Service";
-            this.customerNameToolStripMenuItem.Click += new System.EventHandler(this.customerNameToolStripMenuItem_Click);
-            // 
-            // userNameToolStripMenuItem
-            // 
-            this.userNameToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.userNameToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
-            this.userNameToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Edit;
-            this.userNameToolStripMenuItem.Name = "userNameToolStripMenuItem";
-            this.userNameToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
-            this.userNameToolStripMenuItem.Text = "Edit Service";
+            this.deleteServiceToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.deleteServiceToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.deleteServiceToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Trash;
+            this.deleteServiceToolStripMenuItem.Name = "deleteServiceToolStripMenuItem";
+            this.deleteServiceToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
+            this.deleteServiceToolStripMenuItem.Text = "Delete Service";
+            this.deleteServiceToolStripMenuItem.Click += new System.EventHandler(this.deleteServiceToolStripMenuItem_Click);
             // 
             // ServiceManagement
             // 
@@ -361,5 +373,6 @@
         private System.Windows.Forms.ToolStripMenuItem filter_item_sort_by;
         private System.Windows.Forms.ToolStripMenuItem customerNameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem userNameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteServiceToolStripMenuItem;
     }
 }

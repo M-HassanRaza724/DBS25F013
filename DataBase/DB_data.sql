@@ -13,21 +13,20 @@ INSERT INTO Services (type, description) VALUES
 ('Web Development', 'We build responsive, scalable, and engaging websites to help you establish a robust online presence.'),
 ('Custom Software Development', 'Our team creates custom software solutions to address your specific business requirements, improving productivity and streamlining operations.');
 
--- Insert ServiceTechnologies
-INSERT INTO ServiceTechnologies (service_id, technology) VALUES
-(3, 'User research'), (3, 'wireframing'), (3, 'prototyping'), (3, 'testing'),
-(4, 'Swift'), (4, 'Kotlin'), (4, 'Flutter'), (4, 'React Native'),
-(5, 'HTML5'), (5, 'CSS3'), (5, 'JavaScript'), (5, 'React'), (5, 'Node.js'), (5, 'PHP'),
-(6, 'C++'), (6, 'Java'), (6, 'Python'), (6, '.NET');
+-- INSERT INTO ServiceTechnologies (service_id, technology) VALUES
+(3, 'User research, wireframing, prototyping, testing'),
+(4, 'Swift, Kotlin, Flutter, React Native'),
+(5, 'HTML5, CSS3, JavaScript, React, Node.js, PHP'),
+(6, 'C++, Java, Python, .NET');
 
 -- Insert ServiceInvolved
 INSERT INTO ServiceInvolved (service_id, service_involved) VALUES
-(1, 'Regular maintenance'), (1, 'updates'), (1, 'troubleshooting'), (1, 'tech support'),
-(2, 'Functional testing'), (2, 'performance testing'), (2, 'security testing'), (2, 'automation testing'),
-(3, 'App design'), (3, 'web design'), (3, 'brand identity'), (3, 'product design'),
-(4, 'Business apps'), (4, 'social networking apps'), (4, 'gaming apps'), (4, 'utility apps'),
-(5, 'E-commerce sites'), (5, 'CMS solutions'), (5, 'landing pages'), (5, 'corporate websites'),
-(6, 'Business applications'), (6, 'enterprise software'), (6, 'process automation'), (6, 'custom tool development');
+(1, 'Regular maintenance, updates, troubleshooting, tech support'),
+(2, 'Functional testing, performance testing, security testing, automation testing'),
+(3, 'App design, web design, brand identity, product design'),
+(4, 'Business apps, social networking apps, gaming apps, utility apps'),
+(5, 'E-commerce sites, CMS solutions, landing pages, corporate websites'),
+(6, 'Business applications, enterprise software, process automation, custom tool development');
 
 -- Insert Orders (Add missing 'Data Analytics' service first)
 INSERT INTO Services (type, description) VALUES ('Data Analytics', 'Service for analytics');

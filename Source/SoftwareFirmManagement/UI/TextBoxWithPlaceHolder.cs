@@ -21,6 +21,11 @@ namespace SoftwareFirmManagement.UI
         
         }
 
+        public bool MultiLine
+        {
+            get { return this.TextBox.Multiline.Equals(true) ? true : false; }
+            set { this.TextBox.Multiline = value; }
+        }
         public string Style
         {
             get { return this.TextBox.InputControlStyle.ToString(); }

@@ -65,33 +65,41 @@
             // 
             // lbl_sub_services_text
             // 
-            this.lbl_sub_services_text.Location = new System.Drawing.Point(36, 176);
+            this.lbl_sub_services_text.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_sub_services_text.Location = new System.Drawing.Point(96, 179);
             this.lbl_sub_services_text.Name = "lbl_sub_services_text";
-            this.lbl_sub_services_text.Size = new System.Drawing.Size(414, 23);
+            this.lbl_sub_services_text.Size = new System.Drawing.Size(508, 28);
+            this.lbl_sub_services_text.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_sub_services_text.TabIndex = 8;
             this.lbl_sub_services_text.Values.Text = "E-commerce sites, CMS solutions, landing pages, corporate websites";
             // 
             // lbl_name_text
             // 
-            this.lbl_name_text.Location = new System.Drawing.Point(36, 25);
+            this.lbl_name_text.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_name_text.Location = new System.Drawing.Point(96, 28);
             this.lbl_name_text.Name = "lbl_name_text";
-            this.lbl_name_text.Size = new System.Drawing.Size(121, 23);
+            this.lbl_name_text.Size = new System.Drawing.Size(148, 28);
+            this.lbl_name_text.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_name_text.TabIndex = 7;
             this.lbl_name_text.Values.Text = "Web Development";
             // 
             // lbl_technologies_text
             // 
-            this.lbl_technologies_text.Location = new System.Drawing.Point(36, 130);
+            this.lbl_technologies_text.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_technologies_text.Location = new System.Drawing.Point(96, 133);
             this.lbl_technologies_text.Name = "lbl_technologies_text";
-            this.lbl_technologies_text.Size = new System.Drawing.Size(258, 23);
+            this.lbl_technologies_text.Size = new System.Drawing.Size(316, 28);
+            this.lbl_technologies_text.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_technologies_text.TabIndex = 6;
             this.lbl_technologies_text.Values.Text = "HTML, CSS, JavaScript, React, Nodejs, PHP";
             // 
             // lbl_description_text
             // 
-            this.lbl_description_text.Location = new System.Drawing.Point(36, 67);
+            this.lbl_description_text.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_description_text.Location = new System.Drawing.Point(96, 70);
             this.lbl_description_text.Name = "lbl_description_text";
-            this.lbl_description_text.Size = new System.Drawing.Size(372, 41);
+            this.lbl_description_text.Size = new System.Drawing.Size(456, 49);
+            this.lbl_description_text.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_description_text.TabIndex = 5;
             this.lbl_description_text.Values.Text = "We build responsive, scalable, and engaging websites to help \r\nyou establish a ro" +
     "bust online presence.";
@@ -99,37 +107,45 @@
             // 
             // lbl_description
             // 
+            this.lbl_description.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_description.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_description.Location = new System.Drawing.Point(16, 45);
             this.lbl_description.Name = "lbl_description";
-            this.lbl_description.Size = new System.Drawing.Size(90, 26);
+            this.lbl_description.Size = new System.Drawing.Size(132, 37);
+            this.lbl_description.StateCommon.ShortText.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_description.TabIndex = 3;
             this.lbl_description.Values.Text = "Description";
             // 
             // lbl_technology
             // 
+            this.lbl_technology.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_technology.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_technology.Location = new System.Drawing.Point(18, 107);
             this.lbl_technology.Name = "lbl_technology";
-            this.lbl_technology.Size = new System.Drawing.Size(101, 26);
+            this.lbl_technology.Size = new System.Drawing.Size(149, 37);
+            this.lbl_technology.StateCommon.ShortText.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_technology.TabIndex = 2;
             this.lbl_technology.Values.Text = "Technologies";
             // 
             // lbl_sub_services
             // 
+            this.lbl_sub_services.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_sub_services.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_sub_services.Location = new System.Drawing.Point(18, 153);
             this.lbl_sub_services.Name = "lbl_sub_services";
-            this.lbl_sub_services.Size = new System.Drawing.Size(93, 26);
+            this.lbl_sub_services.Size = new System.Drawing.Size(136, 37);
+            this.lbl_sub_services.StateCommon.ShortText.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_sub_services.TabIndex = 1;
             this.lbl_sub_services.Values.Text = "SubServices";
             // 
             // lbl_name
             // 
+            this.lbl_name.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_name.Location = new System.Drawing.Point(16, 4);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(53, 26);
+            this.lbl_name.Size = new System.Drawing.Size(76, 37);
+            this.lbl_name.StateCommon.ShortText.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_name.TabIndex = 0;
             this.lbl_name.Values.Text = "Name";
             // 

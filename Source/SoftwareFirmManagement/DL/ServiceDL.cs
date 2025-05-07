@@ -25,7 +25,7 @@ namespace SoftwareFirmManagement.DL
                     string name = data.GetString(1);
                     int categoryId = data.IsDBNull(2) ? 0 : data.GetInt32(2);
                     string description = data.GetString(3);
-                    string subserviceDescription = data.IsDBNull(4) ? "null" : data.GetString(5);
+                    string subserviceDescription = data.IsDBNull(4) ? "null" : data.GetString(4);
                     string techDescription = data.IsDBNull(5) ? "null" : data.GetString(5);
                     ServiceDTO service = new ServiceDTO(serviceId, name, categoryId, description);
                     if (subserviceDescription != "null")

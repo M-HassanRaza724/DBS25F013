@@ -376,6 +376,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Available Updates.png" />
+    <None Include="Resources\Add.png" />
     <Content Include="Resources\checked-hover-small.png" />
     <Content Include="Resources\checked-normal-small.png" />
     <Content Include="Resources\Close.png" />
@@ -383,6 +384,7 @@
     <Content Include="Resources\Cross Mark.png" />
     <None Include="Resources\Slider.png" />
     <None Include="Resources\Dashboard Layout%28filled%29.png" />
+    <None Include="Resources\Edit.png" />
     <Content Include="Resources\Full Screen.png" />
     <Content Include="Resources\Horizontal Line.png" />
     <Content Include="Resources\Minimize Window%28colored%29.png" />

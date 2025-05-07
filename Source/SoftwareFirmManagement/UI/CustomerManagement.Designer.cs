@@ -466,14 +466,14 @@ namespace SoftwareFirmManagement.UI
             this.deleteToolStripMenuItem});
             this.contextMenuStrip_grd.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.contextMenuStrip_grd.Name = "contextMenuStrip_grd";
-            this.contextMenuStrip_grd.Size = new System.Drawing.Size(121, 64);
+            this.contextMenuStrip_grd.Size = new System.Drawing.Size(189, 86);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.updateToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Available_Updates;
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(120, 30);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
@@ -482,7 +482,7 @@ namespace SoftwareFirmManagement.UI
             this.deleteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.deleteToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Trash;
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(120, 30);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 

@@ -37,6 +37,7 @@
             this.filter_item_sort_by = new System.Windows.Forms.ToolStripMenuItem();
             this.customerNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbx_add_update_service = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.lbl_subservice = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txt_subservice = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
@@ -50,7 +51,6 @@
             this.lbl_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txt_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.vScrollBar = new System.Windows.Forms.VScrollBar();
-            this.deleteServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_main.SuspendLayout();
             this.menuStrip_filters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_service)).BeginInit();
@@ -114,11 +114,11 @@
             this.menuStrip_filters.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip_filters.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.filter_item_sort_by});
-            this.menuStrip_filters.Location = new System.Drawing.Point(668, 9);
+            this.menuStrip_filters.Location = new System.Drawing.Point(788, 9);
             this.menuStrip_filters.Name = "menuStrip_filters";
             this.menuStrip_filters.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
             this.menuStrip_filters.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip_filters.Size = new System.Drawing.Size(185, 24);
+            this.menuStrip_filters.Size = new System.Drawing.Size(65, 24);
             this.menuStrip_filters.TabIndex = 39;
             this.menuStrip_filters.Text = "Filters";
             // 
@@ -139,7 +139,7 @@
             this.customerNameToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.customerNameToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Add;
             this.customerNameToolStripMenuItem.Name = "customerNameToolStripMenuItem";
-            this.customerNameToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
+            this.customerNameToolStripMenuItem.Size = new System.Drawing.Size(155, 30);
             this.customerNameToolStripMenuItem.Text = "Add Service";
             this.customerNameToolStripMenuItem.Click += new System.EventHandler(this.customerNameToolStripMenuItem_Click);
             // 
@@ -149,14 +149,24 @@
             this.userNameToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.userNameToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Edit;
             this.userNameToolStripMenuItem.Name = "userNameToolStripMenuItem";
-            this.userNameToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
+            this.userNameToolStripMenuItem.Size = new System.Drawing.Size(155, 30);
             this.userNameToolStripMenuItem.Text = "Edit Service";
+            // 
+            // deleteServiceToolStripMenuItem
+            // 
+            this.deleteServiceToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.deleteServiceToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.deleteServiceToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Trash;
+            this.deleteServiceToolStripMenuItem.Name = "deleteServiceToolStripMenuItem";
+            this.deleteServiceToolStripMenuItem.Size = new System.Drawing.Size(155, 30);
+            this.deleteServiceToolStripMenuItem.Text = "Delete Service";
+            this.deleteServiceToolStripMenuItem.Click += new System.EventHandler(this.deleteServiceToolStripMenuItem_Click);
             // 
             // gbx_add_update_service
             // 
             this.gbx_add_update_service.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbx_add_update_service.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlAlternate;
-            this.gbx_add_update_service.Location = new System.Drawing.Point(236, 26);
+            this.gbx_add_update_service.Location = new System.Drawing.Point(236, 73);
             this.gbx_add_update_service.Name = "gbx_add_update_service";
             // 
             // gbx_add_update_service.Panel
@@ -312,16 +322,6 @@
             this.vScrollBar.Size = new System.Drawing.Size(10, 450);
             this.vScrollBar.TabIndex = 0;
             this.vScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vScrollBar_Scroll);
-            // 
-            // deleteServiceToolStripMenuItem
-            // 
-            this.deleteServiceToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.deleteServiceToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
-            this.deleteServiceToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Trash;
-            this.deleteServiceToolStripMenuItem.Name = "deleteServiceToolStripMenuItem";
-            this.deleteServiceToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
-            this.deleteServiceToolStripMenuItem.Text = "Delete Service";
-            this.deleteServiceToolStripMenuItem.Click += new System.EventHandler(this.deleteServiceToolStripMenuItem_Click);
             // 
             // ServiceManagement
             // 

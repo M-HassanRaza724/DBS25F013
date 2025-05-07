@@ -141,6 +141,12 @@
     <Compile Include="UI\AddUpdateCust.Designer.cs">
       <DependentUpon>AddUpdateCust.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\CustomerDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerDisplay.Designer.cs">
+      <DependentUpon>CustomerDisplay.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\CustomerManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,12 @@
     <Compile Include="UI\EmployeeManagement.Designer.cs">
       <DependentUpon>EmployeeManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\EmployeeDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\EmployeeDisplay.Designer.cs">
+      <DependentUpon>EmployeeDisplay.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +184,18 @@
     </Compile>
     <Compile Include="UI\Header.Designer.cs">
       <DependentUpon>Header.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\OrderDetails.Designer.cs">
+      <DependentUpon>OrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OrderDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\OrderDisplay.Designer.cs">
+      <DependentUpon>OrderDisplay.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\OrderManagement.cs">
       <SubType>Form</SubType>
@@ -224,6 +248,9 @@
     <EmbeddedResource Include="UI\AddUpdateCust.resx">
       <DependentUpon>AddUpdateCust.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerDisplay.resx">
+      <DependentUpon>CustomerDisplay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\CustomerManagement.resx">
       <DependentUpon>CustomerManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\EmployeeManagement.resx">
       <DependentUpon>EmployeeManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\EmployeeDisplay.resx">
+      <DependentUpon>EmployeeDisplay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -248,6 +278,12 @@
     </Compile>
     <EmbeddedResource Include="UI\Header.resx">
       <DependentUpon>Header.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\OrderDetails.resx">
+      <DependentUpon>OrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\OrderDisplay.resx">
+      <DependentUpon>OrderDisplay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\OrderManagement.resx">
       <DependentUpon>OrderManagement.cs</DependentUpon>

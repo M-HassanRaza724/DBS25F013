@@ -64,3 +64,7 @@ E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\R
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.OrderManagement.resources
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.ServiceDisplay.resources
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.ServiceManagement.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.OrderDetails.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.OrderDisplay.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.CustomerDisplay.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.EmployeeDisplay.resources

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace SoftwareFirmManagement.BL
 {
@@ -16,6 +17,7 @@ namespace SoftwareFirmManagement.BL
         private DateTime joinedDate;
         private int designationId;
         private Salary salary;
+        private string designation;
 
         //public Employee(int userId, string username, string email, string password, int role, int employeeId, string name, string phone, DateTime joinedDate, int designationId) : base(userId, username, email, password, role)
         //{
@@ -78,6 +80,11 @@ namespace SoftwareFirmManagement.BL
         {
             get { return designationId; }
             set { designationId = value; }
+        }
+        public string Designation
+        {
+            get { return designation; }
+            set { designation = value; }
         }
 
 

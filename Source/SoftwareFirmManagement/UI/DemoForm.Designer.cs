@@ -54,6 +54,20 @@
             this.rdo_sort_customer_name = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.rdo_sort_customer_id = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.textBoxWithPlaceHolder1 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.gbx_add_update_order = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtDescription = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.lblPlatform = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.cmbPlatform = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.lblInitialBudget = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtInitialBudget = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.lblService = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.cmbService = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.btn_cancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_add_update_order = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.lbl_last_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lbl_Customer_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txt_customer_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
@@ -68,11 +82,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.gbx_sort_by.Panel)).BeginInit();
             this.gbx_sort_by.Panel.SuspendLayout();
             this.gbx_sort_by.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_order)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_order.Panel)).BeginInit();
+            this.gbx_add_update_order.Panel.SuspendLayout();
+            this.gbx_add_update_order.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbPlatform)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbService)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonButton5
             // 
-            this.kryptonButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonButton5.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
             this.kryptonButton5.Location = new System.Drawing.Point(735, 93);
             this.kryptonButton5.Name = "kryptonButton5";
@@ -82,7 +101,6 @@
             // 
             // kryptonButton6
             // 
-            this.kryptonButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonButton6.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Alternate;
             this.kryptonButton6.Location = new System.Drawing.Point(735, 38);
             this.kryptonButton6.Name = "kryptonButton6";
@@ -93,7 +111,6 @@
             // 
             // kryptonButton4
             // 
-            this.kryptonButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonButton4.Location = new System.Drawing.Point(397, 93);
             this.kryptonButton4.Name = "kryptonButton4";
             this.kryptonButton4.Size = new System.Drawing.Size(163, 49);
@@ -102,7 +119,6 @@
             // 
             // kryptonButton3
             // 
-            this.kryptonButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonButton3.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
             this.kryptonButton3.Location = new System.Drawing.Point(397, 38);
             this.kryptonButton3.Name = "kryptonButton3";
@@ -112,7 +128,6 @@
             // 
             // kryptonButton2
             // 
-            this.kryptonButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonButton2.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom2;
             this.kryptonButton2.Location = new System.Drawing.Point(566, 93);
             this.kryptonButton2.Name = "kryptonButton2";
@@ -132,7 +147,6 @@
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonButton1.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom1;
             this.kryptonButton1.Location = new System.Drawing.Point(566, 38);
             this.kryptonButton1.Name = "kryptonButton1";
@@ -221,7 +235,7 @@
             this.kryptonRadioButton2.Images.UncheckedPressed = global::SoftwareFirmManagement.Properties.Resources.checked_hover_small;
             this.kryptonRadioButton2.Images.UncheckedTracking = global::SoftwareFirmManagement.Properties.Resources.unchecked_hover_small;
             this.kryptonRadioButton2.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
-            this.kryptonRadioButton2.Location = new System.Drawing.Point(19, 333);
+            this.kryptonRadioButton2.Location = new System.Drawing.Point(17, 472);
             this.kryptonRadioButton2.Name = "kryptonRadioButton2";
             this.kryptonRadioButton2.Size = new System.Drawing.Size(158, 23);
             this.kryptonRadioButton2.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
@@ -241,9 +255,8 @@
             // 
             // cbtn_direction
             // 
-            this.cbtn_direction.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbtn_direction.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
-            this.cbtn_direction.Location = new System.Drawing.Point(540, 274);
+            this.cbtn_direction.Location = new System.Drawing.Point(115, 364);
             this.cbtn_direction.Name = "cbtn_direction";
             this.cbtn_direction.Size = new System.Drawing.Size(152, 38);
             this.cbtn_direction.TabIndex = 39;
@@ -252,9 +265,8 @@
             // 
             // gbx_direction
             // 
-            this.gbx_direction.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gbx_direction.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ButtonStandalone;
-            this.gbx_direction.Location = new System.Drawing.Point(701, 268);
+            this.gbx_direction.Location = new System.Drawing.Point(276, 358);
             this.gbx_direction.Name = "gbx_direction";
             // 
             // gbx_direction.Panel
@@ -304,7 +316,6 @@
             // 
             // cbx_sort
             // 
-            this.cbx_sort.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbx_sort.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
             this.cbx_sort.Location = new System.Drawing.Point(306, 274);
             this.cbx_sort.Name = "cbx_sort";
@@ -315,9 +326,8 @@
             // 
             // gbx_sort_by
             // 
-            this.gbx_sort_by.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gbx_sort_by.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ButtonStandalone;
-            this.gbx_sort_by.Location = new System.Drawing.Point(467, 268);
+            this.gbx_sort_by.Location = new System.Drawing.Point(42, 358);
             this.gbx_sort_by.Name = "gbx_sort_by";
             // 
             // gbx_sort_by.Panel
@@ -389,19 +399,203 @@
             // textBoxWithPlaceHolder1
             // 
             this.textBoxWithPlaceHolder1.BackColor = System.Drawing.Color.Transparent;
-            this.textBoxWithPlaceHolder1.Location = new System.Drawing.Point(183, 351);
+            this.textBoxWithPlaceHolder1.Location = new System.Drawing.Point(210, 466);
+            this.textBoxWithPlaceHolder1.MultiLine = false;
             this.textBoxWithPlaceHolder1.Name = "textBoxWithPlaceHolder1";
             this.textBoxWithPlaceHolder1.PlaceHolder = "place holder";
             this.textBoxWithPlaceHolder1.Size = new System.Drawing.Size(237, 40);
             this.textBoxWithPlaceHolder1.Style = "Standalone";
             this.textBoxWithPlaceHolder1.TabIndex = 41;
+            this.textBoxWithPlaceHolder1.TextBoxText = "place holder";
+            // 
+            // gbx_add_update_order
+            // 
+            this.gbx_add_update_order.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gbx_add_update_order.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlAlternate;
+            this.gbx_add_update_order.Location = new System.Drawing.Point(509, 163);
+            this.gbx_add_update_order.Name = "gbx_add_update_order";
+            // 
+            // gbx_add_update_order.Panel
+            // 
+            this.gbx_add_update_order.Panel.Controls.Add(this.kryptonLabel1);
+            this.gbx_add_update_order.Panel.Controls.Add(this.txtDescription);
+            this.gbx_add_update_order.Panel.Controls.Add(this.lblPlatform);
+            this.gbx_add_update_order.Panel.Controls.Add(this.cmbPlatform);
+            this.gbx_add_update_order.Panel.Controls.Add(this.lblInitialBudget);
+            this.gbx_add_update_order.Panel.Controls.Add(this.txtInitialBudget);
+            this.gbx_add_update_order.Panel.Controls.Add(this.lblService);
+            this.gbx_add_update_order.Panel.Controls.Add(this.cmbService);
+            this.gbx_add_update_order.Panel.Controls.Add(this.btn_cancel);
+            this.gbx_add_update_order.Panel.Controls.Add(this.btn_add_update_order);
+            this.gbx_add_update_order.Panel.Controls.Add(this.lbl_last_name);
+            this.gbx_add_update_order.Panel.Controls.Add(this.lbl_Customer_name);
+            this.gbx_add_update_order.Panel.Controls.Add(this.txt_customer_name);
+            this.gbx_add_update_order.Size = new System.Drawing.Size(389, 398);
+            this.gbx_add_update_order.TabIndex = 42;
+            this.gbx_add_update_order.Values.Heading = "Add Customer";
+            this.gbx_add_update_order.Visible = false;
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.kryptonLabel1.Location = new System.Drawing.Point(41, 195);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(104, 26);
+            this.kryptonLabel1.TabIndex = 34;
+            this.kryptonLabel1.Values.Text = "Initial Budget";
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescription.BackColor = System.Drawing.Color.Transparent;
+            this.txtDescription.Location = new System.Drawing.Point(38, 212);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDescription.MultiLine = false;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.PlaceHolder = "Description";
+            this.txtDescription.Size = new System.Drawing.Size(195, 57);
+            this.txtDescription.Style = "Standalone";
+            this.txtDescription.TabIndex = 33;
+            this.txtDescription.TextBoxText = "Description";
+            // 
+            // lblPlatform
+            // 
+            this.lblPlatform.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.lblPlatform.Location = new System.Drawing.Point(41, 160);
+            this.lblPlatform.Name = "lblPlatform";
+            this.lblPlatform.Size = new System.Drawing.Size(72, 26);
+            this.lblPlatform.TabIndex = 31;
+            this.lblPlatform.Values.Text = "Platform";
+            // 
+            // cmbPlatform
+            // 
+            this.cmbPlatform.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList;
+            this.cmbPlatform.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
+            this.cmbPlatform.DropDownWidth = 188;
+            this.cmbPlatform.Items.AddRange(new object[] {
+            "item 1",
+            "item 2",
+            "item 3",
+            "item 4",
+            "item 5",
+            "item 6"});
+            this.cmbPlatform.Location = new System.Drawing.Point(41, 176);
+            this.cmbPlatform.Name = "cmbPlatform";
+            this.cmbPlatform.Size = new System.Drawing.Size(250, 36);
+            this.cmbPlatform.TabIndex = 32;
+            this.cmbPlatform.Text = "Platform";
+            // 
+            // lblInitialBudget
+            // 
+            this.lblInitialBudget.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblInitialBudget.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.lblInitialBudget.Location = new System.Drawing.Point(41, 30);
+            this.lblInitialBudget.Name = "lblInitialBudget";
+            this.lblInitialBudget.Size = new System.Drawing.Size(104, 26);
+            this.lblInitialBudget.TabIndex = 30;
+            this.lblInitialBudget.Values.Text = "Initial Budget";
+            // 
+            // txtInitialBudget
+            // 
+            this.txtInitialBudget.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtInitialBudget.BackColor = System.Drawing.Color.Transparent;
+            this.txtInitialBudget.Location = new System.Drawing.Point(38, 47);
+            this.txtInitialBudget.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtInitialBudget.MultiLine = false;
+            this.txtInitialBudget.Name = "txtInitialBudget";
+            this.txtInitialBudget.PlaceHolder = "Initial Budget";
+            this.txtInitialBudget.Size = new System.Drawing.Size(195, 42);
+            this.txtInitialBudget.Style = "Standalone";
+            this.txtInitialBudget.TabIndex = 29;
+            this.txtInitialBudget.TextBoxText = "Initial Budget";
+            // 
+            // lblService
+            // 
+            this.lblService.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.lblService.Location = new System.Drawing.Point(41, 105);
+            this.lblService.Name = "lblService";
+            this.lblService.Size = new System.Drawing.Size(61, 26);
+            this.lblService.TabIndex = 27;
+            this.lblService.Values.Text = "Service";
+            // 
+            // cmbService
+            // 
+            this.cmbService.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList;
+            this.cmbService.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
+            this.cmbService.DropDownWidth = 188;
+            this.cmbService.Items.AddRange(new object[] {
+            "item 1",
+            "item 2",
+            "item 3",
+            "item 4",
+            "item 5",
+            "item 6"});
+            this.cmbService.Location = new System.Drawing.Point(41, 121);
+            this.cmbService.Name = "cmbService";
+            this.cmbService.Size = new System.Drawing.Size(250, 36);
+            this.cmbService.TabIndex = 28;
+            this.cmbService.Text = "Service";
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_cancel.Location = new System.Drawing.Point(2, 269);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(150, 50);
+            this.btn_cancel.TabIndex = 13;
+            this.btn_cancel.Values.Text = "Cancel";
+            // 
+            // btn_add_update_order
+            // 
+            this.btn_add_update_order.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_add_update_order.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
+            this.btn_add_update_order.Location = new System.Drawing.Point(158, 269);
+            this.btn_add_update_order.Name = "btn_add_update_order";
+            this.btn_add_update_order.Size = new System.Drawing.Size(150, 50);
+            this.btn_add_update_order.TabIndex = 2;
+            this.btn_add_update_order.Values.Text = "Create Order";
+            // 
+            // lbl_last_name
+            // 
+            this.lbl_last_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.lbl_last_name.Location = new System.Drawing.Point(6, 72);
+            this.lbl_last_name.Name = "lbl_last_name";
+            this.lbl_last_name.Size = new System.Drawing.Size(6, 4);
+            this.lbl_last_name.TabIndex = 9;
+            this.lbl_last_name.Values.Text = "";
+            // 
+            // lbl_Customer_name
+            // 
+            this.lbl_Customer_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Customer_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.lbl_Customer_name.Location = new System.Drawing.Point(41, -19);
+            this.lbl_Customer_name.Name = "lbl_Customer_name";
+            this.lbl_Customer_name.Size = new System.Drawing.Size(123, 26);
+            this.lbl_Customer_name.TabIndex = 8;
+            this.lbl_Customer_name.Values.Text = "Customer Name";
+            // 
+            // txt_customer_name
+            // 
+            this.txt_customer_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_customer_name.BackColor = System.Drawing.Color.Transparent;
+            this.txt_customer_name.Location = new System.Drawing.Point(38, -2);
+            this.txt_customer_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_customer_name.MultiLine = false;
+            this.txt_customer_name.Name = "txt_customer_name";
+            this.txt_customer_name.PlaceHolder = "Customer Name";
+            this.txt_customer_name.Size = new System.Drawing.Size(195, 42);
+            this.txt_customer_name.Style = "Standalone";
+            this.txt_customer_name.TabIndex = 3;
+            this.txt_customer_name.TextBoxText = "Customer Name";
             // 
             // DemoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(941, 442);
+            this.ClientSize = new System.Drawing.Size(992, 611);
+            this.Controls.Add(this.gbx_add_update_order);
             this.Controls.Add(this.textBoxWithPlaceHolder1);
             this.Controls.Add(this.cbtn_direction);
             this.Controls.Add(this.gbx_direction);
@@ -438,6 +632,13 @@
             this.gbx_sort_by.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbx_sort_by)).EndInit();
             this.gbx_sort_by.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_order.Panel)).EndInit();
+            this.gbx_add_update_order.Panel.ResumeLayout(false);
+            this.gbx_add_update_order.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_order)).EndInit();
+            this.gbx_add_update_order.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmbPlatform)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbService)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,5 +671,19 @@
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_customer_name;
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdo_sort_customer_id;
         private TextBoxWithPlaceHolder textBoxWithPlaceHolder1;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox gbx_add_update_order;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private TextBoxWithPlaceHolder txtDescription;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblPlatform;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbPlatform;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblInitialBudget;
+        private TextBoxWithPlaceHolder txtInitialBudget;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblService;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbService;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_cancel;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_add_update_order;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_last_name;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_Customer_name;
+        private TextBoxWithPlaceHolder txt_customer_name;
     }
 }

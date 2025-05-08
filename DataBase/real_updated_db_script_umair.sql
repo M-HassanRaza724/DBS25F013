@@ -59,7 +59,7 @@ CREATE TABLE `customers` (
   PRIMARY KEY (`customer_id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `customers_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,7 +68,7 @@ CREATE TABLE `customers` (
 
 LOCK TABLES `customers` WRITE;
 /*!40000 ALTER TABLE `customers` DISABLE KEYS */;
-INSERT INTO `customers` VALUES (1,7,'Shahid'),(2,9,'Kamran'),(3,10,'Sarah'),(4,11,'Junaid');
+INSERT INTO `customers` VALUES (4,11,'Junaid'),(6,31,'Dora');
 /*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -165,7 +165,7 @@ CREATE TABLE `employees` (
   KEY `fk_user_id` (`user_id`),
   CONSTRAINT `employees_ibfk_1` FOREIGN KEY (`designation_id`) REFERENCES `lookups` (`lookup_id`) ON DELETE SET NULL,
   CONSTRAINT `fk_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -174,9 +174,42 @@ CREATE TABLE `employees` (
 
 LOCK TABLES `employees` WRITE;
 /*!40000 ALTER TABLE `employees` DISABLE KEYS */;
-INSERT INTO `employees` VALUES (1,'farhan','03224480111','2022-02-02',1,19);
+INSERT INTO `employees` VALUES (1,'Farhan','03368656100','2022-02-02',18,19),(2,'Zeshan','0336123456','2020-02-02',19,35);
 /*!40000 ALTER TABLE `employees` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Temporary view structure for view `get_customers_info`
+--
+
+DROP TABLE IF EXISTS `get_customers_info`;
+/*!50001 DROP VIEW IF EXISTS `get_customers_info`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `get_customers_info` AS SELECT 
+ 1 AS `CustomerName`,
+ 1 AS `Email`,
+ 1 AS `OrdersBooked`,
+ 1 AS `TotalSpending`,
+ 1 AS `AverageRating`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `get_employees_info`
+--
+
+DROP TABLE IF EXISTS `get_employees_info`;
+/*!50001 DROP VIEW IF EXISTS `get_employees_info`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `get_employees_info` AS SELECT 
+ 1 AS `Username`,
+ 1 AS `EmployeeName`,
+ 1 AS `Phone`,
+ 1 AS `JoinedDate`,
+ 1 AS `Designation`,
+ 1 AS `OrdersCompleted`*/;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Temporary view structure for view `get_services`
@@ -215,7 +248,7 @@ CREATE TABLE `invoice` (
   KEY `idx_due_date` (`due_date`),
   CONSTRAINT `invoice_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`) ON DELETE CASCADE,
   CONSTRAINT `invoice_ibfk_2` FOREIGN KEY (`payment_status_id`) REFERENCES `lookups` (`lookup_id`) ON DELETE SET NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -224,6 +257,7 @@ CREATE TABLE `invoice` (
 
 LOCK TABLES `invoice` WRITE;
 /*!40000 ALTER TABLE `invoice` DISABLE KEYS */;
+INSERT INTO `invoice` VALUES (1,1,10500.00,15,'2025-05-06','2025-05-04 19:00:00'),(2,2,12000.00,15,'2025-05-06','2025-05-04 19:00:00');
 /*!40000 ALTER TABLE `invoice` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -248,7 +282,7 @@ CREATE TABLE `lookups` (
 
 LOCK TABLES `lookups` WRITE;
 /*!40000 ALTER TABLE `lookups` DISABLE KEYS */;
-INSERT INTO `lookups` VALUES (1,'1','admin'),(2,'user_role','Customer');
+INSERT INTO `lookups` VALUES (1,'user_role','Admin'),(2,'user_role','Customer'),(3,'user_role','Employee'),(4,'service','Web development'),(5,'service','Game development'),(6,'service','Android app development'),(7,'service','Cloud-computing based development'),(8,'service','Artificial intelligence models'),(9,'service','Machine learning models'),(10,'service','Enterprise app development'),(11,'service','IOT app development'),(12,'order','Work in progress'),(13,'order','Completed'),(14,'order','Cancelled'),(15,'payment','Paid'),(16,'payment','Pending'),(17,'employee_designation','Supervisor'),(18,'employee_designation','Software engineer'),(19,'employee_designation','Data scientist'),(20,'employee_designation','Game developer');
 /*!40000 ALTER TABLE `lookups` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -306,7 +340,7 @@ CREATE TABLE `orders` (
   CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`employee_id`) ON DELETE SET NULL,
   CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL,
   CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`status_id`) REFERENCES `lookups` (`lookup_id`) ON DELETE SET NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -315,6 +349,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (1,1,31,'2025-05-06 03:28:00',12),(2,1,31,'2024-06-06 04:00:00',13),(3,2,11,'2020-09-09 03:08:00',12);
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -336,7 +371,7 @@ CREATE TABLE `reviews` (
   KEY `order_id` (`order_id`),
   CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`) ON DELETE CASCADE,
   CONSTRAINT `reviews_chk_1` CHECK ((`stars` between 1 and 5))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -345,6 +380,7 @@ CREATE TABLE `reviews` (
 
 LOCK TABLES `reviews` WRITE;
 /*!40000 ALTER TABLE `reviews` DISABLE KEYS */;
+INSERT INTO `reviews` VALUES (1,1,'Dora',4,'2025-05-06','Good service.'),(2,2,'Dora',3,'2025-05-06','Connection issues.');
 /*!40000 ALTER TABLE `reviews` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -365,7 +401,7 @@ CREATE TABLE `salary` (
   KEY `employee_id` (`employee_id`),
   KEY `idx_pay_date` (`pay_date`),
   CONSTRAINT `salary_ibfk_1` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`employee_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1906 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -374,7 +410,6 @@ CREATE TABLE `salary` (
 
 LOCK TABLES `salary` WRITE;
 /*!40000 ALTER TABLE `salary` DISABLE KEYS */;
-INSERT INTO `salary` VALUES (1,1,'2024-04-04',12000.00,1000.00);
 /*!40000 ALTER TABLE `salary` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -399,7 +434,7 @@ CREATE TABLE `serviceinvolved` (
 
 LOCK TABLES `serviceinvolved` WRITE;
 /*!40000 ALTER TABLE `serviceinvolved` DISABLE KEYS */;
-INSERT INTO `serviceinvolved` VALUES (1,'website building using Python Flask');
+INSERT INTO `serviceinvolved` VALUES (2,''),(3,''),(4,''),(5,''),(11,'Android integration'),(12,''),(13,'Sensor-sentient applications');
 /*!40000 ALTER TABLE `serviceinvolved` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -419,7 +454,7 @@ CREATE TABLE `services` (
   UNIQUE KEY `name` (`name`),
   KEY `idx_services_category` (`category_id`),
   CONSTRAINT `services_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `lookups` (`lookup_id`) ON DELETE SET NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -428,7 +463,7 @@ CREATE TABLE `services` (
 
 LOCK TABLES `services` WRITE;
 /*!40000 ALTER TABLE `services` DISABLE KEYS */;
-INSERT INTO `services` VALUES (1,'web services',1,'services for website building');
+INSERT INTO `services` VALUES (2,'website building',4,'To create good websites'),(3,'Battle royal games for PC',5,'Building BR games for PC.'),(4,'AI model training',8,'AI model training for businesses'),(5,'Machine learning ',9,'Machine learning using advanced models'),(11,'Mailing applications',10,'Applications with email services'),(12,'Songs applications development',10,'Apps for songs'),(13,'Arduino-based applications',11,'Applications reequiring hardware integration.');
 /*!40000 ALTER TABLE `services` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -453,6 +488,7 @@ CREATE TABLE `servicetechnologies` (
 
 LOCK TABLES `servicetechnologies` WRITE;
 /*!40000 ALTER TABLE `servicetechnologies` DISABLE KEYS */;
+INSERT INTO `servicetechnologies` VALUES (2,''),(3,''),(4,''),(5,''),(11,'Dart'),(12,''),(13,'Arduino, C++');
 /*!40000 ALTER TABLE `servicetechnologies` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -500,7 +536,7 @@ CREATE TABLE `users` (
   KEY `role_id` (`role_id`),
   KEY `idx_username` (`username`),
   CONSTRAINT `users_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `lookups` (`lookup_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -509,7 +545,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (2,'ali123','ali123@gmail.com','123456',2),(4,'2e','2l','2d',2),(5,'ahmad123','ahmad@gmail.com','123456',2),(6,'asghar123','asghar123@gmail.com','123456',2),(7,'shahid123','shahid@gmail.com','123456',2),(8,'rehan123','rehan123@gmail.com','123456',2),(9,'kamran123','kamran123@gmail.com','123456',2),(10,'sarah123','sarah123@gmail.com','123456d',2),(11,'junaid123','junaid123@gmail.com','123456',2),(19,'farhan','farhn@gmail.com','1',1);
+INSERT INTO `users` VALUES (2,'ali123','ali123@gmail.com','123456',2),(4,'2e','2l','2d',2),(5,'ahmad123','ahmad@gmail.com','123456',2),(6,'asghar123','asghar123@gmail.com','123456',2),(7,'shahid123','shahid@gmail.com','123456',2),(8,'rehan123','rehan123@gmail.com','123456',2),(10,'sarah123','sarah123@gmail.com','123456d',2),(11,'junaid123','junaid123@gmail.com','123456',2),(19,'farhan','farhan123@gmail.com','098',1),(31,'dora123','dora123@gmail.com','321',2),(34,'kamran123','kaaamran123@gmail.com','098',2),(35,'zeshan123','zeshan123@gmail.com','888',3);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -733,7 +769,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_manage_service`(
 )
 BEGIN 
 	IF operation_type = 'add' THEN
-		INSERT INTO services VALUES (p_service_id, p_name, p_category_id, p_description);
+		INSERT INTO services(name, category_id, description) VALUES (p_name, p_category_id, p_description);
 	ELSEIF operation_type = 'update' THEN 
 		UPDATE services SET name = p_name, description = p_description WHERE service_id = p_service_id;
 	ELSEIF operation_type = 'delete' THEN
@@ -823,9 +859,9 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_manage_user`(
 )
 BEGIN
 	IF operation_type = 'add' THEN
-		INSERT INTO users VALUES (p_user_id, p_username, p_email, p_password, p_role_id);
+		INSERT INTO users(username, email, password, role_id) VALUES (p_username, p_email, p_password, p_role_id);
 	ELSEIF operation_type = 'update' THEN
-		UPDATE users SET users.password = p_password WHERE users.user_id = p_user_id;
+		UPDATE users SET users.email = p_email, users.password = p_password WHERE users.user_id = p_user_id;
 	ELSEIF operation_type = 'delete' THEN
 		DELETE FROM users WHERE users.user_id = p_user_id;
 	END IF;
@@ -850,6 +886,42 @@ DELIMITER ;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `departmentoverview` AS select `d`.`department_id` AS `department_id`,`d`.`department_name` AS `department_name`,`s`.`name` AS `service_name`,`u`.`username` AS `head_name`,count(`e`.`employee_id`) AS `employee_count` from (((`department` `d` join `services` `s` on((`d`.`service_id` = `s`.`service_id`))) join `users` `u` on((`d`.`user_id` = `u`.`user_id`))) left join `employees` `e` on(`e`.`designation_id` in (select `lookups`.`lookup_id` from `lookups` where (`lookups`.`key_group` = 'designation')))) group by `d`.`department_id` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `get_customers_info`
+--
+
+/*!50001 DROP VIEW IF EXISTS `get_customers_info`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `get_customers_info` AS select `c`.`name` AS `CustomerName`,min(`u`.`email`) AS `Email`,count(`o`.`order_id`) AS `OrdersBooked`,cast(coalesce(sum(`i`.`price`),0) as double) AS `TotalSpending`,cast(coalesce(avg(`r`.`stars`),0) as double) AS `AverageRating` from ((((`users` `u` join `customers` `c` on((`u`.`user_id` = `c`.`user_id`))) left join `orders` `o` on((`o`.`user_id` = `u`.`user_id`))) left join `reviews` `r` on((`r`.`order_id` = `o`.`order_id`))) left join `invoice` `i` on((`i`.`order_id` = `o`.`order_id`))) group by `c`.`customer_id` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `get_employees_info`
+--
+
+/*!50001 DROP VIEW IF EXISTS `get_employees_info`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `get_employees_info` AS select min(`u`.`username`) AS `Username`,min(`e`.`name`) AS `EmployeeName`,min(`e`.`phone`) AS `Phone`,min(`e`.`joined_date`) AS `JoinedDate`,min(`l`.`value`) AS `Designation`,min((select count(`o1`.`order_id`) from `orders` `o1` where ((`o1`.`employee_id` = `e`.`employee_id`) and (`o1`.`status_id` = 13)))) AS `OrdersCompleted` from (((`users` `u` join `employees` `e` on((`u`.`user_id` = `e`.`user_id`))) left join `lookups` `l` on((`l`.`lookup_id` = `e`.`designation_id`))) left join `orders` `o` on((`o`.`employee_id` = `e`.`employee_id`))) group by `e`.`employee_id` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -881,4 +953,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-03 16:19:53
+-- Dump completed on 2025-05-08 11:09:31

@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 
 namespace DbFinalProject.BL
 {
-    public class Employee : User
+    public class Employee : User, ISalary
     {
         private int employeeId;
         private string name;
@@ -86,7 +86,7 @@ namespace DbFinalProject.BL
         }
 
 
-        public bool SetSalary(DateTime date, double amount, double bonus) // overload when salaryId is not passed, like when setting salary from UI
+        public bool SetSalaryToDb(DateTime date, double amount, double bonus) // overload when salaryId is not passed, like when setting salary from UI
         {
             try
             {

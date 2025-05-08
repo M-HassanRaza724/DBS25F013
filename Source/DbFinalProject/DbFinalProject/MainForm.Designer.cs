@@ -38,6 +38,7 @@
             this.btnOrders = new System.Windows.Forms.Button();
             this.btnEmployees = new System.Windows.Forms.Button();
             this.btnCustomers = new System.Windows.Forms.Button();
+            this.btnAdmins = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
             this.tlpMain.SuspendLayout();
             this.tlpMenuStrip.SuspendLayout();
@@ -98,25 +99,26 @@
             // 
             // tlpMenuStrip
             // 
-            this.tlpMenuStrip.ColumnCount = 6;
-            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpMenuStrip.ColumnCount = 7;
+            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMenuStrip.Controls.Add(this.btnReports, 6, 0);
             this.tlpMenuStrip.Controls.Add(this.btnProfile, 0, 0);
             this.tlpMenuStrip.Controls.Add(this.btnServices, 1, 0);
             this.tlpMenuStrip.Controls.Add(this.btnOrders, 2, 0);
             this.tlpMenuStrip.Controls.Add(this.btnEmployees, 3, 0);
             this.tlpMenuStrip.Controls.Add(this.btnCustomers, 4, 0);
-            this.tlpMenuStrip.Controls.Add(this.btnReports, 5, 0);
+            this.tlpMenuStrip.Controls.Add(this.btnAdmins, 5, 0);
             this.tlpMenuStrip.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpMenuStrip.Location = new System.Drawing.Point(3, 134);
             this.tlpMenuStrip.Name = "tlpMenuStrip";
             this.tlpMenuStrip.RowCount = 1;
             this.tlpMenuStrip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMenuStrip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpMenuStrip.Size = new System.Drawing.Size(1041, 59);
             this.tlpMenuStrip.TabIndex = 4;
             // 
@@ -126,7 +128,7 @@
             this.btnProfile.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnProfile.Location = new System.Drawing.Point(3, 3);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(167, 53);
+            this.btnProfile.Size = new System.Drawing.Size(142, 53);
             this.btnProfile.TabIndex = 0;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = false;
@@ -136,9 +138,9 @@
             // 
             this.btnServices.BackColor = System.Drawing.SystemColors.Info;
             this.btnServices.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnServices.Location = new System.Drawing.Point(176, 3);
+            this.btnServices.Location = new System.Drawing.Point(151, 3);
             this.btnServices.Name = "btnServices";
-            this.btnServices.Size = new System.Drawing.Size(167, 53);
+            this.btnServices.Size = new System.Drawing.Size(142, 53);
             this.btnServices.TabIndex = 1;
             this.btnServices.Text = "Services";
             this.btnServices.UseVisualStyleBackColor = false;
@@ -148,9 +150,9 @@
             // 
             this.btnOrders.BackColor = System.Drawing.SystemColors.Info;
             this.btnOrders.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnOrders.Location = new System.Drawing.Point(349, 3);
+            this.btnOrders.Location = new System.Drawing.Point(299, 3);
             this.btnOrders.Name = "btnOrders";
-            this.btnOrders.Size = new System.Drawing.Size(167, 53);
+            this.btnOrders.Size = new System.Drawing.Size(142, 53);
             this.btnOrders.TabIndex = 2;
             this.btnOrders.Text = "Orders";
             this.btnOrders.UseVisualStyleBackColor = false;
@@ -159,9 +161,9 @@
             // 
             this.btnEmployees.BackColor = System.Drawing.SystemColors.Info;
             this.btnEmployees.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEmployees.Location = new System.Drawing.Point(522, 3);
+            this.btnEmployees.Location = new System.Drawing.Point(447, 3);
             this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(167, 53);
+            this.btnEmployees.Size = new System.Drawing.Size(142, 53);
             this.btnEmployees.TabIndex = 3;
             this.btnEmployees.Text = "Employees";
             this.btnEmployees.UseVisualStyleBackColor = false;
@@ -171,22 +173,33 @@
             // 
             this.btnCustomers.BackColor = System.Drawing.SystemColors.Info;
             this.btnCustomers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCustomers.Location = new System.Drawing.Point(695, 3);
+            this.btnCustomers.Location = new System.Drawing.Point(595, 3);
             this.btnCustomers.Name = "btnCustomers";
-            this.btnCustomers.Size = new System.Drawing.Size(167, 53);
+            this.btnCustomers.Size = new System.Drawing.Size(142, 53);
             this.btnCustomers.TabIndex = 4;
             this.btnCustomers.Text = "Customers";
             this.btnCustomers.UseVisualStyleBackColor = false;
             this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
             // 
+            // btnAdmins
+            // 
+            this.btnAdmins.BackColor = System.Drawing.SystemColors.Info;
+            this.btnAdmins.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAdmins.Location = new System.Drawing.Point(743, 3);
+            this.btnAdmins.Name = "btnAdmins";
+            this.btnAdmins.Size = new System.Drawing.Size(142, 53);
+            this.btnAdmins.TabIndex = 6;
+            this.btnAdmins.Text = "Admins";
+            this.btnAdmins.UseVisualStyleBackColor = false;
+            // 
             // btnReports
             // 
             this.btnReports.BackColor = System.Drawing.SystemColors.Info;
             this.btnReports.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnReports.Location = new System.Drawing.Point(868, 3);
+            this.btnReports.Location = new System.Drawing.Point(891, 3);
             this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(170, 53);
-            this.btnReports.TabIndex = 5;
+            this.btnReports.Size = new System.Drawing.Size(147, 53);
+            this.btnReports.TabIndex = 7;
             this.btnReports.Text = "Reports";
             this.btnReports.UseVisualStyleBackColor = false;
             // 
@@ -219,5 +232,6 @@
         private System.Windows.Forms.Button btnEmployees;
         private System.Windows.Forms.Button btnCustomers;
         private System.Windows.Forms.Button btnReports;
+        private System.Windows.Forms.Button btnAdmins;
     }
 }

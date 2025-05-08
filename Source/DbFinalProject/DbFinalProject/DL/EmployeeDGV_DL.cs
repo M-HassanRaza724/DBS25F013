@@ -26,7 +26,9 @@ namespace DbFinalProject.DL
                     DateTime joinedDate = DateTime.Parse(data[3].ToString()).Date;
                     string designation = data[4].ToString();
                     int ordersCompleted = data.IsDBNull(5) ? 0 : data.GetInt32(5);
-                    allEmployees.Add(new EmployeeDGV(username, employeeName, phone, joinedDate, designation, ordersCompleted));
+                    double salary = data.IsDBNull(6) ? 0 : data.GetDouble(6);
+                    double totalAmountPaidAsBonus = data.IsDBNull(7) ? 0 : data.GetDouble(7);
+                    allEmployees.Add(new EmployeeDGV(username, employeeName, phone, joinedDate, designation, ordersCompleted, salary, totalAmountPaidAsBonus));
                 }
             }
             catch (MySql.Data.MySqlClient.MySqlException)

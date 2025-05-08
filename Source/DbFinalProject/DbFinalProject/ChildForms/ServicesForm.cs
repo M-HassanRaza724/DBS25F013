@@ -22,6 +22,15 @@ namespace DbFinalProject.ChildForms
         {
             InitializeComponent();
             this.parent = parent;
+            if (Program.currentUser is Employee || Program.currentUser is Customer)
+            {
+                btnAdd.Enabled = false;
+                if (Program.currentUser is Customer)
+                {
+                    btnEdit.Enabled = false;
+                }
+                btnDelete.Enabled = false;
+            }
             dgvServices.DataSource = ServiceDGV.GetServiceDGVList();
         }
 

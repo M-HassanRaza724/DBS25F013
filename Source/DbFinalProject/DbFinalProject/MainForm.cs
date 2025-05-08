@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DbFinalProject.BL;
 using DbFinalProject.ChildForms;
 
 namespace DbFinalProject
@@ -16,6 +17,13 @@ namespace DbFinalProject
         public MainForm()
         {
             InitializeComponent();
+            if (Program.currentUser is Customer || Program.currentUser is Employee)
+            {
+                btnEmployees.Enabled = false;
+                btnCustomers.Enabled = false;
+                btnAdmins.Enabled = false;
+                btnReports.Enabled = false;
+            }
         }
 
 

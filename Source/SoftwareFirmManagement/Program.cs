@@ -19,7 +19,7 @@ namespace SoftwareFirmManagement
         static void Main()
         {
             LookupDL.LoadAllLookups();
-            UserDL.LoadAllUsers();
+            //UserDL.LoadAllUsers();
             ServiceDL.LoadAllServices();
 
             Application.EnableVisualStyles();

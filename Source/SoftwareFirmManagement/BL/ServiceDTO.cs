@@ -14,6 +14,7 @@ namespace SoftwareFirmManagement.BL
         private string name;
         private int categoryId;
         private string description;
+
         private SubServiceDAO subservice;
         private TechnologyDAO technology;
 
@@ -47,7 +48,9 @@ namespace SoftwareFirmManagement.BL
             get { return technology; }
             set { technology = value; }
         }
+ 
 
+        public ServiceDTO() { }
 
 
         public ServiceDTO(int serviceId, string name, int categoryId, string description)

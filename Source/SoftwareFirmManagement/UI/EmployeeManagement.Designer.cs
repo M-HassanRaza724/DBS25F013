@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel_filters = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip_filters = new System.Windows.Forms.MenuStrip();
@@ -45,7 +44,6 @@
             this.kryptonContextMenuItems1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
             this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.contextMenuStrip_grd = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbx_add_update_employee = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.lbl_full_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -66,15 +64,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbox_grd_users = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.dgv_employees = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmployeeIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UsernameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PasswordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoleIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel_filters.SuspendLayout();
             this.menuStrip_filters.SuspendLayout();
@@ -99,15 +99,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_employees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
-            this.updateToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Available_Updates;
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
-            this.updateToolStripMenuItem.Text = "Update";
-            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -219,9 +210,9 @@
             // 
             this.lbl_filter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_filter.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_filter.Location = new System.Drawing.Point(124, 10);
+            this.lbl_filter.Location = new System.Drawing.Point(135, 12);
             this.lbl_filter.Name = "lbl_filter";
-            this.lbl_filter.Size = new System.Drawing.Size(65, 29);
+            this.lbl_filter.Size = new System.Drawing.Size(54, 26);
             this.lbl_filter.TabIndex = 38;
             this.lbl_filter.Values.Text = "Filters";
             // 
@@ -268,15 +259,6 @@
             this.contextMenuStrip_grd.Name = "contextMenuStrip_grd";
             this.contextMenuStrip_grd.Size = new System.Drawing.Size(132, 56);
             // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
-            this.deleteToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Trash;
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
-            // 
             // gbx_add_update_employee
             // 
             this.gbx_add_update_employee.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -299,7 +281,7 @@
             this.lbl_full_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_full_name.Location = new System.Drawing.Point(10, 20);
             this.lbl_full_name.Name = "lbl_full_name";
-            this.lbl_full_name.Size = new System.Drawing.Size(96, 29);
+            this.lbl_full_name.Size = new System.Drawing.Size(77, 26);
             this.lbl_full_name.TabIndex = 8;
             this.lbl_full_name.Values.Text = "FullName";
             // 
@@ -316,7 +298,7 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(572, 309);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(556, 297);
             this.tableLayoutPanel3.TabIndex = 29;
             // 
             // tableLayoutPanel4
@@ -332,8 +314,8 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 241F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(566, 241);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 231F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(550, 231);
             this.tableLayoutPanel4.TabIndex = 3;
             this.tableLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel4_Paint);
             // 
@@ -348,7 +330,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(277, 235);
+            this.panel3.Size = new System.Drawing.Size(269, 225);
             this.panel3.TabIndex = 0;
             // 
             // kryptonLabel1
@@ -356,7 +338,7 @@
             this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel1.Location = new System.Drawing.Point(10, 154);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(93, 26);
+            this.kryptonLabel1.Size = new System.Drawing.Size(119, 27);
             this.kryptonLabel1.TabIndex = 15;
             this.kryptonLabel1.Values.Text = "Designation";
             // 
@@ -365,7 +347,7 @@
             this.lblPhonenum.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lblPhonenum.Location = new System.Drawing.Point(10, 87);
             this.lblPhonenum.Name = "lblPhonenum";
-            this.lblPhonenum.Size = new System.Drawing.Size(55, 26);
+            this.lblPhonenum.Size = new System.Drawing.Size(69, 27);
             this.lblPhonenum.TabIndex = 28;
             this.lblPhonenum.Values.Text = "Phone";
             // 
@@ -417,9 +399,9 @@
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.userCredentials1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(286, 3);
+            this.panel4.Location = new System.Drawing.Point(278, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(277, 235);
+            this.panel4.Size = new System.Drawing.Size(269, 225);
             this.panel4.TabIndex = 1;
             // 
             // userCredentials1
@@ -443,15 +425,15 @@
             this.panel5.Controls.Add(this.btn_cancel);
             this.panel5.Controls.Add(this.btn_add_update_employee);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 250);
+            this.panel5.Location = new System.Drawing.Point(3, 240);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(566, 56);
+            this.panel5.Size = new System.Drawing.Size(550, 54);
             this.panel5.TabIndex = 4;
             // 
             // btn_cancel
             // 
             this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_cancel.Location = new System.Drawing.Point(232, 2);
+            this.btn_cancel.Location = new System.Drawing.Point(216, 1);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(150, 50);
             this.btn_cancel.TabIndex = 13;
@@ -462,7 +444,7 @@
             // 
             this.btn_add_update_employee.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_add_update_employee.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
-            this.btn_add_update_employee.Location = new System.Drawing.Point(402, 2);
+            this.btn_add_update_employee.Location = new System.Drawing.Point(386, 1);
             this.btn_add_update_employee.Name = "btn_add_update_employee";
             this.btn_add_update_employee.Size = new System.Drawing.Size(150, 50);
             this.btn_add_update_employee.TabIndex = 2;
@@ -474,7 +456,7 @@
             this.lbl_last_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_last_name.Location = new System.Drawing.Point(6, 72);
             this.lbl_last_name.Name = "lbl_last_name";
-            this.lbl_last_name.Size = new System.Drawing.Size(6, 2);
+            this.lbl_last_name.Size = new System.Drawing.Size(6, 4);
             this.lbl_last_name.TabIndex = 9;
             this.lbl_last_name.Values.Text = "";
             // 
@@ -536,9 +518,17 @@
             this.dgv_employees.Location = new System.Drawing.Point(0, 0);
             this.dgv_employees.Name = "dgv_employees";
             this.dgv_employees.RowHeadersWidth = 51;
-            this.dgv_employees.Size = new System.Drawing.Size(774, 413);
+            this.dgv_employees.Size = new System.Drawing.Size(764, 404);
             this.dgv_employees.TabIndex = 0;
             this.dgv_employees.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_employees_CellMouseDown);
+            // 
+            // FullNameColumn
+            // 
+            this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FullNameColumn.DataPropertyName = "Name";
+            this.FullNameColumn.HeaderText = "FullName";
+            this.FullNameColumn.MinimumWidth = 6;
+            this.FullNameColumn.Name = "FullNameColumn";
             // 
             // EmployeeIdColumn
             // 
@@ -557,14 +547,6 @@
             this.UserIdColumn.Name = "UserIdColumn";
             this.UserIdColumn.Visible = false;
             this.UserIdColumn.Width = 125;
-            // 
-            // FullNameColumn
-            // 
-            this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FullNameColumn.DataPropertyName = "Name";
-            this.FullNameColumn.HeaderText = "FullName";
-            this.FullNameColumn.MinimumWidth = 6;
-            this.FullNameColumn.Name = "FullNameColumn";
             // 
             // UsernameColumn
             // 
@@ -612,6 +594,24 @@
             // EmployeeBindingSource
             // 
             this.EmployeeBindingSource.DataSource = typeof(SoftwareFirmManagement.BL.Employee);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.updateToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Available_Updates;
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.deleteToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Trash;
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // EmployeeManagement
             // 

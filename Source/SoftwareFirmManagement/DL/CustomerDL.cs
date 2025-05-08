@@ -112,6 +112,7 @@ namespace SoftwareFirmManagement.DL
             }
         }
 
-
+        public static List<Customer> GetAllCustomers()
+        { return null; }
     }
 }

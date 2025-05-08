@@ -39,6 +39,24 @@ namespace SoftwareFirmManagement.BL
             // Default constructor
         }
 
+
+        //For data retrieval
+        public OrderDTO(int orderId, int statusId, int initialBudgetId, int platformId, Employee employee, Customer customer, DateTime createdAt, string status,
+                ServiceDTO service, string initialBudget, string platform, string description)
+        {
+            this.OrderId = orderId;
+            //this.OrderDetailId = orderDetailId;   // not needed
+            this.Employee = employee;
+            this.Customer = customer;
+            this.CreatedAt = createdAt;
+            this.StatusId = statusId;
+            this.Service = service;
+            this.InitialBudgetId = initialBudgetId;
+            this.PlatformId = platformId;
+            this.InitialBudget = initialBudget;
+            this.Platform = platform;
+            this.Description = description;
+        }
         // for updating 
         public OrderDTO(int orderId, Employee employee, Customer customer, DateTime createdAt, int statusId,
                        ServiceDTO service, int initialBudgetId, int platformId, string description)
@@ -195,6 +213,34 @@ namespace SoftwareFirmManagement.BL
                 throw;
             }
             return false;
+        }
+
+        public static List<OrderDTO> GetOrdersByFilter(string search = null, string sortby = null, string direction = "ASC")
+        { // incomplete function because of incomplete UI structure
+            if (search == null || sortby == null)
+            {
+                return OrderDL.allOrders
+                       .OfType<OrderDTO>()
+                       .OrderBy(l => l.createdAt)
+                       .ToList();
+            }
+            List<OrderDTO> filtered = OrderDL.allOrders
+                                      .OfType<OrderDTO>()
+                                      .Where(cust => cust.Description.Contains(search) || cust.Service.Name.Contains(search))
+                                      .ToList();
+            //if (direction == "DESC" && sortby == "username")
+            //{
+            //    filtered = filtered
+            //               .OrderByDescending(l => l.Ordername)
+            //               .ToList();
+            //}
+            //else if (sortby == "username")
+            //{
+            //    filtered = filtered
+            //               .OrderBy(l => l.Ordername)
+            //               .ToList();
+            //}
+            return filtered;
         }
     }
 }

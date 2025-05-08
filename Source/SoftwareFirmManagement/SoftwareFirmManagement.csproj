@@ -173,11 +173,23 @@
     <Compile Include="UI\Header.Designer.cs">
       <DependentUpon>Header.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\OrderManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\OrderManagement.Designer.cs">
+      <DependentUpon>OrderManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Resize.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\Resize.Designer.cs">
       <DependentUpon>Resize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ServiceManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ServiceManagement.Designer.cs">
+      <DependentUpon>ServiceManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\SidePanel.cs">
       <SubType>UserControl</SubType>
@@ -190,6 +202,12 @@
     </Compile>
     <Compile Include="UI\TextBoxWithPlaceHolder.Designer.cs">
       <DependentUpon>TextBoxWithPlaceHolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ServiceDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ServiceDisplay.Designer.cs">
+      <DependentUpon>ServiceDisplay.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UserManagement.cs">
       <SubType>Form</SubType>
@@ -231,8 +249,17 @@
     <EmbeddedResource Include="UI\Header.resx">
       <DependentUpon>Header.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\OrderManagement.resx">
+      <DependentUpon>OrderManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Resize.resx">
       <DependentUpon>Resize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ServiceDisplay.resx">
+      <DependentUpon>ServiceDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ServiceManagement.resx">
+      <DependentUpon>ServiceManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SidePanel.resx">
       <DependentUpon>SidePanel.cs</DependentUpon>
@@ -342,12 +369,14 @@
     </Compile>
     <None Include="SoftwareFirmManagement.BL.Customer.datasource" />
     <None Include="SoftwareFirmManagement.BL.Employee.datasource" />
+    <None Include="SoftwareFirmManagement.BL.OrderDTO.datasource" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Available Updates.png" />
+    <None Include="Resources\Add.png" />
     <Content Include="Resources\checked-hover-small.png" />
     <Content Include="Resources\checked-normal-small.png" />
     <Content Include="Resources\Close.png" />
@@ -355,12 +384,14 @@
     <Content Include="Resources\Cross Mark.png" />
     <None Include="Resources\Slider.png" />
     <None Include="Resources\Dashboard Layout%28filled%29.png" />
+    <None Include="Resources\Edit.png" />
     <Content Include="Resources\Full Screen.png" />
     <Content Include="Resources\Horizontal Line.png" />
     <Content Include="Resources\Minimize Window%28colored%29.png" />
     <Content Include="Resources\Normal Screen.png" />
     <Content Include="Resources\Search.png" />
     <None Include="Resources\Trash.png" />
+    <None Include="Resources\Service.png" />
     <Content Include="Resources\unchecked-hover-small.png" />
     <Content Include="Resources\unchecked-normal-small.png" />
     <None Include="Resources\User Default%28small%29.png" />

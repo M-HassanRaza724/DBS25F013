@@ -22,11 +22,11 @@ namespace SoftwareFirmManagement.DL
                 while (data.Read())
                 {
                     int serviceId = data.IsDBNull(0) ? 0 : data.GetInt32(0);
-                    string name = data[1].ToString();
+                    string name = data.GetString(1);
                     int categoryId = data.IsDBNull(2) ? 0 : data.GetInt32(2);
-                    string description = data[3].ToString();
-                    string subserviceDescription = data.IsDBNull(4) ? "null" : data[5].ToString();
-                    string techDescription = data.IsDBNull(5) ? "null" : data[7].ToString();
+                    string description = data.GetString(3);
+                    string subserviceDescription = data.IsDBNull(4) ? "null" : data.GetString(4);
+                    string techDescription = data.IsDBNull(5) ? "null" : data.GetString(5);
                     ServiceDTO service = new ServiceDTO(serviceId, name, categoryId, description);
                     if (subserviceDescription != "null")
                     {
@@ -125,6 +125,7 @@ namespace SoftwareFirmManagement.DL
             }
 
         }
+
 
     }
 }

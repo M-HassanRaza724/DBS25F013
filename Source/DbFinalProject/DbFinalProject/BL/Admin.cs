@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using DbFinalProject.DL;
@@ -12,22 +14,22 @@ namespace DbFinalProject.BL
         private int adminId;
         private string name;
         private string phone;
-        private int adminRole;
+        private int adminRoleId;
 
         public Admin(int userId, string username, string email, string password, int role, int adminId, string name, string phone, int adminRole) : base(userId, username, email, password, role)
         {
             this.adminId = adminId;
             this.name = name;
             this.phone = phone;
-            this.adminRole = adminRole;
+            this.adminRoleId = adminRole;
         }
 
 
-        public Admin(int userId, string username, string email, string password, int role, string name, string phone, int adminRole) : base(userId, username, email, password, role)
+        public Admin(string username, string email, string password, int role, string name, string phone, int adminRole) : base(username, email, password, role)
         {
             this.name = name;
             this.phone = phone;
-            this.adminRole = adminRole;
+            this.adminRoleId = adminRole;
         }
 
 
@@ -49,10 +51,10 @@ namespace DbFinalProject.BL
             set { phone = value; }
         }
 
-        public int AdminRole
+        public int AdminRoleId
         {
-            get { return adminRole; }
-            set { adminRole = value; }
+            get { return adminRoleId; }
+            set { adminRoleId = value; }
         }
 
         public override bool Add(User user)
@@ -131,6 +133,53 @@ namespace DbFinalProject.BL
             {
                 throw;
             }
+        }
+
+
+        public string GetAdminRole(string username)
+        {
+            UserDL.LoadAllUsers();
+            adminId = UserDL.allUsers
+                      .OfType<Admin>()
+                      .Where(a => a.Username == Username)
+                      .Select(a => a.AdminId)
+                      .FirstOrDefault();
+            return AdminDL.GetAdminRoleByAdminId(adminId);
+        }
+
+
+        public static List<Admin> GetSecondaryAdmins()
+        {
+            List<Admin> admins = UserDL.allUsers
+                                 .OfType<Admin>()
+                                 .ToList();
+            List<Admin> secondaryAdmins = new List<Admin>();
+            foreach (Admin admin in admins)
+            {
+                if (admin.AdminRoleId != 21)
+                {
+                    secondaryAdmins.Add(admin);
+                }
+            }
+            return secondaryAdmins;
+        }
+
+
+        public static List<string> GetSecondaryAdminsUsernames()
+        {
+            List<Admin> secondaryAdmins = GetSecondaryAdmins();
+            return secondaryAdmins
+                   .Select(a => a.Username)
+                   .ToList();
+        }
+
+
+        public static Admin GetAdminFromUsername(string username)
+        {
+            return UserDL.allUsers
+                   .OfType<Admin>()
+                   .Where(a => a.Username == username)
+                   .FirstOrDefault();
         }
 
     }

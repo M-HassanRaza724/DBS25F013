@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\childforms\\servicesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\childforms\\servicesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\bl\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\bl\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\bl\\salary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\bl\\salary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\childforms\\servicesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\childforms\\servicesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\dl\\employeedgv_dl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\dl\\employeedgv_dl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\bl\\employeedgv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\bl\\employeedgv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\bl\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\bl\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,78 +50,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ServicesForm.cs",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\ChildForms\\ServicesForm.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\ChildForms\\ServicesForm.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\ChildForms\\ServicesForm.cs",
-              "RelativeToolTip": "DbFinalProject\\ChildForms\\ServicesForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T06:49:17.415Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ServicesForm.cs [Design]",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\ChildForms\\ServicesForm.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\ChildForms\\ServicesForm.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\ChildForms\\ServicesForm.cs [Design]",
-              "RelativeToolTip": "DbFinalProject\\ChildForms\\ServicesForm.cs [Design]",
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\Employee.cs",
+              "RelativeDocumentMoniker": "DbFinalProject\\BL\\Employee.cs",
+              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\Employee.cs",
+              "RelativeToolTip": "DbFinalProject\\BL\\Employee.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T06:49:15.068Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\MainForm.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\MainForm.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\MainForm.cs",
-              "RelativeToolTip": "DbFinalProject\\MainForm.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA+wBkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T06:39:12.611Z",
+              "WhenOpened": "2025-05-09T18:59:19.191Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\MainForm.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\MainForm.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\MainForm.cs [Design]",
-              "RelativeToolTip": "DbFinalProject\\MainForm.cs [Design]",
+              "Title": "Salary.cs",
+              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\Salary.cs",
+              "RelativeDocumentMoniker": "DbFinalProject\\BL\\Salary.cs",
+              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\Salary.cs",
+              "RelativeToolTip": "DbFinalProject\\BL\\Salary.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T06:36:39.973Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmployeeDGV_DL.cs",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DL\\EmployeeDGV_DL.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\DL\\EmployeeDGV_DL.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DL\\EmployeeDGV_DL.cs",
-              "RelativeToolTip": "DbFinalProject\\DL\\EmployeeDGV_DL.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwB4AAACcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T06:34:27.144Z",
+              "WhenOpened": "2025-05-09T18:58:58.886Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EmployeeDGV.cs",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\EmployeeDGV.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\BL\\EmployeeDGV.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\EmployeeDGV.cs",
-              "RelativeToolTip": "DbFinalProject\\BL\\EmployeeDGV.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAswCMAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\Service.cs",
+              "RelativeDocumentMoniker": "DbFinalProject\\BL\\Service.cs",
+              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\Service.cs",
+              "RelativeToolTip": "DbFinalProject\\BL\\Service.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAswKMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T06:33:35.352Z",
+              "WhenOpened": "2025-05-09T18:58:49.464Z",
               "EditorCaption": ""
             }
           ]

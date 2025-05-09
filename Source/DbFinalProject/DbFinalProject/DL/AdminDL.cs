@@ -43,7 +43,7 @@ namespace DbFinalProject.DL
         {
             try
             {
-                string query = $"CALL sp_manage_admin('add', {admin.AdminId}, {admin.UserId}, '{admin.Name}', '{admin.Phone}', {admin.AdminRole});";
+                string query = $"CALL sp_manage_admin('add', {admin.AdminId}, {admin.UserId}, '{admin.Name}', '{admin.Phone}', {admin.AdminRoleId});";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }
@@ -58,7 +58,7 @@ namespace DbFinalProject.DL
         {
             try
             {
-                string query = $"CALL sp_manage_admin('update', {updatedAdmin.AdminId}, {updatedAdmin.UserId}, '{updatedAdmin.Name}', '{updatedAdmin.Phone}', {updatedAdmin.AdminRole});";
+                string query = $"CALL sp_manage_admin('update', {updatedAdmin.AdminId}, {updatedAdmin.UserId}, '{updatedAdmin.Name}', '{updatedAdmin.Phone}', {updatedAdmin.AdminRoleId});";
                 DatabaseHelper.Instance.Update(query);
                 return true;
             }
@@ -73,9 +73,29 @@ namespace DbFinalProject.DL
         {
             try
             {
-                string query = $"CALL sp_manage_admin('delete', {admin.AdminId}, {admin.UserId}, '{admin.Name}', '{admin.Phone}', {admin.AdminRole});";
+                string query = $"CALL sp_manage_admin('delete', {admin.AdminId}, {admin.UserId}, '{admin.Name}', '{admin.Phone}', {admin.AdminRoleId});";
                 DatabaseHelper.Instance.Update(query);
                 return true;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
+        }
+
+
+        public static string GetAdminRoleByAdminId(int adminId)
+        {
+            try
+            {
+                string query = $"CALL sp_get_admin_role({adminId});";
+                var data = DatabaseHelper.Instance.GetData(query);
+                string adminRole = "";
+                while (data.Read())
+                {
+                    adminRole = data.IsDBNull(0) ? "null" : data[0].ToString();
+                }
+                return adminRole;
             }
             catch (MySql.Data.MySqlClient.MySqlException)
             {

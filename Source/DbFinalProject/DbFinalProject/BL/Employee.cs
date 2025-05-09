@@ -86,11 +86,31 @@ namespace DbFinalProject.BL
         }
 
 
-        public bool SetSalaryToDb(DateTime date, double amount, double bonus) // overload when salaryId is not passed, like when setting salary from UI
+        public bool SetSalary(DateTime date, double amount, double bonus)
         {
             try
             {
                 salary = new Salary(employeeId, date, amount, bonus);
+                return true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+        public bool SetSalaryToDb(DateTime date, double amount, double bonus) // overload when salaryId is not passed, like when setting salary from UI
+        {
+            try
+            {
+                UserDL.LoadAllUsers();
+                int actualEmployeeId = UserDL.allUsers
+                                       .OfType<Employee>()
+                                       .Where(e => e.Username == this.Username)
+                                       .Select(e => e.EmployeeId)
+                                       .FirstOrDefault();
+                salary = new Salary(actualEmployeeId, date, amount, bonus);
                 bool status = SalaryDL.AddSalaryToDatabase(salary);
                 UserDL.LoadAllUsers();
                 return status;
@@ -106,7 +126,18 @@ namespace DbFinalProject.BL
         {
             try
             {
-                salary = new Salary(EmployeeId, payDate, amount, bonus);
+                UserDL.LoadAllUsers();
+                int actualEmployeeId = UserDL.allUsers
+                                       .OfType<Employee>()
+                                       .Where(e => e.Username == this.Username)
+                                       .Select(e => e.EmployeeId)
+                                       .FirstOrDefault();
+                int actualSalaryId = UserDL.allUsers
+                                     .OfType<Employee>()
+                                     .Where(e => e.EmployeeId == actualEmployeeId)
+                                     .Select(e => e.GetSalary().SalaryId)
+                                     .FirstOrDefault();
+                salary = new Salary(actualSalaryId, actualEmployeeId, payDate, amount, bonus);
                 bool status = SalaryDL.UpdateSalaryToDatabase(salary);
                 UserDL.LoadAllUsers();
                 return status;
@@ -170,6 +201,11 @@ namespace DbFinalProject.BL
             {
                 if (user is Employee emp)
                 {
+                    bool salaryUpdated = emp.UpdateSalary(emp.salary.Date, emp.salary.Amount, emp.salary.Bonus);
+                    if (!salaryUpdated)
+                    {
+                        return false;
+                    }
                     bool userUpdated = UserDL.UpdateUserToDatabse(user);
                     if (userUpdated == false)
                     {
@@ -194,7 +230,12 @@ namespace DbFinalProject.BL
             {
                 if (user is Employee emp)
                 {
-                    bool empDeleted = EmployeeDL.DeleteEmployeeFromDatabase(emp); // first, delete employee
+                    bool salaryDeleted = emp.DeleteSalary(); // first, delete salary
+                    if (!salaryDeleted)
+                    {
+                        return false;
+                    }
+                    bool empDeleted = EmployeeDL.DeleteEmployeeFromDatabase(emp); // then delete employee
                     if (!empDeleted)
                     {
                         return false;
@@ -254,6 +295,15 @@ namespace DbFinalProject.BL
             {
                 throw;
             }
+        }
+
+
+        public static Employee GetEmployeeFromUsername(string username)
+        {
+            return UserDL.allUsers
+                   .OfType<Employee>()
+                   .Where(e => e.Username == username)
+                   .FirstOrDefault();
         }
 
     }

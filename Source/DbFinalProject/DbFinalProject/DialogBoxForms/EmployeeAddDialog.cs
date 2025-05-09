@@ -20,6 +20,7 @@ namespace DbFinalProject.DialogBoxForms
             {
                 cbDesignation.Items.Add(designation);
             }
+            dtmPayDate.MaxDate = DateTime.Today;
         }
 
 
@@ -27,7 +28,7 @@ namespace DbFinalProject.DialogBoxForms
         {
             try
             {
-                if (tbUsername.Text == "" || tbPassword.Text == "" || tbEmail.Text == "" || tbName.Text == "" || tbPhone.Text == "" || cbDesignation.SelectedItem == null)
+                if (tbUsername.Text == "" || tbPassword.Text == "" || tbEmail.Text == "" || tbName.Text == "" || mtbPhone.Text == "" || cbDesignation.SelectedItem == null)
                 {
                     MessageBox.Show("Please enter input in all fields.", "Incomplete Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -36,7 +37,7 @@ namespace DbFinalProject.DialogBoxForms
                 string password = tbPassword.Text;
                 string email = tbEmail.Text;
                 string name = tbName.Text;
-                string phone = tbPhone.Text;
+                string phone = mtbPhone.Text;
                 string designation = cbDesignation.SelectedItem.ToString();
                 int designationId = Employee.GetLookupIdFromDesignation(designation);
                 Employee newEmployee = new Employee(username, email, password, 3, name, phone, DateTime.Now.Date, designationId);
@@ -46,6 +47,10 @@ namespace DbFinalProject.DialogBoxForms
                     return;
                 }
                 newEmployee.Add(newEmployee);
+                int salary = (int)nmudSalary.Value;
+                int bonus = (int)nmudBonus.Value;
+                DateTime payDate = dtmPayDate.Value.Date;
+                newEmployee.SetSalaryToDb(payDate, salary, bonus);
                 MessageBox.Show("Employee added successfully.", "Insertion Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }

@@ -63,46 +63,5 @@ namespace DbFinalProject.BL
             this.bonus = bonus;
         }
 
-
-        public bool Add()
-        {
-            try
-            {
-                return SalaryDL.AddSalaryToDatabase(this);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
-
-        public bool Update()
-        {
-            try
-            {
-                return SalaryDL.UpdateSalaryToDatabase(this);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
-
-        public bool Delete()
-        {
-            try
-            {
-                return SalaryDL.DeleteSalaryFromDatabase(this);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
-
-
     }
 }

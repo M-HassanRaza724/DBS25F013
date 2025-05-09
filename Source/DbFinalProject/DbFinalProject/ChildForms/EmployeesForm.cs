@@ -41,7 +41,8 @@ namespace DbFinalProject.ChildForms
 
         private void btnEditEmployee_Click(object sender, EventArgs e)
         {
-
+            EmployeeEditDialog dlg = new EmployeeEditDialog();
+            dlg.Show();
         }
     }
 }

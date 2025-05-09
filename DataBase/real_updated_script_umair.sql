@@ -33,7 +33,7 @@ CREATE TABLE `admins` (
   KEY `user_id` (`user_id`),
   CONSTRAINT `admins_ibfk_1` FOREIGN KEY (`admin_role`) REFERENCES `lookups` (`lookup_id`) ON DELETE SET NULL,
   CONSTRAINT `admins_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,6 +42,7 @@ CREATE TABLE `admins` (
 
 LOCK TABLES `admins` WRITE;
 /*!40000 ALTER TABLE `admins` DISABLE KEYS */;
+INSERT INTO `admins` VALUES (1,19,'Farhan','03361234567',21);
 /*!40000 ALTER TABLE `admins` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -165,7 +166,7 @@ CREATE TABLE `employees` (
   KEY `fk_user_id` (`user_id`),
   CONSTRAINT `employees_ibfk_1` FOREIGN KEY (`designation_id`) REFERENCES `lookups` (`lookup_id`) ON DELETE SET NULL,
   CONSTRAINT `fk_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -174,9 +175,25 @@ CREATE TABLE `employees` (
 
 LOCK TABLES `employees` WRITE;
 /*!40000 ALTER TABLE `employees` DISABLE KEYS */;
-INSERT INTO `employees` VALUES (1,'Farhan','03368656100','2022-02-02',18,19),(2,'Zeshan','0336123456','2020-02-02',19,35);
+INSERT INTO `employees` VALUES (1,'Farhan','03368656100','2022-02-02',18,19),(2,'Zeshan','0336123456','2020-02-02',19,35),(6,'Shahid','03210909909','2025-05-08',20,7);
 /*!40000 ALTER TABLE `employees` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Temporary view structure for view `get_admins_info`
+--
+
+DROP TABLE IF EXISTS `get_admins_info`;
+/*!50001 DROP VIEW IF EXISTS `get_admins_info`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `get_admins_info` AS SELECT 
+ 1 AS `Username`,
+ 1 AS `Email`,
+ 1 AS `Name`,
+ 1 AS `Phone`,
+ 1 AS `Role`*/;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Temporary view structure for view `get_customers_info`
@@ -208,7 +225,9 @@ SET @saved_cs_client     = @@character_set_client;
  1 AS `Phone`,
  1 AS `JoinedDate`,
  1 AS `Designation`,
- 1 AS `OrdersCompleted`*/;
+ 1 AS `OrdersCompleted`,
+ 1 AS `Salary`,
+ 1 AS `TotalAmountPaidAsBonus`*/;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -282,7 +301,7 @@ CREATE TABLE `lookups` (
 
 LOCK TABLES `lookups` WRITE;
 /*!40000 ALTER TABLE `lookups` DISABLE KEYS */;
-INSERT INTO `lookups` VALUES (1,'user_role','Admin'),(2,'user_role','Customer'),(3,'user_role','Employee'),(4,'service','Web development'),(5,'service','Game development'),(6,'service','Android app development'),(7,'service','Cloud-computing based development'),(8,'service','Artificial intelligence models'),(9,'service','Machine learning models'),(10,'service','Enterprise app development'),(11,'service','IOT app development'),(12,'order','Work in progress'),(13,'order','Completed'),(14,'order','Cancelled'),(15,'payment','Paid'),(16,'payment','Pending'),(17,'employee_designation','Supervisor'),(18,'employee_designation','Software engineer'),(19,'employee_designation','Data scientist'),(20,'employee_designation','Game developer');
+INSERT INTO `lookups` VALUES (1,'user_role','Admin'),(2,'user_role','Customer'),(3,'user_role','Employee'),(4,'service','Web development'),(5,'service','Game development'),(6,'service','Android app development'),(7,'service','Cloud-computing based development'),(8,'service','Artificial intelligence models'),(9,'service','Machine learning models'),(10,'service','Enterprise app development'),(11,'service','IOT app development'),(12,'order','Work in progress'),(13,'order','Completed'),(14,'order','Cancelled'),(15,'payment','Paid'),(16,'payment','Pending'),(17,'employee_designation','Supervisor'),(18,'employee_designation','Software engineer'),(19,'employee_designation','Data scientist'),(20,'employee_designation','Game developer'),(21,'admin_role','Primary admin'),(22,'admin_role','Secondary admin');
 /*!40000 ALTER TABLE `lookups` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -401,7 +420,7 @@ CREATE TABLE `salary` (
   KEY `employee_id` (`employee_id`),
   KEY `idx_pay_date` (`pay_date`),
   CONSTRAINT `salary_ibfk_1` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`employee_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1906 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1911 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -410,6 +429,7 @@ CREATE TABLE `salary` (
 
 LOCK TABLES `salary` WRITE;
 /*!40000 ALTER TABLE `salary` DISABLE KEYS */;
+INSERT INTO `salary` VALUES (1,2,'2025-05-08',50000.00,0.00),(2,1,'2025-01-10',75000.00,1000.00);
 /*!40000 ALTER TABLE `salary` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -536,7 +556,7 @@ CREATE TABLE `users` (
   KEY `role_id` (`role_id`),
   KEY `idx_username` (`username`),
   CONSTRAINT `users_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `lookups` (`lookup_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -556,6 +576,28 @@ UNLOCK TABLES;
 --
 -- Dumping routines for database 'db_final_project'
 --
+/*!50003 DROP PROCEDURE IF EXISTS `sp_get_admin_role` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_get_admin_role`(IN p_admin_id INT)
+BEGIN
+	SELECT l.value
+    FROM admins a
+    JOIN lookups l ON l.lookup_id = a.admin_role
+    WHERE a.admin_id = p_admin_id;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `sp_get_employee_salary` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -891,6 +933,24 @@ DELIMITER ;
 /*!50001 SET collation_connection      = @saved_col_connection */;
 
 --
+-- Final view structure for view `get_admins_info`
+--
+
+/*!50001 DROP VIEW IF EXISTS `get_admins_info`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `get_admins_info` AS select `u`.`username` AS `Username`,`u`.`email` AS `Email`,`a`.`name` AS `Name`,`a`.`phone` AS `Phone`,`l`.`value` AS `Role` from ((`users` `u` join `admins` `a` on((`u`.`user_id` = `a`.`user_id`))) join `lookups` `l` on((`l`.`lookup_id` = `a`.`admin_role`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
 -- Final view structure for view `get_customers_info`
 --
 
@@ -921,7 +981,7 @@ DELIMITER ;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `get_employees_info` AS select min(`u`.`username`) AS `Username`,min(`e`.`name`) AS `EmployeeName`,min(`e`.`phone`) AS `Phone`,min(`e`.`joined_date`) AS `JoinedDate`,min(`l`.`value`) AS `Designation`,min((select count(`o1`.`order_id`) from `orders` `o1` where ((`o1`.`employee_id` = `e`.`employee_id`) and (`o1`.`status_id` = 13)))) AS `OrdersCompleted` from (((`users` `u` join `employees` `e` on((`u`.`user_id` = `e`.`user_id`))) left join `lookups` `l` on((`l`.`lookup_id` = `e`.`designation_id`))) left join `orders` `o` on((`o`.`employee_id` = `e`.`employee_id`))) group by `e`.`employee_id` */;
+/*!50001 VIEW `get_employees_info` AS select min(`u`.`username`) AS `Username`,min(`e`.`name`) AS `EmployeeName`,min(`e`.`phone`) AS `Phone`,min(`e`.`joined_date`) AS `JoinedDate`,min(`l`.`value`) AS `Designation`,min((select count(`o1`.`order_id`) from `orders` `o1` where ((`o1`.`employee_id` = `e`.`employee_id`) and (`o1`.`status_id` = 13)))) AS `OrdersCompleted`,round(avg(`s`.`amount`),2) AS `Salary`,round(sum(distinct `s`.`bonus`),2) AS `TotalAmountPaidAsBonus` from ((((`users` `u` join `employees` `e` on((`u`.`user_id` = `e`.`user_id`))) left join `lookups` `l` on((`l`.`lookup_id` = `e`.`designation_id`))) left join `orders` `o` on((`o`.`employee_id` = `e`.`employee_id`))) left join `salary` `s` on((`s`.`employee_id` = `e`.`employee_id`))) group by `e`.`employee_id` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -953,4 +1013,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-08 11:09:31
+-- Dump completed on 2025-05-10  0:11:58

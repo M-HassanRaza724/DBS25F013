@@ -57,3 +57,7 @@ C:\##Semester 2\DBL\db_final_project\DbFinalProjectCode\DbFinalProject\DbFinalPr
 C:\##Semester 2\DBL\db_final_project\DbFinalProjectCode\DbFinalProject\DbFinalProject\obj\Debug\DbFinalProject.ChildForms.EmployeesForm.resources
 C:\##Semester 2\DBL\db_final_project\DbFinalProjectCode\DbFinalProject\DbFinalProject\obj\Debug\DbFinalProject.DialogBoxForms.EmployeeAddDialog.resources
 C:\##Semester 2\DBL\db_final_project\DbFinalProjectCode\DbFinalProject\DbFinalProject\obj\Debug\DbFinalProject.DialogBoxForms.EmployeeDeleteDialog.resources
+C:\##Semester 2\DBL\db_final_project\DbFinalProjectCode\DbFinalProject\DbFinalProject\obj\Debug\DbFinalProject.DialogBoxForms.EmployeeEditDialog.resources
+C:\##Semester 2\DBL\db_final_project\DbFinalProjectCode\DbFinalProject\DbFinalProject\obj\Debug\DbFinalProject.ChildForms.AdminsForm.resources
+C:\##Semester 2\DBL\db_final_project\DbFinalProjectCode\DbFinalProject\DbFinalProject\obj\Debug\DbFinalProject.DialogBoxForms.AdminAddDialog.resources
+C:\##Semester 2\DBL\db_final_project\DbFinalProjectCode\DbFinalProject\DbFinalProject\obj\Debug\DbFinalProject.DialogBoxForms.AdminDeleteDialog.resources

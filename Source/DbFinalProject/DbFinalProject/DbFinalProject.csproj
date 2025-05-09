@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\Admin.cs" />
+    <Compile Include="BL\AdminDGV.cs" />
     <Compile Include="BL\Customer.cs" />
     <Compile Include="BL\CustomerDGV.cs" />
     <Compile Include="BL\Employee.cs" />
@@ -111,6 +112,12 @@
     <Compile Include="BL\SubService.cs" />
     <Compile Include="BL\Technology.cs" />
     <Compile Include="BL\User.cs" />
+    <Compile Include="ChildForms\AdminsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\AdminsForm.Designer.cs">
+      <DependentUpon>AdminsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\CustomersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +141,18 @@
     </Compile>
     <Compile Include="DialogBoxForms\AddServiceDialog.Designer.cs">
       <DependentUpon>AddServiceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBoxForms\AdminAddDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBoxForms\AdminAddDialog.Designer.cs">
+      <DependentUpon>AdminAddDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBoxForms\AdminDeleteDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBoxForms\AdminDeleteDialog.Designer.cs">
+      <DependentUpon>AdminDeleteDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="DialogBoxForms\CustomerDeleteDialog.cs">
       <SubType>Form</SubType>
@@ -178,6 +197,12 @@
     <Compile Include="DialogBoxForms\EmployeeDeleteDialog.Designer.cs">
       <DependentUpon>EmployeeDeleteDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="DialogBoxForms\EmployeeEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBoxForms\EmployeeEditDialog.Designer.cs">
+      <DependentUpon>EmployeeEditDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="DialogBoxForms\ProfileEditDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,12 +215,12 @@
     <Compile Include="DialogBoxForms\UpdateServiceDialog.Designer.cs">
       <DependentUpon>UpdateServiceDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="DL\AdminDGV_DL.cs" />
     <Compile Include="DL\AdminDL.cs" />
     <Compile Include="DL\CustomerDGV_DL.cs" />
     <Compile Include="DL\CustomerDL.cs" />
     <Compile Include="DL\EmployeeDGV_DL.cs" />
     <Compile Include="DL\EmployeeDL.cs" />
-    <Compile Include="DL\Employee_DGV.cs" />
     <Compile Include="DL\LookupDL.cs" />
     <Compile Include="DL\SalaryDL.cs" />
     <Compile Include="DL\ServiceDL.cs" />
@@ -214,6 +239,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChildForms\AdminsForm.resx">
+      <DependentUpon>AdminsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\CustomersForm.resx">
       <DependentUpon>CustomersForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +253,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DialogBoxForms\AddServiceDialog.resx">
       <DependentUpon>AddServiceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBoxForms\AdminAddDialog.resx">
+      <DependentUpon>AdminAddDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBoxForms\AdminDeleteDialog.resx">
+      <DependentUpon>AdminDeleteDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DialogBoxForms\CustomerDeleteDialog.resx">
       <DependentUpon>CustomerDeleteDialog.cs</DependentUpon>
@@ -246,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DialogBoxForms\EmployeeDeleteDialog.resx">
       <DependentUpon>EmployeeDeleteDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBoxForms\EmployeeEditDialog.resx">
+      <DependentUpon>EmployeeEditDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DialogBoxForms\ProfileEditDialog.resx">
       <DependentUpon>ProfileEditDialog.cs</DependentUpon>

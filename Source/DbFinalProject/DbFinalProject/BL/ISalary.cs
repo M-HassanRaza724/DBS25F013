@@ -10,6 +10,7 @@ namespace DbFinalProject.BL
     {
         Salary GetSalary();
         bool SetSalary(int salaryId, DateTime date, double amount, double bonus);
+        bool SetSalary(DateTime date, double amount, double bonus);
         bool SetSalaryToDb(DateTime date, double amount, double bonus);
         bool UpdateSalary(DateTime payDate, double amount, double bonus);
         bool DeleteSalary();

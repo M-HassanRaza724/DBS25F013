@@ -33,13 +33,13 @@
             this.pMain = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.tlpMenuStrip = new System.Windows.Forms.TableLayoutPanel();
+            this.btnReports = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnServices = new System.Windows.Forms.Button();
             this.btnOrders = new System.Windows.Forms.Button();
             this.btnEmployees = new System.Windows.Forms.Button();
             this.btnCustomers = new System.Windows.Forms.Button();
             this.btnAdmins = new System.Windows.Forms.Button();
-            this.btnReports = new System.Windows.Forms.Button();
             this.tlpMain.SuspendLayout();
             this.tlpMenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -122,6 +122,17 @@
             this.tlpMenuStrip.Size = new System.Drawing.Size(1041, 59);
             this.tlpMenuStrip.TabIndex = 4;
             // 
+            // btnReports
+            // 
+            this.btnReports.BackColor = System.Drawing.SystemColors.Info;
+            this.btnReports.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnReports.Location = new System.Drawing.Point(891, 3);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(147, 53);
+            this.btnReports.TabIndex = 7;
+            this.btnReports.Text = "Reports";
+            this.btnReports.UseVisualStyleBackColor = false;
+            // 
             // btnProfile
             // 
             this.btnProfile.BackColor = System.Drawing.SystemColors.Info;
@@ -191,17 +202,7 @@
             this.btnAdmins.TabIndex = 6;
             this.btnAdmins.Text = "Admins";
             this.btnAdmins.UseVisualStyleBackColor = false;
-            // 
-            // btnReports
-            // 
-            this.btnReports.BackColor = System.Drawing.SystemColors.Info;
-            this.btnReports.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnReports.Location = new System.Drawing.Point(891, 3);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(147, 53);
-            this.btnReports.TabIndex = 7;
-            this.btnReports.Text = "Reports";
-            this.btnReports.UseVisualStyleBackColor = false;
+            this.btnAdmins.Click += new System.EventHandler(this.btnAdmins_Click);
             // 
             // MainForm
             // 

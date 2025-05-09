@@ -17,13 +17,13 @@ namespace DbFinalProject
         public MainForm()
         {
             InitializeComponent();
-            if (Program.currentUser is Customer || Program.currentUser is Employee)
-            {
-                btnEmployees.Enabled = false;
-                btnCustomers.Enabled = false;
-                btnAdmins.Enabled = false;
-                btnReports.Enabled = false;
-            }
+            //if (Program.currentUser is Customer || Program.currentUser is Employee)
+            //{
+            //    btnEmployees.Enabled = false;
+            //    btnCustomers.Enabled = false;
+            //    btnAdmins.Enabled = false;
+            //    btnReports.Enabled = false;
+            //}
         }
 
 
@@ -64,6 +64,12 @@ namespace DbFinalProject
         private void btnEmployees_Click(object sender, EventArgs e)
         {
             LoadChildForm(new EmployeesForm(this));
+        }
+
+
+        private void btnAdmins_Click(object sender, EventArgs e)
+        {
+            LoadChildForm(new AdminsForm());
         }
 
     }

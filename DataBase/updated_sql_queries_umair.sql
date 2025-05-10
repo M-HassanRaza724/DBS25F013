@@ -28,9 +28,9 @@ CREATE PROCEDURE sp_manage_user(
 )
 BEGIN
 	IF operation_type = 'add' THEN
-		INSERT INTO users VALUES (p_user_id, p_username, p_email, p_password, p_role_id);
+		INSERT INTO users(username, email, password, role_id) VALUES (p_username, p_email, p_password, p_role_id);
 	ELSEIF operation_type = 'update' THEN
-		UPDATE users SET users.password = p_password WHERE users.user_id = p_user_id;
+		UPDATE users SET users.email = p_email, users.password = p_password WHERE users.user_id = p_user_id;
 	ELSEIF operation_type = 'delete' THEN
 		DELETE FROM users WHERE users.user_id = p_user_id;
 	END IF;
@@ -48,7 +48,7 @@ CREATE PROCEDURE sp_manage_service(
 )
 BEGIN 
 	IF operation_type = 'add' THEN
-		INSERT INTO services VALUES (p_service_id, p_name, p_category_id, p_description);
+		INSERT INTO services(name, category_id, description) VALUES (p_name, p_category_id, p_description);
 	ELSEIF operation_type = 'update' THEN 
 		UPDATE services SET name = p_name, description = p_description WHERE service_id = p_service_id;
 	ELSEIF operation_type = 'delete' THEN
@@ -199,3 +199,56 @@ BEGIN
     WHERE s.employee_id = p_employee_id;
 END //
 DELIMITER ;
+
+-- trigger on users for unique password and email
+
+
+CREATE VIEW get_customers_info AS
+SELECT c.name AS CustomerName, MIN(u.email) AS Email, COUNT(o.order_id) AS OrdersBooked, CAST(COALESCE(SUM(i.price), 0) AS DOUBLE) AS TotalSpending, CAST(COALESCE(AVG(r.stars), 0) AS DOUBLE) AS AverageRating
+FROM users u
+NATURAL JOIN customers c
+LEFT JOIN orders o ON o.user_id = u.user_id
+LEFT JOIN reviews r ON r.order_id = o.order_id
+LEFT JOIN invoice i ON i.order_id = o.order_id
+GROUP BY c.customer_id;
+
+
+
+CREATE VIEW get_employees_info AS
+SELECT 
+	MIN(u.username) AS Username,
+    MIN(e.name) AS EmployeeName,
+    MIN(e.phone) AS Phone,
+    MIN(e.joined_date) AS JoinedDate,
+    MIN(l.value) AS Designation,
+    MIN(
+		(SELECT COUNT(o1.order_id)
+		FROM orders o1
+		WHERE o1.employee_id = e.employee_id AND o1.status_id = 13) -- completed
+    ) AS OrdersCompleted,
+    ROUND(AVG(s.amount), 2) AS Salary,
+    ROUND(SUM(DISTINCT s.bonus), 2) AS TotalAmountPaidAsBonus
+FROM users u
+JOIN employees e ON u.user_id = e.user_id
+LEFT JOIN lookups l ON l.lookup_id = e.designation_id
+LEFT JOIN orders o ON o.employee_id = e.employee_id
+LEFT JOIN salary s ON s.employee_id = e.employee_id
+GROUP BY e.employee_id;
+
+
+DELIMITER //
+CREATE PROCEDURE sp_get_admin_role(IN p_admin_id INT)
+BEGIN
+	SELECT l.value
+    FROM admins a
+    JOIN lookups l ON l.lookup_id = a.admin_role
+    WHERE a.admin_id = p_admin_id;
+END //
+DELIMITER ;
+
+
+CREATE VIEW get_admins_info AS
+SELECT u.username AS Username, u.email AS Email, a.name AS Name, a.phone AS Phone, l.value AS Role
+FROM users u
+JOIN admins a ON u.user_id = a.user_id
+JOIN lookups l ON l.lookup_id = a.admin_role;

@@ -107,16 +107,16 @@ namespace SoftwareFirmManagement.DL
             {
                 string query = $"CALL sp_manage_service('delete', {service.ServiceId}, '{service.Name}', {service.CategoryId}, '{service.Description}');";
                 DatabaseHelper.Instance.Update(query);
-                if (service.Technology != null)
-                {
-                    string query1 = $"CALL sp_manage_technology('delete', {service.ServiceId}, '{service.Technology.Description}')";
-                    DatabaseHelper.Instance.Update(query1);
-                }
-                if (service.Subservice != null)
-                {
-                    string query2 = $"CALL sp_manage_subservice('add', {service.ServiceId}, '{service.Subservice.Description}');";
-                    DatabaseHelper.Instance.Update(query2);
-                }
+                //if (service.Technology != null)
+                //{
+                //    string query1 = $"CALL sp_manage_technology('delete', {service.ServiceId}, '{service.Technology.Description}')";
+                //    DatabaseHelper.Instance.Update(query1);
+                //}
+                //if (service.Subservice != null)
+                //{
+                //    string query2 = $"CALL sp_manage_subservice('add', {service.ServiceId}, '{service.Subservice.Description}');";
+                //    DatabaseHelper.Instance.Update(query2);
+                //}
                 return true;
             }
             catch (MySql.Data.MySqlClient.MySqlException)

@@ -49,11 +49,13 @@ namespace SoftwareFirmManagement.BL
         public Salary(int salaryId, int employeeId, DateTime date, double amount, double bonus)
         {
             this.salaryId = salaryId;
+            this.employee = new Employee();
             this.employee.EmployeeId = employeeId;
             this.date = date;
             this.amount = amount;
             this.bonus = bonus;
         }
+
         public Salary(int salaryId, Employee employee, DateTime date, double amount, double bonus)
         {
             this.salaryId = salaryId;

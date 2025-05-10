@@ -94,6 +94,28 @@ namespace DbFinalProject.BL
         }
 
 
+        public bool Pay()
+        {
+            try
+            {
+                return OrderDL.PayOrderInDatabase(this);
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
+        }
+
+
+        public static List<Order> GetOrdersOfCurrentCustomer()
+        {
+            //OrderDL.LoadAllOrders();
+            return OrderDL.allOrders
+                   .Where(o => o.UserId == Program.currentUser.UserId)
+                   .ToList();
+        }
+
+
         public static List<int> GetOrderIdsNotCompleted()
         {
             return OrderDL.allOrders
@@ -108,6 +130,28 @@ namespace DbFinalProject.BL
             return OrderDL.allOrders
                    .Where(o => o.OrderId == orderId)
                    .FirstOrDefault();
+        }
+
+
+        public static List<int> GetOrderIdsNotPaid(Customer customer)
+        {
+            List<Order> notPaid = OrderDL.GetOrdersNotPaidByCustomer(customer);
+            return notPaid
+                   .Select(o => o.OrderId)
+                   .ToList();
+        }
+
+
+        public bool UpdateReview(int stars, string description)
+        {
+            try
+            {
+                return OrderDL.UpdateReview(this.OrderId, stars, description);
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
         }
 
     }

@@ -268,10 +268,21 @@ CREATE PROCEDURE sp_place_order(
     IN p_due_date DATE
 )
 BEGIN 
+	DECLARE new_order_id INT;
+
+	START TRANSACTION;
+    
 	INSERT INTO orders(employee_id, user_id, created_at, status_id, service_id) 
     VALUES (p_employee_id, p_user_id, NOW(), 12, p_service_id); -- 12 = work-in-progress 
+    
+    SET new_order_id = LAST_INSERT_ID();
+    
 	INSERT INTO invoice(order_id, price, payment_status_id, due_date, created_at) 
-    VALUES ((SELECT LAST_INSERT_ID()), p_price, 16, p_due_date, NOW()); -- 16 = pending
+    VALUES (new_order_id, p_price, 16, p_due_date, NOW()); -- 16 = pending
+    
+    INSERT INTO reviews(order_id, reviewer_name, stars, date, description)
+    VALUES (new_order_id, p_reviewer_name, 1, NOW(), 'null');
+    
 END //
 DELIMITER ;
 
@@ -378,3 +389,44 @@ BEGIN
 	WHERE o.user_id = p_user_id;
 END //
 DELIMITER ;
+
+
+DELIMITER //
+CREATE PROCEDURE sp_get_orders_not_paid_of_user(IN p_user_id INT)
+BEGIN
+	SELECT o.order_id, o.employee_id, o.user_id, o.created_at, o.status_id, o.service_id
+	FROM orders o
+	JOIN invoice i ON o.order_id = i.order_id
+	WHERE i.payment_status_id = 16 AND o.user_id = p_user_id; -- 16 = pending
+END //
+DELIMITER ;
+
+
+
+DELIMITER //
+CREATE PROCEDURE sp_pay_order(IN p_order_id INT)
+BEGIN
+	UPDATE invoice SET payment_status_id = 16 WHERE order_id = p_order_id;
+END //
+DELIMITER ;
+
+
+
+CREATE VIEW get_orders_for_admins_and_employees AS
+SELECT 
+	o.order_id AS OrderId,
+	c.name AS CustomerName,
+	s.name AS ServiceName,
+	o.created_at AS CreatedAt,
+	l.value AS OrderStatus,
+	l1.value AS PaymentStatus,
+	r.stars AS Stars,
+	COALESCE(r.description, 'null') AS ReviewDescription 
+FROM orders o
+JOIN services s ON o.service_id = s.service_id
+JOIN lookups l ON l.lookup_id = o.status_id
+JOIN invoice i ON o.order_id = i.order_id
+JOIN lookups l1 ON l1.lookup_id = i.payment_status_id
+JOIN reviews r ON r.order_id = o.order_id
+JOIN users u ON u.user_id = o.user_id
+JOIN customers c ON c.user_id = u.user_id;

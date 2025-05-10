@@ -34,6 +34,7 @@
             this.btnCancelOrder = new System.Windows.Forms.Button();
             this.btnPayForOrder = new System.Windows.Forms.Button();
             this.dgvCustomerOrders = new System.Windows.Forms.DataGridView();
+            this.btnReviewOrder = new System.Windows.Forms.Button();
             this.tlpMain.SuspendLayout();
             this.tlpMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerOrders)).BeginInit();
@@ -57,14 +58,15 @@
             // 
             // tlpMenuStrip
             // 
-            this.tlpMenuStrip.ColumnCount = 3;
-            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpMenuStrip.ColumnCount = 4;
+            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpMenuStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpMenuStrip.Controls.Add(this.btnPlaceOrder, 0, 0);
             this.tlpMenuStrip.Controls.Add(this.btnCancelOrder, 1, 0);
             this.tlpMenuStrip.Controls.Add(this.btnPayForOrder, 2, 0);
+            this.tlpMenuStrip.Controls.Add(this.btnReviewOrder, 3, 0);
             this.tlpMenuStrip.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpMenuStrip.Location = new System.Drawing.Point(3, 3);
             this.tlpMenuStrip.Name = "tlpMenuStrip";
@@ -72,7 +74,6 @@
             this.tlpMenuStrip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpMenuStrip.Size = new System.Drawing.Size(794, 61);
             this.tlpMenuStrip.TabIndex = 0;
-            this.tlpMenuStrip.Paint += new System.Windows.Forms.PaintEventHandler(this.tlpMenuStrip_Paint);
             // 
             // btnPlaceOrder
             // 
@@ -80,7 +81,7 @@
             this.btnPlaceOrder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPlaceOrder.Location = new System.Drawing.Point(3, 3);
             this.btnPlaceOrder.Name = "btnPlaceOrder";
-            this.btnPlaceOrder.Size = new System.Drawing.Size(258, 55);
+            this.btnPlaceOrder.Size = new System.Drawing.Size(192, 55);
             this.btnPlaceOrder.TabIndex = 0;
             this.btnPlaceOrder.Text = "Place an order";
             this.btnPlaceOrder.UseVisualStyleBackColor = false;
@@ -90,9 +91,9 @@
             // 
             this.btnCancelOrder.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnCancelOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCancelOrder.Location = new System.Drawing.Point(267, 3);
+            this.btnCancelOrder.Location = new System.Drawing.Point(201, 3);
             this.btnCancelOrder.Name = "btnCancelOrder";
-            this.btnCancelOrder.Size = new System.Drawing.Size(258, 55);
+            this.btnCancelOrder.Size = new System.Drawing.Size(192, 55);
             this.btnCancelOrder.TabIndex = 2;
             this.btnCancelOrder.Text = "Cancel an order";
             this.btnCancelOrder.UseVisualStyleBackColor = false;
@@ -102,12 +103,13 @@
             // 
             this.btnPayForOrder.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnPayForOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPayForOrder.Location = new System.Drawing.Point(531, 3);
+            this.btnPayForOrder.Location = new System.Drawing.Point(399, 3);
             this.btnPayForOrder.Name = "btnPayForOrder";
-            this.btnPayForOrder.Size = new System.Drawing.Size(260, 55);
+            this.btnPayForOrder.Size = new System.Drawing.Size(192, 55);
             this.btnPayForOrder.TabIndex = 3;
             this.btnPayForOrder.Text = "Pay for an order";
             this.btnPayForOrder.UseVisualStyleBackColor = false;
+            this.btnPayForOrder.Click += new System.EventHandler(this.btnPayForOrder_Click);
             // 
             // dgvCustomerOrders
             // 
@@ -120,6 +122,18 @@
             this.dgvCustomerOrders.RowTemplate.Height = 28;
             this.dgvCustomerOrders.Size = new System.Drawing.Size(794, 377);
             this.dgvCustomerOrders.TabIndex = 1;
+            // 
+            // btnReviewOrder
+            // 
+            this.btnReviewOrder.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnReviewOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnReviewOrder.Location = new System.Drawing.Point(597, 3);
+            this.btnReviewOrder.Name = "btnReviewOrder";
+            this.btnReviewOrder.Size = new System.Drawing.Size(194, 55);
+            this.btnReviewOrder.TabIndex = 4;
+            this.btnReviewOrder.Text = "Review an order";
+            this.btnReviewOrder.UseVisualStyleBackColor = false;
+            this.btnReviewOrder.Click += new System.EventHandler(this.btnReviewOrder_Click);
             // 
             // OrdersFormForCustomer
             // 
@@ -145,5 +159,6 @@
         private System.Windows.Forms.Button btnCancelOrder;
         private System.Windows.Forms.Button btnPayForOrder;
         private System.Windows.Forms.DataGridView dgvCustomerOrders;
+        private System.Windows.Forms.Button btnReviewOrder;
     }
 }

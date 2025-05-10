@@ -35,8 +35,8 @@ namespace DbFinalProject
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new MainForm());
-            Application.Run(new LoginSignUpForm());
+            Application.Run(new MainForm());
+            //Application.Run(new LoginSignUpForm());
         }
     }
 }

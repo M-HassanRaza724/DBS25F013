@@ -27,19 +27,13 @@ namespace DbFinalProject
         }
 
 
-        private void LoadChildForm(Form childForm)
+        public void LoadChildForm(Form childForm)
         {
             pMain.Controls.Clear();
             childForm.TopLevel = false;
             childForm.Dock = DockStyle.Fill;
             pMain.Controls.Add(childForm);
             childForm.Show();
-        }
-
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
 
@@ -75,7 +69,26 @@ namespace DbFinalProject
 
         private void btnOrders_Click(object sender, EventArgs e)
         {
-            LoadChildForm(new OrdersFormForCustomer());
+            if (Program.currentUser is Customer)
+            {
+                LoadChildForm(new OrdersFormForCustomer(this));
+            }
+            else
+            {
+                LoadChildForm(new OrdersForm());
+            }
+        }
+
+
+        private void btnClearScreen_Click(object sender, EventArgs e)
+        {
+            pMain.Controls.Clear();
+        }
+
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

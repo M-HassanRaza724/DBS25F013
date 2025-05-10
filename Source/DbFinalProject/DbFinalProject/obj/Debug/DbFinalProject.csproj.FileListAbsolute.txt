@@ -64,3 +64,6 @@ C:\##Semester 2\DBL\db_final_project\DbFinalProjectCode\DbFinalProject\DbFinalPr
 C:\##Semester 2\DBL\db_final_project\DbFinalProjectCode\DbFinalProject\DbFinalProject\obj\Debug\DbFinalProject.DialogBoxForms.OrderPlaceDialog.resources
 C:\##Semester 2\DBL\db_final_project\DbFinalProjectCode\DbFinalProject\DbFinalProject\obj\Debug\DbFinalProject.LoginSignUpForm.resources
 C:\##Semester 2\DBL\db_final_project\DbFinalProjectCode\DbFinalProject\DbFinalProject\obj\Debug\DbFinalProject.DialogBoxForms.OrderCancelDialog.resources
+C:\##Semester 2\DBL\db_final_project\DbFinalProjectCode\DbFinalProject\DbFinalProject\obj\Debug\DbFinalProject.DialogBoxForms.OrderPayDialog.resources
+C:\##Semester 2\DBL\db_final_project\DbFinalProjectCode\DbFinalProject\DbFinalProject\obj\Debug\DbFinalProject.DialogBoxForms.OrderReviewDialog.resources
+C:\##Semester 2\DBL\db_final_project\DbFinalProjectCode\DbFinalProject\DbFinalProject\obj\Debug\DbFinalProject.ChildForms.OrdersForm.resources

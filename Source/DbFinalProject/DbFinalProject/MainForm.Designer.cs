@@ -31,7 +31,6 @@
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.lblAppHeader = new System.Windows.Forms.Label();
             this.pMain = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
             this.tlpMenuStrip = new System.Windows.Forms.TableLayoutPanel();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
@@ -40,8 +39,12 @@
             this.btnEmployees = new System.Windows.Forms.Button();
             this.btnCustomers = new System.Windows.Forms.Button();
             this.btnAdmins = new System.Windows.Forms.Button();
+            this.tlpFooterStrip = new System.Windows.Forms.TableLayoutPanel();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnClearScreen = new System.Windows.Forms.Button();
             this.tlpMain.SuspendLayout();
             this.tlpMenuStrip.SuspendLayout();
+            this.tlpFooterStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpMain
@@ -50,8 +53,8 @@
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpMain.Controls.Add(this.lblAppHeader, 0, 0);
             this.tlpMain.Controls.Add(this.pMain, 0, 2);
-            this.tlpMain.Controls.Add(this.btnExit, 0, 3);
             this.tlpMain.Controls.Add(this.tlpMenuStrip, 0, 1);
+            this.tlpMain.Controls.Add(this.tlpFooterStrip, 0, 3);
             this.tlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpMain.Location = new System.Drawing.Point(0, 0);
             this.tlpMain.Name = "tlpMain";
@@ -83,19 +86,6 @@
             this.pMain.Name = "pMain";
             this.pMain.Size = new System.Drawing.Size(1041, 419);
             this.pMain.TabIndex = 2;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnExit.Location = new System.Drawing.Point(3, 624);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(86, 28);
-            this.btnExit.TabIndex = 3;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // tlpMenuStrip
             // 
@@ -205,6 +195,46 @@
             this.btnAdmins.UseVisualStyleBackColor = false;
             this.btnAdmins.Click += new System.EventHandler(this.btnAdmins_Click);
             // 
+            // tlpFooterStrip
+            // 
+            this.tlpFooterStrip.ColumnCount = 3;
+            this.tlpFooterStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpFooterStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpFooterStrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tlpFooterStrip.Controls.Add(this.btnExit, 0, 0);
+            this.tlpFooterStrip.Controls.Add(this.btnClearScreen, 1, 0);
+            this.tlpFooterStrip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpFooterStrip.Location = new System.Drawing.Point(3, 624);
+            this.tlpFooterStrip.Name = "tlpFooterStrip";
+            this.tlpFooterStrip.RowCount = 1;
+            this.tlpFooterStrip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpFooterStrip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpFooterStrip.Size = new System.Drawing.Size(1041, 28);
+            this.tlpFooterStrip.TabIndex = 5;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnExit.Location = new System.Drawing.Point(3, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(98, 22);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnClearScreen
+            // 
+            this.btnClearScreen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnClearScreen.Location = new System.Drawing.Point(107, 3);
+            this.btnClearScreen.Name = "btnClearScreen";
+            this.btnClearScreen.Size = new System.Drawing.Size(98, 22);
+            this.btnClearScreen.TabIndex = 5;
+            this.btnClearScreen.Text = "Clear screen";
+            this.btnClearScreen.UseVisualStyleBackColor = true;
+            this.btnClearScreen.Click += new System.EventHandler(this.btnClearScreen_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -217,6 +247,7 @@
             this.tlpMain.ResumeLayout(false);
             this.tlpMain.PerformLayout();
             this.tlpMenuStrip.ResumeLayout(false);
+            this.tlpFooterStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -226,7 +257,6 @@
         private System.Windows.Forms.TableLayoutPanel tlpMain;
         private System.Windows.Forms.Label lblAppHeader;
         private System.Windows.Forms.Panel pMain;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TableLayoutPanel tlpMenuStrip;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnServices;
@@ -235,5 +265,8 @@
         private System.Windows.Forms.Button btnCustomers;
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnAdmins;
+        private System.Windows.Forms.TableLayoutPanel tlpFooterStrip;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnClearScreen;
     }
 }

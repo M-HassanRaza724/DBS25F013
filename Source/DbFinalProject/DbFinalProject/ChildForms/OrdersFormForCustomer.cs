@@ -15,9 +15,12 @@ namespace DbFinalProject.ChildForms
 {
     public partial class OrdersFormForCustomer : Form
     {
-        public OrdersFormForCustomer()
+        public MainForm parent;
+
+        public OrdersFormForCustomer(MainForm parent)
         {
             InitializeComponent();
+            this.parent = parent;
             dgvCustomerOrders.DataSource = OrderOfCustomerDGV.GetOrdersOfCustomer((Customer)Program.currentUser);
         }
 
@@ -36,9 +39,18 @@ namespace DbFinalProject.ChildForms
             cancelOrderDialog.Show();
         }
 
-        private void tlpMenuStrip_Paint(object sender, PaintEventArgs e)
-        {
 
+        private void btnPayForOrder_Click(object sender, EventArgs e)
+        {
+            OrderPayDialog dialog = new OrderPayDialog(parent);
+            dialog.Show();
+        }
+
+
+        private void btnReviewOrder_Click(object sender, EventArgs e)
+        {
+            OrderReviewDialog dialog = new OrderReviewDialog();
+            dialog.Show();
         }
     }
 }

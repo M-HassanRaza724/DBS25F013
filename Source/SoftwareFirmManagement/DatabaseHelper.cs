@@ -13,7 +13,7 @@ namespace SoftwareFirmManagement
         // Database configuration (should be moved to config file)
         private const string ServerName = "127.0.0.1";
         private const string Port = "3306";
-        private const string DatabaseName = "midprojectdb";
+        private const string DatabaseName = "db_final_project";
         private const string DatabaseUser = "root";
         private const string DatabasePassword = "`1234567890-=";
         private readonly string _connectionString;

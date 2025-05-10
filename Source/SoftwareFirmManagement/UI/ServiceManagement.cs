@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.Remoting.Channels;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
+﻿using ComponentFactory.Krypton.Toolkit;
 using SoftwareFirmManagement.BL;
 using SoftwareFirmManagement.DL;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace SoftwareFirmManagement.UI
 {
     public partial class ServiceManagement : KryptonForm
     {
+        MainForm parentForm;
+        public MainForm ParentForm { get { return parentForm; } set { parentForm = value; } }
         private List<ServiceDisplay> services = new List<ServiceDisplay>();
         private ServiceDTO currentSelectedService = null;
 
@@ -24,7 +20,7 @@ namespace SoftwareFirmManagement.UI
             InitializeComponent();
             LoadServices();
             disableGroupBoxes();
-            
+
         }
 
         private void LoadServices()
@@ -36,7 +32,7 @@ namespace SoftwareFirmManagement.UI
                 ServiceDisplay serviceDisplay = new ServiceDisplay();
                 serviceDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top)));
                 serviceDisplay.BackColor = System.Drawing.Color.Transparent;
-                serviceDisplay.Location = new System.Drawing.Point(12, 250 + (i * 260));
+                serviceDisplay.Location = new System.Drawing.Point(((pnl_main.Width/2)-(420)), 250 + (i * 260));
                 serviceDisplay.Name = $"service{i + 1}";
                 serviceDisplay.Service = s;
                 serviceDisplay.Size = new System.Drawing.Size(840, 225);
@@ -56,13 +52,13 @@ namespace SoftwareFirmManagement.UI
             int change = e.NewValue - e.OldValue;
             if (change > 0)
             {
-                pnl_main.Location = new Point(pnl_main.Location.X , pnl_main.Location.Y - e.NewValue);
+                pnl_main.Location = new Point(pnl_main.Location.X, pnl_main.Location.Y - e.NewValue);
             }
             else
             {
                 pnl_main.Location = new Point(pnl_main.Location.X, pnl_main.Location.Y + e.NewValue);
             }
-            if(e.NewValue == 0)
+            if (e.NewValue == 0)
             {
                 this.pnl_main.Location = new System.Drawing.Point(0, 0);
 
@@ -101,7 +97,7 @@ namespace SoftwareFirmManagement.UI
             disableGroupBoxes();
             gbx_update_service.Enabled = true;
             gbx_update_service.Visible = true;
-            btn_update_service.Visible = false; 
+            btn_update_service.Visible = false;
 
             // Load services into combo box
             cmb_select_service_gbx_update_service.Items.Clear();
@@ -142,7 +138,7 @@ namespace SoftwareFirmManagement.UI
 
         private void btn_delete_service_Click(object sender, EventArgs e)
         {
-            if(currentSelectedService != null)
+            if (currentSelectedService != null)
             {
                 if (DialogResult.Yes == MessageBox.Show(
                     $"Are you sure you want to delete {currentSelectedService.Name}?",
@@ -154,7 +150,8 @@ namespace SoftwareFirmManagement.UI
                         if (currentSelectedService.Delete())
                         {
                             MessageBox.Show("Service deleted successfully");
-                            LoadServices();
+                            //LoadServices();
+                            RefreshServices();
                             disableGroupBoxes();
                         }
                     }
@@ -198,7 +195,8 @@ namespace SoftwareFirmManagement.UI
                     if (currentSelectedService.Update())
                     {
                         MessageBox.Show("Service updated successfully");
-                        LoadServices();
+                        //LoadServices();
+                        RefreshServices();
                         disableGroupBoxes();
                     }
                 }
@@ -218,7 +216,7 @@ namespace SoftwareFirmManagement.UI
         {
             try
             {
-                ServiceDTO service = new ServiceDTO(0, txt_name.TextBoxText,0,txt_description.TextBoxText);
+                ServiceDTO service = new ServiceDTO(0, txt_name.TextBoxText, 0, txt_description.TextBoxText);
 
                 if (!string.IsNullOrEmpty(txt_technology.TextBoxText))
                 {
@@ -233,7 +231,8 @@ namespace SoftwareFirmManagement.UI
                 if (service.Add())
                 {
                     MessageBox.Show("Service added successfully");
-                    LoadServices();
+                    //LoadServices();
+                    RefreshServices();
                     disableGroupBoxes();
                 }
             }
@@ -285,6 +284,17 @@ namespace SoftwareFirmManagement.UI
 
                 btn_update_service.Visible = true;
             }
+        }
+
+        public void RefreshServices()
+        {
+
+            for (int i = 0; i < services.Count; i++)
+            {
+                pnl_main.Controls.Remove(services[i]);
+                services[i] = null;
+            }
+            LoadServices();
         }
     }
 }

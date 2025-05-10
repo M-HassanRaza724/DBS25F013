@@ -11,9 +11,9 @@ using DbFinalProject.ChildForms;
 
 namespace DbFinalProject
 {
-    public partial class LoginSingUpForm : Form
+    public partial class LoginSignUpForm : Form
     {
-        public LoginSingUpForm()
+        public LoginSignUpForm()
         {
             InitializeComponent();
         }

@@ -11,7 +11,7 @@ namespace DbFinalProject.BL
     {
         public string CustomerName { get; set; }
         public string Email {  get; set; }
-        public int OrdersBookedAndPaid { get; set; }
+        public int OrdersBooked { get; set; }
         public double TotalSpending { get; set; }
         public double AverageRating { get; set; }
 
@@ -19,7 +19,7 @@ namespace DbFinalProject.BL
         {
             CustomerName = customerName;
             Email = email;
-            OrdersBookedAndPaid = ordersBooked;
+            OrdersBooked = ordersBooked;
             TotalSpending = totalSpending;
             AverageRating = averageRating;
         }

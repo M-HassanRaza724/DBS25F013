@@ -252,3 +252,129 @@ SELECT u.username AS Username, u.email AS Email, a.name AS Name, a.phone AS Phon
 FROM users u
 JOIN admins a ON u.user_id = a.user_id
 JOIN lookups l ON l.lookup_id = a.admin_role;
+
+
+ALTER TABLE orders
+ADD COLUMN service_id INT,
+ADD CONSTRAINT FOREIGN KEY (service_id) REFERENCES services(service_id);
+
+
+DELIMITER //
+CREATE PROCEDURE sp_place_order(
+    IN p_employee_id INT,
+    IN p_user_id INT,
+    IN p_service_id INT,
+    IN p_price DECIMAL(12, 2),    
+    IN p_due_date DATE
+)
+BEGIN 
+	INSERT INTO orders(employee_id, user_id, created_at, status_id, service_id) 
+    VALUES (p_employee_id, p_user_id, NOW(), 12, p_service_id); -- 12 = work-in-progress 
+	INSERT INTO invoice(order_id, price, payment_status_id, due_date, created_at) 
+    VALUES ((SELECT LAST_INSERT_ID()), p_price, 16, p_due_date, NOW()); -- 16 = pending
+END //
+DELIMITER ;
+
+
+
+DELIMITER //
+CREATE PROCEDURE sp_cancel_order(IN p_order_id INT)
+BEGIN
+	START TRANSACTION;
+	DELETE FROM invoice WHERE order_id = p_order_id;
+    DELETE FROM orders WHERE order_id = p_order_id;
+    COMMIT;
+END //
+DELIMITER ;
+
+
+CREATE TABLE log_orders (
+	log_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT NOT NULL,
+    employee_id INT NOT NULL,
+    user_id INT NOT NULL,
+    created_at TIMESTAMP,
+    status_id INT NOT NULL,
+    service_id INT NOT NULL,
+    action_type ENUM('UPDATE', 'DELETE') NOT NULL,
+    action_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+DELIMITER //
+CREATE TRIGGER trg_orders_before_delete
+BEFORE DELETE ON orders
+FOR EACH ROW
+BEGIN
+	INSERT INTO log_orders(order_id, employee_id, user_id, created_at, status_id, service_id, action_type)
+    VALUES (OLD.order_id, OLD.employee_id, OLD.user_id, OLD.created_at, OLD.status_id, OLD.service_id, 'DELETE');
+END //
+DELIMITER ;
+
+
+DELIMITER //
+CREATE TRIGGER trg_orders_before_update
+BEFORE UPDATE ON orders
+FOR EACH ROW
+BEGIN
+	INSERT INTO log_orders(order_id, employee_id, user_id, created_at, status_id, service_id, action_type)
+    VALUES (OLD.order_id, OLD.employee_id, OLD.user_id, OLD.created_at, OLD.status_id, OLD.service_id, 'UPDATE');
+END //
+DELIMITER ;
+
+
+
+CREATE TABLE log_invoice (
+	log_id INT AUTO_INCREMENT PRIMARY KEY,
+    invoice_id INT,
+    order_id INT,
+    price DECIMAL(12, 2),
+    payment_status_id INT,
+    due_date DATE,
+    created_at TIMESTAMP,
+    action_type ENUM('UPDATE', 'DELETE') NOT NULL,
+    action_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+DELIMITER //
+CREATE TRIGGER trg_invoice_before_update
+BEFORE UPDATE ON invoice
+FOR EACH ROW
+BEGIN
+	INSERT INTO log_invoice(invoice_id, order_id, price, payment_status_id, due_date, created_at, action_type)
+    VALUES (OLD.invoice_id, OLD.order_id, OLD.price, OLD.payment_status_id, OLD.due_date, OLD.created_at, 'UPDATE');
+END //
+DELIMITER ;
+
+
+DELIMITER //
+CREATE TRIGGER trg_invoice_before_delete
+BEFORE DELETE ON invoice
+FOR EACH ROW
+BEGIN
+	INSERT INTO log_invoice(invoice_id, order_id, price, payment_status_id, due_date, created_at, action_type)
+    VALUES (OLD.invoice_id, OLD.order_id, OLD.price, OLD.payment_status_id, OLD.due_date, OLD.created_at, 'DELETE');
+END //
+DELIMITER ;
+
+
+DELIMITER //
+CREATE PROCEDURE sp_get_orders_of_customer(IN p_user_id INT)
+BEGIN 
+	SELECT 
+		o.order_id AS OrderId,
+		s.name AS ServiceName,
+		o.created_at AS CreatedAt,
+		l.value AS OrderStatus,
+		l1.value AS PaymentStatus,
+		r.stars AS Stars,
+		COALESCE(r.description, 'null') AS Description 
+	FROM orders o
+	JOIN services s ON o.service_id = s.service_id
+	JOIN lookups l ON l.lookup_id = o.status_id
+	JOIN invoice i ON o.order_id = i.order_id
+	JOIN lookups l1 ON l1.lookup_id = i.payment_status_id
+	LEFT JOIN reviews r ON r.order_id = o.order_id
+	WHERE o.user_id = p_user_id;
+END //
+DELIMITER ;

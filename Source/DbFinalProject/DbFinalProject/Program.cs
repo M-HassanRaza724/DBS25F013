@@ -25,6 +25,7 @@ namespace DbFinalProject
                 LookupDL.LoadAllLookups();
                 UserDL.LoadAllUsers();
                 ServiceDL.LoadAllServices();
+                OrderDL.LoadAllOrders();
                 CustomerDGV_DL.LoadCustomers();
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
@@ -34,7 +35,8 @@ namespace DbFinalProject
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            //Application.Run(new MainForm());
+            Application.Run(new LoginSignUpForm());
         }
     }
 }

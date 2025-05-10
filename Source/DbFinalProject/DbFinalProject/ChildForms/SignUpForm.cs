@@ -13,9 +13,9 @@ namespace DbFinalProject.ChildForms
 {
     public partial class SignUpForm : Form
     {
-        private LoginSingUpForm parent;
+        private LoginSignUpForm parent;
 
-        public SignUpForm(LoginSingUpForm parent)
+        public SignUpForm(LoginSignUpForm parent)
         {
             InitializeComponent();
             this.parent = parent;

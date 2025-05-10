@@ -1,6 +1,6 @@
 ﻿namespace DbFinalProject
 {
-    partial class LoginSingUpForm
+    partial class LoginSignUpForm
     {
         /// <summary>
         /// Required designer variable.
@@ -133,14 +133,14 @@
             this.pLoginSignUp.Size = new System.Drawing.Size(1052, 364);
             this.pLoginSignUp.TabIndex = 3;
             // 
-            // LoginSingUpForm
+            // LoginSignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1058, 618);
             this.Controls.Add(this.tlpMainLogin);
-            this.Name = "LoginSingUpForm";
-            this.Text = "LoginForm";
+            this.Name = "LoginSignUpForm";
+            this.Text = "LoginSignUpForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tlpMainLogin.ResumeLayout(false);
             this.tlpMainLogin.PerformLayout();

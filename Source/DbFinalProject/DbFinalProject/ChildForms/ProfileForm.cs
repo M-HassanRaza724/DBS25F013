@@ -65,7 +65,7 @@ namespace DbFinalProject.ChildForms
                 }
                 this.Close();
                 parent.Close();
-                LoginSingUpForm loginSingUpForm = new LoginSingUpForm();
+                LoginSignUpForm loginSingUpForm = new LoginSignUpForm();
                 loginSingUpForm.Show();
             }
             else if (result == DialogResult.No)

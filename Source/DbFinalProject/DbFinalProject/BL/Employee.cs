@@ -306,5 +306,14 @@ namespace DbFinalProject.BL
                    .FirstOrDefault();
         }
 
+
+        public static Employee RandomlySelectAnEmployee()
+        {
+            List<Employee> employees = EmployeeDL.GetEmployeesNotSupervisors();
+            Random random = new Random();
+            int index = random.Next(employees.Count);
+            return employees[index];
+        }
+
     }
 }

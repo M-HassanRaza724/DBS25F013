@@ -72,5 +72,10 @@ namespace DbFinalProject
             LoadChildForm(new AdminsForm());
         }
 
+
+        private void btnOrders_Click(object sender, EventArgs e)
+        {
+            LoadChildForm(new OrdersFormForCustomer());
+        }
     }
 }

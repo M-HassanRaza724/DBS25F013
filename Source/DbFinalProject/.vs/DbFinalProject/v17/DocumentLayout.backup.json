@@ -3,64 +3,20 @@
   "WorkspaceRootPath": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\dialogboxforms\\adminadddialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\dialogboxforms\\adminadddialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\childforms\\ordersformforcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\childforms\\ordersformforcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\dialogboxforms\\adminadddialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\dialogboxforms\\adminadddialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\childforms\\ordersformforcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\childforms\\ordersformforcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\dbfinalproject\\bl\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\bl\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\bl\\orderofcustomerdgv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\bl\\orderofcustomerdgv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\dialogboxforms\\admindeletedialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\dialogboxforms\\admindeletedialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\dialogboxforms\\admindeletedialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\dialogboxforms\\admindeletedialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\dbfinalproject\\childforms\\adminsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\childforms\\adminsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\dbfinalproject\\childforms\\adminsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\childforms\\adminsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\dbfinalproject\\dl\\admindgv_dl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\dl\\admindgv_dl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\bl\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\bl\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\dbfinalproject\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\dbfinalproject\\bl\\admindgv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\bl\\admindgv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\dbfinalproject\\childforms\\employeesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\childforms\\employeesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\dbfinalproject\\dl\\employeedgv_dl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\dl\\employeedgv_dl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\dbfinalproject\\dl\\admindl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\dl\\admindl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\dl\\orderofcustomerdgv_dl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\dl\\orderofcustomerdgv_dl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,189 +54,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\User.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\BL\\User.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\User.cs",
-              "RelativeToolTip": "DbFinalProject\\BL\\User.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "OrdersFormForCustomer.cs",
+              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\ChildForms\\OrdersFormForCustomer.cs",
+              "RelativeDocumentMoniker": "DbFinalProject\\ChildForms\\OrdersFormForCustomer.cs",
+              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\ChildForms\\OrdersFormForCustomer.cs",
+              "RelativeToolTip": "DbFinalProject\\ChildForms\\OrdersFormForCustomer.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAuwCEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T18:07:12.933Z",
+              "WhenOpened": "2025-05-10T11:02:59.432Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AdminAddDialog.cs",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DialogBoxForms\\AdminAddDialog.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\DialogBoxForms\\AdminAddDialog.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DialogBoxForms\\AdminAddDialog.cs",
-              "RelativeToolTip": "DbFinalProject\\DialogBoxForms\\AdminAddDialog.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAqwCMAAABYAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "OrderOfCustomerDGV_DL.cs",
+              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DL\\OrderOfCustomerDGV_DL.cs",
+              "RelativeDocumentMoniker": "DbFinalProject\\DL\\OrderOfCustomerDGV_DL.cs",
+              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DL\\OrderOfCustomerDGV_DL.cs",
+              "RelativeToolTip": "DbFinalProject\\DL\\OrderOfCustomerDGV_DL.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwB8AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T17:57:32.953Z",
+              "WhenOpened": "2025-05-10T10:29:12.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderOfCustomerDGV.cs",
+              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\OrderOfCustomerDGV.cs",
+              "RelativeDocumentMoniker": "DbFinalProject\\BL\\OrderOfCustomerDGV.cs",
+              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\OrderOfCustomerDGV.cs",
+              "RelativeToolTip": "DbFinalProject\\BL\\OrderOfCustomerDGV.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAUwCMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T10:26:37.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AdminAddDialog.cs [Design]",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DialogBoxForms\\AdminAddDialog.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\DialogBoxForms\\AdminAddDialog.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DialogBoxForms\\AdminAddDialog.cs [Design]",
-              "RelativeToolTip": "DbFinalProject\\DialogBoxForms\\AdminAddDialog.cs [Design]",
+              "Title": "OrdersFormForCustomer.cs [Design]",
+              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\ChildForms\\OrdersFormForCustomer.cs",
+              "RelativeDocumentMoniker": "DbFinalProject\\ChildForms\\OrdersFormForCustomer.cs",
+              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\ChildForms\\OrdersFormForCustomer.cs [Design]",
+              "RelativeToolTip": "DbFinalProject\\ChildForms\\OrdersFormForCustomer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T17:50:26.726Z",
+              "WhenOpened": "2025-05-10T10:00:57.046Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdminDeleteDialog.cs",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DialogBoxForms\\AdminDeleteDialog.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\DialogBoxForms\\AdminDeleteDialog.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DialogBoxForms\\AdminDeleteDialog.cs",
-              "RelativeToolTip": "DbFinalProject\\DialogBoxForms\\AdminDeleteDialog.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T16:58:26.52Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdminDeleteDialog.cs [Design]",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DialogBoxForms\\AdminDeleteDialog.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\DialogBoxForms\\AdminDeleteDialog.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DialogBoxForms\\AdminDeleteDialog.cs [Design]",
-              "RelativeToolTip": "DbFinalProject\\DialogBoxForms\\AdminDeleteDialog.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T16:58:24.444Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AdminsForm.cs",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\ChildForms\\AdminsForm.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\ChildForms\\AdminsForm.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\ChildForms\\AdminsForm.cs",
-              "RelativeToolTip": "DbFinalProject\\ChildForms\\AdminsForm.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAIA+wC4AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T15:11:20.612Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "EmployeeDGV_DL.cs",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DL\\EmployeeDGV_DL.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\DL\\EmployeeDGV_DL.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DL\\EmployeeDGV_DL.cs",
-              "RelativeToolTip": "DbFinalProject\\DL\\EmployeeDGV_DL.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T15:06:08.355Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AdminDGV_DL.cs",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DL\\AdminDGV_DL.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\DL\\AdminDGV_DL.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DL\\AdminDGV_DL.cs",
-              "RelativeToolTip": "DbFinalProject\\DL\\AdminDGV_DL.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAiwBIAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T15:04:43.587Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AdminDGV.cs",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\AdminDGV.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\BL\\AdminDGV.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\AdminDGV.cs",
-              "RelativeToolTip": "DbFinalProject\\BL\\AdminDGV.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAAB0AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T15:03:12.926Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Admin.cs",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\Admin.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\BL\\Admin.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\Admin.cs",
-              "RelativeToolTip": "DbFinalProject\\BL\\Admin.cs",
-              "ViewState": "AgIAAJYAAAAAAAAAAAA+wKMAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T11:34:20.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\MainForm.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\MainForm.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\MainForm.cs [Design]",
-              "RelativeToolTip": "DbFinalProject\\MainForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T15:35:27.692Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AdminDL.cs",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DL\\AdminDL.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\DL\\AdminDL.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DL\\AdminDL.cs",
-              "RelativeToolTip": "DbFinalProject\\DL\\AdminDL.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAkwFwAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T11:41:36.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AdminsForm.cs [Design]",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\ChildForms\\AdminsForm.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\ChildForms\\AdminsForm.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\ChildForms\\AdminsForm.cs [Design]",
-              "RelativeToolTip": "DbFinalProject\\ChildForms\\AdminsForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T11:29:17.636Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\MainForm.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\MainForm.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\MainForm.cs",
-              "RelativeToolTip": "DbFinalProject\\MainForm.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAowEkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T15:35:59.669Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "EmployeesForm.cs [Design]",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\ChildForms\\EmployeesForm.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\ChildForms\\EmployeesForm.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\ChildForms\\EmployeesForm.cs [Design]",
-              "RelativeToolTip": "DbFinalProject\\ChildForms\\EmployeesForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T19:02:25.31Z"
             }
           ]
         }

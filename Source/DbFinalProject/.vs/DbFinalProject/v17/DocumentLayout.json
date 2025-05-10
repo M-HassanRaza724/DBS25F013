@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\bl\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\bl\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\childforms\\ordersformforcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\childforms\\ordersformforcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\bl\\salary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\bl\\salary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\childforms\\ordersformforcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\childforms\\ordersformforcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\bl\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\bl\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\bl\\orderofcustomerdgv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\bl\\orderofcustomerdgv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|c:\\##semester 2\\dbl\\db_final_project\\dbfinalprojectcode\\dbfinalproject\\dbfinalproject\\dl\\orderofcustomerdgv_dl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70A54403-42FD-498B-8C09-CE29F41A228A}|DbFinalProject\\DbFinalProject.csproj|solutionrelative:dbfinalproject\\dl\\orderofcustomerdgv_dl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,42 +54,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\Employee.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\BL\\Employee.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\Employee.cs",
-              "RelativeToolTip": "DbFinalProject\\BL\\Employee.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "OrdersFormForCustomer.cs",
+              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\ChildForms\\OrdersFormForCustomer.cs",
+              "RelativeDocumentMoniker": "DbFinalProject\\ChildForms\\OrdersFormForCustomer.cs",
+              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\ChildForms\\OrdersFormForCustomer.cs",
+              "RelativeToolTip": "DbFinalProject\\ChildForms\\OrdersFormForCustomer.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAuwCEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T18:59:19.191Z",
+              "WhenOpened": "2025-05-10T11:02:59.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderOfCustomerDGV_DL.cs",
+              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DL\\OrderOfCustomerDGV_DL.cs",
+              "RelativeDocumentMoniker": "DbFinalProject\\DL\\OrderOfCustomerDGV_DL.cs",
+              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\DL\\OrderOfCustomerDGV_DL.cs",
+              "RelativeToolTip": "DbFinalProject\\DL\\OrderOfCustomerDGV_DL.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwB8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T10:29:12.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderOfCustomerDGV.cs",
+              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\OrderOfCustomerDGV.cs",
+              "RelativeDocumentMoniker": "DbFinalProject\\BL\\OrderOfCustomerDGV.cs",
+              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\OrderOfCustomerDGV.cs",
+              "RelativeToolTip": "DbFinalProject\\BL\\OrderOfCustomerDGV.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAUwCMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T10:26:37.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Salary.cs",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\Salary.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\BL\\Salary.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\Salary.cs",
-              "RelativeToolTip": "DbFinalProject\\BL\\Salary.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwEAAAAAAAAAAAAAAAA==",
+              "Title": "OrdersFormForCustomer.cs [Design]",
+              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\ChildForms\\OrdersFormForCustomer.cs",
+              "RelativeDocumentMoniker": "DbFinalProject\\ChildForms\\OrdersFormForCustomer.cs",
+              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\ChildForms\\OrdersFormForCustomer.cs [Design]",
+              "RelativeToolTip": "DbFinalProject\\ChildForms\\OrdersFormForCustomer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T18:58:58.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Service.cs",
-              "DocumentMoniker": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\Service.cs",
-              "RelativeDocumentMoniker": "DbFinalProject\\BL\\Service.cs",
-              "ToolTip": "C:\\##Semester 2\\DBL\\db_final_project\\DbFinalProjectCode\\DbFinalProject\\DbFinalProject\\BL\\Service.cs",
-              "RelativeToolTip": "DbFinalProject\\BL\\Service.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAswKMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T18:58:49.464Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T10:00:57.046Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

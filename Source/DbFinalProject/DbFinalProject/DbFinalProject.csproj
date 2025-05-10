@@ -106,6 +106,8 @@
     <Compile Include="BL\EmployeeDGV.cs" />
     <Compile Include="BL\ISalary.cs" />
     <Compile Include="BL\Lookup.cs" />
+    <Compile Include="BL\Order.cs" />
+    <Compile Include="BL\OrderOfCustomerDGV.cs" />
     <Compile Include="BL\Salary.cs" />
     <Compile Include="BL\Service.cs" />
     <Compile Include="BL\ServiceDGV.cs" />
@@ -129,6 +131,12 @@
     </Compile>
     <Compile Include="ChildForms\EmployeesForm.Designer.cs">
       <DependentUpon>EmployeesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\OrdersFormForCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\OrdersFormForCustomer.Designer.cs">
+      <DependentUpon>OrdersFormForCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\ProfileForm.cs">
       <SubType>Form</SubType>
@@ -203,6 +211,18 @@
     <Compile Include="DialogBoxForms\EmployeeEditDialog.Designer.cs">
       <DependentUpon>EmployeeEditDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="DialogBoxForms\OrderCancelDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBoxForms\OrderCancelDialog.Designer.cs">
+      <DependentUpon>OrderCancelDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBoxForms\OrderPlaceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBoxForms\OrderPlaceDialog.Designer.cs">
+      <DependentUpon>OrderPlaceDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="DialogBoxForms\ProfileEditDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,14 +242,16 @@
     <Compile Include="DL\EmployeeDGV_DL.cs" />
     <Compile Include="DL\EmployeeDL.cs" />
     <Compile Include="DL\LookupDL.cs" />
+    <Compile Include="DL\OrderDL.cs" />
+    <Compile Include="DL\OrderOfCustomerDGV_DL.cs" />
     <Compile Include="DL\SalaryDL.cs" />
     <Compile Include="DL\ServiceDL.cs" />
     <Compile Include="DL\UserDL.cs" />
-    <Compile Include="LoginSingUpForm.cs">
+    <Compile Include="LoginSignUpForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginSingUpForm.Designer.cs">
-      <DependentUpon>LoginSingUpForm.cs</DependentUpon>
+    <Compile Include="LoginSignUpForm.Designer.cs">
+      <DependentUpon>LoginSignUpForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -247,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\EmployeesForm.resx">
       <DependentUpon>EmployeesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\OrdersFormForCustomer.resx">
+      <DependentUpon>OrdersFormForCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\ProfileForm.resx">
       <DependentUpon>ProfileForm.cs</DependentUpon>
@@ -284,14 +309,20 @@
     <EmbeddedResource Include="DialogBoxForms\EmployeeEditDialog.resx">
       <DependentUpon>EmployeeEditDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DialogBoxForms\OrderCancelDialog.resx">
+      <DependentUpon>OrderCancelDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBoxForms\OrderPlaceDialog.resx">
+      <DependentUpon>OrderPlaceDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DialogBoxForms\ProfileEditDialog.resx">
       <DependentUpon>ProfileEditDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DialogBoxForms\UpdateServiceDialog.resx">
       <DependentUpon>UpdateServiceDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginSingUpForm.resx">
-      <DependentUpon>LoginSingUpForm.cs</DependentUpon>
+    <EmbeddedResource Include="LoginSignUpForm.resx">
+      <DependentUpon>LoginSignUpForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

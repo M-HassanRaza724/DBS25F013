@@ -86,5 +86,36 @@ namespace DbFinalProject.DL
             }
         }
 
+
+        public static List<Employee> GetEmployeesNotSupervisors()
+        {
+            try
+            {
+                List<Employee> notSupervisors = new List<Employee>();
+                string query = "SELECT * FROM get_employees_not_supervisors;";
+                var data = DatabaseHelper.Instance.GetData(query);
+                while (data.Read())
+                {
+                    int userId = data.IsDBNull(0) ? 0 : data.GetInt32(0);
+                    int employeeId = data.IsDBNull(1) ? 0 : data.GetInt32(1);
+                    string name = data[2].ToString();
+                    string phone = data[3].ToString();
+                    DateTime joinedDate = DateTime.Parse(data[4].ToString()).Date;
+                    int designationId = data.IsDBNull(5) ? 0 : data.GetInt32(5);
+                    string username = data[6].ToString();
+                    string email = data[7].ToString();
+                    string password = data[8].ToString();
+                    int roleId = data.IsDBNull(9) ? 0 : data.GetInt32(9);
+                    notSupervisors.Add(new Employee(userId, username, email, password, roleId, employeeId, name, phone, joinedDate, designationId));
+                }
+                return notSupervisors;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
+        }
+
+
     }
 }

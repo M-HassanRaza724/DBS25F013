@@ -1,11 +1,7 @@
-﻿using Org.BouncyCastle.Asn1.Cms;
+﻿using SoftwareFirmManagement.DL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SoftwareFirmManagement.DL;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Windows.Forms;
 
 namespace SoftwareFirmManagement.BL
@@ -33,6 +29,21 @@ namespace SoftwareFirmManagement.BL
         string platform;
         string description;
 
+        public static OrderDTO demoOrder = new OrderDTO()
+        {
+            orderId = -1,
+            createdAt = new DateTime(2025, 05, 10),
+            statusId = -1,
+            customer = new Customer("username", "email", "pass", -1, "customer"),
+            employee = new Employee("username", "email", "pass", -1, "employee", "03000000000", new DateTime(), -1),
+            status = "Pending",
+            initialBudgetId = -1,
+            platformId = -1,
+            initialBudget = "<$5000",
+            service = new ServiceDTO(-1, "service", -1, "description"),
+            platform = "demo",
+            description = "demo description",
+        };
         // Constructors
         public OrderDTO()
         {
@@ -44,12 +55,13 @@ namespace SoftwareFirmManagement.BL
         public OrderDTO(int orderId, int statusId, int initialBudgetId, int platformId, Employee employee, Customer customer, DateTime createdAt, string status,
                 ServiceDTO service, string initialBudget, string platform, string description)
         {
-            this.OrderId = orderId;
+            this.orderId = orderId;
             //this.OrderDetailId = orderDetailId;   // not needed
             this.Employee = employee;
             this.Customer = customer;
             this.CreatedAt = createdAt;
             this.StatusId = statusId;
+            this.Status = status;
             this.Service = service;
             this.InitialBudgetId = initialBudgetId;
             this.PlatformId = platformId;
@@ -58,14 +70,13 @@ namespace SoftwareFirmManagement.BL
             this.Description = description;
         }
         // for updating 
-        public OrderDTO(int orderId, Employee employee, Customer customer, DateTime createdAt, int statusId,
+        public OrderDTO(int orderId, Employee employee, Customer customer, int statusId,
                        ServiceDTO service, int initialBudgetId, int platformId, string description)
         {
             this.OrderId = orderId;
             //this.OrderDetailId = orderDetailId;   // not needed
             this.Employee = employee;
             this.Customer = customer;
-            this.CreatedAt = createdAt;
             this.StatusId = statusId;
             this.Service = service;
             this.InitialBudgetId = initialBudgetId;
@@ -114,7 +125,7 @@ namespace SoftwareFirmManagement.BL
         public Employee Employee
         {
             get { return employee; }
-            set { employee = value ?? throw new ArgumentNullException("Employee cant be null") ; }
+            set { employee = value ?? throw new ArgumentNullException("Employee cant be null"); }
         }
         public Customer Customer
         {
@@ -125,19 +136,28 @@ namespace SoftwareFirmManagement.BL
         public DateTime CreatedAt
         {
             get { return createdAt; }
-            set { createdAt = value >= DateTime.Now ? value : throw new InvalidTimeZoneException("I think you have successfully invented time machine"); }
+            set { createdAt = value <= DateTime.Now ? value : throw new InvalidTimeZoneException("I think you have successfully invented time machine"); }
         }
 
         public int StatusId
         {
             get { return statusId; }
-            
-           set { statusId =  LookupDL.GetLookupIdsByKeyGroup("Status").Contains(value) ? value : throw new InvalidOperationException("Invalid Status Id");  }
+
+            set
+            {
+                MessageBox.Show(String.Join(", ", LookupDL.GetLookupIdsByKeyGroup("status")));
+                statusId = LookupDL.GetLookupIdsByKeyGroup("status").Contains(value) ? value : throw new InvalidOperationException("Invalid Status Id");
+            }
         }
         public string Status
         {
             get { return status; }
-            set { status = LookupDL.GetLookupValuesByKeyGroup("Status").Contains(value) ? value : throw new InvalidOperationException("Invalid Status"); }
+            set
+            {
+                List<string> statuses = LookupDL.GetLookupValuesByKeyGroup("status");
+                //MessageBox.Show(String.Join(", ", statuses));
+                status = statuses.Contains(value) ? value : throw new InvalidOperationException("Invalid Status");
+            }
         }
         // Getters and Setters for OrderDetails table attributes
         //public int OrderDetailId  // not needed
@@ -148,7 +168,11 @@ namespace SoftwareFirmManagement.BL
         public ServiceDTO Service
         {
             get { return service; }
-            set { service = ServiceDL.allServices.Contains(value) ? value : throw new InvalidOperationException("Invalid service"); }
+            set
+            {
+                service = value;
+                //service = ServiceDL.allServices.Contains(value) ? value : throw new InvalidOperationException("Invalid service"); }
+            }
         }
 
         public int InitialBudgetId
@@ -174,7 +198,7 @@ namespace SoftwareFirmManagement.BL
             set { platform = LookupDL.GetLookupValuesByKeyGroup("platform").Contains(value) ? value : throw new InvalidOperationException("Invalid initial platform"); ; }
         }
 
-      
+
         public static bool AddOrder(OrderDTO order)
         {
             try
@@ -214,32 +238,67 @@ namespace SoftwareFirmManagement.BL
             }
             return false;
         }
-
-        public static List<OrderDTO> GetOrdersByFilter(string search = null, string sortby = null, string direction = "ASC")
-        { // incomplete function because of incomplete UI structure
-            if (search == null || sortby == null)
-            {
-                return OrderDL.allOrders
-                       .OfType<OrderDTO>()
-                       .OrderBy(l => l.createdAt)
-                       .ToList();
-            }
+        public static List<OrderDTO> GetOrdersByFilter(List<string> statuses, string search = null, string sortby = null, string direction = "ASC")
+        {
             List<OrderDTO> filtered = OrderDL.allOrders
-                                      .OfType<OrderDTO>()
-                                      .Where(cust => cust.Description.Contains(search) || cust.Service.Name.Contains(search))
-                                      .ToList();
-            //if (direction == "DESC" && sortby == "username")
-            //{
-            //    filtered = filtered
-            //               .OrderByDescending(l => l.Ordername)
-            //               .ToList();
-            //}
-            //else if (sortby == "username")
-            //{
-            //    filtered = filtered
-            //               .OrderBy(l => l.Ordername)
-            //               .ToList();
-            //}
+                                          .OfType<OrderDTO>()
+                                          .Where(orders => statuses.Contains(orders.status))
+                                          .ToList();
+            if (search == null && sortby == null)
+            {
+                return filtered
+                            .OfType<OrderDTO>()
+                            .OrderByDescending(l => l.CreatedAt)
+                            .ToList();
+            }
+            if (search != null)
+            {
+                filtered = filtered
+                                .OfType<OrderDTO>()
+                                .Where(orders => (orders.Description.Contains(search) || orders.Service.Name.Contains(search)))
+                                .ToList();
+            }
+            if (sortby != null)
+            {
+
+
+                if (direction == "DESC" && sortby == "customerName")
+                {
+                    filtered = filtered
+                               .OrderByDescending(l => l.Customer.Name)
+                               .ToList();
+                }
+                else if (sortby == "customerName")
+                {
+                    filtered = filtered
+                               .OrderBy(l => l.Customer.Name)
+                               .ToList();
+                }
+                else if (direction == "DESC" && sortby == "orderDate")
+                {
+                    filtered = filtered
+                               .OrderByDescending(l => l.CreatedAt)
+                               .ToList();
+                }
+                else if (sortby == "orderDate")
+                {
+                    filtered = filtered
+                               .OrderBy(l => l.CreatedAt)
+                               .ToList();
+                }
+                else if (direction == "DESC" && sortby == "serviceName")
+                {
+                    filtered = filtered
+                               .OrderByDescending(l => l.Service.Name)
+                               .ToList();
+                }
+                else if (sortby == "serviceName")
+                {
+                    filtered = filtered
+                               .OrderBy(l => l.Service.Name)
+                               .ToList();
+                }
+            }
             return filtered;
         }
     }

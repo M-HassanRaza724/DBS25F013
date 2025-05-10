@@ -139,7 +139,7 @@
             this.customerNameToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.customerNameToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Add;
             this.customerNameToolStripMenuItem.Name = "customerNameToolStripMenuItem";
-            this.customerNameToolStripMenuItem.Size = new System.Drawing.Size(155, 30);
+            this.customerNameToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
             this.customerNameToolStripMenuItem.Text = "Add Service";
             this.customerNameToolStripMenuItem.Click += new System.EventHandler(this.customerNameToolStripMenuItem_Click);
             // 
@@ -149,7 +149,7 @@
             this.userNameToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.userNameToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Edit;
             this.userNameToolStripMenuItem.Name = "userNameToolStripMenuItem";
-            this.userNameToolStripMenuItem.Size = new System.Drawing.Size(155, 30);
+            this.userNameToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
             this.userNameToolStripMenuItem.Text = "Edit Service";
             // 
             // deleteServiceToolStripMenuItem
@@ -158,7 +158,7 @@
             this.deleteServiceToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.deleteServiceToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Trash;
             this.deleteServiceToolStripMenuItem.Name = "deleteServiceToolStripMenuItem";
-            this.deleteServiceToolStripMenuItem.Size = new System.Drawing.Size(155, 30);
+            this.deleteServiceToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
             this.deleteServiceToolStripMenuItem.Text = "Delete Service";
             this.deleteServiceToolStripMenuItem.Click += new System.EventHandler(this.deleteServiceToolStripMenuItem_Click);
             // 

@@ -114,5 +114,20 @@ namespace SoftwareFirmManagement.DL
 
         public static List<Customer> GetAllCustomers()
         { return null; }
+
+        public static Customer GetCustomerById(int id)
+        {
+            foreach (var user in UserDL.allUsers)
+            {
+                if (user is Customer e)
+                {
+                    if (e.CustomerId == id)
+                    {
+                        return e;
+                    }
+                }
+            }
+            return null;
+        }
     }
 }

@@ -1,15 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SoftwareFirmManagement.BL;
+using SoftwareFirmManagement.DL;
+
 
 namespace SoftwareFirmManagement.DL
 {
     public class EmployeeDL
     {
+        public static List<Employee> GetAllEmployees(string search = null, string sortby = null, string direction = null)
+        {
+            List<Employee> employees = new List<Employee>();
+            try
+            {
+                foreach (User user in UserDL.allUsers)
+                {
+                    if (user is Employee employee)
+                    {
+                        employees.Add(employee);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return employees;
+        }
         public static List<Employee> GetOnlyUsersFromDatabase()
         {
             try
@@ -86,5 +108,19 @@ namespace SoftwareFirmManagement.DL
             }
         }
 
+        public static Employee GetEmployeeById(int id)
+        {
+            foreach (var user in UserDL.allUsers)
+            {
+                if(user is Employee e)
+                {
+                    if(e.EmployeeId == id)
+                    {
+                        return e;
+                    }
+                }
+            }
+            return null;
+        }
     }
 }

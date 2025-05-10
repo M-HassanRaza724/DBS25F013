@@ -55,6 +55,27 @@ C:\##Semester 2\ClonedFromGitHubDesktop\DBS25F013\Source\SoftwareFirmManagement\
 C:\##Semester 2\ClonedFromGitHubDesktop\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.MainForm.resources
 C:\##Semester 2\ClonedFromGitHubDesktop\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.TextBoxWithPlaceHolder.resources
 C:\##Semester 2\ClonedFromGitHubDesktop\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.UserCredentials.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.csproj.AssemblyReference.cache
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.AddUpdateCust.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.CustomerDisplay.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.CustomerManagement.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.DemoForm.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.EmployeeManagement.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.EmployeeDisplay.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.MainForm.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.Properties.Resources.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.Header.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.OrderDisplay.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.OrderManagement.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.Resize.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.ServiceDisplay.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.ServiceManagement.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.SidePanel.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.TextBoxWithPlaceHolder.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.UserManagement.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.UserCredentials.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.csproj.GenerateResource.cache
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.csproj.CoreCompileInputs.cache
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\SoftwareFirmManagement.exe.config
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\SoftwareFirmManagement.exe
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\SoftwareFirmManagement.pdb
@@ -100,28 +121,7 @@ E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\bin\D
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.Numerics.Vectors.xml
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.Threading.Tasks.Extensions.xml
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.csproj.AssemblyReference.cache
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.AddUpdateCust.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.CustomerManagement.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.DemoForm.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.EmployeeManagement.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.MainForm.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.Properties.Resources.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.Header.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.OrderDetails.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.OrderDisplay.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.OrderManagement.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.Resize.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.ServiceDisplay.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.ServiceManagement.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.SidePanel.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.TextBoxWithPlaceHolder.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.UserManagement.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.UserCredentials.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.csproj.GenerateResource.cache
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.csproj.CoreCompileInputs.cache
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\Software.768A07E0.Up2Date
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.exe
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.pdb
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.CustomerDisplay.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.EmployeeDisplay.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.OrderDetailsForm.resources

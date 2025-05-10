@@ -185,11 +185,11 @@
     <Compile Include="UI\Header.Designer.cs">
       <DependentUpon>Header.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\OrderDetails.cs">
+    <Compile Include="UI\OrderDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\OrderDetails.Designer.cs">
-      <DependentUpon>OrderDetails.cs</DependentUpon>
+    <Compile Include="UI\OrderDetailsForm.Designer.cs">
+      <DependentUpon>OrderDetailsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\OrderDisplay.cs">
       <SubType>UserControl</SubType>
@@ -279,8 +279,8 @@
     <EmbeddedResource Include="UI\Header.resx">
       <DependentUpon>Header.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\OrderDetails.resx">
-      <DependentUpon>OrderDetails.cs</DependentUpon>
+    <EmbeddedResource Include="UI\OrderDetailsForm.resx">
+      <DependentUpon>OrderDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\OrderDisplay.resx">
       <DependentUpon>OrderDisplay.cs</DependentUpon>
@@ -423,8 +423,10 @@
     <None Include="Resources\Edit.png" />
     <Content Include="Resources\Full Screen.png" />
     <Content Include="Resources\Horizontal Line.png" />
+    <None Include="Resources\List.png" />
     <Content Include="Resources\Minimize Window%28colored%29.png" />
     <Content Include="Resources\Normal Screen.png" />
+    <None Include="Resources\Search More.png" />
     <Content Include="Resources\Search.png" />
     <None Include="Resources\Trash.png" />
     <None Include="Resources\Service.png" />

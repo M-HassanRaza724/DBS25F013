@@ -173,6 +173,16 @@ namespace SoftwareFirmManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap List {
+            get {
+                object obj = ResourceManager.GetObject("List", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Minimize_Window_colored_ {
             get {
                 object obj = ResourceManager.GetObject("Minimize Window(colored)", resourceCulture);
@@ -196,6 +206,16 @@ namespace SoftwareFirmManagement.Properties {
         internal static System.Drawing.Bitmap Search {
             get {
                 object obj = ResourceManager.GetObject("Search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Search_More {
+            get {
+                object obj = ResourceManager.GetObject("Search More", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

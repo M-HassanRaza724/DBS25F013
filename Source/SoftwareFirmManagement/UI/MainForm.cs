@@ -91,7 +91,7 @@ namespace SoftwareFirmManagement.UI
 
         //}
 
-        public void ShowFormInPanel(Form formToShow)
+        public void DeleteExistingChild()
         {
             // Clear existing content
             if (pnl_main.Controls.Count > 0)
@@ -100,6 +100,20 @@ namespace SoftwareFirmManagement.UI
                 oldForm?.Close(); // Properly dispose old form
                 pnl_main.Controls.Clear();
             }
+        }
+        public void HideForm()
+        {
+            // hide existing content
+            if (pnl_main.Controls.Count > 0)
+            {
+                var oldForm = pnl_main.Controls[0] as Form;
+                oldForm?.Hide(); // Properly dispose old form
+                pnl_main.Controls.Clear();
+            }
+        }
+        public void ShowFormInPanel(Form formToShow)
+        {
+        
 
             // Prepare new form
             formToShow.TopLevel = false;
@@ -124,27 +138,16 @@ namespace SoftwareFirmManagement.UI
             };
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_user_management_Click(object sender, EventArgs e)
         {
             if (pnl_user_management.Height == 50)
             {
                 pnl_user_management.Height = 200;
-                pnl_services.Location = new System.Drawing.Point(0, 300);
             }
             else
             {
                 pnl_user_management.Height = 50;
-                pnl_services.Location = new System.Drawing.Point(0, 150);
             }
         }
 
@@ -157,6 +160,7 @@ namespace SoftwareFirmManagement.UI
                 pnl_menu.Width = 230;
                 pnl_user_management.Width = 230;
                 pnl_services.Width = 230;
+                pnl_order_management.Width = 230;
 
             }
             else
@@ -167,38 +171,35 @@ namespace SoftwareFirmManagement.UI
                 pnl_menu.Width = 60;
                 pnl_user_management.Width = 60;
                 pnl_services.Width = 60;
+                pnl_order_management.Width = 60;
 
             }
         }
 
         private void btn_customer_management_Click(object sender, EventArgs e)
         {
+            DeleteExistingChild();
             ShowFormInPanel(new CustomerManagement());
         }
 
-        private void label1_Click(object sender, EventArgs e)
+         private void btn_employee_management_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void btn_employee_management_Click(object sender, EventArgs e)
-        {
+            DeleteExistingChild();
             ShowFormInPanel(new EmployeeManagement());
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btn_services_Click(object sender, EventArgs e)
         {
+            DeleteExistingChild();
             ShowFormInPanel(new ServiceManagement());
+        }
+
+        private void btn_order_management_Click(object sender, EventArgs e)
+        {
+            OrderManagement orderManagement = new OrderManagement();
+            ShowFormInPanel(orderManagement);
+            orderManagement.ParentForm = this;
+
         }
     }
 }

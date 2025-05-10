@@ -63,10 +63,11 @@ namespace SoftwareFirmManagement.DL
                     newEmp.Role = role;
 
                     // getting salary if exists
+                    
                     string salaryQuery = $"CALL sp_get_employee_salary({newEmp.EmployeeId});";
                     var salaryData = DatabaseHelper.Instance.GetData(salaryQuery);
                     salaryData.Read();
-                    if (!salaryData.IsDBNull(0))
+                    if (salaryData.HasRows)
                     {
                         int salaryId = salaryData.GetInt32(0);
                         DateTime payDate = DateTime.Parse(salaryData[2].ToString()).Date;

@@ -18,10 +18,12 @@ namespace SoftwareFirmManagement
         [STAThread]
         static void Main()
         {
+            //MessageBox.Show($"{new Customer(-1, "username", "email", "passs", -1, -1, "Name")}");
             LookupDL.LoadAllLookups();
-            //UserDL.LoadAllUsers();
+            UserDL.LoadAllUsers();
             ServiceDL.LoadAllServices();
-
+            
+            OrderDL.GetAllOrdersFromDatabase();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());

@@ -16,13 +16,14 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
+                allLookups.Clear();
                 string query = "SELECT * FROM lookups;";
                 var data = DatabaseHelper.Instance.GetData(query);
                 while (data.Read())
                 {
                     int lookupId = data.IsDBNull(0) ? 0 : data.GetInt32(0);
-                    string keyGroup = data[1].ToString();
-                    string value = data[2].ToString();
+                    string keyGroup = data.GetString(1);
+                    string value = data.GetString(2);
                     allLookups.Add(new Lookup(lookupId, keyGroup, value));
                 }
                 
@@ -36,13 +37,13 @@ namespace SoftwareFirmManagement.DL
 
         public static int GetLookupId(string keyGroup, string value)
         {
-            //int lookupId = LookupDL.allLookups
-            //               .Where(l => l.KeyGroup == keyGroup && l.Value == value)
-            //               .Select(l => l.LookupId)
-            //               .FirstOrDefault();
-            string query = $"CALL sp_get_lookup_id('{keyGroup}', '{value}');";
-            var data = DatabaseHelper.Instance.GetData(query);
-            int lookupId = data.GetInt32(0);
+            int lookupId = LookupDL.allLookups
+                           .Where(l => l.KeyGroup == keyGroup && l.Value == value)
+                           .Select(l => l.LookupId)
+                           .FirstOrDefault();
+            //string query = $"CALL sp_get_lookup_id('{keyGroup}', '{value}');";
+            //var data = DatabaseHelper.Instance.GetData(query);
+            //int lookupId = data.GetInt32(0);
             return lookupId;
         }
         public static string GetLookupValue(string keyGroup, int lookupId)

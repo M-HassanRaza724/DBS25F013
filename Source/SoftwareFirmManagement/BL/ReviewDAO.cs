@@ -113,7 +113,7 @@ namespace SoftwareFirmManagement.BL
             {
                 throw new Exception("Error in deleting review", e);
             }
-            return false;
+            //return false;
         }
     }
 }

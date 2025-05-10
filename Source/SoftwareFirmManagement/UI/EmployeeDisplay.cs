@@ -14,7 +14,8 @@ namespace SoftwareFirmManagement.UI
   
     public partial class EmployeeDisplay: UserControl
     {
-        Employee employee = new Employee()
+        Employee employee = new Employee();
+        Employee demoEmployee = new Employee()
         {
             Name = "Employee",
             Email = "employee@gmail.com",
@@ -31,8 +32,8 @@ namespace SoftwareFirmManagement.UI
         {
             get { return employee; }
             set
-            {
-                employee = value;
+            { 
+                employee = value == null ?  demoEmployee : value;
                 lbl_full_name_text.Text = employee.Name;
                 lbl_email_text.Text = employee.Email;
                 lbl_designation_text.Text = employee.Designation;

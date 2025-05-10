@@ -31,7 +31,7 @@
             this.dbx_order_display = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.lbl_order_date_text = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_order_date = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lbl_status_text = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_status = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_platform_text = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_order_id_text = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -58,7 +58,7 @@
             // 
             this.dbx_order_display.Panel.Controls.Add(this.lbl_order_date_text);
             this.dbx_order_display.Panel.Controls.Add(this.lbl_order_date);
-            this.dbx_order_display.Panel.Controls.Add(this.kryptonLabel1);
+            this.dbx_order_display.Panel.Controls.Add(this.lbl_status_text);
             this.dbx_order_display.Panel.Controls.Add(this.lbl_status);
             this.dbx_order_display.Panel.Controls.Add(this.lbl_platform_text);
             this.dbx_order_display.Panel.Controls.Add(this.lbl_order_id_text);
@@ -92,15 +92,15 @@
             this.lbl_order_date.TabIndex = 19;
             this.lbl_order_date.Values.Text = "OrderDate";
             // 
-            // kryptonLabel1
+            // lbl_status_text
             // 
-            this.kryptonLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.kryptonLabel1.Location = new System.Drawing.Point(594, 35);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(92, 28);
-            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.TabIndex = 18;
-            this.kryptonLabel1.Values.Text = "Completed";
+            this.lbl_status_text.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_status_text.Location = new System.Drawing.Point(594, 35);
+            this.lbl_status_text.Name = "lbl_status_text";
+            this.lbl_status_text.Size = new System.Drawing.Size(92, 28);
+            this.lbl_status_text.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_status_text.TabIndex = 18;
+            this.lbl_status_text.Values.Text = "Completed";
             // 
             // lbl_status
             // 
@@ -227,7 +227,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_platform;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_order_id;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_status;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_status_text;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_order_date_text;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_order_date;
     }

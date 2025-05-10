@@ -3,20 +3,15 @@
   "WorkspaceRootPath": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|e:\\cs\\2ndsemester\\dbprojects\\final\\dbs25f013\\source\\softwarefirmmanagement\\ui\\orderdetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\ui\\orderdetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\orderdetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|e:\\cs\\2ndsemester\\dbprojects\\final\\dbs25f013\\source\\softwarefirmmanagement\\ui\\orderdetailsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\orderdetailsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\ui\\ordermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\ordermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hassa\\AppData\\Local\\Temp\\.vsdbgsrc\\83577681ba4d2bc32d6857405884ecea530888017b6e300be1dcbf5782833fd0\\VisualControlBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hassa\\AppData\\Local\\Temp\\.vsdbgsrc\\92080e3621dcbc28515e02185c27b215ca7850783a19b24fad250b2e4a8974d9\\KryptonButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -30,6 +25,22 @@
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:dl\\orderdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\ui\\orderdetailsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\orderdetailsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\bl\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:bl\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\ui\\ordermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\ordermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|e:\\cs\\2ndsemester\\dbprojects\\final\\dbs25f013\\source\\softwarefirmmanagement\\ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\dl\\lookupdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:dl\\lookupdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -37,22 +48,22 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hassa\\AppData\\Local\\Temp\\.vsdbgsrc\\2f7ca344f34eeee193e13581fee0b3a793faad414a81fa3ba4c422ab04d7447f\\ScreenObscurer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|e:\\cs\\2ndsemester\\dbprojects\\final\\dbs25f013\\source\\softwarefirmmanagement\\ui\\demoform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\ui\\demoform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\demoform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|e:\\cs\\2ndsemester\\dbprojects\\final\\dbs25f013\\source\\softwarefirmmanagement\\ui\\demoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\ui\\demoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\demoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|e:\\cs\\2ndsemester\\dbprojects\\final\\dbs25f013\\source\\softwarefirmmanagement\\ui\\orderdetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\ui\\orderdetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\orderdetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hassa\\AppData\\Local\\Temp\\.vsdbgsrc\\f52cb5c95ad2fe53dd5bf3fd0eafb5360142a3617494738035df8252545b9c65\\KryptonGroupBox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|e:\\cs\\2ndsemester\\dbprojects\\final\\dbs25f013\\source\\softwarefirmmanagement\\bl\\lookup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\bl\\lookup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:bl\\lookup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -60,7 +71,7 @@
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\orderdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|e:\\cs\\2ndsemester\\dbprojects\\final\\dbs25f013\\source\\softwarefirmmanagement\\ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -80,7 +91,7 @@
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\orderdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|e:\\cs\\2ndsemester\\dbprojects\\final\\dbs25f013\\source\\softwarefirmmanagement\\ui\\orderdisplay.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\ui\\orderdisplay.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\orderdisplay.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -90,10 +101,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\ui\\customerdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\customerdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\dl\\customerdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -144,10 +151,6 @@
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:bl\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\bl\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:bl\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
@@ -175,7 +178,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "DemoForm.cs [Design]",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\DemoForm.cs",
               "RelativeDocumentMoniker": "UI\\DemoForm.cs",
@@ -183,12 +186,11 @@
               "RelativeToolTip": "UI\\DemoForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T06:40:53.771Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 9,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\MainForm.cs",
               "RelativeDocumentMoniker": "UI\\MainForm.cs",
@@ -201,13 +203,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "OrderDTO.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\BL\\OrderDTO.cs",
               "RelativeDocumentMoniker": "BL\\OrderDTO.cs",
               "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\BL\\OrderDTO.cs",
               "RelativeToolTip": "BL\\OrderDTO.cs",
-              "ViewState": "AgIAANoAAAAAAAAAAAApwOIAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAANkAAAAAAAAAAAAIwOIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-06T14:30:56.252Z",
               "IsPinned": true,
@@ -215,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "EmployeeDisplay.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\EmployeeDisplay.cs",
               "RelativeDocumentMoniker": "UI\\EmployeeDisplay.cs",
@@ -228,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "OrderManagement.cs [Design]",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\OrderManagement.cs",
               "RelativeDocumentMoniker": "UI\\OrderManagement.cs",
@@ -241,13 +243,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "OrderManagement.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\OrderManagement.cs",
               "RelativeDocumentMoniker": "UI\\OrderManagement.cs",
               "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\OrderManagement.cs",
               "RelativeToolTip": "UI\\OrderManagement.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAMwEkAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAswEkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T15:04:09.327Z",
               "IsPinned": true,
@@ -255,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "OrderManagement.Designer.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\OrderManagement.Designer.cs",
               "RelativeDocumentMoniker": "UI\\OrderManagement.Designer.cs",
@@ -269,7 +271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "OrderDisplay.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\OrderDisplay.cs",
               "RelativeDocumentMoniker": "UI\\OrderDisplay.cs",
@@ -278,12 +280,11 @@
               "ViewState": "AgIAACMAAAAAAAAAAAAuwCoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-09T05:34:44.956Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "CustomerManagement.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\CustomerManagement.cs",
               "RelativeDocumentMoniker": "UI\\CustomerManagement.cs",
@@ -296,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "OrderDisplay.cs [Design]",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\OrderDisplay.cs",
               "RelativeDocumentMoniker": "UI\\OrderDisplay.cs",
@@ -304,12 +305,11 @@
               "RelativeToolTip": "UI\\OrderDisplay.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-09T05:34:42.052Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "OrderDetailsForm.cs [Design]",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\OrderDetailsForm.cs",
               "RelativeDocumentMoniker": "UI\\OrderDetailsForm.cs",
@@ -328,7 +328,7 @@
               "RelativeDocumentMoniker": "UI\\OrderDetailsForm.cs",
               "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\OrderDetailsForm.cs",
               "RelativeToolTip": "UI\\OrderDetailsForm.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAowEAAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAIwHoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T07:25:57.799Z",
               "IsPinned": true,
@@ -336,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "OrderDetailsForm.Designer.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\OrderDetailsForm.Designer.cs",
               "RelativeDocumentMoniker": "UI\\OrderDetailsForm.Designer.cs",
@@ -350,42 +350,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "KryptonButton.cs",
-              "DocumentMoniker": "C:\\Users\\hassa\\AppData\\Local\\Temp\\.vsdbgsrc\\92080e3621dcbc28515e02185c27b215ca7850783a19b24fad250b2e4a8974d9\\KryptonButton.cs",
-              "ToolTip": "C:\\Users\\hassa\\AppData\\Local\\Temp\\.vsdbgsrc\\92080e3621dcbc28515e02185c27b215ca7850783a19b24fad250b2e4a8974d9\\KryptonButton.cs [Read Only]",
-              "ViewState": "AgIAABkCAAAAAAAAAAApwCECAAACAAAAAQAAAA==",
+              "DocumentIndex": 2,
+              "Title": "VisualControlBase.cs",
+              "DocumentMoniker": "C:\\Users\\hassa\\AppData\\Local\\Temp\\.vsdbgsrc\\83577681ba4d2bc32d6857405884ecea530888017b6e300be1dcbf5782833fd0\\VisualControlBase.cs",
+              "ToolTip": "C:\\Users\\hassa\\AppData\\Local\\Temp\\.vsdbgsrc\\83577681ba4d2bc32d6857405884ecea530888017b6e300be1dcbf5782833fd0\\VisualControlBase.cs [Read Only]",
+              "ViewState": "AgIAANwCAAAAAAAAAAAIwOUCAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T10:24:25.924Z",
+              "WhenOpened": "2025-05-10T10:54:26.585Z",
               "EditorCaption": " [Read Only]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "CustomerDL.cs",
-              "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\CustomerDL.cs",
-              "RelativeDocumentMoniker": "DL\\CustomerDL.cs",
-              "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\CustomerDL.cs",
-              "RelativeToolTip": "DL\\CustomerDL.cs",
-              "ViewState": "AgIAAHoAAAAAAAAAAADgv4IAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "KryptonButton.cs",
+              "DocumentMoniker": "C:\\Users\\hassa\\AppData\\Local\\Temp\\.vsdbgsrc\\92080e3621dcbc28515e02185c27b215ca7850783a19b24fad250b2e4a8974d9\\KryptonButton.cs",
+              "ToolTip": "C:\\Users\\hassa\\AppData\\Local\\Temp\\.vsdbgsrc\\92080e3621dcbc28515e02185c27b215ca7850783a19b24fad250b2e4a8974d9\\KryptonButton.cs",
+              "ViewState": "AgIAABgCAAAAAAAAAAAIwCECAAACAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T05:53:08.345Z"
+              "WhenOpened": "2025-05-10T10:24:25.924Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "CustomerDisplay.cs [Design]",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\CustomerDisplay.cs",
               "RelativeDocumentMoniker": "UI\\CustomerDisplay.cs",
               "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\CustomerDisplay.cs [Design]",
               "RelativeToolTip": "UI\\CustomerDisplay.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T05:24:37.339Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-10T05:24:37.339Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "UserDL.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\UserDL.cs",
               "RelativeDocumentMoniker": "DL\\UserDL.cs",
@@ -393,38 +391,37 @@
               "RelativeToolTip": "DL\\UserDL.cs",
               "ViewState": "AgIAADkAAAAAAAAAAIAwwEQAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T05:55:33.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T05:55:33.477Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAowBwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-09T05:55:15.141Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "OrderDL.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\OrderDL.cs",
               "RelativeDocumentMoniker": "DL\\OrderDL.cs",
               "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\OrderDL.cs",
               "RelativeToolTip": "DL\\OrderDL.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAYwF8AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAIwGkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-09T07:02:22.968Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "ServiceManagement.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\ServiceManagement.cs",
               "RelativeDocumentMoniker": "UI\\ServiceManagement.cs",
@@ -437,6 +434,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\BL\\Employee.cs",
+              "RelativeDocumentMoniker": "BL\\Employee.cs",
+              "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\BL\\Employee.cs",
+              "RelativeToolTip": "BL\\Employee.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAADcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T13:57:26.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CustomerDL.cs",
+              "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\CustomerDL.cs",
+              "RelativeDocumentMoniker": "DL\\CustomerDL.cs",
+              "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\CustomerDL.cs",
+              "RelativeToolTip": "DL\\CustomerDL.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAADgv4IAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T05:53:08.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "LookupDL.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\LookupDL.cs",
               "RelativeDocumentMoniker": "DL\\LookupDL.cs",
@@ -444,12 +466,11 @@
               "RelativeToolTip": "DL\\LookupDL.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAhwC8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T03:43:39.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T03:43:39.108Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "DemoForm.Designer.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\DemoForm.Designer.cs",
               "RelativeDocumentMoniker": "UI\\DemoForm.Designer.cs",
@@ -457,12 +478,11 @@
               "RelativeToolTip": "UI\\DemoForm.Designer.cs",
               "ViewState": "AgIAAL4BAAAAAAAAAAAWwL4BAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T09:36:53.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T09:36:53.315Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "ScreenObscurer.cs",
               "DocumentMoniker": "C:\\Users\\hassa\\AppData\\Local\\Temp\\.vsdbgsrc\\2f7ca344f34eeee193e13581fee0b3a793faad414a81fa3ba4c422ab04d7447f\\ScreenObscurer.cs",
               "ToolTip": "C:\\Users\\hassa\\AppData\\Local\\Temp\\.vsdbgsrc\\2f7ca344f34eeee193e13581fee0b3a793faad414a81fa3ba4c422ab04d7447f\\ScreenObscurer.cs [Read Only]",
@@ -473,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "Lookup.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\BL\\Lookup.cs",
               "RelativeDocumentMoniker": "BL\\Lookup.cs",
@@ -481,12 +501,11 @@
               "RelativeToolTip": "BL\\Lookup.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAA9wBAAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T09:17:56.497Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T09:17:56.497Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "KryptonGroupBox.cs",
               "DocumentMoniker": "C:\\Users\\hassa\\AppData\\Local\\Temp\\.vsdbgsrc\\f52cb5c95ad2fe53dd5bf3fd0eafb5360142a3617494738035df8252545b9c65\\KryptonGroupBox.cs",
               "ToolTip": "C:\\Users\\hassa\\AppData\\Local\\Temp\\.vsdbgsrc\\f52cb5c95ad2fe53dd5bf3fd0eafb5360142a3617494738035df8252545b9c65\\KryptonGroupBox.cs [Read Only]",
@@ -497,7 +516,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "MainForm.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\MainForm.cs",
               "RelativeDocumentMoniker": "UI\\MainForm.cs",
@@ -505,12 +524,11 @@
               "RelativeToolTip": "UI\\MainForm.cs",
               "ViewState": "AgIAAGUAAAAAAAAAAAAmwGcAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T15:11:03.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-07T15:11:03.553Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "OrderDisplay.Designer.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\OrderDisplay.Designer.cs",
               "RelativeDocumentMoniker": "UI\\OrderDisplay.Designer.cs",
@@ -518,12 +536,11 @@
               "RelativeToolTip": "UI\\OrderDisplay.Designer.cs",
               "ViewState": "AgIAAFcAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T07:21:36.863Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T07:21:36.863Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "CustomerDisplay.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\CustomerDisplay.cs",
               "RelativeDocumentMoniker": "UI\\CustomerDisplay.cs",
@@ -531,12 +548,11 @@
               "RelativeToolTip": "UI\\CustomerDisplay.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T05:27:56.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T05:27:56.76Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "EmployeeDL.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\EmployeeDL.cs",
               "RelativeDocumentMoniker": "DL\\EmployeeDL.cs",
@@ -548,7 +564,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "ServiceManagement.cs [Design]",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\ServiceManagement.cs",
               "RelativeDocumentMoniker": "UI\\ServiceManagement.cs",
@@ -559,7 +575,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "EmployeeDisplay.cs [Design]",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\EmployeeDisplay.cs",
               "RelativeDocumentMoniker": "UI\\EmployeeDisplay.cs",
@@ -570,7 +586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "DatabaseHelper.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DatabaseHelper.cs",
               "RelativeDocumentMoniker": "DatabaseHelper.cs",
@@ -582,7 +598,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "ReviewDAO.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\BL\\ReviewDAO.cs",
               "RelativeDocumentMoniker": "BL\\ReviewDAO.cs",
@@ -594,7 +610,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "CustomerManagement.cs [Design]",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\CustomerManagement.cs",
               "RelativeDocumentMoniker": "UI\\CustomerManagement.cs",
@@ -605,7 +621,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "ServiceDTO.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\BL\\ServiceDTO.cs",
               "RelativeDocumentMoniker": "BL\\ServiceDTO.cs",
@@ -617,19 +633,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\BL\\Employee.cs",
-              "RelativeDocumentMoniker": "BL\\Employee.cs",
-              "ToolTip": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\BL\\Employee.cs",
-              "RelativeToolTip": "BL\\Employee.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAAwAsAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T13:57:26.204Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "Customer.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\BL\\Customer.cs",
               "RelativeDocumentMoniker": "BL\\Customer.cs",
@@ -641,7 +645,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "UI\\MainForm.Designer.cs",
@@ -649,11 +653,12 @@
               "RelativeToolTip": "UI\\MainForm.Designer.cs",
               "ViewState": "AgIAAEADAAAAAAAAAAApwNoDAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T06:53:30.387Z"
+              "WhenOpened": "2025-05-09T06:53:30.387Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "packages.config",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\packages.config",
               "RelativeDocumentMoniker": "packages.config",
@@ -665,7 +670,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "EmployeeManagement.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\UI\\EmployeeManagement.cs",
               "RelativeDocumentMoniker": "UI\\EmployeeManagement.cs",
@@ -677,7 +682,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "AdminDL.cs",
               "DocumentMoniker": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\DL\\AdminDL.cs",
               "RelativeDocumentMoniker": "DL\\AdminDL.cs",

@@ -125,7 +125,7 @@ namespace SoftwareFirmManagement.BL
         public Employee Employee
         {
             get { return employee; }
-            set { employee = value ?? throw new ArgumentNullException("Employee cant be null"); }
+            set { employee = value; }
         }
         public Customer Customer
         {

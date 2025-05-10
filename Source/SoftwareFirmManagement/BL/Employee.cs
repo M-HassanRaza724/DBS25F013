@@ -44,6 +44,16 @@ namespace SoftwareFirmManagement.BL
             this.designationId = designationId;
             salary = new Salary();
         }
+
+        public static Employee defaultEmployee = new Employee()
+        {
+            employeeId = -1,
+            name = "null",
+            phone = "null",
+            joinedDate = DateTime.MinValue,
+            designationId = -1,
+            designation = "null",
+        };
         public Employee()
         { } 
 

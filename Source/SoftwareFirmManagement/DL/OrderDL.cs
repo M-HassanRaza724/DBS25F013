@@ -82,9 +82,19 @@ namespace SoftwareFirmManagement.DL
 
         public static bool UpdateOrderInDatabase(OrderDTO order)
         {
+            string query;
+            if(order.Employee == null)
+            {
+                query = $"call sp_update_order({order.OrderId}, null, {order.Customer.CustomerId}, {order.StatusId}, {order.Service.ServiceId},'{order.Description}', {order.InitialBudgetId}, {order.PlatformId});";
+
+            }
+            else
+            {
+                query = $"call sp_update_order({order.OrderId}, {order.Employee.EmployeeId}, {order.Customer.CustomerId}, {order.StatusId}, {order.Service.ServiceId},'{order.Description}', {order.InitialBudgetId}, {order.PlatformId});";
+            }
             try
             {
-                string query = $"call sp_update_order({order.OrderId}, {order.Employee.EmployeeId}, {order.Customer.CustomerId}, {order.StatusId}, {order.Service.ServiceId},'{order.Description}', {order.InitialBudgetId}, {order.PlatformId});";
+
                 DatabaseHelper.Instance.ExecuteNonQuery(query);
                 UpdateOrderInList(order);
                 return true;

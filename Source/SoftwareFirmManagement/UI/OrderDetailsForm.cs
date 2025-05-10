@@ -85,7 +85,16 @@ namespace SoftwareFirmManagement.UI
                 //ServiceDTO service, int initialBudgetId, int platformId, string description)
                 int statusId = LookupDL.GetLookupId("status", cmb_status.Text);
                 int platformId = LookupDL.GetLookupId("platform", cmb_platform.Text);
-                Employee emp = EmployeeDL.GetAllEmployees()[cmb_platform.SelectedIndex];
+                Employee emp;
+                if (cmb_status.Text == "Rejected" || cmb_status.Text == "Pending")
+                {
+                    emp = null;
+                }
+                else
+                {
+                    emp = EmployeeDL.GetAllEmployees()[cmb_platform.SelectedIndex];
+
+                }
                 ServiceDTO ser = ServiceDL.allServices[cmb_service.SelectedIndex];
                 OrderDTO order = new OrderDTO(
                         orderDisplay.OrderDetails.OrderId,
@@ -98,11 +107,21 @@ namespace SoftwareFirmManagement.UI
                         orderDisplay.OrderDetails.Description
                     );
                 OrderDTO.UpdateOrder(order);
-                orderDisplay.OrderDetails.Employee = emp;
                 orderDisplay.OrderDetails.Status = cmb_status.Text;
                 orderDisplay.OrderDetails.Service = ser;
                 orderDisplay.OrderDetails.Platform = cmb_platform.Text;
-                employeeDisplay.Employee = emp;
+                if(emp != null)
+                {
+                    employeeDisplay.Visible = true;
+                    employeeDisplay.Employee = emp;
+                    orderDisplay.OrderDetails.Employee = emp;
+                }
+                else
+                {
+                    employeeDisplay.Employee = Employee.defaultEmployee;
+
+                    employeeDisplay.Visible = false;
+                }
             }
             catch (Exception ex)
             {

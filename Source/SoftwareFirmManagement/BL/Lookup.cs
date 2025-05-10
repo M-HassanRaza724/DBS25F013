@@ -12,6 +12,11 @@ namespace SoftwareFirmManagement.BL
         private string keyGroup;
         private string value;
 
+        public override string ToString()
+        {
+            return value;
+        }
+
         public Lookup(int lookupId, string keyGroup, string value)
         {
             this.lookupId = lookupId;

@@ -63,6 +63,10 @@ namespace SoftwareFirmManagement.BL
             subservice = new SubServiceDAO(); // composition
         }
 
+        public override string ToString()
+        {
+            return Name;
+        }
 
         public void AddSubservice(string description)
         {

@@ -14,7 +14,10 @@ namespace SoftwareFirmManagement.BL
         private int customerId;
         private string name;
 
-
+        public override string ToString()
+        {
+            return Name;
+        }
         public Customer(int userId, string username, string email, string password, int roleId, int customerId, string name) : base(userId, username, email, password, roleId)
         {
             this.customerId = customerId;

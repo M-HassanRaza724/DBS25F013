@@ -196,6 +196,7 @@ namespace SoftwareFirmManagement.UI
 
         private void btn_order_management_Click(object sender, EventArgs e)
         {
+            DeleteExistingChild();
             OrderManagement orderManagement = new OrderManagement();
             ShowFormInPanel(orderManagement);
             orderManagement.ParentForm = this;

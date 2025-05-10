@@ -24,7 +24,7 @@ namespace SoftwareFirmManagement
             ServiceDL.LoadAllServices();
             
             OrderDL.GetAllOrdersFromDatabase();
-            SalaryDL.LoadAllSalaries();
+            //SalaryDL.LoadAllSalaries();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());

@@ -49,6 +49,7 @@ namespace SoftwareFirmManagement.BL
         public Salary(int salaryId, int employeeId, DateTime date, double amount, double bonus)
         {
             this.salaryId = salaryId;
+            this.employee = new Employee();
             this.employee.EmployeeId = employeeId;
             this.date = date;
             this.amount = amount;
@@ -66,6 +67,7 @@ namespace SoftwareFirmManagement.BL
 
         public Salary(int employeeId, DateTime date, double amount, double bonus)
         {
+            this.employee = new Employee();
             this.employee.EmployeeId = employeeId;
             this.date = date;
             this.amount = amount;

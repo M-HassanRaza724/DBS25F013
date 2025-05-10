@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|e:\\cs\\2ndsemester\\dbprojects\\final\\dbs25f013\\source\\softwarefirmmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -37,7 +37,7 @@
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\ordermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|e:\\cs\\2ndsemester\\dbprojects\\final\\dbs25f013\\source\\softwarefirmmanagement\\ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|E:\\CS\\2ndSemester\\DBProjects\\Final\\DBS25F013\\Source\\SoftwareFirmManagement\\ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{79D92463-5096-4DEA-91A2-6DCC7B4D09C6}|SoftwareFirmManagement.csproj|solutionrelative:ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -198,8 +198,7 @@
               "RelativeToolTip": "UI\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T12:16:30.334Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -212,8 +211,7 @@
               "ViewState": "AgIAANkAAAAAAAAAAAAIwNoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-06T14:30:56.252Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -238,8 +236,7 @@
               "RelativeToolTip": "UI\\OrderManagement.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T15:04:04.836Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -252,8 +249,7 @@
               "ViewState": "AgIAADgAAAAAAAAAAAAswEkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T15:04:09.327Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -266,8 +262,7 @@
               "ViewState": "AgIAABMAAAAAAAAAAAAswHsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T13:53:29.668Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -317,8 +312,7 @@
               "RelativeToolTip": "UI\\OrderDetailsForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T07:25:55.363Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -331,8 +325,7 @@
               "ViewState": "AgIAAGMAAAAAAAAAAAAIwGwAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T07:25:57.799Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -345,8 +338,7 @@
               "ViewState": "AgIAAK8BAAAAAAAAAAAWwLgBAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T08:01:48.564Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -367,8 +359,7 @@
               "ToolTip": "C:\\Users\\hassa\\AppData\\Local\\Temp\\.vsdbgsrc\\92080e3621dcbc28515e02185c27b215ca7850783a19b24fad250b2e4a8974d9\\KryptonButton.cs",
               "ViewState": "AgIAABgCAAAAAAAAAAAIwCECAAACAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T10:24:25.924Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T10:24:25.924Z"
             },
             {
               "$type": "Document",
@@ -416,8 +407,7 @@
               "RelativeToolTip": "DL\\OrderDL.cs",
               "ViewState": "AgIAAEoAAAAAAAAAAAAwwFMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T07:02:22.968Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T07:02:22.968Z"
             },
             {
               "$type": "Document",
@@ -441,8 +431,7 @@
               "RelativeToolTip": "BL\\Employee.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAAADcAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T13:57:26.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-07T13:57:26.204Z"
             },
             {
               "$type": "Document",
@@ -653,8 +642,7 @@
               "RelativeToolTip": "UI\\MainForm.Designer.cs",
               "ViewState": "AgIAAEADAAAAAAAAAAApwNoDAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T06:53:30.387Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T06:53:30.387Z"
             },
             {
               "$type": "Document",

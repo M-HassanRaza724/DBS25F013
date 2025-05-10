@@ -11,7 +11,7 @@ namespace SoftwareFirmManagement.BL
     public class Salary
     {
         private int salaryId;
-        private int employeeId;
+        private Employee employee;
         private DateTime date;
         private double amount;
         private double bonus;
@@ -21,10 +21,10 @@ namespace SoftwareFirmManagement.BL
             get {  return salaryId; }
             set { salaryId = value; }
         }
-        public int EmployeeId
+        public Employee Employee
         {
-            get { return employeeId; }
-            set { employeeId = value; }
+            get { return employee; }
+            set { employee = value; }
         }
         public DateTime Date
         {
@@ -49,7 +49,15 @@ namespace SoftwareFirmManagement.BL
         public Salary(int salaryId, int employeeId, DateTime date, double amount, double bonus)
         {
             this.salaryId = salaryId;
-            this.employeeId = employeeId;
+            this.employee.EmployeeId = employeeId;
+            this.date = date;
+            this.amount = amount;
+            this.bonus = bonus;
+        }
+        public Salary(int salaryId, Employee employee, DateTime date, double amount, double bonus)
+        {
+            this.salaryId = salaryId;
+            this.employee = employee;
             this.date = date;
             this.amount = amount;
             this.bonus = bonus;
@@ -58,12 +66,67 @@ namespace SoftwareFirmManagement.BL
 
         public Salary(int employeeId, DateTime date, double amount, double bonus)
         {
-            this.employeeId = employeeId;
+            this.employee.EmployeeId = employeeId;
             this.date = date;
             this.amount = amount;
             this.bonus = bonus;
         }
+        public Salary(Employee employee, DateTime date, double amount, double bonus)
+        {
+            this.employee = employee;
+            this.date = date;
+            this.amount = amount;
+            this.bonus = bonus;
+        }
+        public static List<Salary> GetSalarysByFilter(string search = null, string sortby = null, string direction = "ASC")
+        {
+            List<Salary> filtered = SalaryDL.allSalaries;
 
+            if (search == null && sortby == null)
+            {
+                return filtered
+                            .OfType<Salary>()
+                            .OrderByDescending(l => l.Date)
+                            .ToList();
+            }
+            if (search != null)
+            {
+                filtered = filtered
+                                .OfType<Salary>()
+                                .Where(salary => (salary.Employee.Name.Contains(search)))
+                                .ToList();
+            }
+            if (sortby != null)
+            {
+
+
+                if (direction == "DESC" && sortby == "date")
+                {
+                    filtered = filtered
+                               .OrderByDescending(l => l.Date)
+                               .ToList();
+                }
+                else if (sortby == "customerName")
+                {
+                    filtered = filtered
+                               .OrderBy(l => l.Date)
+                               .ToList();
+                }
+                else if (direction == "DESC" && sortby == "amount")
+                {
+                    filtered = filtered
+                               .OrderByDescending(l => l.Amount)
+                               .ToList();
+                }
+                else if (sortby == "serviceName")
+                {
+                    filtered = filtered
+                               .OrderBy(l => l.Amount)
+                               .ToList();
+                }
+            }
+            return filtered;
+        }
 
         public bool Add()
         {

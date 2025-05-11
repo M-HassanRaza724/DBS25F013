@@ -44,22 +44,25 @@ namespace SoftwareFirmManagement.UI
             this.btn_employee_management = new System.Windows.Forms.Button();
             this.btn_admin_management = new System.Windows.Forms.Button();
             this.btn_customer_management = new System.Windows.Forms.Button();
+            this.btn_user_management = new System.Windows.Forms.Button();
             this.pnl_dashboard = new System.Windows.Forms.Panel();
+            this.btn_dashboard = new System.Windows.Forms.Button();
             this.pnl_menu = new System.Windows.Forms.Panel();
+            this.btn_menu = new System.Windows.Forms.Button();
             this.pnl_services = new System.Windows.Forms.Panel();
-            this.sidePanel1 = new SoftwareFirmManagement.UI.SidePanel();
+            this.btn_services = new System.Windows.Forms.Button();
             this.pnl_order_management = new System.Windows.Forms.Panel();
             this.btn_order_management = new System.Windows.Forms.Button();
-            this.btn_services = new System.Windows.Forms.Button();
-            this.btn_menu = new System.Windows.Forms.Button();
-            this.btn_dashboard = new System.Windows.Forms.Button();
-            this.btn_user_management = new System.Windows.Forms.Button();
+            this.sidePanel1 = new SoftwareFirmManagement.UI.SidePanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_salary_management = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnl_user_management.SuspendLayout();
             this.pnl_dashboard.SuspendLayout();
             this.pnl_menu.SuspendLayout();
             this.pnl_services.SuspendLayout();
             this.pnl_order_management.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainPalette
@@ -905,7 +908,7 @@ namespace SoftwareFirmManagement.UI
             this.pnl_user_management.Controls.Add(this.btn_admin_management);
             this.pnl_user_management.Controls.Add(this.btn_customer_management);
             this.pnl_user_management.Controls.Add(this.btn_user_management);
-            this.pnl_user_management.Location = new System.Drawing.Point(0, 150);
+            this.pnl_user_management.Location = new System.Drawing.Point(0, 250);
             this.pnl_user_management.Margin = new System.Windows.Forms.Padding(0);
             this.pnl_user_management.Name = "pnl_user_management";
             this.pnl_user_management.Size = new System.Drawing.Size(60, 50);
@@ -955,6 +958,22 @@ namespace SoftwareFirmManagement.UI
             this.btn_customer_management.UseVisualStyleBackColor = true;
             this.btn_customer_management.Click += new System.EventHandler(this.btn_customer_management_Click);
             // 
+            // btn_user_management
+            // 
+            this.btn_user_management.FlatAppearance.BorderSize = 0;
+            this.btn_user_management.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_user_management.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_user_management.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.btn_user_management.Image = global::SoftwareFirmManagement.Properties.Resources.User_Default_small_;
+            this.btn_user_management.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_user_management.Location = new System.Drawing.Point(0, 0);
+            this.btn_user_management.Name = "btn_user_management";
+            this.btn_user_management.Size = new System.Drawing.Size(230, 50);
+            this.btn_user_management.TabIndex = 0;
+            this.btn_user_management.Text = "User Management";
+            this.btn_user_management.UseVisualStyleBackColor = true;
+            this.btn_user_management.Click += new System.EventHandler(this.btn_user_management_Click);
+            // 
             // pnl_dashboard
             // 
             this.pnl_dashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
@@ -964,6 +983,21 @@ namespace SoftwareFirmManagement.UI
             this.pnl_dashboard.Name = "pnl_dashboard";
             this.pnl_dashboard.Size = new System.Drawing.Size(60, 50);
             this.pnl_dashboard.TabIndex = 8;
+            // 
+            // btn_dashboard
+            // 
+            this.btn_dashboard.FlatAppearance.BorderSize = 0;
+            this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_dashboard.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.btn_dashboard.Image = global::SoftwareFirmManagement.Properties.Resources.Dashboard_Layout_filled_;
+            this.btn_dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_dashboard.Location = new System.Drawing.Point(0, 0);
+            this.btn_dashboard.Name = "btn_dashboard";
+            this.btn_dashboard.Size = new System.Drawing.Size(230, 50);
+            this.btn_dashboard.TabIndex = 1;
+            this.btn_dashboard.Text = "Dashboard";
+            this.btn_dashboard.UseVisualStyleBackColor = true;
             // 
             // pnl_menu
             // 
@@ -975,6 +1009,22 @@ namespace SoftwareFirmManagement.UI
             this.pnl_menu.Size = new System.Drawing.Size(60, 50);
             this.pnl_menu.TabIndex = 9;
             // 
+            // btn_menu
+            // 
+            this.btn_menu.FlatAppearance.BorderSize = 0;
+            this.btn_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_menu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.btn_menu.Image = global::SoftwareFirmManagement.Properties.Resources.Slider;
+            this.btn_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_menu.Location = new System.Drawing.Point(0, 0);
+            this.btn_menu.Name = "btn_menu";
+            this.btn_menu.Size = new System.Drawing.Size(230, 50);
+            this.btn_menu.TabIndex = 1;
+            this.btn_menu.Text = "Menu";
+            this.btn_menu.UseVisualStyleBackColor = true;
+            this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
+            // 
             // pnl_services
             // 
             this.pnl_services.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
@@ -985,14 +1035,22 @@ namespace SoftwareFirmManagement.UI
             this.pnl_services.Size = new System.Drawing.Size(60, 50);
             this.pnl_services.TabIndex = 7;
             // 
-            // sidePanel1
+            // btn_services
             // 
-            this.sidePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sidePanel1.Location = new System.Drawing.Point(0, 0);
-            this.sidePanel1.Name = "sidePanel1";
-            this.sidePanel1.Size = new System.Drawing.Size(60, 535);
-            this.sidePanel1.TabIndex = 4;
+            this.btn_services.FlatAppearance.BorderSize = 0;
+            this.btn_services.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_services.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_services.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.btn_services.Image = global::SoftwareFirmManagement.Properties.Resources.Service;
+            this.btn_services.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_services.Location = new System.Drawing.Point(0, 0);
+            this.btn_services.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_services.Name = "btn_services";
+            this.btn_services.Size = new System.Drawing.Size(230, 50);
+            this.btn_services.TabIndex = 1;
+            this.btn_services.Text = "Services";
+            this.btn_services.UseVisualStyleBackColor = true;
+            this.btn_services.Click += new System.EventHandler(this.btn_services_Click);
             // 
             // pnl_order_management
             // 
@@ -1021,69 +1079,41 @@ namespace SoftwareFirmManagement.UI
             this.btn_order_management.UseVisualStyleBackColor = true;
             this.btn_order_management.Click += new System.EventHandler(this.btn_order_management_Click);
             // 
-            // btn_services
+            // sidePanel1
             // 
-            this.btn_services.FlatAppearance.BorderSize = 0;
-            this.btn_services.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_services.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_services.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
-            this.btn_services.Image = global::SoftwareFirmManagement.Properties.Resources.Service;
-            this.btn_services.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_services.Location = new System.Drawing.Point(0, 0);
-            this.btn_services.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_services.Name = "btn_services";
-            this.btn_services.Size = new System.Drawing.Size(230, 50);
-            this.btn_services.TabIndex = 1;
-            this.btn_services.Text = "Services";
-            this.btn_services.UseVisualStyleBackColor = true;
-            this.btn_services.Click += new System.EventHandler(this.btn_services_Click);
+            this.sidePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidePanel1.Location = new System.Drawing.Point(0, 0);
+            this.sidePanel1.Name = "sidePanel1";
+            this.sidePanel1.Size = new System.Drawing.Size(60, 535);
+            this.sidePanel1.TabIndex = 4;
             // 
-            // btn_menu
+            // panel2
             // 
-            this.btn_menu.FlatAppearance.BorderSize = 0;
-            this.btn_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_menu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
-            this.btn_menu.Image = global::SoftwareFirmManagement.Properties.Resources.Slider;
-            this.btn_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_menu.Location = new System.Drawing.Point(0, 0);
-            this.btn_menu.Name = "btn_menu";
-            this.btn_menu.Size = new System.Drawing.Size(230, 50);
-            this.btn_menu.TabIndex = 1;
-            this.btn_menu.Text = "Menu";
-            this.btn_menu.UseVisualStyleBackColor = true;
-            this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel2.Controls.Add(this.btn_salary_management);
+            this.panel2.Location = new System.Drawing.Point(0, 150);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(60, 50);
+            this.panel2.TabIndex = 11;
             // 
-            // btn_dashboard
+            // btn_salary_management
             // 
-            this.btn_dashboard.FlatAppearance.BorderSize = 0;
-            this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_dashboard.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_dashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
-            this.btn_dashboard.Image = global::SoftwareFirmManagement.Properties.Resources.Dashboard_Layout_filled_;
-            this.btn_dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_dashboard.Location = new System.Drawing.Point(0, 0);
-            this.btn_dashboard.Name = "btn_dashboard";
-            this.btn_dashboard.Size = new System.Drawing.Size(230, 50);
-            this.btn_dashboard.TabIndex = 1;
-            this.btn_dashboard.Text = "Dashboard";
-            this.btn_dashboard.UseVisualStyleBackColor = true;
-            // 
-            // btn_user_management
-            // 
-            this.btn_user_management.FlatAppearance.BorderSize = 0;
-            this.btn_user_management.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_user_management.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_user_management.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
-            this.btn_user_management.Image = global::SoftwareFirmManagement.Properties.Resources.User_Default_small_;
-            this.btn_user_management.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_user_management.Location = new System.Drawing.Point(0, 0);
-            this.btn_user_management.Name = "btn_user_management";
-            this.btn_user_management.Size = new System.Drawing.Size(230, 50);
-            this.btn_user_management.TabIndex = 0;
-            this.btn_user_management.Text = "User Management";
-            this.btn_user_management.UseVisualStyleBackColor = true;
-            this.btn_user_management.Click += new System.EventHandler(this.btn_user_management_Click);
+            this.btn_salary_management.FlatAppearance.BorderSize = 0;
+            this.btn_salary_management.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_salary_management.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salary_management.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.btn_salary_management.Image = global::SoftwareFirmManagement.Properties.Resources.Stack_of_Money;
+            this.btn_salary_management.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_salary_management.Location = new System.Drawing.Point(0, 0);
+            this.btn_salary_management.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_salary_management.Name = "btn_salary_management";
+            this.btn_salary_management.Size = new System.Drawing.Size(230, 50);
+            this.btn_salary_management.TabIndex = 11;
+            this.btn_salary_management.Text = "Salaries";
+            this.btn_salary_management.UseVisualStyleBackColor = true;
+            this.btn_salary_management.Click += new System.EventHandler(this.btn_salary_management_Click);
             // 
             // MainForm
             // 
@@ -1091,6 +1121,7 @@ namespace SoftwareFirmManagement.UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(28)))));
             this.ClientSize = new System.Drawing.Size(965, 535);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnl_order_management);
             this.Controls.Add(this.pnl_services);
             this.Controls.Add(this.pnl_menu);
@@ -1112,6 +1143,7 @@ namespace SoftwareFirmManagement.UI
             this.pnl_menu.ResumeLayout(false);
             this.pnl_services.ResumeLayout(false);
             this.pnl_order_management.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1139,6 +1171,8 @@ namespace SoftwareFirmManagement.UI
         private System.Windows.Forms.Button btn_services;
         private System.Windows.Forms.Panel pnl_order_management;
         private System.Windows.Forms.Button btn_order_management;
+        private System.Windows.Forms.Button btn_salary_management;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

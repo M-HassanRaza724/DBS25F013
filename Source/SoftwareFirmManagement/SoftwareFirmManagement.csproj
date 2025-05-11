@@ -141,6 +141,12 @@
     <Compile Include="UI\AddUpdateCust.Designer.cs">
       <DependentUpon>AddUpdateCust.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\AdminManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AdminManagement.Designer.cs">
+      <DependentUpon>AdminManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\ClientReviews.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +278,9 @@
     <EmbeddedResource Include="Reports\Report1.rdlc" />
     <EmbeddedResource Include="UI\AddUpdateCust.resx">
       <DependentUpon>AddUpdateCust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AdminManagement.resx">
+      <DependentUpon>AdminManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ClientReviews.resx">
       <DependentUpon>ClientReviews.cs</DependentUpon>
@@ -440,6 +449,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SoftwareFirmManagement.BL.Admin.datasource" />
     <None Include="SoftwareFirmManagement.BL.Customer.datasource" />
     <None Include="SoftwareFirmManagement.BL.Employee.datasource" />
     <None Include="SoftwareFirmManagement.BL.OrderDTO.datasource" />

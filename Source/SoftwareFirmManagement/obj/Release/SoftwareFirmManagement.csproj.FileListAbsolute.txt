@@ -72,3 +72,4 @@ E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\R
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.ClientReviews.resources
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.ReviewDisplay.resources
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.SalaryManagement.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.AdminManagement.resources

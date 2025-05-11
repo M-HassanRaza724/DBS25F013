@@ -54,6 +54,11 @@ namespace SoftwareFirmManagement.BL
             designationId = -1,
             designation = "null",
         };
+
+        public override string ToString()
+        {
+            return Name;
+        }
         public Employee()
         { } 
 

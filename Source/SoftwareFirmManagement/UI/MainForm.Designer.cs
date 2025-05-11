@@ -51,6 +51,8 @@ namespace SoftwareFirmManagement.UI
             this.pnl_services = new System.Windows.Forms.Panel();
             this.pnl_order_management = new System.Windows.Forms.Panel();
             this.btn_order_management = new System.Windows.Forms.Button();
+            this.btn_salary_management = new System.Windows.Forms.Button();
+            this.pnl_salary_management = new System.Windows.Forms.Panel();
             this.pnl_reviews = new System.Windows.Forms.Panel();
             this.btn_reviews = new System.Windows.Forms.Button();
             this.btn_services = new System.Windows.Forms.Button();
@@ -62,6 +64,7 @@ namespace SoftwareFirmManagement.UI
             this.pnl_menu.SuspendLayout();
             this.pnl_services.SuspendLayout();
             this.pnl_order_management.SuspendLayout();
+            this.pnl_salary_management.SuspendLayout();
             this.pnl_reviews.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1080,6 +1083,7 @@ namespace SoftwareFirmManagement.UI
             this.btn_reviews.Click += new System.EventHandler(this.btn_reviews_Click);
             // 
             // btn_services
+            // pnl_salary_management
             // 
             this.btn_services.FlatAppearance.BorderSize = 0;
             this.btn_services.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1095,8 +1099,16 @@ namespace SoftwareFirmManagement.UI
             this.btn_services.Text = "Services";
             this.btn_services.UseVisualStyleBackColor = true;
             this.btn_services.Click += new System.EventHandler(this.btn_services_Click_1);
+            this.pnl_salary_management.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.pnl_salary_management.Controls.Add(this.btn_salary_management);
+            this.pnl_salary_management.Location = new System.Drawing.Point(0, 250);
+            this.pnl_salary_management.Margin = new System.Windows.Forms.Padding(0);
+            this.pnl_salary_management.Name = "pnl_salary_management";
+            this.pnl_salary_management.Size = new System.Drawing.Size(60, 50);
+            this.pnl_salary_management.TabIndex = 11;
             // 
             // header1
+            // btn_salary_management
             // 
             this.header1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.header1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -1104,6 +1116,20 @@ namespace SoftwareFirmManagement.UI
             this.header1.Name = "header1";
             this.header1.Size = new System.Drawing.Size(352, 50);
             this.header1.TabIndex = 3;
+            this.btn_salary_management.FlatAppearance.BorderSize = 0;
+            this.btn_salary_management.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_salary_management.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salary_management.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.btn_salary_management.Image = global::SoftwareFirmManagement.Properties.Resources.Stack_of_Money;
+            this.btn_salary_management.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_salary_management.Location = new System.Drawing.Point(0, 0);
+            this.btn_salary_management.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_salary_management.Name = "btn_salary_management";
+            this.btn_salary_management.Size = new System.Drawing.Size(230, 50);
+            this.btn_salary_management.TabIndex = 2;
+            this.btn_salary_management.Text = "Salaries";
+            this.btn_salary_management.UseVisualStyleBackColor = true;
+            this.btn_salary_management.Click += new System.EventHandler(this.btn_salary_management_Click);
             // 
             // sidePanel1
             // 
@@ -1121,6 +1147,7 @@ namespace SoftwareFirmManagement.UI
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(28)))));
             this.ClientSize = new System.Drawing.Size(965, 535);
             this.Controls.Add(this.pnl_reviews);
+            this.Controls.Add(this.pnl_salary_management);
             this.Controls.Add(this.pnl_order_management);
             this.Controls.Add(this.pnl_services);
             this.Controls.Add(this.pnl_menu);
@@ -1143,6 +1170,7 @@ namespace SoftwareFirmManagement.UI
             this.pnl_services.ResumeLayout(false);
             this.pnl_order_management.ResumeLayout(false);
             this.pnl_reviews.ResumeLayout(false);
+            this.pnl_salary_management.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1173,6 +1201,8 @@ namespace SoftwareFirmManagement.UI
         private System.Windows.Forms.Panel pnl_reviews;
         private System.Windows.Forms.Button btn_reviews;
         private System.Windows.Forms.Button btn_services;
+        private System.Windows.Forms.Panel pnl_salary_management;
+        private System.Windows.Forms.Button btn_salary_management;
     }
 }
 

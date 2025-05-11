@@ -434,6 +434,7 @@
     <None Include="SoftwareFirmManagement.BL.Customer.datasource" />
     <None Include="SoftwareFirmManagement.BL.Employee.datasource" />
     <None Include="SoftwareFirmManagement.BL.OrderDTO.datasource" />
+    <None Include="SoftwareFirmManagement.BL.Salary.datasource" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

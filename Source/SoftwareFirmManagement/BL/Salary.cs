@@ -41,6 +41,10 @@ namespace SoftwareFirmManagement.BL
             get { return bonus; }
             set { bonus = value; }
         }
+        public string EmployeeName
+        {
+            get { return Employee?.Name; }
+        }
 
 
         public Salary() { }
@@ -55,6 +59,7 @@ namespace SoftwareFirmManagement.BL
             this.amount = amount;
             this.bonus = bonus;
         }
+
         public Salary(int salaryId, Employee employee, DateTime date, double amount, double bonus)
         {
             this.salaryId = salaryId;

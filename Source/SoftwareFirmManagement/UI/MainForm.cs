@@ -205,6 +205,13 @@ namespace SoftwareFirmManagement.UI
 
         }
 
+        private void btn_salary_management_Click(object sender, EventArgs e)
+        {
+            DeleteExistingChild();
+            ShowFormInPanel(new SalaryManagement());
+
+        }ss
+
         private void btn_reviews_Click(object sender, EventArgs e)
         {
             DeleteExistingChild();

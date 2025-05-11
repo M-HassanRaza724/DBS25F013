@@ -1,0 +1,121 @@
+﻿using DbFinalProject.BL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DbFinalProject.DL
+{
+    public class EmployeeDL
+    {
+        public static List<Employee> GetOnlyUsersFromDatabase()
+        {
+            try
+            {
+                List<Employee> onlyUsers = new List<Employee>();
+                string query = $"SELECT * FROM users;";
+                var data = DatabaseHelper.Instance.GetData(query);
+                while (data.Read())
+                {
+                    int userId = data.IsDBNull(0) ? 0 : data.GetInt32(0);
+                    string username = data[1].ToString();
+                    string email = data[2].ToString();
+                    string password = data[3].ToString();
+                    int roleId = data.IsDBNull(4) ? 0 : data.GetInt32(4);
+                    Employee user = new Employee(userId, username, email, password, roleId, 0, "no_name", "no_phone", DateTime.Now, 0);
+                    user.Role = LookupDL.allLookups
+                                .Where(l => l.LookupId == roleId)
+                                .Select(l => l.Value)
+                                .FirstOrDefault();
+                    onlyUsers.Add(user);
+                }
+                return onlyUsers;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
+        }
+
+
+        public static bool AddEmployeeToDatabase(Employee employee)
+        {
+            try
+            {
+                string formattedDate = employee.JoinedDate.ToString("yyyy-MM-dd");
+                string query = $"CALL sp_manage_employee('add', {employee.EmployeeId}, '{employee.Name}', '{employee.Phone}', '{formattedDate}', {employee.DesignationId}, {employee.UserId});";
+                DatabaseHelper.Instance.Update(query);
+                return true;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
+        }
+
+
+        public static bool UpdateEmployeeToDatabase(Employee employee) // only name and phone are updatable
+        {
+            try
+            {
+                string formattedDate = employee.JoinedDate.ToString("yyyy-MM-dd");
+                string query = $"CALL sp_manage_employee('update', {employee.EmployeeId}, '{employee.Name}', '{employee.Phone}', '{formattedDate}', {employee.DesignationId}, {employee.UserId});";
+                DatabaseHelper.Instance.Update(query);
+                return true;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
+        }
+
+
+        public static bool DeleteEmployeeFromDatabase(Employee employee)
+        {
+            try
+            {
+                string formattedDate = employee.JoinedDate.ToString("yyyy-MM-dd");
+                string query = $"CALL sp_manage_employee('delete', {employee.EmployeeId}, '{employee.Name}', '{employee.Phone}', '{formattedDate}', {employee.DesignationId}, {employee.UserId});";
+                DatabaseHelper.Instance.Update(query);
+                return true;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
+        }
+
+
+        public static List<Employee> GetEmployeesNotSupervisors()
+        {
+            try
+            {
+                List<Employee> notSupervisors = new List<Employee>();
+                string query = "SELECT * FROM get_employees_not_supervisors;";
+                var data = DatabaseHelper.Instance.GetData(query);
+                while (data.Read())
+                {
+                    int userId = data.IsDBNull(0) ? 0 : data.GetInt32(0);
+                    int employeeId = data.IsDBNull(1) ? 0 : data.GetInt32(1);
+                    string name = data[2].ToString();
+                    string phone = data[3].ToString();
+                    DateTime joinedDate = DateTime.Parse(data[4].ToString()).Date;
+                    int designationId = data.IsDBNull(5) ? 0 : data.GetInt32(5);
+                    string username = data[6].ToString();
+                    string email = data[7].ToString();
+                    string password = data[8].ToString();
+                    int roleId = data.IsDBNull(9) ? 0 : data.GetInt32(9);
+                    notSupervisors.Add(new Employee(userId, username, email, password, roleId, employeeId, name, phone, joinedDate, designationId));
+                }
+                return notSupervisors;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                throw;
+            }
+        }
+
+
+    }
+}

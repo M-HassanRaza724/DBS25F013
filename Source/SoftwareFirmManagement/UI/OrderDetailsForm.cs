@@ -279,7 +279,95 @@ namespace SoftwareFirmManagement.UI
                 MessageBox.Show(ex.Message);
             }
         }
+        int stars;
+        private void star1_Click(object sender, EventArgs e)
+        {
+            if (star1.Image == Properties.Resources.Star)
+            {
+                star1.Image = Properties.Resources.Star_filled_;
+                stars = 1;
+            }
+            else
+            {
+                star1.Image = Properties.Resources.Star;
+                star2.Image = Properties.Resources.Star;
+                star3.Image = Properties.Resources.Star;
+                star4.Image = Properties.Resources.Star;
+                star5.Image = Properties.Resources.Star;
+                stars = 0;
+            }
+        }
 
+        private void star2_Click(object sender, EventArgs e)
+        {
+            if (star2.Image == Properties.Resources.Star)
+            {
+                star1.Image = Properties.Resources.Star_filled_;
+                star2.Image = Properties.Resources.Star_filled_;
+                stars = 2;
+            }
+            else
+            {
+                star2.Image = Properties.Resources.Star;
+                star3.Image = Properties.Resources.Star;
+                star4.Image = Properties.Resources.Star;
+                star5.Image = Properties.Resources.Star;
+                stars = 1;
+            }
+        }
 
+        private void star3_Click(object sender, EventArgs e)
+        {
+            if (star3.Image == Properties.Resources.Star)
+            {
+                star1.Image = Properties.Resources.Star_filled_;
+                star2.Image = Properties.Resources.Star_filled_;
+                star3.Image = Properties.Resources.Star_filled_;
+                stars = 3;
+            }
+            else
+            {
+                star3.Image = Properties.Resources.Star;
+                star4.Image = Properties.Resources.Star;
+                star5.Image = Properties.Resources.Star;
+                stars = 2;
+            }
+        }
+
+        private void star4_Click(object sender, EventArgs e)
+        { 
+            if (star4.Image == Properties.Resources.Star)
+            {
+                star1.Image = Properties.Resources.Star_filled_;
+                star2.Image = Properties.Resources.Star_filled_;
+                star3.Image = Properties.Resources.Star_filled_;
+                star4.Image = Properties.Resources.Star_filled_;
+                stars = 4;
+            }
+            else
+            {
+                star4.Image = Properties.Resources.Star;
+                star5.Image = Properties.Resources.Star;
+                stars = 3;
+            }
+        }
+
+        private void star5_Click(object sender, EventArgs e)
+        {
+            if (star5.Image == Properties.Resources.Star)
+            {
+                star1.Image = Properties.Resources.Star_filled_;
+                star2.Image = Properties.Resources.Star_filled_;
+                star3.Image = Properties.Resources.Star_filled_;
+                star4.Image = Properties.Resources.Star_filled_;
+                star5.Image = Properties.Resources.Star_filled_;
+                stars = 5;
+            }
+            else
+            {
+                star5.Image = Properties.Resources.Star;
+                stars = 4;
+            }
+        }
     }
 }

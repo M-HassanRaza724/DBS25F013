@@ -75,6 +75,7 @@ namespace SoftwareFirmManagement.UI
             Customer customer = CustomerDL.GetCustomerById(order.Customer.CustomerId);
             OrderDetailsForm orderDetails = new OrderDetailsForm(order, customer, employee);
             orderDetails.ParentF = this;
+            orderDetails.GrandParentForm = ParentForm;
             ParentForm.HideForm();
             ParentForm.ShowFormInPanel(orderDetails);
         }

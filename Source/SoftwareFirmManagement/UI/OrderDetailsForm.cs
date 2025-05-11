@@ -10,6 +10,9 @@ namespace SoftwareFirmManagement.UI
 {
     public partial class OrderDetailsForm : KryptonForm
     {
+
+        MainForm grandParent;
+        public MainForm GrandParentForm { get { return grandParent; } set { grandParent = value; } }
         OrderManagement parentForm;
         public OrderManagement ParentF { get { return parentForm; } set { parentForm = value; } }
         public OrderDetailsForm(OrderDTO order, Customer customer, Employee employee = null)
@@ -163,7 +166,19 @@ namespace SoftwareFirmManagement.UI
 
 
 
+        private void assignEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
+            EmployeeAssignationForm employeeAssignation = new EmployeeAssignationForm(orderDisplay.OrderDetails);
+            employeeAssignation.ParentF = this;
+            GrandParentForm.HideForm();
+            GrandParentForm.ShowFormInPanel(employeeAssignation);
+        }
+        public void Return()
+        {
+            GrandParentForm.HideForm();
+            GrandParentForm.ShowFormInPanel(this);
+        }
 
 
 
@@ -331,5 +346,7 @@ namespace SoftwareFirmManagement.UI
 
 
         }
+
+   
     }
 }

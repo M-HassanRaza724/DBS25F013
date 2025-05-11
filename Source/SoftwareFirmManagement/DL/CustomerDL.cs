@@ -45,6 +45,7 @@ namespace SoftwareFirmManagement.DL
             {
                 string query = $"CALL sp_manage_customer('add', {customer.CustomerId}, {customer.UserId}, '{customer.Name}');";
                 DatabaseHelper.Instance.Update(query);
+                //UpdateCustomerInList(customer);
                 return true;
             }
             catch (MySql.Data.MySqlClient.MySqlException)
@@ -60,6 +61,7 @@ namespace SoftwareFirmManagement.DL
             {
                 string query = $"CALL sp_manage_customer('update', {updatedCustomer.CustomerId}, {updatedCustomer.UserId}, '{updatedCustomer.Name}');";
                 DatabaseHelper.Instance.Update(query);
+                //UpdateCustomerInList(updatedCustomer);
                 return true;
             }
             catch (MySql.Data.MySqlClient.MySqlException)
@@ -104,6 +106,7 @@ namespace SoftwareFirmManagement.DL
             {
                 string query = $"CALL sp_manage_customer('delete', {customer.CustomerId}, {customer.UserId}, '{customer.Name}');";
                 DatabaseHelper.Instance.Update(query);
+                //DeleteCustomerInList(customer);
                 return true;
             }
             catch (MySql.Data.MySqlClient.MySqlException)
@@ -129,5 +132,52 @@ namespace SoftwareFirmManagement.DL
             }
             return null;
         }
+        //public static bool UpdateCustomerInList(Customer customer)
+        //{
+        //    for (int i = 0; i < UserDL.allUsers.Count; i++)
+        //    {
+        //        if (UserDL.allUsers[i] is Customer cust)
+        //        {
+        //            if (cust.UserId == customer.UserId)
+        //            {
+        //                UserDL.allUsers[i] = cust;
+        //                return true;
+        //            }
+        //        }
+
+
+        //    }
+        //    return false;
+        //}
+        //public static bool AddCustomerInList(Customer customer)
+        //{
+        //    for (int i = 0; i < UserDL.allUsers.Count; i++)
+        //    {
+        //        if (UserDL.allUsers[i] is Customer cust)
+        //        {
+        //            if (cust.UserId == customer.UserId)
+        //            {
+        //                UserDL.allUsers[i] = cust;
+        //                return true;
+        //            }
+        //        }
+        //    }
+        //    return true;
+        //}
+        //public static bool DeleteCustomerInList(Customer customer)
+        //{
+        //    for (int i = 0; i < UserDL.allUsers.Count; i++)
+        //    {
+        //        if (UserDL.allUsers[i] is Customer cust)
+        //        {
+        //            if (cust.UserId == customer.UserId)
+        //            {
+        //                UserDL.allUsers.RemoveAt(i);
+        //                return true;
+        //            }
+        //        }
+        //    }
+        //    return false;
+        //}
     }
 }

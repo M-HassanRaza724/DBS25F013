@@ -182,11 +182,7 @@ namespace SoftwareFirmManagement.BL
                     {
                         return false;
                     }
-                    List<Employee> onlyUsers = new List<Employee>();
-                    int userId = onlyUsers
-                                 .Where(e => e.Username == user.Username)
-                                 .Select(e => e.UserId)
-                                 .FirstOrDefault();
+                    int userId = UserDL.GetUserId(user);
                     emp.UserId = userId;
                     bool status = EmployeeDL.AddEmployeeToDatabase(emp);
                     UserDL.LoadAllUsers();

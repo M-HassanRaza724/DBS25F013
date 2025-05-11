@@ -24,11 +24,17 @@ namespace SoftwareFirmManagement.DL
                     string email = data[2].ToString();
                     string password = data[3].ToString();
                     int roleId = data.IsDBNull(4) ? 0 : data.GetInt32(4);
-                    Admin user = new Admin(userId, username, email, password, roleId, 0, "no_name", "no_phone", 0);
-                    user.Role = LookupDL.allLookups
+                    //user.Role = LookupDL.allLookups
+                    //            .Where(l => l.LookupId == roleId)
+                    //            .Select(l => l.Value)
+                    //            .FirstOrDefault();
+                    string adminRole = LookupDL.allLookups
                                 .Where(l => l.LookupId == roleId)
                                 .Select(l => l.Value)
                                 .FirstOrDefault();
+                    //public Admin(int userId, string username, string email, string password, int role, int adminId, string name, string phone, int adminRoleId, string adminRole) : base(userId, username, email, password, role)
+
+                    Admin user = new Admin(userId, username, email, password, roleId, 0, "no_name", "no_phone", 0,"no-admin-role");
                     onlyUsers.Add(user);
                 }
                 return onlyUsers;

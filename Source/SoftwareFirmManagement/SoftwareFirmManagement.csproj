@@ -143,11 +143,23 @@
     <Compile Include="UI\AddUpdateCust.Designer.cs">
       <DependentUpon>AddUpdateCust.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\ClientReviews.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\ClientReviews.Designer.cs">
       <DependentUpon>ClientReviews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerDashboard.Designer.cs">
+      <DependentUpon>CustomerDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\CustomerDisplay.cs">
       <SubType>UserControl</SubType>
@@ -172,6 +184,12 @@
     </Compile>
     <Compile Include="UI\EmployeeAssignationForm.Designer.cs">
       <DependentUpon>EmployeeAssignationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EmployeeDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\EmployeeDashboard.Designer.cs">
+      <DependentUpon>EmployeeDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\EmployeeManagement.cs">
       <SubType>Form</SubType>
@@ -289,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ClientReviews.resx">
       <DependentUpon>ClientReviews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerDashboard.resx">
+      <DependentUpon>CustomerDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CustomerDisplay.resx">
       <DependentUpon>CustomerDisplay.cs</DependentUpon>
@@ -469,6 +490,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\User Default.png" />
     <None Include="Resources\Available Updates.png" />
     <None Include="Resources\Add.png" />
     <Content Include="Resources\checked-hover-small.png" />

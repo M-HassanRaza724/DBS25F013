@@ -8,42 +8,60 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using SoftwareFirmManagement.BL;
 
 namespace SoftwareFirmManagement.UI
 {
+
+
     public partial class MainForm : KryptonForm
     {
+        ServiceManagement serviceManagement = new ServiceManagement();
+        ClientReviews clientReviews = new ClientReviews();
+        SalaryManagement salaryManagement;
+        CustomerDashboard customerDashboard;
+        EmployeeDashboard employeeDashboard;
+        AdminDashboard adminDashboard;
+        OrderManagement orderManagement;
+        CustomerManagement customerManagement;
+        EmployeeManagement employeeManagement;
+        OrderPlacementForm orderPlacementForm;
+        //AdminManagement adminManagement;
+
+        public void LoadForms()
+        {
+            if (Program.user is Admin ad)
+            {
+                orderManagement = new OrderManagement();
+                adminDashboard = new AdminDashboard();
+                employeeManagement = new EmployeeManagement();
+                customerManagement = new CustomerManagement();
+                salaryManagement = new SalaryManagement();
+                serviceManagement = new ServiceManagement();
+                if (ad.AdminRole == "superAdmin")
+                {
+                    //adminManagement = new AdminManagement();
+                }
+            }
+            else if (Program.user is Employee emp)
+            {
+                employeeDashboard = new EmployeeDashboard();
+                orderManagement = new OrderManagement();
+            }
+            else if (Program.user is Customer cust)
+            {
+                customerDashboard = new CustomerDashboard();
+                orderManagement= new OrderManagement();
+
+            }
+            }
         public MainForm()
         {
             InitializeComponent();
             //this.ContextMenuStrip = contextMenuStrip1;
         }
 
-        private void kryptonPalette1_PalettePaint(object sender, PaletteLayoutEventArgs e)
-        {
-
-        }
-
-        private void kryptonButton1_Click(object sender, EventArgs e)
-        {
-            //new Form1().Show();
-
-        }
-
-        private void orders1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_search_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+  
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
@@ -73,23 +91,7 @@ namespace SoftwareFirmManagement.UI
             Close();
         }
 
-        private void kryptonCheckButton1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        //private void kryptonCheckButton1_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    if (cbtn_test.Checked)
-        //    {
-        //        cbtn_test.Values.ExtraText = "▼";
-        //    }
-        //    else
-        //    {
-        //        cbtn_test.Values.ExtraText = "▲";
-        //    }
-
-        //}
 
         public void DeleteExistingChild()
         {
@@ -181,25 +183,24 @@ namespace SoftwareFirmManagement.UI
         private void btn_customer_management_Click(object sender, EventArgs e)
         {
             DeleteExistingChild();
-            ShowFormInPanel(new CustomerManagement());
+            ShowFormInPanel(customerManagement);
         }
 
          private void btn_employee_management_Click(object sender, EventArgs e)
         {
             DeleteExistingChild();
-            ShowFormInPanel(new EmployeeManagement());
+            ShowFormInPanel(employeeManagement);
         }
 
         private void btn_services_Click(object sender, EventArgs e)
         {
             DeleteExistingChild();
-            ShowFormInPanel(new ServiceManagement());
+            ShowFormInPanel(serviceManagement);
         }
 
         private void btn_order_management_Click(object sender, EventArgs e)
         {
             DeleteExistingChild();
-            OrderManagement orderManagement = new OrderManagement();
             ShowFormInPanel(orderManagement);
             orderManagement.ParentForm = this;
 
@@ -208,22 +209,23 @@ namespace SoftwareFirmManagement.UI
         private void btn_salary_management_Click(object sender, EventArgs e)
         {
             DeleteExistingChild();
-            ShowFormInPanel(new SalaryManagement());
+            ShowFormInPanel(salaryManagement );
 
         }
 
         private void btn_reviews_Click(object sender, EventArgs e)
         {
             DeleteExistingChild();
-            ClientReviews clientReviews = new ClientReviews();
             ShowFormInPanel(clientReviews);
         }
 
         private void btn_services_Click_1(object sender, EventArgs e)
         {
             DeleteExistingChild();
-            ServiceManagement serviceManagement = new ServiceManagement();
             ShowFormInPanel(serviceManagement);
         }
+
+
+
     }
 }

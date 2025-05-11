@@ -15,7 +15,7 @@ namespace SoftwareFirmManagement
         /// The main entry point for the application.
         /// </summary>
         //new User(0,"Anonymous","","","Customer");
-        static User user = Customer.defaultCustomer;
+        public static User user = Customer.defaultCustomer;
         [STAThread]
         static void Main()
         {

@@ -12,22 +12,28 @@ namespace SoftwareFirmManagement.BL
         private int adminId;
         private string name;
         private string phone;
-        private int adminRole;
+        private int adminRoleId;
+        private string adminRole;
 
-        public Admin(int userId, string username, string email, string password, int role, int adminId, string name, string phone, int adminRole) : base(userId, username, email, password, role)
+        public Admin(int userId, string username, string email, string password, int role, int adminId, string name, string phone, int adminRoleId , string adminRole) : base(userId, username, email, password, role)
         {
             this.adminId = adminId;
             this.name = name;
             this.phone = phone;
+            this.adminRoleId = adminRoleId;
             this.adminRole = adminRole;
         }
 
 
-        public Admin(int userId, string username, string email, string password, int role, string name, string phone, int adminRole) : base(userId, username, email, password, role)
+        public Admin(int userId, string username, string email, string password, int role, string name, string phone, int adminRoleId , string adminRole) : base(userId, username, email, password, role)
         {
             this.name = name;
             this.phone = phone;
+            this.adminRoleId = adminRoleId;
             this.adminRole = adminRole;
+
+
+
         }
 
 
@@ -49,7 +55,12 @@ namespace SoftwareFirmManagement.BL
             set { phone = value; }
         }
 
-        public int AdminRole
+        public int AdminRoleId
+        {
+            get { return adminRoleId; }
+            set { adminRoleId = value; }
+        }
+        public string AdminRole
         {
             get { return adminRole; }
             set { adminRole = value; }

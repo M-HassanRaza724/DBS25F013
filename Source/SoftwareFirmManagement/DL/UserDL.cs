@@ -29,8 +29,12 @@ namespace SoftwareFirmManagement.DL
                     int adminId = data2.IsDBNull(5) ? 0 : data2.GetInt32(5);
                     string name = data2[6].ToString();
                     string phone = data2[7].ToString();
-                    int adminRole = data2.IsDBNull(8) ? 0 : data2.GetInt32(8);
-                    Admin newAdmin = new Admin(userId, username, email, password, roleId, adminId, name, phone, adminRole);
+                    int adminRoleId = data2.IsDBNull(8) ? 0 : data2.GetInt32(8);
+                    string adminRole = LookupDL.allLookups
+                            .Where(l => l.LookupId == roleId)
+                            .Select(l => l.Value)
+                            .FirstOrDefault();
+                    Admin newAdmin = new Admin(userId, username, email, password, roleId, adminId, name, phone,adminRoleId, adminRole);
                     string role = LookupDL.allLookups
                                   .Where(l => l.LookupId == roleId)
                                   .Select(l => l.Value)

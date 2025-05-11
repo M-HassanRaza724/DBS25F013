@@ -43,7 +43,7 @@ namespace SoftwareFirmManagement.UI
                 i++;
             }
 
-            lbl_footer.Location = new System.Drawing.Point(6, 300 + (i * 260));
+            lbl_footer.Location = new System.Drawing.Point(((pnl_main.Width / 2) - (426)), 300 + (i * 260));
             vScrollBar.Maximum = (8 * i) + 5;
         }
 

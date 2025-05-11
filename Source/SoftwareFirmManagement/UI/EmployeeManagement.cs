@@ -26,8 +26,8 @@ namespace SoftwareFirmManagement.UI
         {
             if (search == "Search")
                 search = null;
-            //EmployeeBindingSource.DataSource = EmployeeDL.GetAllEmployees(search, sortby, direction);
-            //dgv_employees.DataSource = EmployeeBindingSource;
+            EmployeeBindingSource.DataSource = EmployeeDL.GetAllEmployees(search, sortby, direction);
+            dgv_employees.DataSource = EmployeeBindingSource;
         }
         private void EmployeeManagement_Load(object sender, EventArgs e)
         {

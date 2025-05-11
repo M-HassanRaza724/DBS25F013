@@ -42,6 +42,7 @@ namespace SoftwareFirmManagement.DL
                     string initialBudget = data.IsDBNull(13) ? "null" : data.GetString(13);
                     string platform = data.IsDBNull(14) ? "null" : data.GetString(14);
                     string description = data.IsDBNull(12) ? "null" : data.GetString(12);
+                    
                     OrderDTO order = new OrderDTO(orderId, statusId, initialBudgetId, platformId, e, c,createdAt, status, s, initialBudget, platform, description);
                     allOrders.Add(order);
                 }

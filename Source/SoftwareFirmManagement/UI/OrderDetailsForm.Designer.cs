@@ -30,8 +30,8 @@ namespace SoftwareFirmManagement.UI
         /// </summary>
         private void InitializeComponent()
         {
-            SoftwareFirmManagement.BL.Customer customer4 = new SoftwareFirmManagement.BL.Customer();
-            SoftwareFirmManagement.BL.Employee employee4 = new SoftwareFirmManagement.BL.Employee();
+            SoftwareFirmManagement.BL.Customer customer1 = new SoftwareFirmManagement.BL.Customer();
+            SoftwareFirmManagement.BL.Employee employee1 = new SoftwareFirmManagement.BL.Employee();
             this.vScrollBar = new System.Windows.Forms.VScrollBar();
             this.pnl_main = new System.Windows.Forms.Panel();
             this.btn_exit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -52,12 +52,12 @@ namespace SoftwareFirmManagement.UI
             this.toolStripMenuItem_delete_order = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_edit_order = new System.Windows.Forms.ToolStripMenuItem();
             this.lbl_title = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.orderDisplay = new SoftwareFirmManagement.UI.OrderDisplay();
             this.lbl_details = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.customerDisplay = new SoftwareFirmManagement.UI.CustomerDisplay();
             this.lbl_customer_details = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.employeeDisplay = new SoftwareFirmManagement.UI.EmployeeDisplay();
             this.lbl_supervision = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.orderDisplay = new SoftwareFirmManagement.UI.OrderDisplay();
+            this.customerDisplay = new SoftwareFirmManagement.UI.CustomerDisplay();
+            this.employeeDisplay = new SoftwareFirmManagement.UI.EmployeeDisplay();
             this.pnl_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_order)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_order.Panel)).BeginInit();
@@ -139,7 +139,7 @@ namespace SoftwareFirmManagement.UI
             // 
             this.kryptonLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.kryptonLabel2.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonLabel2.Location = new System.Drawing.Point(24, 6);
+            this.kryptonLabel2.Location = new System.Drawing.Point(24, 0);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(92, 26);
             this.kryptonLabel2.TabIndex = 8;
@@ -149,7 +149,7 @@ namespace SoftwareFirmManagement.UI
             // 
             this.lbl_status.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_status.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_status.Location = new System.Drawing.Point(24, 75);
+            this.lbl_status.Location = new System.Drawing.Point(24, 69);
             this.lbl_status.Name = "lbl_status";
             this.lbl_status.Size = new System.Drawing.Size(55, 26);
             this.lbl_status.TabIndex = 35;
@@ -161,7 +161,7 @@ namespace SoftwareFirmManagement.UI
             this.cmb_status.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList;
             this.cmb_status.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
             this.cmb_status.DropDownWidth = 188;
-            this.cmb_status.Location = new System.Drawing.Point(24, 91);
+            this.cmb_status.Location = new System.Drawing.Point(24, 85);
             this.cmb_status.Name = "cmb_status";
             this.cmb_status.Size = new System.Drawing.Size(265, 36);
             this.cmb_status.TabIndex = 34;
@@ -172,7 +172,7 @@ namespace SoftwareFirmManagement.UI
             this.cmb_supervision.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList;
             this.cmb_supervision.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
             this.cmb_supervision.DropDownWidth = 188;
-            this.cmb_supervision.Location = new System.Drawing.Point(24, 24);
+            this.cmb_supervision.Location = new System.Drawing.Point(24, 18);
             this.cmb_supervision.Name = "cmb_supervision";
             this.cmb_supervision.Size = new System.Drawing.Size(265, 36);
             this.cmb_supervision.TabIndex = 33;
@@ -182,7 +182,7 @@ namespace SoftwareFirmManagement.UI
             // 
             this.kryptonLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.kryptonLabel3.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonLabel3.Location = new System.Drawing.Point(24, 210);
+            this.kryptonLabel3.Location = new System.Drawing.Point(24, 204);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(72, 26);
             this.kryptonLabel3.TabIndex = 31;
@@ -194,7 +194,7 @@ namespace SoftwareFirmManagement.UI
             this.cmb_platform.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList;
             this.cmb_platform.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
             this.cmb_platform.DropDownWidth = 188;
-            this.cmb_platform.Location = new System.Drawing.Point(24, 225);
+            this.cmb_platform.Location = new System.Drawing.Point(24, 219);
             this.cmb_platform.Name = "cmb_platform";
             this.cmb_platform.Size = new System.Drawing.Size(265, 36);
             this.cmb_platform.TabIndex = 32;
@@ -204,7 +204,7 @@ namespace SoftwareFirmManagement.UI
             // 
             this.kryptonLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.kryptonLabel4.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonLabel4.Location = new System.Drawing.Point(24, 139);
+            this.kryptonLabel4.Location = new System.Drawing.Point(24, 133);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(61, 26);
             this.kryptonLabel4.TabIndex = 27;
@@ -216,7 +216,7 @@ namespace SoftwareFirmManagement.UI
             this.cmb_service.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList;
             this.cmb_service.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
             this.cmb_service.DropDownWidth = 188;
-            this.cmb_service.Location = new System.Drawing.Point(24, 158);
+            this.cmb_service.Location = new System.Drawing.Point(24, 152);
             this.cmb_service.Name = "cmb_service";
             this.cmb_service.Size = new System.Drawing.Size(265, 36);
             this.cmb_service.TabIndex = 28;
@@ -225,7 +225,7 @@ namespace SoftwareFirmManagement.UI
             // btn_cancel
             // 
             this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_cancel.Location = new System.Drawing.Point(10, 298);
+            this.btn_cancel.Location = new System.Drawing.Point(10, 292);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(150, 50);
             this.btn_cancel.TabIndex = 13;
@@ -236,7 +236,7 @@ namespace SoftwareFirmManagement.UI
             // 
             this.btn_update_order.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btn_update_order.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
-            this.btn_update_order.Location = new System.Drawing.Point(166, 298);
+            this.btn_update_order.Location = new System.Drawing.Point(166, 292);
             this.btn_update_order.Name = "btn_update_order";
             this.btn_update_order.Size = new System.Drawing.Size(150, 50);
             this.btn_update_order.TabIndex = 2;
@@ -286,7 +286,7 @@ namespace SoftwareFirmManagement.UI
             this.toolStripMenuItem_delete_order.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.toolStripMenuItem_delete_order.Image = global::SoftwareFirmManagement.Properties.Resources.Trash;
             this.toolStripMenuItem_delete_order.Name = "toolStripMenuItem_delete_order";
-            this.toolStripMenuItem_delete_order.Size = new System.Drawing.Size(188, 30);
+            this.toolStripMenuItem_delete_order.Size = new System.Drawing.Size(166, 24);
             this.toolStripMenuItem_delete_order.Text = "Delete Order";
             this.toolStripMenuItem_delete_order.Click += new System.EventHandler(this.toolStripMenuItem_delete_order_Click);
             // 
@@ -296,7 +296,7 @@ namespace SoftwareFirmManagement.UI
             this.toolStripMenuItem_edit_order.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.toolStripMenuItem_edit_order.Image = global::SoftwareFirmManagement.Properties.Resources.Edit;
             this.toolStripMenuItem_edit_order.Name = "toolStripMenuItem_edit_order";
-            this.toolStripMenuItem_edit_order.Size = new System.Drawing.Size(188, 30);
+            this.toolStripMenuItem_edit_order.Size = new System.Drawing.Size(166, 24);
             this.toolStripMenuItem_edit_order.Text = "Edit Order";
             this.toolStripMenuItem_edit_order.Click += new System.EventHandler(this.toolStripMenuItem_edit_order_Click);
             // 
@@ -311,16 +311,6 @@ namespace SoftwareFirmManagement.UI
             this.lbl_title.TabIndex = 62;
             this.lbl_title.Values.Text = "Order Details";
             // 
-            // orderDisplay
-            // 
-            this.orderDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.orderDisplay.BackColor = System.Drawing.Color.Transparent;
-            this.orderDisplay.Location = new System.Drawing.Point(53, 102);
-            this.orderDisplay.Name = "orderDisplay";
-            this.orderDisplay.OrderDetails = null;
-            this.orderDisplay.Size = new System.Drawing.Size(820, 220);
-            this.orderDisplay.TabIndex = 68;
-            // 
             // lbl_details
             // 
             this.lbl_details.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -330,24 +320,6 @@ namespace SoftwareFirmManagement.UI
             this.lbl_details.Size = new System.Drawing.Size(59, 26);
             this.lbl_details.TabIndex = 65;
             this.lbl_details.Values.Text = "Details";
-            // 
-            // customerDisplay
-            // 
-            this.customerDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.customerDisplay.BackColor = System.Drawing.Color.Transparent;
-            customer4.CustomerId = 0;
-            customer4.Email = null;
-            customer4.Name = null;
-            customer4.Password = null;
-            customer4.Role = null;
-            customer4.RoleId = 0;
-            customer4.UserId = 0;
-            customer4.Username = null;
-            this.customerDisplay.Customer = customer4;
-            this.customerDisplay.Location = new System.Drawing.Point(53, 363);
-            this.customerDisplay.Name = "customerDisplay";
-            this.customerDisplay.Size = new System.Drawing.Size(820, 100);
-            this.customerDisplay.TabIndex = 69;
             // 
             // lbl_customer_details
             // 
@@ -359,28 +331,6 @@ namespace SoftwareFirmManagement.UI
             this.lbl_customer_details.TabIndex = 63;
             this.lbl_customer_details.Values.Text = "Customer Details";
             // 
-            // employeeDisplay
-            // 
-            this.employeeDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.employeeDisplay.BackColor = System.Drawing.Color.Transparent;
-            employee4.Designation = null;
-            employee4.DesignationId = 0;
-            employee4.Email = null;
-            employee4.EmployeeId = 0;
-            employee4.JoinedDate = new System.DateTime(((long)(0)));
-            employee4.Name = null;
-            employee4.Password = null;
-            employee4.Phone = null;
-            employee4.Role = null;
-            employee4.RoleId = 0;
-            employee4.UserId = 0;
-            employee4.Username = null;
-            this.employeeDisplay.Employee = employee4;
-            this.employeeDisplay.Location = new System.Drawing.Point(53, 496);
-            this.employeeDisplay.Name = "employeeDisplay";
-            this.employeeDisplay.Size = new System.Drawing.Size(820, 150);
-            this.employeeDisplay.TabIndex = 70;
-            // 
             // lbl_supervision
             // 
             this.lbl_supervision.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -390,6 +340,56 @@ namespace SoftwareFirmManagement.UI
             this.lbl_supervision.Size = new System.Drawing.Size(143, 26);
             this.lbl_supervision.TabIndex = 64;
             this.lbl_supervision.Values.Text = "Supervision Details";
+            // 
+            // orderDisplay
+            // 
+            this.orderDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.orderDisplay.BackColor = System.Drawing.Color.Transparent;
+            this.orderDisplay.Location = new System.Drawing.Point(53, 102);
+            this.orderDisplay.Name = "orderDisplay";
+            this.orderDisplay.OrderDetails = null;
+            this.orderDisplay.Size = new System.Drawing.Size(820, 220);
+            this.orderDisplay.TabIndex = 68;
+            // 
+            // customerDisplay
+            // 
+            this.customerDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.customerDisplay.BackColor = System.Drawing.Color.Transparent;
+            customer1.CustomerId = 0;
+            customer1.Email = null;
+            customer1.Name = null;
+            customer1.Password = null;
+            customer1.Role = null;
+            customer1.RoleId = 0;
+            customer1.UserId = 0;
+            customer1.Username = null;
+            this.customerDisplay.Customer = customer1;
+            this.customerDisplay.Location = new System.Drawing.Point(53, 363);
+            this.customerDisplay.Name = "customerDisplay";
+            this.customerDisplay.Size = new System.Drawing.Size(820, 100);
+            this.customerDisplay.TabIndex = 69;
+            // 
+            // employeeDisplay
+            // 
+            this.employeeDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.employeeDisplay.BackColor = System.Drawing.Color.Transparent;
+            employee1.Designation = null;
+            employee1.DesignationId = 0;
+            employee1.Email = null;
+            employee1.EmployeeId = 0;
+            employee1.JoinedDate = new System.DateTime(((long)(0)));
+            employee1.Name = null;
+            employee1.Password = null;
+            employee1.Phone = null;
+            employee1.Role = null;
+            employee1.RoleId = 0;
+            employee1.UserId = 0;
+            employee1.Username = null;
+            this.employeeDisplay.Employee = employee1;
+            this.employeeDisplay.Location = new System.Drawing.Point(53, 496);
+            this.employeeDisplay.Name = "employeeDisplay";
+            this.employeeDisplay.Size = new System.Drawing.Size(820, 150);
+            this.employeeDisplay.TabIndex = 70;
             // 
             // OrderDetailsForm
             // 

@@ -1,4 +1,4 @@
-﻿using SoftwareFirmManagement.BL;
+using SoftwareFirmManagement.BL;
 
 namespace SoftwareFirmManagement.UI
 {
@@ -30,10 +30,11 @@ namespace SoftwareFirmManagement.UI
         /// </summary>
         private void InitializeComponent()
         {
-            SoftwareFirmManagement.BL.Customer customer1 = new SoftwareFirmManagement.BL.Customer();
-            SoftwareFirmManagement.BL.Employee employee1 = new SoftwareFirmManagement.BL.Employee();
+            SoftwareFirmManagement.BL.Customer customer2 = new SoftwareFirmManagement.BL.Customer();
+            SoftwareFirmManagement.BL.Employee employee2 = new SoftwareFirmManagement.BL.Employee();
             this.vScrollBar = new System.Windows.Forms.VScrollBar();
             this.pnl_main = new System.Windows.Forms.Panel();
+            this.btn_review = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_exit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.gbx_add_update_order = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -55,9 +56,11 @@ namespace SoftwareFirmManagement.UI
             this.lbl_details = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_customer_details = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_supervision = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.orderDisplay = new SoftwareFirmManagement.UI.OrderDisplay();
-            this.customerDisplay = new SoftwareFirmManagement.UI.CustomerDisplay();
-            this.employeeDisplay = new SoftwareFirmManagement.UI.EmployeeDisplay();
+            this.gbx_review_input = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.btn_add_review = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_later = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.txt_review_description = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.stars_Display1 = new SoftwareFirmManagement.UI.Stars_Display();
             this.pnl_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_order)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_order.Panel)).BeginInit();
@@ -68,6 +71,10 @@ namespace SoftwareFirmManagement.UI
             ((System.ComponentModel.ISupportInitialize)(this.cmb_platform)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmb_service)).BeginInit();
             this.menuStrip_actions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_review_input)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_review_input.Panel)).BeginInit();
+            this.gbx_review_input.Panel.SuspendLayout();
+            this.gbx_review_input.SuspendLayout();
             this.SuspendLayout();
             // 
             // vScrollBar
@@ -85,6 +92,7 @@ namespace SoftwareFirmManagement.UI
             this.pnl_main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_main.Controls.Add(this.btn_review);
             this.pnl_main.Controls.Add(this.btn_exit);
             this.pnl_main.Controls.Add(this.gbx_add_update_order);
             this.pnl_main.Controls.Add(this.menuStrip_actions);
@@ -101,11 +109,22 @@ namespace SoftwareFirmManagement.UI
             this.pnl_main.Size = new System.Drawing.Size(939, 701);
             this.pnl_main.TabIndex = 57;
             // 
+            // btn_review
+            // 
+            this.btn_review.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
+            this.btn_review.Location = new System.Drawing.Point(147, 11);
+            this.btn_review.Name = "btn_review";
+            this.btn_review.Size = new System.Drawing.Size(148, 50);
+            this.btn_review.TabIndex = 72;
+            this.btn_review.Values.Text = "Add Review";
+            this.btn_review.Visible = false;
+            this.btn_review.Click += new System.EventHandler(this.btn_review_Click);
+            // 
             // btn_exit
             // 
             this.btn_exit.Location = new System.Drawing.Point(18, 12);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(150, 50);
+            this.btn_exit.Size = new System.Drawing.Size(123, 49);
             this.btn_exit.TabIndex = 71;
             this.btn_exit.Values.Text = "Back";
             this.btn_exit.Click += new System.EventHandler(this.btn_back_Click);
@@ -139,7 +158,7 @@ namespace SoftwareFirmManagement.UI
             // 
             this.kryptonLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.kryptonLabel2.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonLabel2.Location = new System.Drawing.Point(24, 0);
+            this.kryptonLabel2.Location = new System.Drawing.Point(24, -12);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(92, 26);
             this.kryptonLabel2.TabIndex = 8;
@@ -149,7 +168,7 @@ namespace SoftwareFirmManagement.UI
             // 
             this.lbl_status.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_status.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_status.Location = new System.Drawing.Point(24, 69);
+            this.lbl_status.Location = new System.Drawing.Point(24, 57);
             this.lbl_status.Name = "lbl_status";
             this.lbl_status.Size = new System.Drawing.Size(55, 26);
             this.lbl_status.TabIndex = 35;
@@ -161,7 +180,7 @@ namespace SoftwareFirmManagement.UI
             this.cmb_status.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList;
             this.cmb_status.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
             this.cmb_status.DropDownWidth = 188;
-            this.cmb_status.Location = new System.Drawing.Point(24, 85);
+            this.cmb_status.Location = new System.Drawing.Point(24, 73);
             this.cmb_status.Name = "cmb_status";
             this.cmb_status.Size = new System.Drawing.Size(265, 36);
             this.cmb_status.TabIndex = 34;
@@ -172,7 +191,7 @@ namespace SoftwareFirmManagement.UI
             this.cmb_supervision.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList;
             this.cmb_supervision.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
             this.cmb_supervision.DropDownWidth = 188;
-            this.cmb_supervision.Location = new System.Drawing.Point(24, 18);
+            this.cmb_supervision.Location = new System.Drawing.Point(24, 6);
             this.cmb_supervision.Name = "cmb_supervision";
             this.cmb_supervision.Size = new System.Drawing.Size(265, 36);
             this.cmb_supervision.TabIndex = 33;
@@ -182,7 +201,7 @@ namespace SoftwareFirmManagement.UI
             // 
             this.kryptonLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.kryptonLabel3.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonLabel3.Location = new System.Drawing.Point(24, 204);
+            this.kryptonLabel3.Location = new System.Drawing.Point(24, 192);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(72, 26);
             this.kryptonLabel3.TabIndex = 31;
@@ -194,7 +213,7 @@ namespace SoftwareFirmManagement.UI
             this.cmb_platform.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList;
             this.cmb_platform.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
             this.cmb_platform.DropDownWidth = 188;
-            this.cmb_platform.Location = new System.Drawing.Point(24, 219);
+            this.cmb_platform.Location = new System.Drawing.Point(24, 207);
             this.cmb_platform.Name = "cmb_platform";
             this.cmb_platform.Size = new System.Drawing.Size(265, 36);
             this.cmb_platform.TabIndex = 32;
@@ -204,7 +223,7 @@ namespace SoftwareFirmManagement.UI
             // 
             this.kryptonLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.kryptonLabel4.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonLabel4.Location = new System.Drawing.Point(24, 133);
+            this.kryptonLabel4.Location = new System.Drawing.Point(24, 121);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(61, 26);
             this.kryptonLabel4.TabIndex = 27;
@@ -216,7 +235,7 @@ namespace SoftwareFirmManagement.UI
             this.cmb_service.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList;
             this.cmb_service.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
             this.cmb_service.DropDownWidth = 188;
-            this.cmb_service.Location = new System.Drawing.Point(24, 152);
+            this.cmb_service.Location = new System.Drawing.Point(24, 140);
             this.cmb_service.Name = "cmb_service";
             this.cmb_service.Size = new System.Drawing.Size(265, 36);
             this.cmb_service.TabIndex = 28;
@@ -225,7 +244,7 @@ namespace SoftwareFirmManagement.UI
             // btn_cancel
             // 
             this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_cancel.Location = new System.Drawing.Point(10, 292);
+            this.btn_cancel.Location = new System.Drawing.Point(10, 280);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(150, 50);
             this.btn_cancel.TabIndex = 13;
@@ -236,7 +255,7 @@ namespace SoftwareFirmManagement.UI
             // 
             this.btn_update_order.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btn_update_order.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
-            this.btn_update_order.Location = new System.Drawing.Point(166, 292);
+            this.btn_update_order.Location = new System.Drawing.Point(166, 280);
             this.btn_update_order.Name = "btn_update_order";
             this.btn_update_order.Size = new System.Drawing.Size(150, 50);
             this.btn_update_order.TabIndex = 2;
@@ -321,6 +340,24 @@ namespace SoftwareFirmManagement.UI
             this.lbl_details.TabIndex = 65;
             this.lbl_details.Values.Text = "Details";
             // 
+            // customerDisplay
+            // 
+            this.customerDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.customerDisplay.BackColor = System.Drawing.Color.Transparent;
+            customer2.CustomerId = 0;
+            customer2.Email = null;
+            customer2.Name = null;
+            customer2.Password = null;
+            customer2.Role = null;
+            customer2.RoleId = 0;
+            customer2.UserId = 0;
+            customer2.Username = null;
+            this.customerDisplay.Customer = customer2;
+            this.customerDisplay.Location = new System.Drawing.Point(53, 363);
+            this.customerDisplay.Name = "customerDisplay";
+            this.customerDisplay.Size = new System.Drawing.Size(820, 100);
+            this.customerDisplay.TabIndex = 69;
+            // 
             // lbl_customer_details
             // 
             this.lbl_customer_details.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -330,6 +367,28 @@ namespace SoftwareFirmManagement.UI
             this.lbl_customer_details.Size = new System.Drawing.Size(129, 26);
             this.lbl_customer_details.TabIndex = 63;
             this.lbl_customer_details.Values.Text = "Customer Details";
+            // 
+            // employeeDisplay
+            // 
+            this.employeeDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.employeeDisplay.BackColor = System.Drawing.Color.Transparent;
+            employee2.Designation = null;
+            employee2.DesignationId = 0;
+            employee2.Email = null;
+            employee2.EmployeeId = 0;
+            employee2.JoinedDate = new System.DateTime(((long)(0)));
+            employee2.Name = null;
+            employee2.Password = null;
+            employee2.Phone = null;
+            employee2.Role = null;
+            employee2.RoleId = 0;
+            employee2.UserId = 0;
+            employee2.Username = null;
+            this.employeeDisplay.Employee = employee2;
+            this.employeeDisplay.Location = new System.Drawing.Point(53, 496);
+            this.employeeDisplay.Name = "employeeDisplay";
+            this.employeeDisplay.Size = new System.Drawing.Size(820, 150);
+            this.employeeDisplay.TabIndex = 70;
             // 
             // lbl_supervision
             // 
@@ -341,55 +400,63 @@ namespace SoftwareFirmManagement.UI
             this.lbl_supervision.TabIndex = 64;
             this.lbl_supervision.Values.Text = "Supervision Details";
             // 
-            // orderDisplay
+            // gbx_review_input
             // 
-            this.orderDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.orderDisplay.BackColor = System.Drawing.Color.Transparent;
-            this.orderDisplay.Location = new System.Drawing.Point(53, 102);
-            this.orderDisplay.Name = "orderDisplay";
-            this.orderDisplay.OrderDetails = null;
-            this.orderDisplay.Size = new System.Drawing.Size(820, 220);
-            this.orderDisplay.TabIndex = 68;
+            this.gbx_review_input.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gbx_review_input.Location = new System.Drawing.Point(196, 63);
+            this.gbx_review_input.Name = "gbx_review_input";
             // 
-            // customerDisplay
+            // gbx_review_input.Panel
             // 
-            this.customerDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.customerDisplay.BackColor = System.Drawing.Color.Transparent;
-            customer1.CustomerId = 0;
-            customer1.Email = null;
-            customer1.Name = null;
-            customer1.Password = null;
-            customer1.Role = null;
-            customer1.RoleId = 0;
-            customer1.UserId = 0;
-            customer1.Username = null;
-            this.customerDisplay.Customer = customer1;
-            this.customerDisplay.Location = new System.Drawing.Point(53, 363);
-            this.customerDisplay.Name = "customerDisplay";
-            this.customerDisplay.Size = new System.Drawing.Size(820, 100);
-            this.customerDisplay.TabIndex = 69;
+            this.gbx_review_input.Panel.Controls.Add(this.btn_add_review);
+            this.gbx_review_input.Panel.Controls.Add(this.btn_later);
+            this.gbx_review_input.Panel.Controls.Add(this.txt_review_description);
+            this.gbx_review_input.Panel.Controls.Add(this.stars_Display1);
+            this.gbx_review_input.Size = new System.Drawing.Size(592, 229);
+            this.gbx_review_input.TabIndex = 72;
+            this.gbx_review_input.Values.Heading = "Add your Review";
+            this.gbx_review_input.Visible = false;
             // 
-            // employeeDisplay
+            // btn_add_review
             // 
-            this.employeeDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.employeeDisplay.BackColor = System.Drawing.Color.Transparent;
-            employee1.Designation = null;
-            employee1.DesignationId = 0;
-            employee1.Email = null;
-            employee1.EmployeeId = 0;
-            employee1.JoinedDate = new System.DateTime(((long)(0)));
-            employee1.Name = null;
-            employee1.Password = null;
-            employee1.Phone = null;
-            employee1.Role = null;
-            employee1.RoleId = 0;
-            employee1.UserId = 0;
-            employee1.Username = null;
-            this.employeeDisplay.Employee = employee1;
-            this.employeeDisplay.Location = new System.Drawing.Point(53, 496);
-            this.employeeDisplay.Name = "employeeDisplay";
-            this.employeeDisplay.Size = new System.Drawing.Size(820, 150);
-            this.employeeDisplay.TabIndex = 70;
+            this.btn_add_review.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
+            this.btn_add_review.Location = new System.Drawing.Point(295, 138);
+            this.btn_add_review.Name = "btn_add_review";
+            this.btn_add_review.Size = new System.Drawing.Size(200, 50);
+            this.btn_add_review.TabIndex = 74;
+            this.btn_add_review.Values.Text = "Add";
+            this.btn_add_review.Click += new System.EventHandler(this.btn_add_review_Click);
+            // 
+            // btn_later
+            // 
+            this.btn_later.Location = new System.Drawing.Point(60, 138);
+            this.btn_later.Name = "btn_later";
+            this.btn_later.Size = new System.Drawing.Size(200, 50);
+            this.btn_later.TabIndex = 73;
+            this.btn_later.Values.Text = "Later";
+            this.btn_later.Click += new System.EventHandler(this.btn_later_Click);
+            // 
+            // txt_review_description
+            // 
+            this.txt_review_description.BackColor = System.Drawing.Color.Transparent;
+            this.txt_review_description.Location = new System.Drawing.Point(20, 43);
+            this.txt_review_description.MultiLine = true;
+            this.txt_review_description.Name = "txt_review_description";
+            this.txt_review_description.PlaceHolder = "Your Review";
+            this.txt_review_description.Size = new System.Drawing.Size(526, 86);
+            this.txt_review_description.Style = "Standalone";
+            this.txt_review_description.TabIndex = 8;
+            this.txt_review_description.TextBoxText = "Your Review";
+            // 
+            // stars_Display1
+            // 
+            this.stars_Display1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.stars_Display1.InputMode = true;
+            this.stars_Display1.Location = new System.Drawing.Point(20, 5);
+            this.stars_Display1.Name = "stars_Display1";
+            this.stars_Display1.Size = new System.Drawing.Size(156, 33);
+            this.stars_Display1.Stars = 5;
+            this.stars_Display1.TabIndex = 7;
             // 
             // OrderDetailsForm
             // 
@@ -397,6 +464,7 @@ namespace SoftwareFirmManagement.UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(950, 600);
+            this.Controls.Add(this.gbx_review_input);
             this.Controls.Add(this.pnl_main);
             this.Controls.Add(this.vScrollBar);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -416,6 +484,10 @@ namespace SoftwareFirmManagement.UI
             ((System.ComponentModel.ISupportInitialize)(this.cmb_service)).EndInit();
             this.menuStrip_actions.ResumeLayout(false);
             this.menuStrip_actions.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_review_input.Panel)).EndInit();
+            this.gbx_review_input.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gbx_review_input)).EndInit();
+            this.gbx_review_input.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -448,5 +520,11 @@ namespace SoftwareFirmManagement.UI
         private CustomerDisplay customerDisplay;
         private EmployeeDisplay employeeDisplay;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_exit;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox gbx_review_input;
+        private Stars_Display stars_Display1;
+        private TextBoxWithPlaceHolder txt_review_description;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_review;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_add_review;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_later;
     }
 }

@@ -161,6 +161,7 @@ namespace SoftwareFirmManagement.UI
                 pnl_user_management.Width = 230;
                 pnl_services.Width = 230;
                 pnl_order_management.Width = 230;
+                pnl_reviews.Width = 230;
 
             }
             else
@@ -172,6 +173,7 @@ namespace SoftwareFirmManagement.UI
                 pnl_user_management.Width = 60;
                 pnl_services.Width = 60;
                 pnl_order_management.Width = 60;
+                pnl_reviews.Width = 60;
 
             }
         }
@@ -201,6 +203,13 @@ namespace SoftwareFirmManagement.UI
             ShowFormInPanel(orderManagement);
             orderManagement.ParentForm = this;
 
+        }
+
+        private void btn_reviews_Click(object sender, EventArgs e)
+        {
+            DeleteExistingChild();
+            ClientReviews clientReviews = new ClientReviews();
+            ShowFormInPanel(clientReviews);
         }
     }
 }

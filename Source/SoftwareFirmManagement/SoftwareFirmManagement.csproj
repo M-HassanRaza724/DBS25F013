@@ -141,6 +141,12 @@
     <Compile Include="UI\AddUpdateCust.Designer.cs">
       <DependentUpon>AddUpdateCust.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ClientReviews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ClientReviews.Designer.cs">
+      <DependentUpon>ClientReviews.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\CustomerDisplay.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -209,6 +215,12 @@
     <Compile Include="UI\Resize.Designer.cs">
       <DependentUpon>Resize.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ReviewDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ReviewDisplay.Designer.cs">
+      <DependentUpon>ReviewDisplay.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\ServiceManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +232,12 @@
     </Compile>
     <Compile Include="UI\SidePanel.Designer.cs">
       <DependentUpon>SidePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Stars_Display.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Stars_Display.Designer.cs">
+      <DependentUpon>Stars_Display.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\TextBoxWithPlaceHolder.cs">
       <SubType>UserControl</SubType>
@@ -245,8 +263,12 @@
     <Compile Include="UI\UserCredentials.Designer.cs">
       <DependentUpon>UserCredentials.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\Report1.rdlc" />
     <EmbeddedResource Include="UI\AddUpdateCust.resx">
       <DependentUpon>AddUpdateCust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ClientReviews.resx">
+      <DependentUpon>ClientReviews.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CustomerDisplay.resx">
       <DependentUpon>CustomerDisplay.cs</DependentUpon>
@@ -291,6 +313,9 @@
     <EmbeddedResource Include="UI\Resize.resx">
       <DependentUpon>Resize.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\ReviewDisplay.resx">
+      <DependentUpon>ReviewDisplay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\ServiceDisplay.resx">
       <DependentUpon>ServiceDisplay.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SidePanel.resx">
       <DependentUpon>SidePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Stars_Display.resx">
+      <DependentUpon>Stars_Display.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TextBoxWithPlaceHolder.resx">
       <DependentUpon>TextBoxWithPlaceHolder.cs</DependentUpon>
@@ -427,9 +455,12 @@
     <Content Include="Resources\Minimize Window%28colored%29.png" />
     <Content Include="Resources\Normal Screen.png" />
     <None Include="Resources\Search More.png" />
+    <None Include="Resources\Popular.png" />
     <Content Include="Resources\Search.png" />
     <None Include="Resources\Trash.png" />
     <None Include="Resources\Service.png" />
+    <None Include="Resources\Star.png" />
+    <None Include="Resources\Star%28filled%29.png" />
     <Content Include="Resources\unchecked-hover-small.png" />
     <Content Include="Resources\unchecked-normal-small.png" />
     <None Include="Resources\User Default%28small%29.png" />

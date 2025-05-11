@@ -35,48 +35,48 @@ namespace SoftwareFirmManagement.UI
             this.pnl_main = new System.Windows.Forms.Panel();
             this.menuStrip_filters = new System.Windows.Forms.MenuStrip();
             this.filter_item_sort_by = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.UpdateServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbx_update_service = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.cmb_select_service_gbx_update_service = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.textBoxWithPlaceHolder1 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.textBoxWithPlaceHolder2 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.textBoxWithPlaceHolder3 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.btn_canel_update_service = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_update_service = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.textBoxWithPlaceHolder4 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.gbx_add_service = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.lbl_subservice = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txt_subservice = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.lbl_description = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txt_description = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.lbl_technology = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txt_technology = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.btn_cancel_add_service = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_add_update_services = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lbl_last_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txt_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.gbx_delete_service = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.cmb_select_service_gbx_delete_service = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.textBoxWithPlaceHolder5 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.textBoxWithPlaceHolder6 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.textBoxWithPlaceHolder7 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.btn_cancel_delete_service = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_delete_service = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel10 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.textBoxWithPlaceHolder8 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.vScrollBar = new System.Windows.Forms.VScrollBar();
+            this.AddServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.UpdateServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBoxWithPlaceHolder1 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.textBoxWithPlaceHolder2 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.textBoxWithPlaceHolder3 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.textBoxWithPlaceHolder4 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.txt_subservice = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.txt_description = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.txt_technology = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.txt_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.textBoxWithPlaceHolder5 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.textBoxWithPlaceHolder6 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.textBoxWithPlaceHolder7 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.textBoxWithPlaceHolder8 = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.pnl_main.SuspendLayout();
             this.menuStrip_filters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbx_update_service)).BeginInit();
@@ -131,7 +131,10 @@ namespace SoftwareFirmManagement.UI
             this.pnl_main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_main.Controls.Add(this.gbx_update_service);
             this.pnl_main.Controls.Add(this.menuStrip_filters);
+            this.pnl_main.Controls.Add(this.gbx_add_service);
+            this.pnl_main.Controls.Add(this.gbx_delete_service);
             this.pnl_main.Controls.Add(this.lbl_footer);
             this.pnl_main.Controls.Add(this.lbl_title);
             this.pnl_main.Controls.Add(this.lbl_header);
@@ -168,41 +171,11 @@ namespace SoftwareFirmManagement.UI
             this.filter_item_sort_by.Size = new System.Drawing.Size(59, 22);
             this.filter_item_sort_by.Text = "Actions";
             // 
-            // AddServiceToolStripMenuItem
-            // 
-            this.AddServiceToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.AddServiceToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
-            this.AddServiceToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Add;
-            this.AddServiceToolStripMenuItem.Name = "AddServiceToolStripMenuItem";
-            this.AddServiceToolStripMenuItem.Size = new System.Drawing.Size(155, 30);
-            this.AddServiceToolStripMenuItem.Text = "Add Service";
-            this.AddServiceToolStripMenuItem.Click += new System.EventHandler(this.AddServiceToolStripMenuItem_Click);
-            // 
-            // UpdateServiceToolStripMenuItem
-            // 
-            this.UpdateServiceToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.UpdateServiceToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
-            this.UpdateServiceToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Edit;
-            this.UpdateServiceToolStripMenuItem.Name = "UpdateServiceToolStripMenuItem";
-            this.UpdateServiceToolStripMenuItem.Size = new System.Drawing.Size(155, 30);
-            this.UpdateServiceToolStripMenuItem.Text = "Edit Service";
-            this.UpdateServiceToolStripMenuItem.Click += new System.EventHandler(this.UpdateServiceToolStripMenuItem_Click);
-            // 
-            // deleteServiceToolStripMenuItem
-            // 
-            this.deleteServiceToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.deleteServiceToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
-            this.deleteServiceToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Trash;
-            this.deleteServiceToolStripMenuItem.Name = "deleteServiceToolStripMenuItem";
-            this.deleteServiceToolStripMenuItem.Size = new System.Drawing.Size(155, 30);
-            this.deleteServiceToolStripMenuItem.Text = "Delete Service";
-            this.deleteServiceToolStripMenuItem.Click += new System.EventHandler(this.deleteServiceToolStripMenuItem_Click);
-            // 
             // gbx_update_service
             // 
             this.gbx_update_service.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gbx_update_service.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlAlternate;
-            this.gbx_update_service.Location = new System.Drawing.Point(208, 30);
+            this.gbx_update_service.Location = new System.Drawing.Point(231, 91);
             this.gbx_update_service.Name = "gbx_update_service";
             // 
             // gbx_update_service.Panel
@@ -250,23 +223,9 @@ namespace SoftwareFirmManagement.UI
             this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel1.Location = new System.Drawing.Point(16, 257);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(93, 26);
+            this.kryptonLabel1.Size = new System.Drawing.Size(124, 27);
             this.kryptonLabel1.TabIndex = 19;
             this.kryptonLabel1.Values.Text = "SubServices";
-            // 
-            // textBoxWithPlaceHolder1
-            // 
-            this.textBoxWithPlaceHolder1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxWithPlaceHolder1.BackColor = System.Drawing.Color.Transparent;
-            this.textBoxWithPlaceHolder1.Location = new System.Drawing.Point(13, 274);
-            this.textBoxWithPlaceHolder1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxWithPlaceHolder1.MultiLine = true;
-            this.textBoxWithPlaceHolder1.Name = "textBoxWithPlaceHolder1";
-            this.textBoxWithPlaceHolder1.PlaceHolder = "SubServices";
-            this.textBoxWithPlaceHolder1.Size = new System.Drawing.Size(287, 42);
-            this.textBoxWithPlaceHolder1.Style = "Standalone";
-            this.textBoxWithPlaceHolder1.TabIndex = 18;
-            this.textBoxWithPlaceHolder1.TextBoxText = "SubServices";
             // 
             // kryptonLabel2
             // 
@@ -274,23 +233,9 @@ namespace SoftwareFirmManagement.UI
             this.kryptonLabel2.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel2.Location = new System.Drawing.Point(13, 117);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(90, 26);
+            this.kryptonLabel2.Size = new System.Drawing.Size(114, 27);
             this.kryptonLabel2.TabIndex = 17;
             this.kryptonLabel2.Values.Text = "Description";
-            // 
-            // textBoxWithPlaceHolder2
-            // 
-            this.textBoxWithPlaceHolder2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxWithPlaceHolder2.BackColor = System.Drawing.Color.Transparent;
-            this.textBoxWithPlaceHolder2.Location = new System.Drawing.Point(10, 134);
-            this.textBoxWithPlaceHolder2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxWithPlaceHolder2.MultiLine = true;
-            this.textBoxWithPlaceHolder2.Name = "textBoxWithPlaceHolder2";
-            this.textBoxWithPlaceHolder2.PlaceHolder = "Description";
-            this.textBoxWithPlaceHolder2.Size = new System.Drawing.Size(287, 42);
-            this.textBoxWithPlaceHolder2.Style = "Standalone";
-            this.textBoxWithPlaceHolder2.TabIndex = 16;
-            this.textBoxWithPlaceHolder2.TextBoxText = "Description";
             // 
             // kryptonLabel3
             // 
@@ -298,23 +243,9 @@ namespace SoftwareFirmManagement.UI
             this.kryptonLabel3.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel3.Location = new System.Drawing.Point(13, 187);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(90, 26);
+            this.kryptonLabel3.Size = new System.Drawing.Size(117, 27);
             this.kryptonLabel3.TabIndex = 15;
             this.kryptonLabel3.Values.Text = "Technology";
-            // 
-            // textBoxWithPlaceHolder3
-            // 
-            this.textBoxWithPlaceHolder3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxWithPlaceHolder3.BackColor = System.Drawing.Color.Transparent;
-            this.textBoxWithPlaceHolder3.Location = new System.Drawing.Point(10, 204);
-            this.textBoxWithPlaceHolder3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxWithPlaceHolder3.MultiLine = true;
-            this.textBoxWithPlaceHolder3.Name = "textBoxWithPlaceHolder3";
-            this.textBoxWithPlaceHolder3.PlaceHolder = "Technology";
-            this.textBoxWithPlaceHolder3.Size = new System.Drawing.Size(287, 42);
-            this.textBoxWithPlaceHolder3.Style = "Standalone";
-            this.textBoxWithPlaceHolder3.TabIndex = 14;
-            this.textBoxWithPlaceHolder3.TextBoxText = "Technology";
             // 
             // btn_canel_update_service
             // 
@@ -352,29 +283,15 @@ namespace SoftwareFirmManagement.UI
             this.kryptonLabel5.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel5.Location = new System.Drawing.Point(13, 50);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(53, 26);
+            this.kryptonLabel5.Size = new System.Drawing.Size(63, 27);
             this.kryptonLabel5.TabIndex = 8;
             this.kryptonLabel5.Values.Text = "Name";
-            // 
-            // textBoxWithPlaceHolder4
-            // 
-            this.textBoxWithPlaceHolder4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxWithPlaceHolder4.BackColor = System.Drawing.Color.Transparent;
-            this.textBoxWithPlaceHolder4.Location = new System.Drawing.Point(10, 67);
-            this.textBoxWithPlaceHolder4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxWithPlaceHolder4.MultiLine = false;
-            this.textBoxWithPlaceHolder4.Name = "textBoxWithPlaceHolder4";
-            this.textBoxWithPlaceHolder4.PlaceHolder = "Name";
-            this.textBoxWithPlaceHolder4.Size = new System.Drawing.Size(287, 42);
-            this.textBoxWithPlaceHolder4.Style = "Standalone";
-            this.textBoxWithPlaceHolder4.TabIndex = 3;
-            this.textBoxWithPlaceHolder4.TextBoxText = "Name";
             // 
             // gbx_add_service
             // 
             this.gbx_add_service.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gbx_add_service.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlAlternate;
-            this.gbx_add_service.Location = new System.Drawing.Point(236, 23);
+            this.gbx_add_service.Location = new System.Drawing.Point(259, 84);
             this.gbx_add_service.Name = "gbx_add_service";
             // 
             // gbx_add_service.Panel
@@ -405,20 +322,6 @@ namespace SoftwareFirmManagement.UI
             this.lbl_subservice.TabIndex = 19;
             this.lbl_subservice.Values.Text = "SubServices";
             // 
-            // txt_subservice
-            // 
-            this.txt_subservice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_subservice.BackColor = System.Drawing.Color.Transparent;
-            this.txt_subservice.Location = new System.Drawing.Point(13, 210);
-            this.txt_subservice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_subservice.MultiLine = true;
-            this.txt_subservice.Name = "txt_subservice";
-            this.txt_subservice.PlaceHolder = "SubServices";
-            this.txt_subservice.Size = new System.Drawing.Size(287, 42);
-            this.txt_subservice.Style = "Standalone";
-            this.txt_subservice.TabIndex = 18;
-            this.txt_subservice.TextBoxText = "SubServices";
-            // 
             // lbl_description
             // 
             this.lbl_description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -429,20 +332,6 @@ namespace SoftwareFirmManagement.UI
             this.lbl_description.TabIndex = 17;
             this.lbl_description.Values.Text = "Description";
             // 
-            // txt_description
-            // 
-            this.txt_description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_description.BackColor = System.Drawing.Color.Transparent;
-            this.txt_description.Location = new System.Drawing.Point(10, 70);
-            this.txt_description.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_description.MultiLine = true;
-            this.txt_description.Name = "txt_description";
-            this.txt_description.PlaceHolder = "Description";
-            this.txt_description.Size = new System.Drawing.Size(287, 42);
-            this.txt_description.Style = "Standalone";
-            this.txt_description.TabIndex = 16;
-            this.txt_description.TextBoxText = "Description";
-            // 
             // lbl_technology
             // 
             this.lbl_technology.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -452,20 +341,6 @@ namespace SoftwareFirmManagement.UI
             this.lbl_technology.Size = new System.Drawing.Size(90, 26);
             this.lbl_technology.TabIndex = 15;
             this.lbl_technology.Values.Text = "Technology";
-            // 
-            // txt_technology
-            // 
-            this.txt_technology.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_technology.BackColor = System.Drawing.Color.Transparent;
-            this.txt_technology.Location = new System.Drawing.Point(10, 140);
-            this.txt_technology.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_technology.MultiLine = true;
-            this.txt_technology.Name = "txt_technology";
-            this.txt_technology.PlaceHolder = "Technology";
-            this.txt_technology.Size = new System.Drawing.Size(287, 42);
-            this.txt_technology.Style = "Standalone";
-            this.txt_technology.TabIndex = 14;
-            this.txt_technology.TextBoxText = "Technology";
             // 
             // btn_cancel_add_service
             // 
@@ -507,25 +382,11 @@ namespace SoftwareFirmManagement.UI
             this.lbl_name.TabIndex = 8;
             this.lbl_name.Values.Text = "Name";
             // 
-            // txt_name
-            // 
-            this.txt_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_name.BackColor = System.Drawing.Color.Transparent;
-            this.txt_name.Location = new System.Drawing.Point(10, 3);
-            this.txt_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_name.MultiLine = false;
-            this.txt_name.Name = "txt_name";
-            this.txt_name.PlaceHolder = "Name";
-            this.txt_name.Size = new System.Drawing.Size(287, 42);
-            this.txt_name.Style = "Standalone";
-            this.txt_name.TabIndex = 3;
-            this.txt_name.TextBoxText = "Name";
-            // 
             // gbx_delete_service
             // 
             this.gbx_delete_service.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gbx_delete_service.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlAlternate;
-            this.gbx_delete_service.Location = new System.Drawing.Point(263, 3);
+            this.gbx_delete_service.Location = new System.Drawing.Point(286, 64);
             this.gbx_delete_service.Name = "gbx_delete_service";
             // 
             // gbx_delete_service.Panel
@@ -573,23 +434,9 @@ namespace SoftwareFirmManagement.UI
             this.kryptonLabel6.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel6.Location = new System.Drawing.Point(16, 257);
             this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(93, 26);
+            this.kryptonLabel6.Size = new System.Drawing.Size(124, 27);
             this.kryptonLabel6.TabIndex = 19;
             this.kryptonLabel6.Values.Text = "SubServices";
-            // 
-            // textBoxWithPlaceHolder5
-            // 
-            this.textBoxWithPlaceHolder5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxWithPlaceHolder5.BackColor = System.Drawing.Color.Transparent;
-            this.textBoxWithPlaceHolder5.Location = new System.Drawing.Point(13, 274);
-            this.textBoxWithPlaceHolder5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxWithPlaceHolder5.MultiLine = true;
-            this.textBoxWithPlaceHolder5.Name = "textBoxWithPlaceHolder5";
-            this.textBoxWithPlaceHolder5.PlaceHolder = "SubServices";
-            this.textBoxWithPlaceHolder5.Size = new System.Drawing.Size(287, 42);
-            this.textBoxWithPlaceHolder5.Style = "Standalone";
-            this.textBoxWithPlaceHolder5.TabIndex = 18;
-            this.textBoxWithPlaceHolder5.TextBoxText = "SubServices";
             // 
             // kryptonLabel7
             // 
@@ -597,23 +444,9 @@ namespace SoftwareFirmManagement.UI
             this.kryptonLabel7.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel7.Location = new System.Drawing.Point(13, 117);
             this.kryptonLabel7.Name = "kryptonLabel7";
-            this.kryptonLabel7.Size = new System.Drawing.Size(90, 26);
+            this.kryptonLabel7.Size = new System.Drawing.Size(114, 27);
             this.kryptonLabel7.TabIndex = 17;
             this.kryptonLabel7.Values.Text = "Description";
-            // 
-            // textBoxWithPlaceHolder6
-            // 
-            this.textBoxWithPlaceHolder6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxWithPlaceHolder6.BackColor = System.Drawing.Color.Transparent;
-            this.textBoxWithPlaceHolder6.Location = new System.Drawing.Point(10, 134);
-            this.textBoxWithPlaceHolder6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxWithPlaceHolder6.MultiLine = true;
-            this.textBoxWithPlaceHolder6.Name = "textBoxWithPlaceHolder6";
-            this.textBoxWithPlaceHolder6.PlaceHolder = "Description";
-            this.textBoxWithPlaceHolder6.Size = new System.Drawing.Size(287, 42);
-            this.textBoxWithPlaceHolder6.Style = "Standalone";
-            this.textBoxWithPlaceHolder6.TabIndex = 16;
-            this.textBoxWithPlaceHolder6.TextBoxText = "Description";
             // 
             // kryptonLabel8
             // 
@@ -621,23 +454,9 @@ namespace SoftwareFirmManagement.UI
             this.kryptonLabel8.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel8.Location = new System.Drawing.Point(13, 187);
             this.kryptonLabel8.Name = "kryptonLabel8";
-            this.kryptonLabel8.Size = new System.Drawing.Size(90, 26);
+            this.kryptonLabel8.Size = new System.Drawing.Size(117, 27);
             this.kryptonLabel8.TabIndex = 15;
             this.kryptonLabel8.Values.Text = "Technology";
-            // 
-            // textBoxWithPlaceHolder7
-            // 
-            this.textBoxWithPlaceHolder7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxWithPlaceHolder7.BackColor = System.Drawing.Color.Transparent;
-            this.textBoxWithPlaceHolder7.Location = new System.Drawing.Point(10, 204);
-            this.textBoxWithPlaceHolder7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxWithPlaceHolder7.MultiLine = true;
-            this.textBoxWithPlaceHolder7.Name = "textBoxWithPlaceHolder7";
-            this.textBoxWithPlaceHolder7.PlaceHolder = "Technology";
-            this.textBoxWithPlaceHolder7.Size = new System.Drawing.Size(287, 42);
-            this.textBoxWithPlaceHolder7.Style = "Standalone";
-            this.textBoxWithPlaceHolder7.TabIndex = 14;
-            this.textBoxWithPlaceHolder7.TextBoxText = "Technology";
             // 
             // btn_cancel_delete_service
             // 
@@ -675,9 +494,205 @@ namespace SoftwareFirmManagement.UI
             this.kryptonLabel10.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel10.Location = new System.Drawing.Point(13, 50);
             this.kryptonLabel10.Name = "kryptonLabel10";
-            this.kryptonLabel10.Size = new System.Drawing.Size(53, 26);
+            this.kryptonLabel10.Size = new System.Drawing.Size(63, 27);
             this.kryptonLabel10.TabIndex = 8;
             this.kryptonLabel10.Values.Text = "Name";
+            // 
+            // vScrollBar
+            // 
+            this.vScrollBar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.vScrollBar.LargeChange = 1;
+            this.vScrollBar.Location = new System.Drawing.Point(863, 0);
+            this.vScrollBar.Maximum = 0;
+            this.vScrollBar.MaximumSize = new System.Drawing.Size(15, 0);
+            this.vScrollBar.Name = "vScrollBar";
+            this.vScrollBar.Size = new System.Drawing.Size(10, 450);
+            this.vScrollBar.TabIndex = 0;
+            this.vScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vScrollBar_Scroll);
+            // 
+            // AddServiceToolStripMenuItem
+            // 
+            this.AddServiceToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.AddServiceToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.AddServiceToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Add;
+            this.AddServiceToolStripMenuItem.Name = "AddServiceToolStripMenuItem";
+            this.AddServiceToolStripMenuItem.Size = new System.Drawing.Size(155, 30);
+            this.AddServiceToolStripMenuItem.Text = "Add Service";
+            this.AddServiceToolStripMenuItem.Click += new System.EventHandler(this.AddServiceToolStripMenuItem_Click);
+            // 
+            // UpdateServiceToolStripMenuItem
+            // 
+            this.UpdateServiceToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.UpdateServiceToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.UpdateServiceToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Edit;
+            this.UpdateServiceToolStripMenuItem.Name = "UpdateServiceToolStripMenuItem";
+            this.UpdateServiceToolStripMenuItem.Size = new System.Drawing.Size(155, 30);
+            this.UpdateServiceToolStripMenuItem.Text = "Edit Service";
+            this.UpdateServiceToolStripMenuItem.Click += new System.EventHandler(this.UpdateServiceToolStripMenuItem_Click);
+            // 
+            // deleteServiceToolStripMenuItem
+            // 
+            this.deleteServiceToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.deleteServiceToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.deleteServiceToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Trash;
+            this.deleteServiceToolStripMenuItem.Name = "deleteServiceToolStripMenuItem";
+            this.deleteServiceToolStripMenuItem.Size = new System.Drawing.Size(155, 30);
+            this.deleteServiceToolStripMenuItem.Text = "Delete Service";
+            this.deleteServiceToolStripMenuItem.Click += new System.EventHandler(this.deleteServiceToolStripMenuItem_Click);
+            // 
+            // textBoxWithPlaceHolder1
+            // 
+            this.textBoxWithPlaceHolder1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxWithPlaceHolder1.BackColor = System.Drawing.Color.Transparent;
+            this.textBoxWithPlaceHolder1.Location = new System.Drawing.Point(13, 274);
+            this.textBoxWithPlaceHolder1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxWithPlaceHolder1.MultiLine = true;
+            this.textBoxWithPlaceHolder1.Name = "textBoxWithPlaceHolder1";
+            this.textBoxWithPlaceHolder1.PlaceHolder = "SubServices";
+            this.textBoxWithPlaceHolder1.Size = new System.Drawing.Size(287, 42);
+            this.textBoxWithPlaceHolder1.Style = "Standalone";
+            this.textBoxWithPlaceHolder1.TabIndex = 18;
+            this.textBoxWithPlaceHolder1.TextBoxText = "SubServices";
+            // 
+            // textBoxWithPlaceHolder2
+            // 
+            this.textBoxWithPlaceHolder2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxWithPlaceHolder2.BackColor = System.Drawing.Color.Transparent;
+            this.textBoxWithPlaceHolder2.Location = new System.Drawing.Point(10, 134);
+            this.textBoxWithPlaceHolder2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxWithPlaceHolder2.MultiLine = true;
+            this.textBoxWithPlaceHolder2.Name = "textBoxWithPlaceHolder2";
+            this.textBoxWithPlaceHolder2.PlaceHolder = "Description";
+            this.textBoxWithPlaceHolder2.Size = new System.Drawing.Size(287, 42);
+            this.textBoxWithPlaceHolder2.Style = "Standalone";
+            this.textBoxWithPlaceHolder2.TabIndex = 16;
+            this.textBoxWithPlaceHolder2.TextBoxText = "Description";
+            // 
+            // textBoxWithPlaceHolder3
+            // 
+            this.textBoxWithPlaceHolder3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxWithPlaceHolder3.BackColor = System.Drawing.Color.Transparent;
+            this.textBoxWithPlaceHolder3.Location = new System.Drawing.Point(10, 204);
+            this.textBoxWithPlaceHolder3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxWithPlaceHolder3.MultiLine = true;
+            this.textBoxWithPlaceHolder3.Name = "textBoxWithPlaceHolder3";
+            this.textBoxWithPlaceHolder3.PlaceHolder = "Technology";
+            this.textBoxWithPlaceHolder3.Size = new System.Drawing.Size(287, 42);
+            this.textBoxWithPlaceHolder3.Style = "Standalone";
+            this.textBoxWithPlaceHolder3.TabIndex = 14;
+            this.textBoxWithPlaceHolder3.TextBoxText = "Technology";
+            // 
+            // textBoxWithPlaceHolder4
+            // 
+            this.textBoxWithPlaceHolder4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxWithPlaceHolder4.BackColor = System.Drawing.Color.Transparent;
+            this.textBoxWithPlaceHolder4.Location = new System.Drawing.Point(10, 67);
+            this.textBoxWithPlaceHolder4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxWithPlaceHolder4.MultiLine = false;
+            this.textBoxWithPlaceHolder4.Name = "textBoxWithPlaceHolder4";
+            this.textBoxWithPlaceHolder4.PlaceHolder = "Name";
+            this.textBoxWithPlaceHolder4.Size = new System.Drawing.Size(287, 42);
+            this.textBoxWithPlaceHolder4.Style = "Standalone";
+            this.textBoxWithPlaceHolder4.TabIndex = 3;
+            this.textBoxWithPlaceHolder4.TextBoxText = "Name";
+            // 
+            // txt_subservice
+            // 
+            this.txt_subservice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_subservice.BackColor = System.Drawing.Color.Transparent;
+            this.txt_subservice.Location = new System.Drawing.Point(13, 210);
+            this.txt_subservice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_subservice.MultiLine = true;
+            this.txt_subservice.Name = "txt_subservice";
+            this.txt_subservice.PlaceHolder = "SubServices";
+            this.txt_subservice.Size = new System.Drawing.Size(287, 42);
+            this.txt_subservice.Style = "Standalone";
+            this.txt_subservice.TabIndex = 18;
+            this.txt_subservice.TextBoxText = "SubServices";
+            // 
+            // txt_description
+            // 
+            this.txt_description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_description.BackColor = System.Drawing.Color.Transparent;
+            this.txt_description.Location = new System.Drawing.Point(10, 70);
+            this.txt_description.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_description.MultiLine = true;
+            this.txt_description.Name = "txt_description";
+            this.txt_description.PlaceHolder = "Description";
+            this.txt_description.Size = new System.Drawing.Size(287, 42);
+            this.txt_description.Style = "Standalone";
+            this.txt_description.TabIndex = 16;
+            this.txt_description.TextBoxText = "Description";
+            // 
+            // txt_technology
+            // 
+            this.txt_technology.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_technology.BackColor = System.Drawing.Color.Transparent;
+            this.txt_technology.Location = new System.Drawing.Point(10, 140);
+            this.txt_technology.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_technology.MultiLine = true;
+            this.txt_technology.Name = "txt_technology";
+            this.txt_technology.PlaceHolder = "Technology";
+            this.txt_technology.Size = new System.Drawing.Size(287, 42);
+            this.txt_technology.Style = "Standalone";
+            this.txt_technology.TabIndex = 14;
+            this.txt_technology.TextBoxText = "Technology";
+            // 
+            // txt_name
+            // 
+            this.txt_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_name.BackColor = System.Drawing.Color.Transparent;
+            this.txt_name.Location = new System.Drawing.Point(10, 3);
+            this.txt_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_name.MultiLine = false;
+            this.txt_name.Name = "txt_name";
+            this.txt_name.PlaceHolder = "Name";
+            this.txt_name.Size = new System.Drawing.Size(287, 42);
+            this.txt_name.Style = "Standalone";
+            this.txt_name.TabIndex = 3;
+            this.txt_name.TextBoxText = "Name";
+            // 
+            // textBoxWithPlaceHolder5
+            // 
+            this.textBoxWithPlaceHolder5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxWithPlaceHolder5.BackColor = System.Drawing.Color.Transparent;
+            this.textBoxWithPlaceHolder5.Location = new System.Drawing.Point(13, 274);
+            this.textBoxWithPlaceHolder5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxWithPlaceHolder5.MultiLine = true;
+            this.textBoxWithPlaceHolder5.Name = "textBoxWithPlaceHolder5";
+            this.textBoxWithPlaceHolder5.PlaceHolder = "SubServices";
+            this.textBoxWithPlaceHolder5.Size = new System.Drawing.Size(287, 42);
+            this.textBoxWithPlaceHolder5.Style = "Standalone";
+            this.textBoxWithPlaceHolder5.TabIndex = 18;
+            this.textBoxWithPlaceHolder5.TextBoxText = "SubServices";
+            // 
+            // textBoxWithPlaceHolder6
+            // 
+            this.textBoxWithPlaceHolder6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxWithPlaceHolder6.BackColor = System.Drawing.Color.Transparent;
+            this.textBoxWithPlaceHolder6.Location = new System.Drawing.Point(10, 134);
+            this.textBoxWithPlaceHolder6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxWithPlaceHolder6.MultiLine = true;
+            this.textBoxWithPlaceHolder6.Name = "textBoxWithPlaceHolder6";
+            this.textBoxWithPlaceHolder6.PlaceHolder = "Description";
+            this.textBoxWithPlaceHolder6.Size = new System.Drawing.Size(287, 42);
+            this.textBoxWithPlaceHolder6.Style = "Standalone";
+            this.textBoxWithPlaceHolder6.TabIndex = 16;
+            this.textBoxWithPlaceHolder6.TextBoxText = "Description";
+            // 
+            // textBoxWithPlaceHolder7
+            // 
+            this.textBoxWithPlaceHolder7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxWithPlaceHolder7.BackColor = System.Drawing.Color.Transparent;
+            this.textBoxWithPlaceHolder7.Location = new System.Drawing.Point(10, 204);
+            this.textBoxWithPlaceHolder7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxWithPlaceHolder7.MultiLine = true;
+            this.textBoxWithPlaceHolder7.Name = "textBoxWithPlaceHolder7";
+            this.textBoxWithPlaceHolder7.PlaceHolder = "Technology";
+            this.textBoxWithPlaceHolder7.Size = new System.Drawing.Size(287, 42);
+            this.textBoxWithPlaceHolder7.Style = "Standalone";
+            this.textBoxWithPlaceHolder7.TabIndex = 14;
+            this.textBoxWithPlaceHolder7.TextBoxText = "Technology";
             // 
             // textBoxWithPlaceHolder8
             // 
@@ -693,27 +708,12 @@ namespace SoftwareFirmManagement.UI
             this.textBoxWithPlaceHolder8.TabIndex = 3;
             this.textBoxWithPlaceHolder8.TextBoxText = "Name";
             // 
-            // vScrollBar
-            // 
-            this.vScrollBar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.vScrollBar.LargeChange = 1;
-            this.vScrollBar.Location = new System.Drawing.Point(863, 0);
-            this.vScrollBar.Maximum = 0;
-            this.vScrollBar.MaximumSize = new System.Drawing.Size(15, 0);
-            this.vScrollBar.Name = "vScrollBar";
-            this.vScrollBar.Size = new System.Drawing.Size(10, 450);
-            this.vScrollBar.TabIndex = 0;
-            this.vScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vScrollBar_Scroll);
-            // 
             // ServiceManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(873, 450);
-            this.Controls.Add(this.gbx_update_service);
-            this.Controls.Add(this.gbx_add_service);
-            this.Controls.Add(this.gbx_delete_service);
             this.Controls.Add(this.pnl_main);
             this.Controls.Add(this.vScrollBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

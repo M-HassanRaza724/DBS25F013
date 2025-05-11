@@ -25,7 +25,15 @@ namespace SoftwareFirmManagement.UI
                 employeeDisplay.Visible = false;
                 lbl_supervision.Visible = false;
             }
-
+            if (orderDisplay.OrderDetails.Status == "Completed" && !ReviewDL.ReviewExist(orderDisplay.OrderDetails.OrderId))
+            {
+                btn_review.Visible = true;
+            }
+            else
+            {
+                btn_review.Visible = false;
+                gbx_review_input.Visible = false;
+            }
         }
 
         private void vScrollBar_Scroll(object sender, ScrollEventArgs e)
@@ -92,7 +100,7 @@ namespace SoftwareFirmManagement.UI
                 }
                 else
                 {
-                    emp = EmployeeDL.GetAllEmployees()[cmb_platform.SelectedIndex];
+                    emp = EmployeeDL.GetEmployeeByName(cmb_supervision.Text);
 
                 }
                 ServiceDTO ser = ServiceDL.allServices[cmb_service.SelectedIndex];
@@ -110,7 +118,7 @@ namespace SoftwareFirmManagement.UI
                 orderDisplay.OrderDetails.Status = cmb_status.Text;
                 orderDisplay.OrderDetails.Service = ser;
                 orderDisplay.OrderDetails.Platform = cmb_platform.Text;
-                if(emp != null)
+                if (emp != null)
                 {
                     employeeDisplay.Visible = true;
                     employeeDisplay.Employee = emp;
@@ -121,6 +129,15 @@ namespace SoftwareFirmManagement.UI
                     employeeDisplay.Employee = Employee.defaultEmployee;
 
                     employeeDisplay.Visible = false;
+                }
+                if(orderDisplay.OrderDetails.Status == "Completed" && !ReviewDL.ReviewExist(orderDisplay.OrderDetails.OrderId))
+                {
+                    btn_review.Visible = true;
+                }
+                else
+                {
+                    btn_review.Visible = false;
+                    gbx_review_input.Visible = false;
                 }
             }
             catch (Exception ex)
@@ -280,6 +297,39 @@ namespace SoftwareFirmManagement.UI
             }
         }
 
+        private void btn_review_Click(object sender, EventArgs e)
+        {
+            gbx_review_input.Enabled = true;
+            gbx_review_input.Visible = true;
+        }
 
+        private void btn_later_Click(object sender, EventArgs e)
+        {
+            gbx_review_input.Visible = false;
+            gbx_review_input.Enabled = false;
+
+        }
+
+        private void btn_add_review_Click(object sender, EventArgs e)
+        {
+            ReviewDAO r = new ReviewDAO();
+            try
+            {
+                r.Stars = stars_Display1.Stars;
+                r.Date = DateTime.Now;
+                r.Description = txt_review_description.TextBoxText;
+                r.ReviewerName = orderDisplay.OrderDetails.Customer.Name;
+                r.OrderId = orderDisplay.OrderDetails.OrderId;
+                ReviewDAO.AddReview(r);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            gbx_review_input.Visible = false;
+            gbx_review_input.Enabled = false;
+
+
+        }
     }
 }

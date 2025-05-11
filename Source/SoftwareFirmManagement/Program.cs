@@ -22,6 +22,7 @@ namespace SoftwareFirmManagement
             //MessageBox.Show($"{new Customer(-1, "username", "email", "passs", -1, -1, "Name")}");
             LookupDL.LoadAllLookups();
             
+            
             UserDL.LoadAllUsers();
             ServiceDL.LoadAllServices();
             OrderDL.GetAllOrdersFromDatabase();

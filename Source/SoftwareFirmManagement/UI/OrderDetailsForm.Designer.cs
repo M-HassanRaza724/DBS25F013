@@ -64,6 +64,7 @@ namespace SoftwareFirmManagement.UI
             this.btn_later = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.txt_review_description = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.stars_Display1 = new SoftwareFirmManagement.UI.Stars_Display();
+            this.assignEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_order)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_order.Panel)).BeginInit();
@@ -283,11 +284,11 @@ namespace SoftwareFirmManagement.UI
             this.menuStrip_actions.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip_actions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.actions});
-            this.menuStrip_actions.Location = new System.Drawing.Point(851, 11);
+            this.menuStrip_actions.Location = new System.Drawing.Point(731, 11);
             this.menuStrip_actions.Name = "menuStrip_actions";
             this.menuStrip_actions.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
             this.menuStrip_actions.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip_actions.Size = new System.Drawing.Size(77, 25);
+            this.menuStrip_actions.Size = new System.Drawing.Size(197, 25);
             this.menuStrip_actions.TabIndex = 66;
             this.menuStrip_actions.Text = "Filters";
             // 
@@ -295,7 +296,8 @@ namespace SoftwareFirmManagement.UI
             // 
             this.actions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem_delete_order,
-            this.toolStripMenuItem_edit_order});
+            this.toolStripMenuItem_edit_order,
+            this.assignEmployeesToolStripMenuItem});
             this.actions.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.actions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.actions.Name = "actions";
@@ -308,7 +310,7 @@ namespace SoftwareFirmManagement.UI
             this.toolStripMenuItem_delete_order.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.toolStripMenuItem_delete_order.Image = global::SoftwareFirmManagement.Properties.Resources.Trash;
             this.toolStripMenuItem_delete_order.Name = "toolStripMenuItem_delete_order";
-            this.toolStripMenuItem_delete_order.Size = new System.Drawing.Size(166, 24);
+            this.toolStripMenuItem_delete_order.Size = new System.Drawing.Size(206, 30);
             this.toolStripMenuItem_delete_order.Text = "Delete Order";
             this.toolStripMenuItem_delete_order.Click += new System.EventHandler(this.toolStripMenuItem_delete_order_Click);
             // 
@@ -318,7 +320,7 @@ namespace SoftwareFirmManagement.UI
             this.toolStripMenuItem_edit_order.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.toolStripMenuItem_edit_order.Image = global::SoftwareFirmManagement.Properties.Resources.Edit;
             this.toolStripMenuItem_edit_order.Name = "toolStripMenuItem_edit_order";
-            this.toolStripMenuItem_edit_order.Size = new System.Drawing.Size(166, 24);
+            this.toolStripMenuItem_edit_order.Size = new System.Drawing.Size(206, 30);
             this.toolStripMenuItem_edit_order.Text = "Edit Order";
             this.toolStripMenuItem_edit_order.Click += new System.EventHandler(this.toolStripMenuItem_edit_order_Click);
             // 
@@ -471,6 +473,15 @@ namespace SoftwareFirmManagement.UI
             this.stars_Display1.Stars = 5;
             this.stars_Display1.TabIndex = 7;
             // 
+            // assignEmployeesToolStripMenuItem
+            // 
+            this.assignEmployeesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.assignEmployeesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.assignEmployeesToolStripMenuItem.Name = "assignEmployeesToolStripMenuItem";
+            this.assignEmployeesToolStripMenuItem.Size = new System.Drawing.Size(206, 30);
+            this.assignEmployeesToolStripMenuItem.Text = "Assign Employees";
+            this.assignEmployeesToolStripMenuItem.Click += new System.EventHandler(this.assignEmployeesToolStripMenuItem_Click);
+            // 
             // OrderDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -539,5 +550,6 @@ namespace SoftwareFirmManagement.UI
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_review;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_add_review;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_later;
+        private System.Windows.Forms.ToolStripMenuItem assignEmployeesToolStripMenuItem;
     }
 }

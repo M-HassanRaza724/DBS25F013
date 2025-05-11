@@ -129,3 +129,5 @@ E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\D
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.ReviewDisplay.resources
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.ClientReviews.resources
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.SalaryManagement.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.EmployeeAssignationForm.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.OrderPlacementForm.resources

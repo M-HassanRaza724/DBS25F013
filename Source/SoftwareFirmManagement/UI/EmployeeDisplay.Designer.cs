@@ -30,6 +30,8 @@
         {
             this.lbl_username = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.gbx_customer_details = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.lbl_phone_text = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lbl_phone = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_designation_text = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_designation = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_username_text = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -37,8 +39,7 @@
             this.lbl_full_name_text = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_email = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_full_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.lbl_phone_text = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.lbl_phone = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.cbtn_assign = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
             ((System.ComponentModel.ISupportInitialize)(this.gbx_customer_details)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbx_customer_details.Panel)).BeginInit();
             this.gbx_customer_details.Panel.SuspendLayout();
@@ -65,6 +66,7 @@
             // 
             // gbx_customer_details.Panel
             // 
+            this.gbx_customer_details.Panel.Controls.Add(this.cbtn_assign);
             this.gbx_customer_details.Panel.Controls.Add(this.lbl_phone_text);
             this.gbx_customer_details.Panel.Controls.Add(this.lbl_phone);
             this.gbx_customer_details.Panel.Controls.Add(this.lbl_designation_text);
@@ -78,6 +80,27 @@
             this.gbx_customer_details.Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.gbx_customer_details_Panel_Paint);
             this.gbx_customer_details.Size = new System.Drawing.Size(820, 150);
             this.gbx_customer_details.TabIndex = 1;
+            // 
+            // lbl_phone_text
+            // 
+            this.lbl_phone_text.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_phone_text.Location = new System.Drawing.Point(22, 101);
+            this.lbl_phone_text.Name = "lbl_phone_text";
+            this.lbl_phone_text.Size = new System.Drawing.Size(127, 28);
+            this.lbl_phone_text.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_phone_text.TabIndex = 26;
+            this.lbl_phone_text.Values.Text = "0300000000000";
+            // 
+            // lbl_phone
+            // 
+            this.lbl_phone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_phone.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.lbl_phone.Location = new System.Drawing.Point(18, 71);
+            this.lbl_phone.Name = "lbl_phone";
+            this.lbl_phone.Size = new System.Drawing.Size(80, 37);
+            this.lbl_phone.StateCommon.ShortText.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_phone.TabIndex = 25;
+            this.lbl_phone.Values.Text = "Phone";
             // 
             // lbl_designation_text
             // 
@@ -152,26 +175,17 @@
             this.lbl_full_name.TabIndex = 17;
             this.lbl_full_name.Values.Text = "Name";
             // 
-            // lbl_phone_text
+            // cbtn_assign
             // 
-            this.lbl_phone_text.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_phone_text.Location = new System.Drawing.Point(22, 101);
-            this.lbl_phone_text.Name = "lbl_phone_text";
-            this.lbl_phone_text.Size = new System.Drawing.Size(127, 28);
-            this.lbl_phone_text.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_phone_text.TabIndex = 26;
-            this.lbl_phone_text.Values.Text = "0300000000000";
-            // 
-            // lbl_phone
-            // 
-            this.lbl_phone.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_phone.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_phone.Location = new System.Drawing.Point(18, 71);
-            this.lbl_phone.Name = "lbl_phone";
-            this.lbl_phone.Size = new System.Drawing.Size(80, 37);
-            this.lbl_phone.StateCommon.ShortText.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_phone.TabIndex = 25;
-            this.lbl_phone.Values.Text = "Phone";
+            this.cbtn_assign.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbtn_assign.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
+            this.cbtn_assign.Location = new System.Drawing.Point(535, 80);
+            this.cbtn_assign.Name = "cbtn_assign";
+            this.cbtn_assign.Size = new System.Drawing.Size(182, 42);
+            this.cbtn_assign.TabIndex = 32;
+            this.cbtn_assign.Values.Text = "Assign";
+            this.cbtn_assign.Visible = false;
+            this.cbtn_assign.CheckedChanged += new System.EventHandler(this.cbtn_assign_CheckedChanged);
             // 
             // EmployeeDisplay
             // 
@@ -203,5 +217,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_designation;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_phone_text;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_phone;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckButton cbtn_assign;
     }
 }

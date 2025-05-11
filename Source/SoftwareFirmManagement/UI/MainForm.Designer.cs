@@ -38,7 +38,6 @@ namespace SoftwareFirmManagement.UI
             this.btn_close = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_max_min = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_size = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.header1 = new SoftwareFirmManagement.UI.Header();
             this.pnl_main = new System.Windows.Forms.Panel();
             this.pnl_user_management = new System.Windows.Forms.Panel();
             this.btn_employee_management = new System.Windows.Forms.Button();
@@ -47,8 +46,11 @@ namespace SoftwareFirmManagement.UI
             this.pnl_dashboard = new System.Windows.Forms.Panel();
             this.pnl_menu = new System.Windows.Forms.Panel();
             this.pnl_services = new System.Windows.Forms.Panel();
-            this.sidePanel1 = new SoftwareFirmManagement.UI.SidePanel();
             this.pnl_order_management = new System.Windows.Forms.Panel();
+            this.header1 = new SoftwareFirmManagement.UI.Header();
+            this.sidePanel1 = new SoftwareFirmManagement.UI.SidePanel();
+            this.pnl_reviews = new System.Windows.Forms.Panel();
+            this.btn_reviews = new System.Windows.Forms.Button();
             this.btn_order_management = new System.Windows.Forms.Button();
             this.btn_services = new System.Windows.Forms.Button();
             this.btn_menu = new System.Windows.Forms.Button();
@@ -60,6 +62,7 @@ namespace SoftwareFirmManagement.UI
             this.pnl_menu.SuspendLayout();
             this.pnl_services.SuspendLayout();
             this.pnl_order_management.SuspendLayout();
+            this.pnl_reviews.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainPalette
@@ -877,15 +880,6 @@ namespace SoftwareFirmManagement.UI
             this.btn_size.Values.Text = "";
             this.btn_size.Click += new System.EventHandler(this.btn_size_Click);
             // 
-            // header1
-            // 
-            this.header1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.header1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.header1.Location = new System.Drawing.Point(0, 0);
-            this.header1.Name = "header1";
-            this.header1.Size = new System.Drawing.Size(352, 50);
-            this.header1.TabIndex = 3;
-            // 
             // pnl_main
             // 
             this.pnl_main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -905,7 +899,7 @@ namespace SoftwareFirmManagement.UI
             this.pnl_user_management.Controls.Add(this.btn_admin_management);
             this.pnl_user_management.Controls.Add(this.btn_customer_management);
             this.pnl_user_management.Controls.Add(this.btn_user_management);
-            this.pnl_user_management.Location = new System.Drawing.Point(0, 150);
+            this.pnl_user_management.Location = new System.Drawing.Point(0, 300);
             this.pnl_user_management.Margin = new System.Windows.Forms.Padding(0);
             this.pnl_user_management.Name = "pnl_user_management";
             this.pnl_user_management.Size = new System.Drawing.Size(60, 50);
@@ -985,15 +979,6 @@ namespace SoftwareFirmManagement.UI
             this.pnl_services.Size = new System.Drawing.Size(60, 50);
             this.pnl_services.TabIndex = 7;
             // 
-            // sidePanel1
-            // 
-            this.sidePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sidePanel1.Location = new System.Drawing.Point(0, 0);
-            this.sidePanel1.Name = "sidePanel1";
-            this.sidePanel1.Size = new System.Drawing.Size(60, 535);
-            this.sidePanel1.TabIndex = 4;
-            // 
             // pnl_order_management
             // 
             this.pnl_order_management.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
@@ -1003,6 +988,50 @@ namespace SoftwareFirmManagement.UI
             this.pnl_order_management.Name = "pnl_order_management";
             this.pnl_order_management.Size = new System.Drawing.Size(60, 50);
             this.pnl_order_management.TabIndex = 10;
+            // 
+            // header1
+            // 
+            this.header1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.header1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.header1.Location = new System.Drawing.Point(0, 0);
+            this.header1.Name = "header1";
+            this.header1.Size = new System.Drawing.Size(352, 50);
+            this.header1.TabIndex = 3;
+            // 
+            // sidePanel1
+            // 
+            this.sidePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidePanel1.Location = new System.Drawing.Point(0, 0);
+            this.sidePanel1.Name = "sidePanel1";
+            this.sidePanel1.Size = new System.Drawing.Size(60, 535);
+            this.sidePanel1.TabIndex = 4;
+            // 
+            // pnl_reviews
+            // 
+            this.pnl_reviews.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.pnl_reviews.Controls.Add(this.btn_reviews);
+            this.pnl_reviews.Location = new System.Drawing.Point(0, 150);
+            this.pnl_reviews.Name = "pnl_reviews";
+            this.pnl_reviews.Size = new System.Drawing.Size(60, 50);
+            this.pnl_reviews.TabIndex = 11;
+            // 
+            // btn_reviews
+            // 
+            this.btn_reviews.FlatAppearance.BorderSize = 0;
+            this.btn_reviews.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reviews.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reviews.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.btn_reviews.Image = global::SoftwareFirmManagement.Properties.Resources.Popular;
+            this.btn_reviews.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reviews.Location = new System.Drawing.Point(0, 0);
+            this.btn_reviews.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_reviews.Name = "btn_reviews";
+            this.btn_reviews.Size = new System.Drawing.Size(230, 50);
+            this.btn_reviews.TabIndex = 3;
+            this.btn_reviews.Text = "Orders";
+            this.btn_reviews.UseVisualStyleBackColor = true;
+            this.btn_reviews.Click += new System.EventHandler(this.btn_reviews_Click);
             // 
             // btn_order_management
             // 
@@ -1091,6 +1120,7 @@ namespace SoftwareFirmManagement.UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(28)))));
             this.ClientSize = new System.Drawing.Size(965, 535);
+            this.Controls.Add(this.pnl_reviews);
             this.Controls.Add(this.pnl_order_management);
             this.Controls.Add(this.pnl_services);
             this.Controls.Add(this.pnl_menu);
@@ -1112,6 +1142,7 @@ namespace SoftwareFirmManagement.UI
             this.pnl_menu.ResumeLayout(false);
             this.pnl_services.ResumeLayout(false);
             this.pnl_order_management.ResumeLayout(false);
+            this.pnl_reviews.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1139,6 +1170,8 @@ namespace SoftwareFirmManagement.UI
         private System.Windows.Forms.Button btn_services;
         private System.Windows.Forms.Panel pnl_order_management;
         private System.Windows.Forms.Button btn_order_management;
+        private System.Windows.Forms.Panel pnl_reviews;
+        private System.Windows.Forms.Button btn_reviews;
     }
 }
 

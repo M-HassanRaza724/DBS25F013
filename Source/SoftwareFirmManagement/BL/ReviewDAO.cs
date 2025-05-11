@@ -55,7 +55,7 @@ namespace SoftwareFirmManagement.BL
             {
                 throw new Exception("Stars should be between 1 and 5");
             }
-            if (review.Date != DateTime.Now)
+            if (review.Date > DateTime.Now)
             {
                 throw new Exception("Date should be current date");
             }

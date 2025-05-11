@@ -32,6 +32,28 @@ namespace SoftwareFirmManagement.DL
             }
             return employees;
         }
+        public static Employee GetEmployeeByName(string name)
+        {
+            //Employee employee;
+            try
+            {
+                foreach (User user in UserDL.allUsers)
+                {
+                    if (user is Employee employee)
+                    {
+                        if (employee.Name == name)
+                        {
+                            return employee;
+                        }
+                    }
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         public static List<Employee> GetOnlyUsersFromDatabase()
         {
             try

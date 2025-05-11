@@ -25,7 +25,15 @@ namespace SoftwareFirmManagement.UI
                 employeeDisplay.Visible = false;
                 lbl_supervision.Visible = false;
             }
-
+            if (orderDisplay.OrderDetails.Status == "Completed" && !ReviewDL.ReviewExist(orderDisplay.OrderDetails.OrderId))
+            {
+                btn_review.Visible = true;
+            }
+            else
+            {
+                btn_review.Visible = false;
+                gbx_review_input.Visible = false;
+            }
         }
 
         private void vScrollBar_Scroll(object sender, ScrollEventArgs e)
@@ -92,7 +100,7 @@ namespace SoftwareFirmManagement.UI
                 }
                 else
                 {
-                    emp = EmployeeDL.GetAllEmployees()[cmb_platform.SelectedIndex];
+                    emp = EmployeeDL.GetEmployeeByName(cmb_supervision.Text);
 
                 }
                 ServiceDTO ser = ServiceDL.allServices[cmb_service.SelectedIndex];
@@ -110,7 +118,7 @@ namespace SoftwareFirmManagement.UI
                 orderDisplay.OrderDetails.Status = cmb_status.Text;
                 orderDisplay.OrderDetails.Service = ser;
                 orderDisplay.OrderDetails.Platform = cmb_platform.Text;
-                if(emp != null)
+                if (emp != null)
                 {
                     employeeDisplay.Visible = true;
                     employeeDisplay.Employee = emp;
@@ -121,6 +129,15 @@ namespace SoftwareFirmManagement.UI
                     employeeDisplay.Employee = Employee.defaultEmployee;
 
                     employeeDisplay.Visible = false;
+                }
+                if(orderDisplay.OrderDetails.Status == "Completed" && !ReviewDL.ReviewExist(orderDisplay.OrderDetails.OrderId))
+                {
+                    btn_review.Visible = true;
+                }
+                else
+                {
+                    btn_review.Visible = false;
+                    gbx_review_input.Visible = false;
                 }
             }
             catch (Exception ex)
@@ -279,95 +296,40 @@ namespace SoftwareFirmManagement.UI
                 MessageBox.Show(ex.Message);
             }
         }
-        int stars;
-        private void star1_Click(object sender, EventArgs e)
+
+        private void btn_review_Click(object sender, EventArgs e)
         {
-            if (star1.Image == Properties.Resources.Star)
-            {
-                star1.Image = Properties.Resources.Star_filled_;
-                stars = 1;
-            }
-            else
-            {
-                star1.Image = Properties.Resources.Star;
-                star2.Image = Properties.Resources.Star;
-                star3.Image = Properties.Resources.Star;
-                star4.Image = Properties.Resources.Star;
-                star5.Image = Properties.Resources.Star;
-                stars = 0;
-            }
+            gbx_review_input.Enabled = true;
+            gbx_review_input.Visible = true;
         }
 
-        private void star2_Click(object sender, EventArgs e)
+        private void btn_later_Click(object sender, EventArgs e)
         {
-            if (star2.Image == Properties.Resources.Star)
-            {
-                star1.Image = Properties.Resources.Star_filled_;
-                star2.Image = Properties.Resources.Star_filled_;
-                stars = 2;
-            }
-            else
-            {
-                star2.Image = Properties.Resources.Star;
-                star3.Image = Properties.Resources.Star;
-                star4.Image = Properties.Resources.Star;
-                star5.Image = Properties.Resources.Star;
-                stars = 1;
-            }
+            gbx_review_input.Visible = false;
+            gbx_review_input.Enabled = false;
+
         }
 
-        private void star3_Click(object sender, EventArgs e)
+        private void btn_add_review_Click(object sender, EventArgs e)
         {
-            if (star3.Image == Properties.Resources.Star)
+            ReviewDAO r = new ReviewDAO();
+            try
             {
-                star1.Image = Properties.Resources.Star_filled_;
-                star2.Image = Properties.Resources.Star_filled_;
-                star3.Image = Properties.Resources.Star_filled_;
-                stars = 3;
+                r.Stars = stars_Display1.Stars;
+                r.Date = DateTime.Now;
+                r.Description = txt_review_description.TextBoxText;
+                r.ReviewerName = orderDisplay.OrderDetails.Customer.Name;
+                r.OrderId = orderDisplay.OrderDetails.OrderId;
+                ReviewDAO.AddReview(r);
             }
-            else
+            catch (Exception ex)
             {
-                star3.Image = Properties.Resources.Star;
-                star4.Image = Properties.Resources.Star;
-                star5.Image = Properties.Resources.Star;
-                stars = 2;
+                MessageBox.Show(ex.Message);
             }
-        }
+            gbx_review_input.Visible = false;
+            gbx_review_input.Enabled = false;
 
-        private void star4_Click(object sender, EventArgs e)
-        { 
-            if (star4.Image == Properties.Resources.Star)
-            {
-                star1.Image = Properties.Resources.Star_filled_;
-                star2.Image = Properties.Resources.Star_filled_;
-                star3.Image = Properties.Resources.Star_filled_;
-                star4.Image = Properties.Resources.Star_filled_;
-                stars = 4;
-            }
-            else
-            {
-                star4.Image = Properties.Resources.Star;
-                star5.Image = Properties.Resources.Star;
-                stars = 3;
-            }
-        }
 
-        private void star5_Click(object sender, EventArgs e)
-        {
-            if (star5.Image == Properties.Resources.Star)
-            {
-                star1.Image = Properties.Resources.Star_filled_;
-                star2.Image = Properties.Resources.Star_filled_;
-                star3.Image = Properties.Resources.Star_filled_;
-                star4.Image = Properties.Resources.Star_filled_;
-                star5.Image = Properties.Resources.Star_filled_;
-                stars = 5;
-            }
-            else
-            {
-                star5.Image = Properties.Resources.Star;
-                stars = 4;
-            }
         }
     }
 }

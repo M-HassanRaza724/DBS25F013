@@ -211,5 +211,12 @@ namespace SoftwareFirmManagement.UI
             ClientReviews clientReviews = new ClientReviews();
             ShowFormInPanel(clientReviews);
         }
+
+        private void btn_services_Click_1(object sender, EventArgs e)
+        {
+            DeleteExistingChild();
+            ServiceManagement serviceManagement = new ServiceManagement();
+            ShowFormInPanel(serviceManagement);
+        }
     }
 }

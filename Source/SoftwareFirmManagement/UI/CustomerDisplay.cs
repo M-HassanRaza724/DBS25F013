@@ -13,7 +13,15 @@ namespace SoftwareFirmManagement.UI
 {
     public partial class CustomerDisplay: UserControl
     {
-        Customer customer = new Customer();
+        Customer customer = new Customer()
+        {
+            Name = "Customer",
+            Email = "customer@gmail.com",
+            Username = "CustomerUsername",
+            UserId = -1,
+
+        };
+
         Customer demoCustomer = new Customer()
         {
             Name = "Customer",
@@ -35,9 +43,6 @@ namespace SoftwareFirmManagement.UI
             }
         }
 
-        private void gbx_customer_details_Panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+ 
     }
 }

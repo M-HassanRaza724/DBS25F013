@@ -30,8 +30,8 @@ namespace SoftwareFirmManagement.UI
         /// </summary>
         private void InitializeComponent()
         {
-            SoftwareFirmManagement.BL.Customer customer2 = new SoftwareFirmManagement.BL.Customer();
-            SoftwareFirmManagement.BL.Employee employee2 = new SoftwareFirmManagement.BL.Employee();
+            SoftwareFirmManagement.BL.Customer customer1 = new SoftwareFirmManagement.BL.Customer();
+            SoftwareFirmManagement.BL.Employee employee1 = new SoftwareFirmManagement.BL.Employee();
             this.vScrollBar = new System.Windows.Forms.VScrollBar();
             this.pnl_main = new System.Windows.Forms.Panel();
             this.btn_review = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -53,8 +53,11 @@ namespace SoftwareFirmManagement.UI
             this.toolStripMenuItem_delete_order = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_edit_order = new System.Windows.Forms.ToolStripMenuItem();
             this.lbl_title = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.orderDisplay = new SoftwareFirmManagement.UI.OrderDisplay();
             this.lbl_details = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.customerDisplay = new SoftwareFirmManagement.UI.CustomerDisplay();
             this.lbl_customer_details = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.employeeDisplay = new SoftwareFirmManagement.UI.EmployeeDisplay();
             this.lbl_supervision = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.gbx_review_input = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.btn_add_review = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -330,6 +333,16 @@ namespace SoftwareFirmManagement.UI
             this.lbl_title.TabIndex = 62;
             this.lbl_title.Values.Text = "Order Details";
             // 
+            // orderDisplay
+            // 
+            this.orderDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.orderDisplay.BackColor = System.Drawing.Color.Transparent;
+            this.orderDisplay.Location = new System.Drawing.Point(53, 103);
+            this.orderDisplay.Name = "orderDisplay";
+            this.orderDisplay.OrderDetails = null;
+            this.orderDisplay.Size = new System.Drawing.Size(820, 220);
+            this.orderDisplay.TabIndex = 73;
+            // 
             // lbl_details
             // 
             this.lbl_details.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -344,15 +357,15 @@ namespace SoftwareFirmManagement.UI
             // 
             this.customerDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.customerDisplay.BackColor = System.Drawing.Color.Transparent;
-            customer2.CustomerId = 0;
-            customer2.Email = null;
-            customer2.Name = null;
-            customer2.Password = null;
-            customer2.Role = null;
-            customer2.RoleId = 0;
-            customer2.UserId = 0;
-            customer2.Username = null;
-            this.customerDisplay.Customer = customer2;
+            customer1.CustomerId = 0;
+            customer1.Email = null;
+            customer1.Name = null;
+            customer1.Password = null;
+            customer1.Role = null;
+            customer1.RoleId = 0;
+            customer1.UserId = 0;
+            customer1.Username = null;
+            this.customerDisplay.Customer = customer1;
             this.customerDisplay.Location = new System.Drawing.Point(53, 363);
             this.customerDisplay.Name = "customerDisplay";
             this.customerDisplay.Size = new System.Drawing.Size(820, 100);
@@ -372,19 +385,19 @@ namespace SoftwareFirmManagement.UI
             // 
             this.employeeDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.employeeDisplay.BackColor = System.Drawing.Color.Transparent;
-            employee2.Designation = null;
-            employee2.DesignationId = 0;
-            employee2.Email = null;
-            employee2.EmployeeId = 0;
-            employee2.JoinedDate = new System.DateTime(((long)(0)));
-            employee2.Name = null;
-            employee2.Password = null;
-            employee2.Phone = null;
-            employee2.Role = null;
-            employee2.RoleId = 0;
-            employee2.UserId = 0;
-            employee2.Username = null;
-            this.employeeDisplay.Employee = employee2;
+            employee1.Designation = null;
+            employee1.DesignationId = 0;
+            employee1.Email = null;
+            employee1.EmployeeId = 0;
+            employee1.JoinedDate = new System.DateTime(((long)(0)));
+            employee1.Name = null;
+            employee1.Password = null;
+            employee1.Phone = null;
+            employee1.Role = null;
+            employee1.RoleId = 0;
+            employee1.UserId = 0;
+            employee1.Username = null;
+            this.employeeDisplay.Employee = employee1;
             this.employeeDisplay.Location = new System.Drawing.Point(53, 496);
             this.employeeDisplay.Name = "employeeDisplay";
             this.employeeDisplay.Size = new System.Drawing.Size(820, 150);

@@ -56,7 +56,6 @@
             this.gbx_customer_details.Panel.Controls.Add(this.lbl_full_name_text);
             this.gbx_customer_details.Panel.Controls.Add(this.lbl_email);
             this.gbx_customer_details.Panel.Controls.Add(this.lbl_full_name);
-            this.gbx_customer_details.Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.gbx_customer_details_Panel_Paint);
             this.gbx_customer_details.Size = new System.Drawing.Size(820, 100);
             this.gbx_customer_details.TabIndex = 0;
             // 

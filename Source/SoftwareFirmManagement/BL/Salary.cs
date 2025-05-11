@@ -41,6 +41,10 @@ namespace SoftwareFirmManagement.BL
             get { return bonus; }
             set { bonus = value; }
         }
+        public string EmployeeName
+        {
+            get { return Employee?.Name; }
+        }
 
 
         public Salary() { }

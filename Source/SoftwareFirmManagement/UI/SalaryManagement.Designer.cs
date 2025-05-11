@@ -49,7 +49,6 @@
             this.dgv_salaries = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salaryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeeIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bonusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -218,6 +217,7 @@
             // 
             this.btn_add_salary.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_add_salary.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
+            this.btn_add_salary.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_add_salary.Location = new System.Drawing.Point(26, 3);
             this.btn_add_salary.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add_salary.Name = "btn_add_salary";
@@ -265,7 +265,6 @@
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(135, 30);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
-
             // 
             // dgv_salaries
             // 
@@ -274,7 +273,6 @@
             this.dgv_salaries.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FullNameColumn,
             this.salaryIdDataGridViewTextBoxColumn,
-            this.employeeIdDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn,
             this.amountDataGridViewTextBoxColumn,
             this.bonusDataGridViewTextBoxColumn});
@@ -286,14 +284,16 @@
             this.dgv_salaries.RowHeadersWidth = 62;
             this.dgv_salaries.Size = new System.Drawing.Size(1030, 497);
             this.dgv_salaries.TabIndex = 0;
+            this.dgv_salaries.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_salaries_CellMouseDown);
             // 
             // FullNameColumn
             // 
             this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FullNameColumn.DataPropertyName = "Name";
+            this.FullNameColumn.DataPropertyName = "EmployeeName";
             this.FullNameColumn.HeaderText = "FullName";
             this.FullNameColumn.MinimumWidth = 8;
             this.FullNameColumn.Name = "FullNameColumn";
+            this.FullNameColumn.ReadOnly = true;
             // 
             // salaryIdDataGridViewTextBoxColumn
             // 
@@ -301,15 +301,8 @@
             this.salaryIdDataGridViewTextBoxColumn.HeaderText = "SalaryId";
             this.salaryIdDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.salaryIdDataGridViewTextBoxColumn.Name = "salaryIdDataGridViewTextBoxColumn";
+            this.salaryIdDataGridViewTextBoxColumn.ReadOnly = true;
             this.salaryIdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // employeeIdDataGridViewTextBoxColumn
-            // 
-            this.employeeIdDataGridViewTextBoxColumn.DataPropertyName = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn.HeaderText = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.employeeIdDataGridViewTextBoxColumn.Name = "employeeIdDataGridViewTextBoxColumn";
-            this.employeeIdDataGridViewTextBoxColumn.Width = 125;
             // 
             // dateDataGridViewTextBoxColumn
             // 
@@ -317,6 +310,7 @@
             this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
             this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             this.dateDataGridViewTextBoxColumn.Width = 125;
             // 
             // amountDataGridViewTextBoxColumn
@@ -325,6 +319,7 @@
             this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
             this.amountDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            this.amountDataGridViewTextBoxColumn.ReadOnly = true;
             this.amountDataGridViewTextBoxColumn.Width = 125;
             // 
             // bonusDataGridViewTextBoxColumn
@@ -333,6 +328,7 @@
             this.bonusDataGridViewTextBoxColumn.HeaderText = "Bonus";
             this.bonusDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.bonusDataGridViewTextBoxColumn.Name = "bonusDataGridViewTextBoxColumn";
+            this.bonusDataGridViewTextBoxColumn.ReadOnly = true;
             this.bonusDataGridViewTextBoxColumn.Width = 125;
             // 
             // salaryBindingSource
@@ -386,7 +382,7 @@
             // 
             this.gbx_add_update_salaries.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbx_add_update_salaries.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlAlternate;
-            this.gbx_add_update_salaries.Location = new System.Drawing.Point(238, 2);
+            this.gbx_add_update_salaries.Location = new System.Drawing.Point(232, 34);
             this.gbx_add_update_salaries.Margin = new System.Windows.Forms.Padding(4);
             this.gbx_add_update_salaries.Name = "gbx_add_update_salaries";
             // 
@@ -401,16 +397,16 @@
             this.gbx_add_update_salaries.Panel.Controls.Add(this.lbl_last_name);
             this.gbx_add_update_salaries.Panel.Controls.Add(this.lbl_Amount);
             this.gbx_add_update_salaries.Panel.Controls.Add(this.txt_amount);
-            this.gbx_add_update_salaries.Size = new System.Drawing.Size(519, 490);
+            this.gbx_add_update_salaries.Size = new System.Drawing.Size(738, 517);
             this.gbx_add_update_salaries.TabIndex = 1;
             this.gbx_add_update_salaries.Values.Heading = "Add Salaries";
             this.gbx_add_update_salaries.Visible = false;
             // 
             // lbl_Employee
             // 
-            this.lbl_Employee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Employee.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Employee.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_Employee.Location = new System.Drawing.Point(46, 36);
+            this.lbl_Employee.Location = new System.Drawing.Point(42, 20);
             this.lbl_Employee.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_Employee.Name = "lbl_Employee";
             this.lbl_Employee.Size = new System.Drawing.Size(98, 31);
@@ -419,6 +415,7 @@
             // 
             // cmbEmployee
             // 
+            this.cmbEmployee.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbEmployee.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList;
             this.cmbEmployee.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
             this.cmbEmployee.DropDownWidth = 188;
@@ -430,18 +427,18 @@
             "item 4",
             "item 5",
             "item 6"});
-            this.cmbEmployee.Location = new System.Drawing.Point(46, 70);
+            this.cmbEmployee.Location = new System.Drawing.Point(42, 44);
             this.cmbEmployee.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEmployee.Name = "cmbEmployee";
-            this.cmbEmployee.Size = new System.Drawing.Size(333, 42);
+            this.cmbEmployee.Size = new System.Drawing.Size(404, 42);
             this.cmbEmployee.TabIndex = 26;
             this.cmbEmployee.Text = "Employee";
             // 
             // lbl_bonus
             // 
-            this.lbl_bonus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_bonus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_bonus.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_bonus.Location = new System.Drawing.Point(46, 223);
+            this.lbl_bonus.Location = new System.Drawing.Point(42, 206);
             this.lbl_bonus.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_bonus.Name = "lbl_bonus";
             this.lbl_bonus.Size = new System.Drawing.Size(66, 31);
@@ -450,22 +447,23 @@
             // 
             // txtBonus
             // 
-            this.txtBonus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBonus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBonus.BackColor = System.Drawing.Color.Transparent;
-            this.txtBonus.Location = new System.Drawing.Point(42, 244);
+            this.txtBonus.Location = new System.Drawing.Point(38, 227);
             this.txtBonus.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtBonus.MultiLine = false;
             this.txtBonus.Name = "txtBonus";
             this.txtBonus.PlaceHolder = "Bonus Amount";
-            this.txtBonus.Size = new System.Drawing.Size(288, 52);
+            this.txtBonus.Size = new System.Drawing.Size(408, 52);
             this.txtBonus.Style = "Standalone";
             this.txtBonus.TabIndex = 14;
             this.txtBonus.TextBoxText = "Bonus Amount";
             // 
             // btn_cancel
             // 
-            this.btn_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_cancel.Location = new System.Drawing.Point(30, 340);
+            this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancel.Location = new System.Drawing.Point(38, 328);
             this.btn_cancel.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(200, 62);
@@ -475,9 +473,10 @@
             // 
             // btn_add_update_salary
             // 
-            this.btn_add_update_salary.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_add_update_salary.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_add_update_salary.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
-            this.btn_add_update_salary.Location = new System.Drawing.Point(238, 340);
+            this.btn_add_update_salary.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_add_update_salary.Location = new System.Drawing.Point(246, 328);
             this.btn_add_update_salary.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add_update_salary.Name = "btn_add_update_salary";
             this.btn_add_update_salary.Size = new System.Drawing.Size(200, 62);
@@ -497,9 +496,9 @@
             // 
             // lbl_Amount
             // 
-            this.lbl_Amount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Amount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Amount.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_Amount.Location = new System.Drawing.Point(46, 123);
+            this.lbl_Amount.Location = new System.Drawing.Point(42, 106);
             this.lbl_Amount.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_Amount.Name = "lbl_Amount";
             this.lbl_Amount.Size = new System.Drawing.Size(83, 31);
@@ -508,14 +507,14 @@
             // 
             // txt_amount
             // 
-            this.txt_amount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_amount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_amount.BackColor = System.Drawing.Color.Transparent;
-            this.txt_amount.Location = new System.Drawing.Point(42, 144);
+            this.txt_amount.Location = new System.Drawing.Point(38, 127);
             this.txt_amount.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txt_amount.MultiLine = false;
             this.txt_amount.Name = "txt_amount";
             this.txt_amount.PlaceHolder = "Amount";
-            this.txt_amount.Size = new System.Drawing.Size(288, 52);
+            this.txt_amount.Size = new System.Drawing.Size(408, 52);
             this.txt_amount.Style = "Standalone";
             this.txt_amount.TabIndex = 3;
             this.txt_amount.TextBoxText = "Amount";
@@ -578,7 +577,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.BindingSource salaryBindingSource;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dgv_salaries;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FullNameColumn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox gbox_grd_salaries;
@@ -588,14 +586,14 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_last_name;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_Amount;
         private TextBoxWithPlaceHolder txt_amount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn salaryIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn employeeIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bonusDataGridViewTextBoxColumn;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_bonus;
         private TextBoxWithPlaceHolder txtBonus;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_Employee;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbEmployee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullNameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salaryIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bonusDataGridViewTextBoxColumn;
     }
 }

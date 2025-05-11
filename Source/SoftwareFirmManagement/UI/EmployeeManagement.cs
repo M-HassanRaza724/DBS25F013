@@ -32,7 +32,6 @@ namespace SoftwareFirmManagement.UI
         private void EmployeeManagement_Load(object sender, EventArgs e)
         {
             LoadData();
-            loadDesignations();
         }
         private void userNameToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -96,6 +95,8 @@ namespace SoftwareFirmManagement.UI
         {
             gbx_add_update_employee.Enabled = true;
             gbx_add_update_employee.Visible = true;
+            loadDesignations();
+
 
             if (empId != -1)
             {
@@ -163,8 +164,10 @@ namespace SoftwareFirmManagement.UI
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int employeeId = Convert.ToInt32(currentContextRow.Cells["EmployeeIdColumn"].Value);
+            int userId = Convert.ToInt32(currentContextRow.Cells["UserIdColumn"].Value);
             Employee employee = new Employee();
             employee.EmployeeId = employeeId;
+            employee.UserId = userId;
 
             if (DialogResult.Yes == MessageBox.Show($"Are you sure you want to delete {currentContextRow.Cells["FullNameColumn"].Value.ToString()}?", "Warning", MessageBoxButtons.YesNo))
                 employee.Delete(employee);
@@ -185,18 +188,15 @@ namespace SoftwareFirmManagement.UI
             disableGroupBox();
 
         }
-        private List<Lookup> designationsList;
+        List<Lookup> designationsList;
         private void loadDesignations()
         {
             try
             {
-                designationsList = LookupDL.GetDesignations();
                 cmbDesignations.Items.Clear();
+                designationsList = LookupDL.GetLookupsByKeyGroup("designation");
 
-                foreach (Lookup d in designationsList)
-                {
-                    cmbDesignations.Items.Add(d.Value); 
-                }
+                    cmbDesignations.Items.AddRange(designationsList.ToArray()); 
 
                 if (cmbDesignations.Items.Count > 0)
                     cmbDesignations.SelectedIndex = 0;
@@ -222,6 +222,11 @@ namespace SoftwareFirmManagement.UI
         }
 
         private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void gbox_grd_users_Paint(object sender, PaintEventArgs e)
         {
 
         }

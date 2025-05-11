@@ -91,7 +91,8 @@ namespace SoftwareFirmManagement.DL
                 string formattedDate = employee.JoinedDate.ToString("yyyy-MM-dd");
                 string query = $"CALL sp_manage_employee('add', {employee.EmployeeId}, '{employee.Name}', '{employee.Phone}', '{formattedDate}', {employee.DesignationId}, {employee.UserId});";
                 DatabaseHelper.Instance.Update(query);
-                return true;
+                //UpdateEmployeeInList(employee);
+                return true; 
             }
             catch (MySql.Data.MySqlClient.MySqlException)
             {
@@ -106,6 +107,7 @@ namespace SoftwareFirmManagement.DL
                 string formattedDate = employee.JoinedDate.ToString("yyyy-MM-dd");
                 string query = $"CALL sp_manage_employee('update', {employee.EmployeeId}, '{employee.Name}', '{employee.Phone}', '{formattedDate}', {employee.DesignationId}, {employee.UserId});";
                 DatabaseHelper.Instance.Update(query);
+                //UpdateEmployeeInList(employee);
                 return true;
             }
             catch (MySql.Data.MySqlClient.MySqlException)
@@ -122,6 +124,7 @@ namespace SoftwareFirmManagement.DL
                 string formattedDate = employee.JoinedDate.ToString("yyyy-MM-dd");
                 string query = $"CALL sp_manage_employee('delete', {employee.EmployeeId}, '{employee.Name}', '{employee.Phone}', '{formattedDate}', {employee.DesignationId}, {employee.UserId});";
                 DatabaseHelper.Instance.Update(query);
+                //DeleteEmployeeInList(employee);
                 return true;
             }
             catch (MySql.Data.MySqlClient.MySqlException)
@@ -130,13 +133,15 @@ namespace SoftwareFirmManagement.DL
             }
         }
 
+
+
         public static Employee GetEmployeeById(int id)
         {
             foreach (var user in UserDL.allUsers)
             {
-                if(user is Employee e)
+                if (user is Employee e)
                 {
-                    if(e.EmployeeId == id)
+                    if (e.EmployeeId == id)
                     {
                         return e;
                     }
@@ -144,5 +149,52 @@ namespace SoftwareFirmManagement.DL
             }
             return null;
         }
+        //public static bool UpdateEmployeeInList(Employee employee)
+        //{
+        //    for (int i = 0; i < UserDL.allUsers.Count; i++)
+        //    {
+        //        if(UserDL.allUsers[i] is Employee emp)
+        //        {
+        //            if (emp.UserId == employee.UserId)
+        //            {
+        //                UserDL.allUsers[i] = emp;
+        //                return true;
+        //            }
+        //        }
+
+
+        //    }
+        //    return false;
+        //}
+        //public static bool AddEmployeeInList(Employee employee)
+        //{
+        //    for (int i = 0; i < UserDL.allUsers.Count; i++)
+        //    {
+        //        if (UserDL.allUsers[i] is Employee emp)
+        //        {
+        //            if (emp.UserId == employee.UserId)
+        //            {
+        //                UserDL.allUsers[i] = emp;
+        //                return true;
+        //            }
+        //        }
+        //    }
+        //    return true;
+        //}
+        //public static bool DeleteEmployeeInList(Employee employee)
+        //{
+        //    for (int i = 0; i < UserDL.allUsers.Count; i++)
+        //    {
+        //        if (UserDL.allUsers[i] is Employee emp)
+        //        {
+        //            if (emp.UserId == employee.UserId)
+        //            {
+        //                UserDL.allUsers.RemoveAt(i);
+        //                return true;
+        //            }
+        //        }
+        //    }
+        //    return false;
+        //}
     }
 }

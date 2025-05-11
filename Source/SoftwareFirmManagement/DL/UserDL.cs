@@ -61,20 +61,24 @@ namespace SoftwareFirmManagement.DL
                                   .Select(l => l.Value)
                                   .FirstOrDefault();
                     newEmp.Role = role;
+                    string designation = LookupDL.allLookups
+                            .Where(l => l.LookupId == designationId)
+                            .Select(l => l.Value)
+                            .FirstOrDefault();
+                    newEmp.Designation = designation;
+                    // getting user if exists
 
-                    // getting salary if exists
-                    
-                    string salaryQuery = $"CALL sp_get_employee_salary({newEmp.EmployeeId});";
-                    var salaryData = DatabaseHelper.Instance.GetData(salaryQuery);
-                    salaryData.Read();
-                    if (salaryData.HasRows)
-                    {
-                        int salaryId = salaryData.GetInt32(0);
-                        DateTime payDate = DateTime.Parse(salaryData[2].ToString()).Date;
-                        double amount = salaryData.GetDouble(3);
-                        double bonus = salaryData.GetDouble(4);
-                        newEmp.SetSalary(salaryId, payDate, amount, bonus);
-                    }
+                    //string userQuery = $"CALL sp_get_employee_user({newEmp.EmployeeId});";
+                    //var userData = DatabaseHelper.Instance.GetData(userQuery);
+                    //userData.Read();
+                    //if (userData.HasRows)
+                    //{
+                    //    int userId = userData.GetInt32(0);
+                    //    DateTime payDate = DateTime.Parse(userData[2].ToString()).Date;
+                    //    double amount = userData.GetDouble(3);
+                    //    double bonus = userData.GetDouble(4);
+                    //    newEmp.SetUser(userId, payDate, amount, bonus);
+                    //}
 
                     allUsers.Add(newEmp);
                 }
@@ -113,6 +117,7 @@ namespace SoftwareFirmManagement.DL
                 // the first arguement "add" is operation_type
                 string query = $"CALL sp_manage_user('add', {user.UserId}, '{user.Username}', '{user.Email}', '{user.Password}', {user.RoleId});";
                 DatabaseHelper.Instance.Update(query);
+                //AddUserInList(user);
                 return true;
             }
             catch (MySql.Data.MySqlClient.MySqlException exception)
@@ -129,6 +134,7 @@ namespace SoftwareFirmManagement.DL
             {
                 string query = $"CALL sp_manage_user('update', {updatedUser.UserId}, '{updatedUser.Username}', '{updatedUser.Email}', '{updatedUser.Password}', {updatedUser.RoleId});";
                 DatabaseHelper.Instance.Update(query);
+                //UpdateUserInList(updatedUser);
                 return true;
             }
             catch (MySql.Data.MySqlClient.MySqlException exception)
@@ -145,6 +151,7 @@ namespace SoftwareFirmManagement.DL
             {
                 string query = $"CALL sp_manage_user('delete', {userToDelete.UserId}, '{userToDelete.Username}', '{userToDelete.Email}', '{userToDelete.Password}', {userToDelete.RoleId});";
                 DatabaseHelper.Instance.Update(query);
+                //DeleteUserInList(userToDelete);
                 return true;
             }
             catch (MySql.Data.MySqlClient.MySqlException exception)
@@ -153,7 +160,53 @@ namespace SoftwareFirmManagement.DL
                 return false;
             }
         }
+        public static int GetUserId(User user)
+        {
+            string query = $"select user_id from users where (username, email, password, role_id) = ('{user.Username}' , '{user.Email}','{user.Password}' , '{user.RoleId}');";
+            var data = DatabaseHelper.Instance.GetData(query);
 
+            if (data.Read())
+            {
+                int userId = data.IsDBNull(0) ? 0 : data.GetInt32(0);
+                return userId;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        //public static bool UpdateUserInList(User user)
+        //{
+        //    for (int i = 0; i < allUsers.Count; i++)
+        //    {
+        //        if (allUsers[i].UserId == user.UserId)
+        //        {
+        //            allUsers[i] = user;
+        //            return true;
+        //        }
+
+        //    }
+        //    return false;
+        //}
+        //public static bool AddUserInList(User user)
+        //{
+        //    allUsers.Add(user);
+        //    return true;
+        //}
+        //public static bool DeleteUserInList(User user)
+        //{
+        //    for (int i = 0; i < allUsers.Count; i++)
+        //    {
+        //        if (allUsers[i].UserId == user.UserId)
+        //        {
+        //            allUsers.RemoveAt(i);
+        //            return true;
+        //        }
+
+        //    }
+        //    return false;
+        //}
 
     }
 }

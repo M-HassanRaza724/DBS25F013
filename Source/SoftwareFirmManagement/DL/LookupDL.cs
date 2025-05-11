@@ -91,13 +91,6 @@ namespace SoftwareFirmManagement.DL
         {
             return allLookups;
         }
-        public static List<Lookup> GetDesignations()
-        {
-            List<Lookup> designations = new List<Lookup>();
-            return designations;
-            // DL logic
-        }
-
 
     }
 }

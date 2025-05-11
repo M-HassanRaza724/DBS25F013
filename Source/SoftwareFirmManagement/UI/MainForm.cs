@@ -211,7 +211,11 @@ namespace SoftwareFirmManagement.UI
             ShowFormInPanel(new SalaryManagement());
 
         }
-
+        private void btn_admin_management_Click(object sender, EventArgs e)
+        {
+            DeleteExistingChild();
+            ShowFormInPanel(new AdminManagement());
+        }
         private void btn_reviews_Click(object sender, EventArgs e)
         {
             DeleteExistingChild();

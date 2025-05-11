@@ -936,6 +936,7 @@ namespace SoftwareFirmManagement.UI
             this.btn_admin_management.TabIndex = 2;
             this.btn_admin_management.Text = "Admin Management";
             this.btn_admin_management.UseVisualStyleBackColor = true;
+            this.btn_admin_management.Click += new System.EventHandler(this.btn_admin_management_Click);
             // 
             // btn_customer_management
             // 

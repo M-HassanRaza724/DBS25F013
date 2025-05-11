@@ -21,7 +21,13 @@ namespace SoftwareFirmManagement.BL
             this.phone = phone;
             this.adminRole = adminRole;
         }
-
+        public Admin(string username, string email, string password, int role, string name, string phone, int adminRole) : base(0, username, email, password, role)
+        {
+            this.adminId = 0; 
+            this.name = name;
+            this.phone = phone;
+            this.adminRole = adminRole;
+        }
 
         public Admin(int userId, string username, string email, string password, int role, string name, string phone, int adminRole) : base(userId, username, email, password, role)
         {

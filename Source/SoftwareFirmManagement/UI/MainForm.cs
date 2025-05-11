@@ -209,6 +209,6 @@ namespace SoftwareFirmManagement.UI
             DeleteExistingChild();
             ShowFormInPanel(new SalaryManagement());
 
-        }
+        }ss
     }
 }

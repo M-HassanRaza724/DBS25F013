@@ -38,7 +38,6 @@ namespace SoftwareFirmManagement.UI
             this.btn_close = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_max_min = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_size = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.header1 = new SoftwareFirmManagement.UI.Header();
             this.pnl_main = new System.Windows.Forms.Panel();
             this.pnl_user_management = new System.Windows.Forms.Panel();
             this.btn_employee_management = new System.Windows.Forms.Button();
@@ -53,16 +52,17 @@ namespace SoftwareFirmManagement.UI
             this.btn_services = new System.Windows.Forms.Button();
             this.pnl_order_management = new System.Windows.Forms.Panel();
             this.btn_order_management = new System.Windows.Forms.Button();
-            this.sidePanel1 = new SoftwareFirmManagement.UI.SidePanel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnl_salary_management = new System.Windows.Forms.Panel();
             this.btn_salary_management = new System.Windows.Forms.Button();
+            this.header1 = new SoftwareFirmManagement.UI.Header();
+            this.sidePanel1 = new SoftwareFirmManagement.UI.SidePanel();
             this.panel1.SuspendLayout();
             this.pnl_user_management.SuspendLayout();
             this.pnl_dashboard.SuspendLayout();
             this.pnl_menu.SuspendLayout();
             this.pnl_services.SuspendLayout();
             this.pnl_order_management.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnl_salary_management.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainPalette
@@ -880,15 +880,6 @@ namespace SoftwareFirmManagement.UI
             this.btn_size.Values.Text = "";
             this.btn_size.Click += new System.EventHandler(this.btn_size_Click);
             // 
-            // header1
-            // 
-            this.header1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.header1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.header1.Location = new System.Drawing.Point(0, 0);
-            this.header1.Name = "header1";
-            this.header1.Size = new System.Drawing.Size(352, 50);
-            this.header1.TabIndex = 3;
-            // 
             // pnl_main
             // 
             this.pnl_main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -908,7 +899,7 @@ namespace SoftwareFirmManagement.UI
             this.pnl_user_management.Controls.Add(this.btn_admin_management);
             this.pnl_user_management.Controls.Add(this.btn_customer_management);
             this.pnl_user_management.Controls.Add(this.btn_user_management);
-            this.pnl_user_management.Location = new System.Drawing.Point(0, 250);
+            this.pnl_user_management.Location = new System.Drawing.Point(0, 300);
             this.pnl_user_management.Margin = new System.Windows.Forms.Padding(0);
             this.pnl_user_management.Name = "pnl_user_management";
             this.pnl_user_management.Size = new System.Drawing.Size(60, 50);
@@ -1079,24 +1070,15 @@ namespace SoftwareFirmManagement.UI
             this.btn_order_management.UseVisualStyleBackColor = true;
             this.btn_order_management.Click += new System.EventHandler(this.btn_order_management_Click);
             // 
-            // sidePanel1
+            // pnl_salary_management
             // 
-            this.sidePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sidePanel1.Location = new System.Drawing.Point(0, 0);
-            this.sidePanel1.Name = "sidePanel1";
-            this.sidePanel1.Size = new System.Drawing.Size(60, 535);
-            this.sidePanel1.TabIndex = 4;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.panel2.Controls.Add(this.btn_salary_management);
-            this.panel2.Location = new System.Drawing.Point(0, 150);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(60, 50);
-            this.panel2.TabIndex = 11;
+            this.pnl_salary_management.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.pnl_salary_management.Controls.Add(this.btn_salary_management);
+            this.pnl_salary_management.Location = new System.Drawing.Point(0, 250);
+            this.pnl_salary_management.Margin = new System.Windows.Forms.Padding(0);
+            this.pnl_salary_management.Name = "pnl_salary_management";
+            this.pnl_salary_management.Size = new System.Drawing.Size(60, 50);
+            this.pnl_salary_management.TabIndex = 11;
             // 
             // btn_salary_management
             // 
@@ -1110,10 +1092,28 @@ namespace SoftwareFirmManagement.UI
             this.btn_salary_management.Margin = new System.Windows.Forms.Padding(0);
             this.btn_salary_management.Name = "btn_salary_management";
             this.btn_salary_management.Size = new System.Drawing.Size(230, 50);
-            this.btn_salary_management.TabIndex = 11;
+            this.btn_salary_management.TabIndex = 2;
             this.btn_salary_management.Text = "Salaries";
             this.btn_salary_management.UseVisualStyleBackColor = true;
             this.btn_salary_management.Click += new System.EventHandler(this.btn_salary_management_Click);
+            // 
+            // header1
+            // 
+            this.header1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.header1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.header1.Location = new System.Drawing.Point(0, 0);
+            this.header1.Name = "header1";
+            this.header1.Size = new System.Drawing.Size(352, 50);
+            this.header1.TabIndex = 3;
+            // 
+            // sidePanel1
+            // 
+            this.sidePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidePanel1.Location = new System.Drawing.Point(0, 0);
+            this.sidePanel1.Name = "sidePanel1";
+            this.sidePanel1.Size = new System.Drawing.Size(60, 535);
+            this.sidePanel1.TabIndex = 4;
             // 
             // MainForm
             // 
@@ -1121,7 +1121,7 @@ namespace SoftwareFirmManagement.UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(28)))));
             this.ClientSize = new System.Drawing.Size(965, 535);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnl_salary_management);
             this.Controls.Add(this.pnl_order_management);
             this.Controls.Add(this.pnl_services);
             this.Controls.Add(this.pnl_menu);
@@ -1143,7 +1143,7 @@ namespace SoftwareFirmManagement.UI
             this.pnl_menu.ResumeLayout(false);
             this.pnl_services.ResumeLayout(false);
             this.pnl_order_management.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.pnl_salary_management.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1172,7 +1172,7 @@ namespace SoftwareFirmManagement.UI
         private System.Windows.Forms.Panel pnl_order_management;
         private System.Windows.Forms.Button btn_order_management;
         private System.Windows.Forms.Button btn_salary_management;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnl_salary_management;
     }
 }
 

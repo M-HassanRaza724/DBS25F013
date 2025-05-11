@@ -47,11 +47,6 @@
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgv_salaries = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salaryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bonusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salaryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -66,6 +61,12 @@
             this.lbl_last_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_Amount = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txt_amount = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
+            this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salaryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bonusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel_filters.SuspendLayout();
             this.menuStrip_filters.SuspendLayout();
@@ -99,7 +100,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1076, 61);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(807, 50);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // tableLayoutPanel_filters
@@ -107,16 +108,16 @@
             this.tableLayoutPanel_filters.ColumnCount = 2;
             this.tableLayoutPanel_filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel_filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel_filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel_filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel_filters.Controls.Add(this.menuStrip_filters, 1, 0);
             this.tableLayoutPanel_filters.Controls.Add(this.lbl_filter, 0, 0);
             this.tableLayoutPanel_filters.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel_filters.Location = new System.Drawing.Point(430, 0);
+            this.tableLayoutPanel_filters.Location = new System.Drawing.Point(322, 0);
             this.tableLayoutPanel_filters.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel_filters.Name = "tableLayoutPanel_filters";
             this.tableLayoutPanel_filters.RowCount = 1;
             this.tableLayoutPanel_filters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel_filters.Size = new System.Drawing.Size(646, 61);
+            this.tableLayoutPanel_filters.Size = new System.Drawing.Size(485, 50);
             this.tableLayoutPanel_filters.TabIndex = 3;
             // 
             // menuStrip_filters
@@ -128,11 +129,11 @@
             this.menuStrip_filters.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.filter_item_sort_by,
             this.filter_item_direction});
-            this.menuStrip_filters.Location = new System.Drawing.Point(258, 0);
+            this.menuStrip_filters.Location = new System.Drawing.Point(194, 0);
             this.menuStrip_filters.Name = "menuStrip_filters";
-            this.menuStrip_filters.Padding = new System.Windows.Forms.Padding(5, 1, 0, 1);
+            this.menuStrip_filters.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
             this.menuStrip_filters.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip_filters.Size = new System.Drawing.Size(388, 61);
+            this.menuStrip_filters.Size = new System.Drawing.Size(291, 50);
             this.menuStrip_filters.TabIndex = 1;
             this.menuStrip_filters.Text = "Filters";
             // 
@@ -143,7 +144,7 @@
             this.AmountToolStripMenuItem});
             this.filter_item_sort_by.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.filter_item_sort_by.Name = "filter_item_sort_by";
-            this.filter_item_sort_by.Size = new System.Drawing.Size(63, 59);
+            this.filter_item_sort_by.Size = new System.Drawing.Size(56, 48);
             this.filter_item_sort_by.Text = "Sort By";
             // 
             // MonthToolStripMenuItem
@@ -151,7 +152,7 @@
             this.MonthToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.MonthToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.MonthToolStripMenuItem.Name = "MonthToolStripMenuItem";
-            this.MonthToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
+            this.MonthToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.MonthToolStripMenuItem.Text = "Month";
             this.MonthToolStripMenuItem.Click += new System.EventHandler(this.MonthToolStripMenuItem_Click);
             // 
@@ -160,7 +161,7 @@
             this.AmountToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.AmountToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.AmountToolStripMenuItem.Name = "AmountToolStripMenuItem";
-            this.AmountToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
+            this.AmountToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.AmountToolStripMenuItem.Text = "Amount";
             this.AmountToolStripMenuItem.Click += new System.EventHandler(this.AmountToolStripMenuItem_Click);
             // 
@@ -171,7 +172,7 @@
             this.descendingToolStripMenuItem});
             this.filter_item_direction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.filter_item_direction.Name = "filter_item_direction";
-            this.filter_item_direction.Size = new System.Drawing.Size(74, 59);
+            this.filter_item_direction.Size = new System.Drawing.Size(67, 48);
             this.filter_item_direction.Text = "Direction";
             // 
             // ascendingToolStripMenuItem
@@ -179,7 +180,7 @@
             this.ascendingToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.ascendingToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.ascendingToolStripMenuItem.Name = "ascendingToolStripMenuItem";
-            this.ascendingToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
+            this.ascendingToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.ascendingToolStripMenuItem.Text = "Ascending";
             this.ascendingToolStripMenuItem.Click += new System.EventHandler(this.ascendingToolStripMenuItem_Click);
             // 
@@ -188,7 +189,7 @@
             this.descendingToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.descendingToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.descendingToolStripMenuItem.Name = "descendingToolStripMenuItem";
-            this.descendingToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
+            this.descendingToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.descendingToolStripMenuItem.Text = "Descending";
             this.descendingToolStripMenuItem.Click += new System.EventHandler(this.descendingToolStripMenuItem_Click);
             // 
@@ -196,10 +197,9 @@
             // 
             this.lbl_filter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_filter.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_filter.Location = new System.Drawing.Point(188, 15);
-            this.lbl_filter.Margin = new System.Windows.Forms.Padding(4);
+            this.lbl_filter.Location = new System.Drawing.Point(137, 12);
             this.lbl_filter.Name = "lbl_filter";
-            this.lbl_filter.Size = new System.Drawing.Size(66, 31);
+            this.lbl_filter.Size = new System.Drawing.Size(54, 26);
             this.lbl_filter.TabIndex = 38;
             this.lbl_filter.Values.Text = "Filters";
             // 
@@ -210,7 +210,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(430, 61);
+            this.panel2.Size = new System.Drawing.Size(322, 50);
             this.panel2.TabIndex = 4;
             // 
             // btn_add_salary
@@ -218,10 +218,9 @@
             this.btn_add_salary.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_add_salary.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
             this.btn_add_salary.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_add_salary.Location = new System.Drawing.Point(26, 3);
-            this.btn_add_salary.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_add_salary.Location = new System.Drawing.Point(20, 2);
             this.btn_add_salary.Name = "btn_add_salary";
-            this.btn_add_salary.Size = new System.Drawing.Size(189, 54);
+            this.btn_add_salary.Size = new System.Drawing.Size(142, 44);
             this.btn_add_salary.TabIndex = 0;
             this.btn_add_salary.Values.Text = "Add Salary";
             this.btn_add_salary.Click += new System.EventHandler(this.btn_add_salary_Click);
@@ -272,6 +271,7 @@
             this.dgv_salaries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_salaries.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FullNameColumn,
+            this.Employee,
             this.salaryIdDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn,
             this.amountDataGridViewTextBoxColumn,
@@ -279,57 +279,11 @@
             this.dgv_salaries.DataSource = this.salaryBindingSource;
             this.dgv_salaries.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_salaries.Location = new System.Drawing.Point(0, 0);
-            this.dgv_salaries.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_salaries.Name = "dgv_salaries";
             this.dgv_salaries.RowHeadersWidth = 62;
-            this.dgv_salaries.Size = new System.Drawing.Size(1030, 497);
+            this.dgv_salaries.Size = new System.Drawing.Size(769, 402);
             this.dgv_salaries.TabIndex = 0;
             this.dgv_salaries.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_salaries_CellMouseDown);
-            // 
-            // FullNameColumn
-            // 
-            this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FullNameColumn.DataPropertyName = "EmployeeName";
-            this.FullNameColumn.HeaderText = "FullName";
-            this.FullNameColumn.MinimumWidth = 8;
-            this.FullNameColumn.Name = "FullNameColumn";
-            this.FullNameColumn.ReadOnly = true;
-            // 
-            // salaryIdDataGridViewTextBoxColumn
-            // 
-            this.salaryIdDataGridViewTextBoxColumn.DataPropertyName = "SalaryId";
-            this.salaryIdDataGridViewTextBoxColumn.HeaderText = "SalaryId";
-            this.salaryIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.salaryIdDataGridViewTextBoxColumn.Name = "salaryIdDataGridViewTextBoxColumn";
-            this.salaryIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.salaryIdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // amountDataGridViewTextBoxColumn
-            // 
-            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
-            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
-            this.amountDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-            this.amountDataGridViewTextBoxColumn.ReadOnly = true;
-            this.amountDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // bonusDataGridViewTextBoxColumn
-            // 
-            this.bonusDataGridViewTextBoxColumn.DataPropertyName = "Bonus";
-            this.bonusDataGridViewTextBoxColumn.HeaderText = "Bonus";
-            this.bonusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bonusDataGridViewTextBoxColumn.Name = "bonusDataGridViewTextBoxColumn";
-            this.bonusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bonusDataGridViewTextBoxColumn.Width = 125;
             // 
             // salaryBindingSource
             // 
@@ -343,22 +297,20 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1076, 618);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(807, 502);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.gbox_grd_salaries);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(4, 65);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(3, 53);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1068, 549);
+            this.panel1.Size = new System.Drawing.Size(801, 446);
             this.panel1.TabIndex = 2;
             // 
             // gbox_grd_salaries
@@ -366,15 +318,14 @@
             this.gbox_grd_salaries.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbox_grd_salaries.Location = new System.Drawing.Point(12, 4);
-            this.gbox_grd_salaries.Margin = new System.Windows.Forms.Padding(4);
+            this.gbox_grd_salaries.Location = new System.Drawing.Point(9, 3);
             this.gbox_grd_salaries.Name = "gbox_grd_salaries";
             // 
             // gbox_grd_salaries.Panel
             // 
             this.gbox_grd_salaries.Panel.Controls.Add(this.gbx_add_update_salaries);
             this.gbox_grd_salaries.Panel.Controls.Add(this.dgv_salaries);
-            this.gbox_grd_salaries.Size = new System.Drawing.Size(1044, 535);
+            this.gbox_grd_salaries.Size = new System.Drawing.Size(783, 435);
             this.gbox_grd_salaries.TabIndex = 1;
             this.gbox_grd_salaries.Values.Heading = "Salaries";
             // 
@@ -382,8 +333,7 @@
             // 
             this.gbx_add_update_salaries.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbx_add_update_salaries.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlAlternate;
-            this.gbx_add_update_salaries.Location = new System.Drawing.Point(232, 34);
-            this.gbx_add_update_salaries.Margin = new System.Windows.Forms.Padding(4);
+            this.gbx_add_update_salaries.Location = new System.Drawing.Point(172, 25);
             this.gbx_add_update_salaries.Name = "gbx_add_update_salaries";
             // 
             // gbx_add_update_salaries.Panel
@@ -397,7 +347,7 @@
             this.gbx_add_update_salaries.Panel.Controls.Add(this.lbl_last_name);
             this.gbx_add_update_salaries.Panel.Controls.Add(this.lbl_Amount);
             this.gbx_add_update_salaries.Panel.Controls.Add(this.txt_amount);
-            this.gbx_add_update_salaries.Size = new System.Drawing.Size(738, 517);
+            this.gbx_add_update_salaries.Size = new System.Drawing.Size(554, 420);
             this.gbx_add_update_salaries.TabIndex = 1;
             this.gbx_add_update_salaries.Values.Heading = "Add Salaries";
             this.gbx_add_update_salaries.Visible = false;
@@ -406,10 +356,9 @@
             // 
             this.lbl_Employee.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Employee.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_Employee.Location = new System.Drawing.Point(42, 20);
-            this.lbl_Employee.Margin = new System.Windows.Forms.Padding(4);
+            this.lbl_Employee.Location = new System.Drawing.Point(30, 12);
             this.lbl_Employee.Name = "lbl_Employee";
-            this.lbl_Employee.Size = new System.Drawing.Size(98, 31);
+            this.lbl_Employee.Size = new System.Drawing.Size(100, 27);
             this.lbl_Employee.TabIndex = 27;
             this.lbl_Employee.Values.Text = "Employee";
             // 
@@ -427,10 +376,9 @@
             "item 4",
             "item 5",
             "item 6"});
-            this.cmbEmployee.Location = new System.Drawing.Point(42, 44);
-            this.cmbEmployee.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbEmployee.Location = new System.Drawing.Point(30, 32);
             this.cmbEmployee.Name = "cmbEmployee";
-            this.cmbEmployee.Size = new System.Drawing.Size(404, 42);
+            this.cmbEmployee.Size = new System.Drawing.Size(303, 37);
             this.cmbEmployee.TabIndex = 26;
             this.cmbEmployee.Text = "Employee";
             // 
@@ -438,10 +386,9 @@
             // 
             this.lbl_bonus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_bonus.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_bonus.Location = new System.Drawing.Point(42, 206);
-            this.lbl_bonus.Margin = new System.Windows.Forms.Padding(4);
+            this.lbl_bonus.Location = new System.Drawing.Point(30, 163);
             this.lbl_bonus.Name = "lbl_bonus";
-            this.lbl_bonus.Size = new System.Drawing.Size(66, 31);
+            this.lbl_bonus.Size = new System.Drawing.Size(70, 27);
             this.lbl_bonus.TabIndex = 15;
             this.lbl_bonus.Values.Text = "Bonus";
             // 
@@ -449,12 +396,12 @@
             // 
             this.txtBonus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBonus.BackColor = System.Drawing.Color.Transparent;
-            this.txtBonus.Location = new System.Drawing.Point(38, 227);
-            this.txtBonus.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtBonus.Location = new System.Drawing.Point(26, 180);
+            this.txtBonus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBonus.MultiLine = false;
             this.txtBonus.Name = "txtBonus";
             this.txtBonus.PlaceHolder = "Bonus Amount";
-            this.txtBonus.Size = new System.Drawing.Size(408, 52);
+            this.txtBonus.Size = new System.Drawing.Size(306, 42);
             this.txtBonus.Style = "Standalone";
             this.txtBonus.TabIndex = 14;
             this.txtBonus.TextBoxText = "Bonus Amount";
@@ -463,10 +410,9 @@
             // 
             this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cancel.Location = new System.Drawing.Point(38, 328);
-            this.btn_cancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_cancel.Location = new System.Drawing.Point(26, 262);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(200, 62);
+            this.btn_cancel.Size = new System.Drawing.Size(150, 50);
             this.btn_cancel.TabIndex = 13;
             this.btn_cancel.Values.Text = "Cancel";
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
@@ -476,10 +422,9 @@
             this.btn_add_update_salary.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_add_update_salary.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
             this.btn_add_update_salary.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_add_update_salary.Location = new System.Drawing.Point(246, 328);
-            this.btn_add_update_salary.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_add_update_salary.Location = new System.Drawing.Point(182, 262);
             this.btn_add_update_salary.Name = "btn_add_update_salary";
-            this.btn_add_update_salary.Size = new System.Drawing.Size(200, 62);
+            this.btn_add_update_salary.Size = new System.Drawing.Size(150, 50);
             this.btn_add_update_salary.TabIndex = 2;
             this.btn_add_update_salary.Values.Text = "Add Salary";
             this.btn_add_update_salary.Click += new System.EventHandler(this.btn_add_update_salary_Click);
@@ -487,8 +432,7 @@
             // lbl_last_name
             // 
             this.lbl_last_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_last_name.Location = new System.Drawing.Point(8, 89);
-            this.lbl_last_name.Margin = new System.Windows.Forms.Padding(4);
+            this.lbl_last_name.Location = new System.Drawing.Point(6, 72);
             this.lbl_last_name.Name = "lbl_last_name";
             this.lbl_last_name.Size = new System.Drawing.Size(6, 4);
             this.lbl_last_name.TabIndex = 9;
@@ -498,10 +442,9 @@
             // 
             this.lbl_Amount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Amount.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_Amount.Location = new System.Drawing.Point(42, 106);
-            this.lbl_Amount.Margin = new System.Windows.Forms.Padding(4);
+            this.lbl_Amount.Location = new System.Drawing.Point(30, 82);
             this.lbl_Amount.Name = "lbl_Amount";
-            this.lbl_Amount.Size = new System.Drawing.Size(83, 31);
+            this.lbl_Amount.Size = new System.Drawing.Size(83, 27);
             this.lbl_Amount.TabIndex = 8;
             this.lbl_Amount.Values.Text = "Amount";
             // 
@@ -509,25 +452,80 @@
             // 
             this.txt_amount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_amount.BackColor = System.Drawing.Color.Transparent;
-            this.txt_amount.Location = new System.Drawing.Point(38, 127);
-            this.txt_amount.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txt_amount.Location = new System.Drawing.Point(26, 99);
+            this.txt_amount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_amount.MultiLine = false;
             this.txt_amount.Name = "txt_amount";
             this.txt_amount.PlaceHolder = "Amount";
-            this.txt_amount.Size = new System.Drawing.Size(408, 52);
+            this.txt_amount.Size = new System.Drawing.Size(306, 42);
             this.txt_amount.Style = "Standalone";
             this.txt_amount.TabIndex = 3;
             this.txt_amount.TextBoxText = "Amount";
             // 
+            // FullNameColumn
+            // 
+            this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FullNameColumn.DataPropertyName = "EmployeeName";
+            this.FullNameColumn.HeaderText = "FullName";
+            this.FullNameColumn.MinimumWidth = 8;
+            this.FullNameColumn.Name = "FullNameColumn";
+            this.FullNameColumn.ReadOnly = true;
+            this.FullNameColumn.Visible = false;
+            // 
+            // Employee
+            // 
+            this.Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Employee.DataPropertyName = "Employee";
+            this.Employee.HeaderText = "Employee";
+            this.Employee.Name = "Employee";
+            // 
+            // salaryIdDataGridViewTextBoxColumn
+            // 
+            this.salaryIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.salaryIdDataGridViewTextBoxColumn.DataPropertyName = "SalaryId";
+            this.salaryIdDataGridViewTextBoxColumn.HeaderText = "SalaryId";
+            this.salaryIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.salaryIdDataGridViewTextBoxColumn.Name = "salaryIdDataGridViewTextBoxColumn";
+            this.salaryIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.salaryIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            this.amountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bonusDataGridViewTextBoxColumn
+            // 
+            this.bonusDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.bonusDataGridViewTextBoxColumn.DataPropertyName = "Bonus";
+            this.bonusDataGridViewTextBoxColumn.HeaderText = "Bonus";
+            this.bonusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bonusDataGridViewTextBoxColumn.Name = "bonusDataGridViewTextBoxColumn";
+            this.bonusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // SalaryManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.ClientSize = new System.Drawing.Size(1076, 618);
+            this.ClientSize = new System.Drawing.Size(807, 502);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip_filters;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SalaryManagement";
             this.Text = "SalaryManagement";
             this.Load += new System.EventHandler(this.SalaryManagement_Load);
@@ -591,6 +589,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_Employee;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbEmployee;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullNameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Employee;
         private System.Windows.Forms.DataGridViewTextBoxColumn salaryIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;

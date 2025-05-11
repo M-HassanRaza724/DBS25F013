@@ -221,6 +221,12 @@
     <Compile Include="UI\ReviewDisplay.Designer.cs">
       <DependentUpon>ReviewDisplay.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\SalaryManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SalaryManagement.Designer.cs">
+      <DependentUpon>SalaryManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\ServiceManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ReviewDisplay.resx">
       <DependentUpon>ReviewDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SalaryManagement.resx">
+      <DependentUpon>SalaryManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ServiceDisplay.resx">
       <DependentUpon>ServiceDisplay.cs</DependentUpon>
@@ -462,6 +471,7 @@
     <None Include="Resources\Service.png" />
     <None Include="Resources\Star.png" />
     <None Include="Resources\Star%28filled%29.png" />
+    <Content Include="Resources\Stack of Money.png" />
     <Content Include="Resources\unchecked-hover-small.png" />
     <Content Include="Resources\unchecked-normal-small.png" />
     <None Include="Resources\User Default%28small%29.png" />

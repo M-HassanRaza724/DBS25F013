@@ -210,7 +210,7 @@ namespace SoftwareFirmManagement.UI
             DeleteExistingChild();
             ShowFormInPanel(new SalaryManagement());
 
-        }ss
+        }
 
         private void btn_reviews_Click(object sender, EventArgs e)
         {

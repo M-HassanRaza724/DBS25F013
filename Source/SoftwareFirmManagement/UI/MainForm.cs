@@ -93,7 +93,7 @@ namespace SoftwareFirmManagement.UI
 
 
 
-        public void DeleteExistingChild()
+        public void  DeleteExistingChild()
         {
             // Clear existing content
             if (pnl_main.Controls.Count > 0)
@@ -182,25 +182,25 @@ namespace SoftwareFirmManagement.UI
 
         private void btn_customer_management_Click(object sender, EventArgs e)
         {
-            DeleteExistingChild();
+           HideForm();
             ShowFormInPanel(customerManagement);
         }
 
          private void btn_employee_management_Click(object sender, EventArgs e)
         {
-            DeleteExistingChild();
+           HideForm();
             ShowFormInPanel(employeeManagement);
         }
 
         private void btn_services_Click(object sender, EventArgs e)
         {
-            DeleteExistingChild();
+           HideForm();
             ShowFormInPanel(serviceManagement);
         }
 
         private void btn_order_management_Click(object sender, EventArgs e)
         {
-            DeleteExistingChild();
+           HideForm();
             ShowFormInPanel(orderManagement);
             orderManagement.ParentForm = this;
 
@@ -208,20 +208,20 @@ namespace SoftwareFirmManagement.UI
 
         private void btn_salary_management_Click(object sender, EventArgs e)
         {
-            DeleteExistingChild();
+           HideForm();
             ShowFormInPanel(salaryManagement );
 
         }
 
         private void btn_reviews_Click(object sender, EventArgs e)
         {
-            DeleteExistingChild();
+           HideForm();
             ShowFormInPanel(clientReviews);
         }
 
         private void btn_services_Click_1(object sender, EventArgs e)
         {
-            DeleteExistingChild();
+            HideForm();
             ShowFormInPanel(serviceManagement);
         }
 

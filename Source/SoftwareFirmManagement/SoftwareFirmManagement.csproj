@@ -143,6 +143,12 @@
     <Compile Include="UI\AddUpdateCust.Designer.cs">
       <DependentUpon>AddUpdateCust.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\AdminManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AdminManagement.Designer.cs">
+      <DependentUpon>AdminManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\ClientReviews.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,12 @@
     <Compile Include="UI\EmployeeDisplay.Designer.cs">
       <DependentUpon>EmployeeDisplay.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +235,12 @@
     <Compile Include="UI\OrderPlacementForm.Designer.cs">
       <DependentUpon>OrderPlacementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\PasswordRecoveryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PasswordRecoveryForm.Designer.cs">
+      <DependentUpon>PasswordRecoveryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Resize.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -252,6 +270,12 @@
     </Compile>
     <Compile Include="UI\SidePanel.Designer.cs">
       <DependentUpon>SidePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SignupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SignupForm.Designer.cs">
+      <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Stars_Display.cs">
       <SubType>UserControl</SubType>
@@ -287,6 +311,9 @@
     <EmbeddedResource Include="UI\AddUpdateCust.resx">
       <DependentUpon>AddUpdateCust.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\AdminManagement.resx">
+      <DependentUpon>AdminManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\ClientReviews.resx">
       <DependentUpon>ClientReviews.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\EmployeeDisplay.resx">
       <DependentUpon>EmployeeDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -336,6 +366,9 @@
     <EmbeddedResource Include="UI\OrderPlacementForm.resx">
       <DependentUpon>OrderPlacementForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\PasswordRecoveryForm.resx">
+      <DependentUpon>PasswordRecoveryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Resize.resx">
       <DependentUpon>Resize.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,6 +386,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SidePanel.resx">
       <DependentUpon>SidePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SignupForm.resx">
+      <DependentUpon>SignupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Stars_Display.resx">
       <DependentUpon>Stars_Display.cs</DependentUpon>
@@ -460,6 +496,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SoftwareFirmManagement.BL.Admin.datasource" />
     <None Include="SoftwareFirmManagement.BL.Customer.datasource" />
     <None Include="SoftwareFirmManagement.BL.Employee.datasource" />
     <None Include="SoftwareFirmManagement.BL.OrderDTO.datasource" />

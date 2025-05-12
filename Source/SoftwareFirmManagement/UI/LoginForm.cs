@@ -15,8 +15,6 @@ namespace SoftwareFirmManagement.UI
             this.StartPosition = FormStartPosition.CenterScreen;
 
             // Initialize UI
-            txt_email.TextBoxText = "";
-            txtPassword.TextBoxText = "";
             txt_email.PlaceHolder = "Email";
             txtPassword.PlaceHolder = "Password";
         }
@@ -42,7 +40,12 @@ namespace SoftwareFirmManagement.UI
 
                 if (authenticatedUser != null)
                 {
-                    Program.CurrentUser = authenticatedUser;
+                    if(authenticatedUser is Admin ad)
+                        Program.CurrentUser = ad;
+                    else if (authenticatedUser is Employee emp)
+                        Program.CurrentUser = emp;
+                    else if (authenticatedUser is Customer cust)
+                        Program.CurrentUser = cust;
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }

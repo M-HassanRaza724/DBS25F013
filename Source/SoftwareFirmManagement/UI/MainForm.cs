@@ -64,6 +64,7 @@ namespace SoftwareFirmManagement.UI
         {
             InitializeComponent();
             LoadForms();
+            OpenDashboard();
             //this.ContextMenuStrip = contextMenuStrip1;
         }
 
@@ -240,7 +241,7 @@ namespace SoftwareFirmManagement.UI
                     if (loginForm.ShowDialog() == DialogResult.OK)
                     {
                         HideForm();
-                        CloseForms();
+                        //CloseForms();
                         DeleteExistingChild();
                         LoadForms();
                         OpenDashboard();
@@ -313,7 +314,7 @@ namespace SoftwareFirmManagement.UI
                 }
                 else if (Program.CurrentUser is Employee emp)
                 {
-                    employeeDashboard.Close();
+                    //employeeDashboard.Close();
                     salaryManagement.Close();
                     orderManagement.Close();
                 }

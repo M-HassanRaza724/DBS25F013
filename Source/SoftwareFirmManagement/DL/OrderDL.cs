@@ -58,7 +58,7 @@ namespace SoftwareFirmManagement.DL
         {
             try
             {
-                DatabaseHelper.Instance.ExecuteNonQuery($"call sp_add_order({order.Employee.EmployeeId}, {order.Customer.CustomerId}, '{order.CreatedAt.ToString()}', {order.StatusId}, {order.Service.ServiceId}, {order.InitialBudgetId}, {order.PlatformId});");
+                DatabaseHelper.Instance.ExecuteNonQuery($"call sp_add_order({order.Customer.CustomerId}, '{order.CreatedAt.ToString("yyyy-MM-dd")}', {order.StatusId}, {order.Service.ServiceId}, {order.InitialBudgetId}, {order.PlatformId});");
                 AddOrderInList(order);
                 return true;
             }

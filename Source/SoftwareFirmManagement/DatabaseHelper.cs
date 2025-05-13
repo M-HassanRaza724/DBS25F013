@@ -16,7 +16,7 @@ namespace SoftwareFirmManagement
         private const string DatabaseName = "finalprojectdb3" +
             "";
         private const string DatabaseUser = "root";
-        private const string DatabasePassword = "`1234567890-=";
+        private const string DatabasePassword = "saad@60913527";
         private readonly string _connectionString;
 
         // Private constructor

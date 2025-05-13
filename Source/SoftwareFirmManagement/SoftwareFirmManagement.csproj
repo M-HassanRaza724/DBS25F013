@@ -144,12 +144,6 @@
     <Compile Include="UI\AddUpdateCust.Designer.cs">
       <DependentUpon>AddUpdateCust.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\AdminDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\AdminDashboard.Designer.cs">
-      <DependentUpon>AdminDashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\AdminManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,9 +323,6 @@
     <EmbeddedResource Include="Reports\Report1.rdlc" />
     <EmbeddedResource Include="UI\AddUpdateCust.resx">
       <DependentUpon>AddUpdateCust.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\AdminDashboard.resx">
-      <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\AdminManagement.resx">
       <DependentUpon>AdminManagement.cs</DependentUpon>

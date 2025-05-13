@@ -131,10 +131,78 @@ E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\D
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.SalaryManagement.resources
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.EmployeeAssignationForm.resources
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.OrderPlacementForm.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.AdminManagement.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.LoginForm.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.SignupForm.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.PasswordRecoveryForm.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.CustomerDashboard.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.AdminDashboard.resources
-E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.EmployeeDashboard.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\SoftwareFirmManagement.exe.config
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\SoftwareFirmManagement.exe
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\SoftwareFirmManagement.pdb
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\BouncyCastle.Cryptography.dll
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\Google.Protobuf.dll
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\K4os.Compression.LZ4.dll
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\K4os.Hash.xxHash.dll
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\MySql.Data.dll
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.Buffers.dll
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.IO.Pipelines.dll
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.Memory.dll
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.Numerics.Vectors.dll
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\ZstdSharp.dll
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\BouncyCastle.Cryptography.xml
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\ComponentFactory.Krypton.Docking.pdb
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\ComponentFactory.Krypton.Navigator.pdb
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\ComponentFactory.Krypton.Ribbon.pdb
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\ComponentFactory.Krypton.Workspace.pdb
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\Google.Protobuf.pdb
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\Google.Protobuf.xml
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\K4os.Compression.LZ4.xml
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\K4os.Hash.xxHash.xml
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\MySql.Data.xml
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.Buffers.xml
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.IO.Pipelines.xml
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.Memory.xml
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.Numerics.Vectors.xml
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.csproj.AssemblyReference.cache
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.AddUpdateCust.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.AdminManagement.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.ClientReviews.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.CustomerDisplay.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.CustomerManagement.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.DemoForm.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.EmployeeAssignationForm.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.EmployeeManagement.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.EmployeeDisplay.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.MainForm.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.Properties.Resources.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.Header.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.OrderDetailsForm.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.OrderDisplay.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.OrderManagement.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.OrderPlacementForm.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.Resize.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.ReviewDisplay.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.SalaryManagement.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.ServiceDisplay.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.ServiceManagement.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.SidePanel.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.Stars_Display.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.TextBoxWithPlaceHolder.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.UserManagement.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.UserCredentials.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.csproj.GenerateResource.cache
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.csproj.CoreCompileInputs.cache
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\Software.768A07E0.Up2Date
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.exe
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.pdb
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.LoginForm.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.PasswordRecoveryForm.resources
+D:\University\2nd Semester\DataBase\Final Project\DBS25F013\Source\SoftwareFirmManagement\obj\Debug\SoftwareFirmManagement.UI.SignupForm.resources

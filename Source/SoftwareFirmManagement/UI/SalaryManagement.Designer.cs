@@ -44,10 +44,8 @@
             this.kryptonContextMenuItems1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
             this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.contextMenuStrip_grd = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgv_salaries = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.salaryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbox_grd_salaries = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
@@ -55,25 +53,26 @@
             this.lbl_Employee = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.cmbEmployee = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.lbl_bonus = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txtBonus = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.btn_cancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_add_update_salary = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lbl_last_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_Amount = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtBonus = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.txt_amount = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
-            this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salaryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bonusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salaryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel_filters.SuspendLayout();
             this.menuStrip_filters.SuspendLayout();
             this.panel2.SuspendLayout();
             this.contextMenuStrip_grd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_salaries)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salaryBindingSource)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_salaries)).BeginInit();
@@ -85,6 +84,7 @@
             this.gbx_add_update_salaries.Panel.SuspendLayout();
             this.gbx_add_update_salaries.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salaryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -197,9 +197,9 @@
             // 
             this.lbl_filter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_filter.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_filter.Location = new System.Drawing.Point(137, 12);
+            this.lbl_filter.Location = new System.Drawing.Point(137, 13);
             this.lbl_filter.Name = "lbl_filter";
-            this.lbl_filter.Size = new System.Drawing.Size(54, 26);
+            this.lbl_filter.Size = new System.Drawing.Size(54, 24);
             this.lbl_filter.TabIndex = 38;
             this.lbl_filter.Values.Text = "Filters";
             // 
@@ -218,11 +218,13 @@
             this.btn_add_salary.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_add_salary.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
             this.btn_add_salary.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_add_salary.Enabled = false;
             this.btn_add_salary.Location = new System.Drawing.Point(20, 2);
             this.btn_add_salary.Name = "btn_add_salary";
             this.btn_add_salary.Size = new System.Drawing.Size(142, 44);
             this.btn_add_salary.TabIndex = 0;
             this.btn_add_salary.Values.Text = "Add Salary";
+            this.btn_add_salary.Visible = false;
             this.btn_add_salary.Click += new System.EventHandler(this.btn_add_salary_Click);
             // 
             // kryptonContextMenuItems1
@@ -247,24 +249,6 @@
             this.contextMenuStrip_grd.Name = "contextMenuStrip_grd";
             this.contextMenuStrip_grd.Size = new System.Drawing.Size(136, 64);
             // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
-            this.updateToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Available_Updates;
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(135, 30);
-            this.updateToolStripMenuItem.Text = "Update";
-            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
-            this.deleteToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Trash;
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(135, 30);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
-            // 
             // dgv_salaries
             // 
             this.dgv_salaries.AutoGenerateColumns = false;
@@ -285,9 +269,15 @@
             this.dgv_salaries.TabIndex = 0;
             this.dgv_salaries.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_salaries_CellMouseDown);
             // 
-            // salaryBindingSource
+            // FullNameColumn
             // 
-            this.salaryBindingSource.DataSource = typeof(SoftwareFirmManagement.BL.Salary);
+            this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FullNameColumn.DataPropertyName = "EmployeeName";
+            this.FullNameColumn.HeaderText = "FullName";
+            this.FullNameColumn.MinimumWidth = 8;
+            this.FullNameColumn.Name = "FullNameColumn";
+            this.FullNameColumn.ReadOnly = true;
+            this.FullNameColumn.Visible = false;
             // 
             // tableLayoutPanel1
             // 
@@ -358,7 +348,7 @@
             this.lbl_Employee.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_Employee.Location = new System.Drawing.Point(30, 12);
             this.lbl_Employee.Name = "lbl_Employee";
-            this.lbl_Employee.Size = new System.Drawing.Size(100, 27);
+            this.lbl_Employee.Size = new System.Drawing.Size(97, 29);
             this.lbl_Employee.TabIndex = 27;
             this.lbl_Employee.Values.Text = "Employee";
             // 
@@ -388,23 +378,9 @@
             this.lbl_bonus.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_bonus.Location = new System.Drawing.Point(30, 163);
             this.lbl_bonus.Name = "lbl_bonus";
-            this.lbl_bonus.Size = new System.Drawing.Size(70, 27);
+            this.lbl_bonus.Size = new System.Drawing.Size(66, 29);
             this.lbl_bonus.TabIndex = 15;
             this.lbl_bonus.Values.Text = "Bonus";
-            // 
-            // txtBonus
-            // 
-            this.txtBonus.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBonus.BackColor = System.Drawing.Color.Transparent;
-            this.txtBonus.Location = new System.Drawing.Point(26, 180);
-            this.txtBonus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtBonus.MultiLine = false;
-            this.txtBonus.Name = "txtBonus";
-            this.txtBonus.PlaceHolder = "Bonus Amount";
-            this.txtBonus.Size = new System.Drawing.Size(306, 42);
-            this.txtBonus.Style = "Standalone";
-            this.txtBonus.TabIndex = 14;
-            this.txtBonus.TextBoxText = "Bonus Amount";
             // 
             // btn_cancel
             // 
@@ -434,7 +410,7 @@
             this.lbl_last_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_last_name.Location = new System.Drawing.Point(6, 72);
             this.lbl_last_name.Name = "lbl_last_name";
-            this.lbl_last_name.Size = new System.Drawing.Size(6, 4);
+            this.lbl_last_name.Size = new System.Drawing.Size(6, 2);
             this.lbl_last_name.TabIndex = 9;
             this.lbl_last_name.Values.Text = "";
             // 
@@ -444,9 +420,41 @@
             this.lbl_Amount.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_Amount.Location = new System.Drawing.Point(30, 82);
             this.lbl_Amount.Name = "lbl_Amount";
-            this.lbl_Amount.Size = new System.Drawing.Size(83, 27);
+            this.lbl_Amount.Size = new System.Drawing.Size(83, 29);
             this.lbl_Amount.TabIndex = 8;
             this.lbl_Amount.Values.Text = "Amount";
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.updateToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Available_Updates;
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(135, 30);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.deleteToolStripMenuItem.Image = global::SoftwareFirmManagement.Properties.Resources.Trash;
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(135, 30);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // txtBonus
+            // 
+            this.txtBonus.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBonus.BackColor = System.Drawing.Color.Transparent;
+            this.txtBonus.Location = new System.Drawing.Point(26, 180);
+            this.txtBonus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBonus.MultiLine = false;
+            this.txtBonus.Name = "txtBonus";
+            this.txtBonus.PlaceHolder = "Bonus Amount";
+            this.txtBonus.Size = new System.Drawing.Size(306, 42);
+            this.txtBonus.Style = "Standalone";
+            this.txtBonus.TabIndex = 14;
+            this.txtBonus.TextBoxText = "Bonus Amount";
             // 
             // txt_amount
             // 
@@ -461,16 +469,6 @@
             this.txt_amount.Style = "Standalone";
             this.txt_amount.TabIndex = 3;
             this.txt_amount.TextBoxText = "Amount";
-            // 
-            // FullNameColumn
-            // 
-            this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FullNameColumn.DataPropertyName = "EmployeeName";
-            this.FullNameColumn.HeaderText = "FullName";
-            this.FullNameColumn.MinimumWidth = 8;
-            this.FullNameColumn.Name = "FullNameColumn";
-            this.FullNameColumn.ReadOnly = true;
-            this.FullNameColumn.Visible = false;
             // 
             // Employee
             // 
@@ -516,6 +514,10 @@
             this.bonusDataGridViewTextBoxColumn.Name = "bonusDataGridViewTextBoxColumn";
             this.bonusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // salaryBindingSource
+            // 
+            this.salaryBindingSource.DataSource = typeof(SoftwareFirmManagement.BL.Salary);
+            // 
             // SalaryManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -525,7 +527,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip_filters;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SalaryManagement";
             this.Text = "SalaryManagement";
             this.Load += new System.EventHandler(this.SalaryManagement_Load);
@@ -537,7 +539,6 @@
             this.panel2.ResumeLayout(false);
             this.contextMenuStrip_grd.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_salaries)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salaryBindingSource)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbox_grd_salaries.Panel)).EndInit();
@@ -550,6 +551,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_salaries)).EndInit();
             this.gbx_add_update_salaries.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cmbEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salaryBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

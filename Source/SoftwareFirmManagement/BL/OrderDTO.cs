@@ -238,12 +238,29 @@ namespace SoftwareFirmManagement.BL
             }
             return false;
         }
-        public static List<OrderDTO> GetOrdersByFilter(List<string> statuses, string search = null, string sortby = null, string direction = "ASC")
+        public static List<OrderDTO> GetOrdersByFilter(List<string> statuses, string search = null, string sortby = null, string direction = "ASC" , int custId = -1, int empId = -1)
         {
-            List<OrderDTO> filtered = OrderDL.allOrders
+            List<OrderDTO> filtered;
+            if (custId != -1) 
+            {
+                filtered = OrderDL.GetOrdersByCustomerId(custId)
                                           .OfType<OrderDTO>()
                                           .Where(orders => statuses.Contains(orders.status))
                                           .ToList();
+            }
+            else if(empId != -1)
+            {
+                filtered = OrderDL.GetOrdersByEmployeeId(empId)
+                                    .OfType<OrderDTO>()
+                                    .Where(orders => statuses.Contains(orders.status))
+                                    .ToList();
+            }
+            else {
+                filtered = OrderDL.allOrders
+                                          .OfType<OrderDTO>()
+                                          .Where(orders => statuses.Contains(orders.status))
+                                          .ToList();
+            }
             if (search == null && sortby == null)
             {
                 return filtered

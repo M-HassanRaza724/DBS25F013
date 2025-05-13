@@ -1,4 +1,5 @@
-﻿using SoftwareFirmManagement.BL;
+﻿using Mysqlx.Crud;
+using SoftwareFirmManagement.BL;
 using System;
 using System.Collections.Generic;
 
@@ -126,16 +127,29 @@ namespace SoftwareFirmManagement.DL
             }
             return null;
         }
-        public static OrderDTO GetOrderByid(int id)
+        public static List<OrderDTO> GetOrdersByCustomerId(int CustId)
         {
+            List<OrderDTO> orders = new List<OrderDTO>();
             foreach (var order in allOrders)
             {
-                if (order.OrderId == id)
+                if (order.Customer.CustomerId == CustId)
                 {
-                    return order;
+                    orders.Add(order);
                 }
             }
-            return null;
+            return orders;
+        }
+        public static List<OrderDTO> GetOrdersByEmployeeId(int EmpId)
+        {
+            List<OrderDTO> orders = new List<OrderDTO>();
+            foreach (var order in allOrders)
+            {
+                if (order.Employee.EmployeeId == EmpId)
+                {
+                    orders.Add(order);
+                }
+            }
+            return orders;
         }
         //public static List<int> GetOrderDetailsID()
         //{
@@ -173,5 +187,7 @@ namespace SoftwareFirmManagement.DL
             }
             return false;
         }
+
+
     }
 }

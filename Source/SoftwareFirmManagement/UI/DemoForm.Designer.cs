@@ -214,7 +214,7 @@
             this.kryptonRadioButton2.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
             this.kryptonRadioButton2.Location = new System.Drawing.Point(17, 472);
             this.kryptonRadioButton2.Name = "kryptonRadioButton2";
-            this.kryptonRadioButton2.Size = new System.Drawing.Size(148, 22);
+            this.kryptonRadioButton2.Size = new System.Drawing.Size(148, 20);
             this.kryptonRadioButton2.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
             this.kryptonRadioButton2.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
             this.kryptonRadioButton2.TabIndex = 24;
@@ -267,7 +267,7 @@
             this.rdo_sort_desc.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
             this.rdo_sort_desc.Location = new System.Drawing.Point(8, 37);
             this.rdo_sort_desc.Name = "rdo_sort_desc";
-            this.rdo_sort_desc.Size = new System.Drawing.Size(101, 23);
+            this.rdo_sort_desc.Size = new System.Drawing.Size(101, 21);
             this.rdo_sort_desc.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
             this.rdo_sort_desc.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
             this.rdo_sort_desc.TabIndex = 28;
@@ -285,7 +285,7 @@
             this.rdo_sort_asc.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
             this.rdo_sort_asc.Location = new System.Drawing.Point(8, 8);
             this.rdo_sort_asc.Name = "rdo_sort_asc";
-            this.rdo_sort_asc.Size = new System.Drawing.Size(94, 23);
+            this.rdo_sort_asc.Size = new System.Drawing.Size(94, 21);
             this.rdo_sort_asc.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
             this.rdo_sort_asc.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
             this.rdo_sort_asc.TabIndex = 27;
@@ -330,7 +330,7 @@
             this.rdo_sort_username.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
             this.rdo_sort_username.Location = new System.Drawing.Point(-3, 54);
             this.rdo_sort_username.Name = "rdo_sort_username";
-            this.rdo_sort_username.Size = new System.Drawing.Size(91, 23);
+            this.rdo_sort_username.Size = new System.Drawing.Size(91, 21);
             this.rdo_sort_username.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
             this.rdo_sort_username.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
             this.rdo_sort_username.TabIndex = 27;
@@ -349,7 +349,7 @@
             this.rdo_sort_customer_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
             this.rdo_sort_customer_name.Location = new System.Drawing.Point(-3, 31);
             this.rdo_sort_customer_name.Name = "rdo_sort_customer_name";
-            this.rdo_sort_customer_name.Size = new System.Drawing.Size(124, 23);
+            this.rdo_sort_customer_name.Size = new System.Drawing.Size(124, 21);
             this.rdo_sort_customer_name.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
             this.rdo_sort_customer_name.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
             this.rdo_sort_customer_name.TabIndex = 26;
@@ -367,7 +367,7 @@
             this.rdo_sort_customer_id.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
             this.rdo_sort_customer_id.Location = new System.Drawing.Point(-3, 7);
             this.rdo_sort_customer_id.Name = "rdo_sort_customer_id";
-            this.rdo_sort_customer_id.Size = new System.Drawing.Size(100, 23);
+            this.rdo_sort_customer_id.Size = new System.Drawing.Size(100, 21);
             this.rdo_sort_customer_id.StateCommon.Image.ImageColorMap = System.Drawing.Color.White;
             this.rdo_sort_customer_id.StateCommon.Image.ImageColorTo = System.Drawing.Color.White;
             this.rdo_sort_customer_id.TabIndex = 25;
@@ -417,7 +417,7 @@
             this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel1.Location = new System.Drawing.Point(41, 189);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(130, 27);
+            this.kryptonLabel1.Size = new System.Drawing.Size(131, 29);
             this.kryptonLabel1.TabIndex = 34;
             this.kryptonLabel1.Values.Text = "Initial Budget";
             // 
@@ -440,7 +440,7 @@
             this.lblPlatform.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lblPlatform.Location = new System.Drawing.Point(41, 160);
             this.lblPlatform.Name = "lblPlatform";
-            this.lblPlatform.Size = new System.Drawing.Size(88, 27);
+            this.lblPlatform.Size = new System.Drawing.Size(89, 29);
             this.lblPlatform.TabIndex = 31;
             this.lblPlatform.Values.Text = "Platform";
             // 
@@ -468,7 +468,7 @@
             this.lblInitialBudget.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lblInitialBudget.Location = new System.Drawing.Point(41, 24);
             this.lblInitialBudget.Name = "lblInitialBudget";
-            this.lblInitialBudget.Size = new System.Drawing.Size(130, 27);
+            this.lblInitialBudget.Size = new System.Drawing.Size(131, 29);
             this.lblInitialBudget.TabIndex = 30;
             this.lblInitialBudget.Values.Text = "Initial Budget";
             // 
@@ -491,7 +491,7 @@
             this.lblService.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lblService.Location = new System.Drawing.Point(41, 105);
             this.lblService.Name = "lblService";
-            this.lblService.Size = new System.Drawing.Size(78, 27);
+            this.lblService.Size = new System.Drawing.Size(75, 29);
             this.lblService.TabIndex = 27;
             this.lblService.Values.Text = "Service";
             // 
@@ -537,7 +537,7 @@
             this.lbl_last_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_last_name.Location = new System.Drawing.Point(6, 72);
             this.lbl_last_name.Name = "lbl_last_name";
-            this.lbl_last_name.Size = new System.Drawing.Size(6, 4);
+            this.lbl_last_name.Size = new System.Drawing.Size(6, 2);
             this.lbl_last_name.TabIndex = 9;
             this.lbl_last_name.Values.Text = "";
             // 
@@ -547,7 +547,7 @@
             this.lbl_Customer_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_Customer_name.Location = new System.Drawing.Point(41, -25);
             this.lbl_Customer_name.Name = "lbl_Customer_name";
-            this.lbl_Customer_name.Size = new System.Drawing.Size(155, 27);
+            this.lbl_Customer_name.Size = new System.Drawing.Size(153, 29);
             this.lbl_Customer_name.TabIndex = 8;
             this.lbl_Customer_name.Values.Text = "Customer Name";
             // 
@@ -649,7 +649,7 @@
             this.kryptonLabel2.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel2.Location = new System.Drawing.Point(24, 6);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(119, 27);
+            this.kryptonLabel2.Size = new System.Drawing.Size(114, 29);
             this.kryptonLabel2.TabIndex = 8;
             this.kryptonLabel2.Values.Text = "Supervision";
             // 
@@ -659,7 +659,7 @@
             this.lbl_status.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_status.Location = new System.Drawing.Point(24, 75);
             this.lbl_status.Name = "lbl_status";
-            this.lbl_status.Size = new System.Drawing.Size(69, 27);
+            this.lbl_status.Size = new System.Drawing.Size(67, 29);
             this.lbl_status.TabIndex = 35;
             this.lbl_status.Values.Text = "Status";
             // 
@@ -707,7 +707,7 @@
             this.kryptonLabel3.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel3.Location = new System.Drawing.Point(24, 210);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(88, 27);
+            this.kryptonLabel3.Size = new System.Drawing.Size(89, 29);
             this.kryptonLabel3.TabIndex = 31;
             this.kryptonLabel3.Values.Text = "Platform";
             // 
@@ -736,7 +736,7 @@
             this.kryptonLabel4.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel4.Location = new System.Drawing.Point(24, 139);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(78, 27);
+            this.kryptonLabel4.Size = new System.Drawing.Size(75, 29);
             this.kryptonLabel4.TabIndex = 27;
             this.kryptonLabel4.Values.Text = "Service";
             // 
@@ -783,7 +783,7 @@
             this.kryptonLabel5.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel5.Location = new System.Drawing.Point(6, 72);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(6, 4);
+            this.kryptonLabel5.Size = new System.Drawing.Size(6, 2);
             this.kryptonLabel5.TabIndex = 9;
             this.kryptonLabel5.Values.Text = "";
             // 
@@ -804,7 +804,7 @@
             this.lbl_supervision.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_supervision.Location = new System.Drawing.Point(84, 464);
             this.lbl_supervision.Name = "lbl_supervision";
-            this.lbl_supervision.Size = new System.Drawing.Size(143, 26);
+            this.lbl_supervision.Size = new System.Drawing.Size(143, 24);
             this.lbl_supervision.TabIndex = 47;
             this.lbl_supervision.Values.Text = "Supervision Details";
             // 
@@ -814,7 +814,7 @@
             this.lbl_title.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_title.Location = new System.Drawing.Point(367, 13);
             this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(199, 48);
+            this.lbl_title.Size = new System.Drawing.Size(199, 46);
             this.lbl_title.StateCommon.ShortText.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title.TabIndex = 44;
             this.lbl_title.Values.Text = "Order Details";
@@ -871,7 +871,7 @@
             this.lbl_details.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_details.Location = new System.Drawing.Point(90, 56);
             this.lbl_details.Name = "lbl_details";
-            this.lbl_details.Size = new System.Drawing.Size(59, 26);
+            this.lbl_details.Size = new System.Drawing.Size(59, 24);
             this.lbl_details.TabIndex = 48;
             this.lbl_details.Values.Text = "Details";
             // 
@@ -880,7 +880,7 @@
             this.lbl_customer_details.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_customer_details.Location = new System.Drawing.Point(84, 327);
             this.lbl_customer_details.Name = "lbl_customer_details";
-            this.lbl_customer_details.Size = new System.Drawing.Size(129, 26);
+            this.lbl_customer_details.Size = new System.Drawing.Size(129, 24);
             this.lbl_customer_details.TabIndex = 45;
             this.lbl_customer_details.Values.Text = "Customer Details";
             // 

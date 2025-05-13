@@ -33,7 +33,20 @@ namespace SoftwareFirmManagement.UI
                 search = null;
             List<string> statuses = GetCheckedStatuses();
             //MessageBox.Show($"{String.Join(", ", statuses)} , {search} , {sortby} , {direction}");
-            OrderBindingSource.DataSource = OrderDTO.GetOrdersByFilter(statuses,search, sortby, direction);
+            if (Program.CurrentUser is Admin admin) 
+            {
+                OrderBindingSource.DataSource = OrderDTO.GetOrdersByFilter(statuses,search, sortby, direction);
+
+            }
+            else if (Program.CurrentUser is Customer cust)
+            {
+                OrderBindingSource.DataSource = OrderDTO.GetOrdersByFilter(statuses, search, sortby, direction, cust.CustomerId);
+
+            }
+            else if(Program.CurrentUser is Employee emp)
+            {
+                OrderBindingSource.DataSource = OrderDTO.GetOrdersByFilter(statuses, search, sortby, direction, -1, emp.EmployeeId);
+            }
             dgv_orders.DataSource = OrderBindingSource;
         }
         private void OrderManagement_Load(object sender, EventArgs e)
@@ -198,6 +211,11 @@ namespace SoftwareFirmManagement.UI
 
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void dgv_orders_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right && e.RowIndex >= 0)
@@ -205,7 +223,8 @@ namespace SoftwareFirmManagement.UI
                 currentContextRow = dgv_orders.Rows[e.RowIndex];
                 dgv_orders.ClearSelection();
                 currentContextRow.Selected = true;
-                contextMenuStrip_grd.Show(dgv_orders, dgv_orders.PointToClient(Cursor.Position));
+          
+                    contextMenuStrip_grd.Show(dgv_orders, dgv_orders.PointToClient(Cursor.Position));
             }
 
         }

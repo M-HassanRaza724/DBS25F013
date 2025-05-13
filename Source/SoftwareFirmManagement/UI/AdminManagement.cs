@@ -72,7 +72,7 @@ namespace SoftwareFirmManagement.UI
 
         private void btn_add_update_admin_Click(object sender, EventArgs e)
         {
-            if (cmbDesignations.SelectedIndex == -1)
+            if (cmbAdminRoles.SelectedIndex == -1)
             {
                 MessageBox.Show("Please select an admin role!");
                 return;
@@ -99,16 +99,18 @@ namespace SoftwareFirmManagement.UI
             {
                 try
                 {
+                    //(int userId, string username, string email, string password, int role, int adminId, string name, string phone, int adminRoleId, string adminRole) : base(userId, username, email, password, role)
                     Admin admin = new Admin(
                         Convert.ToInt32(currentContextRow.Cells["UserIdColumn"].Value),
                         userCredentials1.Username,
                         userCredentials1.Email,
                         userCredentials1.Password,
-                        adminRoleId,
+                        LookupDL.GetLookupId("user_role", "Admin"),
                         Convert.ToInt32(currentContextRow.Cells["AdminIdColumn"].Value),
                         txt_full_name.TextBoxText,
                         txt_Phone.TextBoxText,
                         adminRoleId
+
                     );
                     admin.Update(admin);
                     LoadData();
@@ -123,12 +125,13 @@ namespace SoftwareFirmManagement.UI
             {
                 try
                 {
+                    //(int userId, string username, string email, string password, int role, string name, string phone, int adminRoleId) : base(userId, username, email, password, role)
                     Admin admin = new Admin(
-                        0,
+                        Convert.ToInt32(currentContextRow.Cells["UserIdColumn"].Value),
                         userCredentials1.Username,
                         userCredentials1.Email,
                         userCredentials1.Password,
-                        adminRoleId,
+                        LookupDL.GetLookupId("user_role", "Admin"),
                         txt_full_name.TextBoxText,
                         txt_Phone.TextBoxText,
                         adminRoleId
@@ -173,12 +176,12 @@ namespace SoftwareFirmManagement.UI
         {
             try
             {
-                cmbDesignations.Items.Clear();
+                cmbAdminRoles.Items.Clear();
                 adminRolesList = LookupDL.GetLookupsByKeyGroup("admin_role");
-                cmbDesignations.Items.AddRange(adminRolesList.ToArray());
+                cmbAdminRoles.Items.AddRange(adminRolesList.ToArray());
 
-                if (cmbDesignations.Items.Count > 0)
-                    cmbDesignations.SelectedIndex = 0;
+                if (cmbAdminRoles.Items.Count > 0)
+                    cmbAdminRoles.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
@@ -187,9 +190,9 @@ namespace SoftwareFirmManagement.UI
         }
         private int GetSelectedAdminRoleId()
         {
-            if (cmbDesignations.SelectedIndex >= 0 && cmbDesignations.SelectedIndex < adminRolesList.Count)
+            if (cmbAdminRoles.SelectedIndex >= 0 && cmbAdminRoles.SelectedIndex < adminRolesList.Count)
             {
-                return adminRolesList[cmbDesignations.SelectedIndex].LookupId;
+                return adminRolesList[cmbAdminRoles.SelectedIndex].LookupId;
             }
             return 0;
         }
@@ -213,7 +216,7 @@ namespace SoftwareFirmManagement.UI
                 {
                     if (adminRolesList[i].LookupId == roleId)
                     {
-                        cmbDesignations.SelectedIndex = i;
+                        cmbAdminRoles.SelectedIndex = i;
                         break;
                     }
                 }
@@ -223,12 +226,12 @@ namespace SoftwareFirmManagement.UI
             }
             else
             {
-                txt_full_name.TextBoxText = "";
-                txt_Phone.TextBoxText = "";
-                userCredentials1.Username = "";
-                userCredentials1.Email = "";
-                userCredentials1.Password = "";
-                cmbDesignations.SelectedIndex = -1;
+                //txt_full_name.TextBoxText = "";
+                //txt_Phone.TextBoxText = "";
+                //userCredentials1.Username = "";
+                //userCredentials1.Email = "";
+                //userCredentials1.Password = "";
+                cmbAdminRoles.SelectedIndex = -1;
 
                 btn_add_update_admin.Text = "Add";
                 gbx_add_update_employee.Text = "Add Admin";
@@ -249,8 +252,8 @@ namespace SoftwareFirmManagement.UI
             userCredentials1.EmailPlaceHolder = "Email";
             userCredentials1.Password = "";
             userCredentials1.PasswordPlaceHolder = "Password";
-            cmbDesignations.SelectedIndex = -1;
-            cmbDesignations.Text = "Select Admin Role";
+            cmbAdminRoles.SelectedIndex = -1;
+            cmbAdminRoles.Text = "Select Admin Role";
 
             btn_add_update_admin.Text = "Add";
             gbx_add_update_employee.Text = "Add Admin";

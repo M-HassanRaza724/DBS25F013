@@ -16,12 +16,25 @@ namespace SoftwareFirmManagement.UI
         public SalaryManagement()
         {
             InitializeComponent();
+            if (Program.CurrentUser is Admin ad)
+            {
+                btn_add_salary.Enabled = true;
+                btn_add_salary.Visible = true;
+            }
         }
 
         public void LoadData(string search = null)
         {
             if (search == "Search") search = null;
-            salaryBindingSource.DataSource = Salary.GetSalarysByFilter(search, sortby, direction);
+            if (Program.CurrentUser is Admin)
+            {
+                salaryBindingSource.DataSource = Salary.GetSalarysByFilter(search, sortby, direction);
+            }
+            else if (Program.CurrentUser is Employee emp)
+            {
+                salaryBindingSource.DataSource = Salary.GetSalarysByFilter(search, sortby, direction, emp.EmployeeId);
+
+            }
             dgv_salaries.DataSource = salaryBindingSource;
             dgv_salaries.Refresh();
         }
@@ -51,11 +64,12 @@ namespace SoftwareFirmManagement.UI
         }
 
         private void SalaryManagement_Load(object sender, EventArgs e)
+
         {
             LoadData();
             LoadEmployees();
             disableGroupBox();
-            dgv_salaries.ContextMenuStrip = contextMenuStrip_grd;
+            //dgv_salaries.ContextMenuStrip = contextMenuStrip_grd;
         }
 
         private void LoadEmployees()
@@ -84,7 +98,10 @@ namespace SoftwareFirmManagement.UI
                 currentContextRow = dgv_salaries.Rows[e.RowIndex];
                 dgv_salaries.ClearSelection();
                 currentContextRow.Selected = true;
-                contextMenuStrip_grd.Show(dgv_salaries, dgv_salaries.PointToClient(Cursor.Position));
+                if(Program.CurrentUser is Admin ad)
+                {
+                    contextMenuStrip_grd.Show(dgv_salaries, dgv_salaries.PointToClient(Cursor.Position));
+                }
             }
         }
 

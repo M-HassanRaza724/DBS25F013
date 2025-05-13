@@ -31,13 +31,13 @@ namespace SoftwareFirmManagement
 
 
             MainForm main = new MainForm();
-            using (var loginForm = new LoginForm())
-            {
-                if (loginForm.ShowDialog() == DialogResult.OK)
-                {
+            //using (var loginForm = new LoginForm())
+            //{
+            //    if (loginForm.ShowDialog() == DialogResult.OK)
+            //    {
                     Application.Run(main);
-                }
-            }
+            //    }
+            //}
         }
     }
 }

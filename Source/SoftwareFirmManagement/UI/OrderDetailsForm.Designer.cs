@@ -30,8 +30,8 @@ namespace SoftwareFirmManagement.UI
         /// </summary>
         private void InitializeComponent()
         {
-            SoftwareFirmManagement.BL.Customer customer1 = new SoftwareFirmManagement.BL.Customer();
-            SoftwareFirmManagement.BL.Employee employee1 = new SoftwareFirmManagement.BL.Employee();
+            SoftwareFirmManagement.BL.Customer customer2 = new SoftwareFirmManagement.BL.Customer();
+            SoftwareFirmManagement.BL.Employee employee2 = new SoftwareFirmManagement.BL.Employee();
             this.vScrollBar = new System.Windows.Forms.VScrollBar();
             this.pnl_main = new System.Windows.Forms.Panel();
             this.btn_review = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -52,6 +52,7 @@ namespace SoftwareFirmManagement.UI
             this.actions = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_delete_order = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_edit_order = new System.Windows.Forms.ToolStripMenuItem();
+            this.assignEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbl_title = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.orderDisplay = new SoftwareFirmManagement.UI.OrderDisplay();
             this.lbl_details = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -64,7 +65,6 @@ namespace SoftwareFirmManagement.UI
             this.btn_later = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.txt_review_description = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.stars_Display1 = new SoftwareFirmManagement.UI.Stars_Display();
-            this.assignEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_order)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbx_add_update_order.Panel)).BeginInit();
@@ -164,7 +164,7 @@ namespace SoftwareFirmManagement.UI
             this.kryptonLabel2.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel2.Location = new System.Drawing.Point(24, -12);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(92, 26);
+            this.kryptonLabel2.Size = new System.Drawing.Size(114, 29);
             this.kryptonLabel2.TabIndex = 8;
             this.kryptonLabel2.Values.Text = "Supervision";
             // 
@@ -174,7 +174,7 @@ namespace SoftwareFirmManagement.UI
             this.lbl_status.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_status.Location = new System.Drawing.Point(24, 57);
             this.lbl_status.Name = "lbl_status";
-            this.lbl_status.Size = new System.Drawing.Size(55, 26);
+            this.lbl_status.Size = new System.Drawing.Size(67, 29);
             this.lbl_status.TabIndex = 35;
             this.lbl_status.Values.Text = "Status";
             // 
@@ -207,7 +207,7 @@ namespace SoftwareFirmManagement.UI
             this.kryptonLabel3.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel3.Location = new System.Drawing.Point(24, 192);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(72, 26);
+            this.kryptonLabel3.Size = new System.Drawing.Size(89, 29);
             this.kryptonLabel3.TabIndex = 31;
             this.kryptonLabel3.Values.Text = "Platform";
             // 
@@ -229,7 +229,7 @@ namespace SoftwareFirmManagement.UI
             this.kryptonLabel4.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel4.Location = new System.Drawing.Point(24, 121);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(61, 26);
+            this.kryptonLabel4.Size = new System.Drawing.Size(75, 29);
             this.kryptonLabel4.TabIndex = 27;
             this.kryptonLabel4.Values.Text = "Service";
             // 
@@ -271,7 +271,7 @@ namespace SoftwareFirmManagement.UI
             this.kryptonLabel5.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.kryptonLabel5.Location = new System.Drawing.Point(6, 72);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(6, 4);
+            this.kryptonLabel5.Size = new System.Drawing.Size(6, 2);
             this.kryptonLabel5.TabIndex = 9;
             this.kryptonLabel5.Values.Text = "";
             // 
@@ -291,6 +291,7 @@ namespace SoftwareFirmManagement.UI
             this.menuStrip_actions.Size = new System.Drawing.Size(197, 25);
             this.menuStrip_actions.TabIndex = 66;
             this.menuStrip_actions.Text = "Filters";
+            this.menuStrip_actions.Visible = false;
             // 
             // actions
             // 
@@ -310,7 +311,7 @@ namespace SoftwareFirmManagement.UI
             this.toolStripMenuItem_delete_order.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.toolStripMenuItem_delete_order.Image = global::SoftwareFirmManagement.Properties.Resources.Trash;
             this.toolStripMenuItem_delete_order.Name = "toolStripMenuItem_delete_order";
-            this.toolStripMenuItem_delete_order.Size = new System.Drawing.Size(206, 30);
+            this.toolStripMenuItem_delete_order.Size = new System.Drawing.Size(198, 24);
             this.toolStripMenuItem_delete_order.Text = "Delete Order";
             this.toolStripMenuItem_delete_order.Click += new System.EventHandler(this.toolStripMenuItem_delete_order_Click);
             // 
@@ -320,9 +321,18 @@ namespace SoftwareFirmManagement.UI
             this.toolStripMenuItem_edit_order.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
             this.toolStripMenuItem_edit_order.Image = global::SoftwareFirmManagement.Properties.Resources.Edit;
             this.toolStripMenuItem_edit_order.Name = "toolStripMenuItem_edit_order";
-            this.toolStripMenuItem_edit_order.Size = new System.Drawing.Size(206, 30);
+            this.toolStripMenuItem_edit_order.Size = new System.Drawing.Size(198, 24);
             this.toolStripMenuItem_edit_order.Text = "Edit Order";
             this.toolStripMenuItem_edit_order.Click += new System.EventHandler(this.toolStripMenuItem_edit_order_Click);
+            // 
+            // assignEmployeesToolStripMenuItem
+            // 
+            this.assignEmployeesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.assignEmployeesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
+            this.assignEmployeesToolStripMenuItem.Name = "assignEmployeesToolStripMenuItem";
+            this.assignEmployeesToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
+            this.assignEmployeesToolStripMenuItem.Text = "Assign Employees";
+            this.assignEmployeesToolStripMenuItem.Click += new System.EventHandler(this.assignEmployeesToolStripMenuItem_Click);
             // 
             // lbl_title
             // 
@@ -330,7 +340,7 @@ namespace SoftwareFirmManagement.UI
             this.lbl_title.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_title.Location = new System.Drawing.Point(364, 11);
             this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(199, 48);
+            this.lbl_title.Size = new System.Drawing.Size(199, 46);
             this.lbl_title.StateCommon.ShortText.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title.TabIndex = 62;
             this.lbl_title.Values.Text = "Order Details";
@@ -351,7 +361,7 @@ namespace SoftwareFirmManagement.UI
             this.lbl_details.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_details.Location = new System.Drawing.Point(71, 80);
             this.lbl_details.Name = "lbl_details";
-            this.lbl_details.Size = new System.Drawing.Size(59, 26);
+            this.lbl_details.Size = new System.Drawing.Size(59, 24);
             this.lbl_details.TabIndex = 65;
             this.lbl_details.Values.Text = "Details";
             // 
@@ -359,15 +369,15 @@ namespace SoftwareFirmManagement.UI
             // 
             this.customerDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.customerDisplay.BackColor = System.Drawing.Color.Transparent;
-            customer1.CustomerId = 0;
-            customer1.Email = null;
-            customer1.Name = null;
-            customer1.Password = null;
-            customer1.Role = null;
-            customer1.RoleId = 0;
-            customer1.UserId = 0;
-            customer1.Username = null;
-            this.customerDisplay.Customer = customer1;
+            customer2.CustomerId = 0;
+            customer2.Email = null;
+            customer2.Name = null;
+            customer2.Password = null;
+            customer2.Role = null;
+            customer2.RoleId = 0;
+            customer2.UserId = 0;
+            customer2.Username = null;
+            this.customerDisplay.Customer = customer2;
             this.customerDisplay.Location = new System.Drawing.Point(53, 363);
             this.customerDisplay.Name = "customerDisplay";
             this.customerDisplay.Size = new System.Drawing.Size(820, 100);
@@ -379,27 +389,29 @@ namespace SoftwareFirmManagement.UI
             this.lbl_customer_details.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_customer_details.Location = new System.Drawing.Point(71, 342);
             this.lbl_customer_details.Name = "lbl_customer_details";
-            this.lbl_customer_details.Size = new System.Drawing.Size(129, 26);
+            this.lbl_customer_details.Size = new System.Drawing.Size(129, 24);
             this.lbl_customer_details.TabIndex = 63;
             this.lbl_customer_details.Values.Text = "Customer Details";
             // 
             // employeeDisplay
             // 
             this.employeeDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.employeeDisplay.AssignButton = false;
+            this.employeeDisplay.Assigned = false;
             this.employeeDisplay.BackColor = System.Drawing.Color.Transparent;
-            employee1.Designation = null;
-            employee1.DesignationId = 0;
-            employee1.Email = null;
-            employee1.EmployeeId = 0;
-            employee1.JoinedDate = new System.DateTime(((long)(0)));
-            employee1.Name = null;
-            employee1.Password = null;
-            employee1.Phone = null;
-            employee1.Role = null;
-            employee1.RoleId = 0;
-            employee1.UserId = 0;
-            employee1.Username = null;
-            this.employeeDisplay.Employee = employee1;
+            employee2.Designation = null;
+            employee2.DesignationId = 0;
+            employee2.Email = null;
+            employee2.EmployeeId = 0;
+            employee2.JoinedDate = new System.DateTime(((long)(0)));
+            employee2.Name = null;
+            employee2.Password = null;
+            employee2.Phone = null;
+            employee2.Role = null;
+            employee2.RoleId = 0;
+            employee2.UserId = 0;
+            employee2.Username = null;
+            this.employeeDisplay.Employee = employee2;
             this.employeeDisplay.Location = new System.Drawing.Point(53, 496);
             this.employeeDisplay.Name = "employeeDisplay";
             this.employeeDisplay.Size = new System.Drawing.Size(820, 150);
@@ -411,7 +423,7 @@ namespace SoftwareFirmManagement.UI
             this.lbl_supervision.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_supervision.Location = new System.Drawing.Point(71, 476);
             this.lbl_supervision.Name = "lbl_supervision";
-            this.lbl_supervision.Size = new System.Drawing.Size(143, 26);
+            this.lbl_supervision.Size = new System.Drawing.Size(143, 24);
             this.lbl_supervision.TabIndex = 64;
             this.lbl_supervision.Values.Text = "Supervision Details";
             // 
@@ -472,15 +484,6 @@ namespace SoftwareFirmManagement.UI
             this.stars_Display1.Size = new System.Drawing.Size(156, 33);
             this.stars_Display1.Stars = 5;
             this.stars_Display1.TabIndex = 7;
-            // 
-            // assignEmployeesToolStripMenuItem
-            // 
-            this.assignEmployeesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.assignEmployeesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(210)))));
-            this.assignEmployeesToolStripMenuItem.Name = "assignEmployeesToolStripMenuItem";
-            this.assignEmployeesToolStripMenuItem.Size = new System.Drawing.Size(206, 30);
-            this.assignEmployeesToolStripMenuItem.Text = "Assign Employees";
-            this.assignEmployeesToolStripMenuItem.Click += new System.EventHandler(this.assignEmployeesToolStripMenuItem_Click);
             // 
             // OrderDetailsForm
             // 

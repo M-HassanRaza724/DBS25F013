@@ -74,3 +74,8 @@ E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\R
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.SalaryManagement.resources
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.EmployeeAssignationForm.resources
 E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.OrderPlacementForm.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.AdminManagement.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.CustomerDashboard.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.LoginForm.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.PasswordRecoveryForm.resources
+E:\CS\2ndSemester\DBProjects\Final\DBS25F013\Source\SoftwareFirmManagement\obj\Release\SoftwareFirmManagement.UI.SignupForm.resources

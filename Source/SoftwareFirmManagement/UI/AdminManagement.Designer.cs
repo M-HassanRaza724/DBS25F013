@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lbl_admin_roles = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.userCredentials1 = new SoftwareFirmManagement.UI.UserCredentials();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -45,10 +45,22 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblPhonenum = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.cmbDesignations = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.cmbAdminRoles = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.txt_Phone = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.txt_full_name = new SoftwareFirmManagement.UI.TextBoxWithPlaceHolder();
             this.dgv_admins = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.UserIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsernameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhoneColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AdminRoleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DesignationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PasswordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JoinedDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoleIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DesignationIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AdminBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel_filters = new System.Windows.Forms.TableLayoutPanel();
@@ -67,18 +79,6 @@
             this.contextMenuStrip_grd = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.UserIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UsernameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AdminRoleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DesignationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PasswordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JoinedDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoleIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DesignationIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -94,7 +94,7 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbDesignations)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAdminRoles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_admins)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdminBindingSource)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -104,14 +104,14 @@
             this.contextMenuStrip_grd.SuspendLayout();
             this.SuspendLayout();
             // 
-            // kryptonLabel1
+            // lbl_admin_roles
             // 
-            this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonLabel1.Location = new System.Drawing.Point(10, 154);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(93, 26);
-            this.kryptonLabel1.TabIndex = 15;
-            this.kryptonLabel1.Values.Text = "Designation";
+            this.lbl_admin_roles.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.lbl_admin_roles.Location = new System.Drawing.Point(10, 154);
+            this.lbl_admin_roles.Name = "lbl_admin_roles";
+            this.lbl_admin_roles.Size = new System.Drawing.Size(87, 24);
+            this.lbl_admin_roles.TabIndex = 15;
+            this.lbl_admin_roles.Values.Text = "AdminRole";
             // 
             // panel4
             // 
@@ -176,7 +176,7 @@
             this.lbl_last_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_last_name.Location = new System.Drawing.Point(6, 72);
             this.lbl_last_name.Name = "lbl_last_name";
-            this.lbl_last_name.Size = new System.Drawing.Size(6, 4);
+            this.lbl_last_name.Size = new System.Drawing.Size(6, 2);
             this.lbl_last_name.TabIndex = 9;
             this.lbl_last_name.Values.Text = "";
             // 
@@ -224,7 +224,7 @@
             // 
             this.gbx_add_update_employee.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbx_add_update_employee.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlAlternate;
-            this.gbx_add_update_employee.Location = new System.Drawing.Point(71, 49);
+            this.gbx_add_update_employee.Location = new System.Drawing.Point(66, 45);
             this.gbx_add_update_employee.Name = "gbx_add_update_employee";
             // 
             // gbx_add_update_employee.Panel
@@ -242,7 +242,7 @@
             this.lbl_full_name.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lbl_full_name.Location = new System.Drawing.Point(10, 20);
             this.lbl_full_name.Name = "lbl_full_name";
-            this.lbl_full_name.Size = new System.Drawing.Size(77, 26);
+            this.lbl_full_name.Size = new System.Drawing.Size(77, 24);
             this.lbl_full_name.TabIndex = 8;
             this.lbl_full_name.Values.Text = "FullName";
             // 
@@ -275,16 +275,16 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 231F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 241F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(550, 231);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.kryptonLabel1);
+            this.panel3.Controls.Add(this.lbl_admin_roles);
             this.panel3.Controls.Add(this.lblPhonenum);
-            this.panel3.Controls.Add(this.cmbDesignations);
+            this.panel3.Controls.Add(this.cmbAdminRoles);
             this.panel3.Controls.Add(this.txt_Phone);
             this.panel3.Controls.Add(this.txt_full_name);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -298,27 +298,27 @@
             this.lblPhonenum.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
             this.lblPhonenum.Location = new System.Drawing.Point(10, 87);
             this.lblPhonenum.Name = "lblPhonenum";
-            this.lblPhonenum.Size = new System.Drawing.Size(55, 26);
+            this.lblPhonenum.Size = new System.Drawing.Size(55, 24);
             this.lblPhonenum.TabIndex = 28;
             this.lblPhonenum.Values.Text = "Phone";
             // 
-            // cmbDesignations
+            // cmbAdminRoles
             // 
-            this.cmbDesignations.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList;
-            this.cmbDesignations.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
-            this.cmbDesignations.DropDownWidth = 188;
-            this.cmbDesignations.Items.AddRange(new object[] {
+            this.cmbAdminRoles.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridDataCellList;
+            this.cmbAdminRoles.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Cluster;
+            this.cmbAdminRoles.DropDownWidth = 188;
+            this.cmbAdminRoles.Items.AddRange(new object[] {
             "item 1",
             "item 2",
             "item 3",
             "item 4",
             "item 5",
             "item 6"});
-            this.cmbDesignations.Location = new System.Drawing.Point(10, 171);
-            this.cmbDesignations.Name = "cmbDesignations";
-            this.cmbDesignations.Size = new System.Drawing.Size(250, 36);
-            this.cmbDesignations.TabIndex = 26;
-            this.cmbDesignations.Text = "Designations";
+            this.cmbAdminRoles.Location = new System.Drawing.Point(10, 171);
+            this.cmbAdminRoles.Name = "cmbAdminRoles";
+            this.cmbAdminRoles.Size = new System.Drawing.Size(250, 36);
+            this.cmbAdminRoles.TabIndex = 26;
+            this.cmbAdminRoles.Text = "Select AdminRole";
             // 
             // txt_Phone
             // 
@@ -370,6 +370,117 @@
             this.dgv_admins.RowHeadersWidth = 51;
             this.dgv_admins.Size = new System.Drawing.Size(718, 394);
             this.dgv_admins.TabIndex = 0;
+            // 
+            // UserIdColumn
+            // 
+            this.UserIdColumn.DataPropertyName = "UserId";
+            this.UserIdColumn.HeaderText = "UserId";
+            this.UserIdColumn.MinimumWidth = 6;
+            this.UserIdColumn.Name = "UserIdColumn";
+            this.UserIdColumn.ReadOnly = true;
+            this.UserIdColumn.Visible = false;
+            this.UserIdColumn.Width = 125;
+            // 
+            // FullNameColumn
+            // 
+            this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FullNameColumn.DataPropertyName = "Name";
+            this.FullNameColumn.HeaderText = "FullName";
+            this.FullNameColumn.MinimumWidth = 6;
+            this.FullNameColumn.Name = "FullNameColumn";
+            this.FullNameColumn.ReadOnly = true;
+            // 
+            // UsernameColumn
+            // 
+            this.UsernameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.UsernameColumn.DataPropertyName = "Username";
+            this.UsernameColumn.HeaderText = "Username";
+            this.UsernameColumn.MinimumWidth = 6;
+            this.UsernameColumn.Name = "UsernameColumn";
+            this.UsernameColumn.ReadOnly = true;
+            // 
+            // EmailColumn
+            // 
+            this.EmailColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EmailColumn.DataPropertyName = "Email";
+            this.EmailColumn.HeaderText = "Email";
+            this.EmailColumn.MinimumWidth = 6;
+            this.EmailColumn.Name = "EmailColumn";
+            this.EmailColumn.ReadOnly = true;
+            // 
+            // PhoneColumn
+            // 
+            this.PhoneColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PhoneColumn.DataPropertyName = "Phone";
+            this.PhoneColumn.HeaderText = "Phone";
+            this.PhoneColumn.MinimumWidth = 6;
+            this.PhoneColumn.Name = "PhoneColumn";
+            this.PhoneColumn.ReadOnly = true;
+            // 
+            // AdminRoleColumn
+            // 
+            this.AdminRoleColumn.DataPropertyName = "AdminRole";
+            this.AdminRoleColumn.HeaderText = "AdminRole";
+            this.AdminRoleColumn.Name = "AdminRoleColumn";
+            // 
+            // DesignationColumn
+            // 
+            this.DesignationColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DesignationColumn.DataPropertyName = "Designation";
+            this.DesignationColumn.HeaderText = "Designation";
+            this.DesignationColumn.MinimumWidth = 6;
+            this.DesignationColumn.Name = "DesignationColumn";
+            this.DesignationColumn.ReadOnly = true;
+            this.DesignationColumn.Visible = false;
+            // 
+            // PasswordColumn
+            // 
+            this.PasswordColumn.DataPropertyName = "Password";
+            this.PasswordColumn.HeaderText = "Password";
+            this.PasswordColumn.MinimumWidth = 6;
+            this.PasswordColumn.Name = "PasswordColumn";
+            this.PasswordColumn.Visible = false;
+            this.PasswordColumn.Width = 125;
+            // 
+            // JoinedDateColumn
+            // 
+            this.JoinedDateColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.JoinedDateColumn.DataPropertyName = "JoinedDate";
+            this.JoinedDateColumn.HeaderText = "JoinedDate";
+            this.JoinedDateColumn.MinimumWidth = 6;
+            this.JoinedDateColumn.Name = "JoinedDateColumn";
+            this.JoinedDateColumn.ReadOnly = true;
+            this.JoinedDateColumn.Visible = false;
+            // 
+            // RoleIdColumn
+            // 
+            this.RoleIdColumn.DataPropertyName = "RoleId";
+            this.RoleIdColumn.HeaderText = "RoleId";
+            this.RoleIdColumn.MinimumWidth = 6;
+            this.RoleIdColumn.Name = "RoleIdColumn";
+            this.RoleIdColumn.ReadOnly = true;
+            this.RoleIdColumn.Visible = false;
+            this.RoleIdColumn.Width = 125;
+            // 
+            // DesignationIdColumn
+            // 
+            this.DesignationIdColumn.DataPropertyName = "DesignationId";
+            this.DesignationIdColumn.HeaderText = "DesignationId";
+            this.DesignationIdColumn.MinimumWidth = 6;
+            this.DesignationIdColumn.Name = "DesignationIdColumn";
+            this.DesignationIdColumn.ReadOnly = true;
+            this.DesignationIdColumn.Visible = false;
+            this.DesignationIdColumn.Width = 125;
+            // 
+            // RoleColumn
+            // 
+            this.RoleColumn.DataPropertyName = "Role";
+            this.RoleColumn.HeaderText = "Role";
+            this.RoleColumn.MinimumWidth = 6;
+            this.RoleColumn.Name = "RoleColumn";
+            this.RoleColumn.ReadOnly = true;
+            this.RoleColumn.Visible = false;
+            this.RoleColumn.Width = 125;
             // 
             // AdminBindingSource
             // 
@@ -483,9 +594,9 @@
             // 
             this.lbl_filter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_filter.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lbl_filter.Location = new System.Drawing.Point(124, 11);
+            this.lbl_filter.Location = new System.Drawing.Point(124, 12);
             this.lbl_filter.Name = "lbl_filter";
-            this.lbl_filter.Size = new System.Drawing.Size(54, 26);
+            this.lbl_filter.Size = new System.Drawing.Size(54, 24);
             this.lbl_filter.TabIndex = 38;
             this.lbl_filter.Values.Text = "Filters";
             // 
@@ -550,117 +661,6 @@
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
-            // UserIdColumn
-            // 
-            this.UserIdColumn.DataPropertyName = "UserId";
-            this.UserIdColumn.HeaderText = "UserId";
-            this.UserIdColumn.MinimumWidth = 6;
-            this.UserIdColumn.Name = "UserIdColumn";
-            this.UserIdColumn.ReadOnly = true;
-            this.UserIdColumn.Visible = false;
-            this.UserIdColumn.Width = 125;
-            // 
-            // FullNameColumn
-            // 
-            this.FullNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FullNameColumn.DataPropertyName = "Name";
-            this.FullNameColumn.HeaderText = "FullName";
-            this.FullNameColumn.MinimumWidth = 6;
-            this.FullNameColumn.Name = "FullNameColumn";
-            this.FullNameColumn.ReadOnly = true;
-            // 
-            // UsernameColumn
-            // 
-            this.UsernameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.UsernameColumn.DataPropertyName = "Username";
-            this.UsernameColumn.HeaderText = "Username";
-            this.UsernameColumn.MinimumWidth = 6;
-            this.UsernameColumn.Name = "UsernameColumn";
-            this.UsernameColumn.ReadOnly = true;
-            // 
-            // EmailColumn
-            // 
-            this.EmailColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.EmailColumn.DataPropertyName = "Email";
-            this.EmailColumn.HeaderText = "Email";
-            this.EmailColumn.MinimumWidth = 6;
-            this.EmailColumn.Name = "EmailColumn";
-            this.EmailColumn.ReadOnly = true;
-            // 
-            // PhoneColumn
-            // 
-            this.PhoneColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PhoneColumn.DataPropertyName = "Phone";
-            this.PhoneColumn.HeaderText = "Phone";
-            this.PhoneColumn.MinimumWidth = 6;
-            this.PhoneColumn.Name = "PhoneColumn";
-            this.PhoneColumn.ReadOnly = true;
-            // 
-            // AdminRoleColumn
-            // 
-            this.AdminRoleColumn.DataPropertyName = "AdminRole";
-            this.AdminRoleColumn.HeaderText = "AdminRole";
-            this.AdminRoleColumn.Name = "AdminRoleColumn";
-            // 
-            // DesignationColumn
-            // 
-            this.DesignationColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DesignationColumn.DataPropertyName = "Designation";
-            this.DesignationColumn.HeaderText = "Designation";
-            this.DesignationColumn.MinimumWidth = 6;
-            this.DesignationColumn.Name = "DesignationColumn";
-            this.DesignationColumn.ReadOnly = true;
-            this.DesignationColumn.Visible = false;
-            // 
-            // PasswordColumn
-            // 
-            this.PasswordColumn.DataPropertyName = "Password";
-            this.PasswordColumn.HeaderText = "Password";
-            this.PasswordColumn.MinimumWidth = 6;
-            this.PasswordColumn.Name = "PasswordColumn";
-            this.PasswordColumn.Visible = false;
-            this.PasswordColumn.Width = 125;
-            // 
-            // JoinedDateColumn
-            // 
-            this.JoinedDateColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.JoinedDateColumn.DataPropertyName = "JoinedDate";
-            this.JoinedDateColumn.HeaderText = "JoinedDate";
-            this.JoinedDateColumn.MinimumWidth = 6;
-            this.JoinedDateColumn.Name = "JoinedDateColumn";
-            this.JoinedDateColumn.ReadOnly = true;
-            this.JoinedDateColumn.Visible = false;
-            // 
-            // RoleIdColumn
-            // 
-            this.RoleIdColumn.DataPropertyName = "RoleId";
-            this.RoleIdColumn.HeaderText = "RoleId";
-            this.RoleIdColumn.MinimumWidth = 6;
-            this.RoleIdColumn.Name = "RoleIdColumn";
-            this.RoleIdColumn.ReadOnly = true;
-            this.RoleIdColumn.Visible = false;
-            this.RoleIdColumn.Width = 125;
-            // 
-            // DesignationIdColumn
-            // 
-            this.DesignationIdColumn.DataPropertyName = "DesignationId";
-            this.DesignationIdColumn.HeaderText = "DesignationId";
-            this.DesignationIdColumn.MinimumWidth = 6;
-            this.DesignationIdColumn.Name = "DesignationIdColumn";
-            this.DesignationIdColumn.ReadOnly = true;
-            this.DesignationIdColumn.Visible = false;
-            this.DesignationIdColumn.Width = 125;
-            // 
-            // RoleColumn
-            // 
-            this.RoleColumn.DataPropertyName = "Role";
-            this.RoleColumn.HeaderText = "Role";
-            this.RoleColumn.MinimumWidth = 6;
-            this.RoleColumn.Name = "RoleColumn";
-            this.RoleColumn.ReadOnly = true;
-            this.RoleColumn.Visible = false;
-            this.RoleColumn.Width = 125;
-            // 
             // AdminManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -691,7 +691,7 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbDesignations)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAdminRoles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_admins)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdminBindingSource)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -707,7 +707,7 @@
 
         #endregion
 
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_admin_roles;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_cancel;
@@ -722,7 +722,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Panel panel3;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblPhonenum;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbDesignations;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbAdminRoles;
         private TextBoxWithPlaceHolder txt_Phone;
         private TextBoxWithPlaceHolder txt_full_name;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dgv_admins;

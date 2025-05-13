@@ -1,14 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using SoftwareFirmManagement.BL;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace SoftwareFirmManagement.UI
 {
@@ -19,49 +13,61 @@ namespace SoftwareFirmManagement.UI
         ServiceManagement serviceManagement = new ServiceManagement();
         ClientReviews clientReviews = new ClientReviews();
         SalaryManagement salaryManagement;
-        CustomerDashboard customerDashboard;
+        CustomerDashboard customerDashboard = new CustomerDashboard();
         EmployeeDashboard employeeDashboard;
         AdminDashboard adminDashboard;
         OrderManagement orderManagement;
         CustomerManagement customerManagement;
         EmployeeManagement employeeManagement;
         OrderPlacementForm orderPlacementForm;
-        //AdminManagement adminManagement;
-
+        AdminManagement adminManagement;
+              //if(Program.CurrentUser is Admin ad)
+                //{
+                //}
         public void LoadForms()
         {
-            if (Program.user is Admin ad)
+            if (Program.CurrentUser is Admin ad)
             {
                 orderManagement = new OrderManagement();
                 adminDashboard = new AdminDashboard();
+                adminDashboard.ParentForm = this;
                 employeeManagement = new EmployeeManagement();
                 customerManagement = new CustomerManagement();
                 salaryManagement = new SalaryManagement();
                 serviceManagement = new ServiceManagement();
+                adminManagement = new AdminManagement();
                 if (ad.AdminRole == "superAdmin")
                 {
-                    //adminManagement = new AdminManagement();
+                    adminManagement = new AdminManagement();
                 }
+                //btn_user_management.Enabled = true;
+                //btn_user_management.Visible = true;
+                btn_salary_management.Enabled = true;
+                btn_salary_management.Visible = true;
             }
-            else if (Program.user is Employee emp)
+            else if (Program.CurrentUser is Employee emp)
             {
                 employeeDashboard = new EmployeeDashboard();
+                salaryManagement = new SalaryManagement();
                 orderManagement = new OrderManagement();
+                btn_salary_management.Enabled = true;
+                btn_salary_management.Visible = true;
             }
-            else if (Program.user is Customer cust)
+            else if (Program.CurrentUser is Customer cust)
             {
                 customerDashboard = new CustomerDashboard();
-                orderManagement= new OrderManagement();
+                orderManagement = new OrderManagement();
 
             }
-            }
+        }
         public MainForm()
         {
             InitializeComponent();
+            LoadForms();
             //this.ContextMenuStrip = contextMenuStrip1;
         }
 
-  
+
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
@@ -93,7 +99,7 @@ namespace SoftwareFirmManagement.UI
 
 
 
-        public void  DeleteExistingChild()
+        public void DeleteExistingChild()
         {
             // Clear existing content
             if (pnl_main.Controls.Count > 0)
@@ -115,7 +121,7 @@ namespace SoftwareFirmManagement.UI
         }
         public void ShowFormInPanel(Form formToShow)
         {
-        
+
 
             // Prepare new form
             formToShow.TopLevel = false;
@@ -155,7 +161,7 @@ namespace SoftwareFirmManagement.UI
 
         private void btn_menu_Click(object sender, EventArgs e)
         {
-            if(sidePanel1.Width == 60)
+            if (sidePanel1.Width == 60)
             {
                 sidePanel1.Width = 230;
                 pnl_dashboard.Width = 230;
@@ -182,25 +188,30 @@ namespace SoftwareFirmManagement.UI
 
         private void btn_customer_management_Click(object sender, EventArgs e)
         {
-           HideForm();
+            HideForm();
             ShowFormInPanel(customerManagement);
         }
 
-         private void btn_employee_management_Click(object sender, EventArgs e)
+        private void btn_employee_management_Click(object sender, EventArgs e)
         {
-           HideForm();
+            HideForm();
             ShowFormInPanel(employeeManagement);
         }
 
         private void btn_services_Click(object sender, EventArgs e)
         {
-           HideForm();
+            HideForm();
             ShowFormInPanel(serviceManagement);
         }
 
         private void btn_order_management_Click(object sender, EventArgs e)
         {
-           HideForm();
+            if (Program.CurrentUser == Customer.defaultCustomer)
+            {
+                MessageBox.Show("Please Login First", "Remainder", MessageBoxButtons.OK);
+                return;
+            }
+            HideForm();
             ShowFormInPanel(orderManagement);
             orderManagement.ParentForm = this;
 
@@ -208,24 +219,153 @@ namespace SoftwareFirmManagement.UI
 
         private void btn_salary_management_Click(object sender, EventArgs e)
         {
-           HideForm();
-            ShowFormInPanel(salaryManagement );
+            HideForm();
+            ShowFormInPanel(salaryManagement);
 
         }
 
         private void btn_reviews_Click(object sender, EventArgs e)
         {
-           HideForm();
+            HideForm();
             ShowFormInPanel(clientReviews);
         }
 
-        private void btn_services_Click_1(object sender, EventArgs e)
+        private void btn_login_Click(object sender, EventArgs e)
         {
-            HideForm();
-            ShowFormInPanel(serviceManagement);
+            if (Program.CurrentUser == Customer.defaultCustomer)
+            {
+
+                using (var loginForm = new LoginForm())
+                {
+                    if (loginForm.ShowDialog() == DialogResult.OK)
+                    {
+                        HideForm();
+                        CloseForms();
+                        DeleteExistingChild();
+                        LoadForms();
+                        OpenDashboard();
+                        btn_logout.Enabled = true;
+                        btn_logout.Visible = true;
+                    }
+                }
+            }
+            else
+            {
+                ShowCredentials();
+            }
+        }
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            if(Program.CurrentUser != Customer.defaultCustomer)
+                if (MessageBox.Show("Are you sure.You want to logout", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    Program.CurrentUser = Customer.defaultCustomer;
+                    HideForm();
+                    CloseForms();
+                    DeleteExistingChild();
+                    LoadForms();
+                    OpenDashboard();
+
+                    btn_logout.Enabled = false;
+                    btn_logout.Visible = false;
+                }
+            
+        }
+        private void ShowCredentials()
+        {
+            if (Program.CurrentUser is Admin ad)
+            {
+                //DisplayA
+            }
+            else if (Program.CurrentUser is Employee emp)
+            {
+                EmployeeDisplay employeeDisplay = new EmployeeDisplay();
+                employeeDisplay.Show();
+
+            }
+            else if (Program.CurrentUser is Customer cust)
+            {
+
+                CustomerDisplay customerDisplay = new CustomerDisplay();
+                customerDisplay.Show();
+
+            }
         }
 
+      
+        private void CloseForms()
+        {
+            try
+            {
 
+                if (Program.CurrentUser is Admin ad)
+                {
+                    orderManagement.Close();
+                    adminDashboard.Close();
+                    employeeManagement.Close();
+                    customerManagement.Close();
+                    salaryManagement.Close();
+                    serviceManagement.Close();
+                    if (ad.AdminRole == "superAdmin")
+                    {
+                        adminManagement.Close();
+                    }
+                }
+                else if (Program.CurrentUser is Employee emp)
+                {
+                    employeeDashboard.Close();
+                    salaryManagement.Close();
+                    orderManagement.Close();
+                }
+                else if (Program.CurrentUser is Customer cust)
+                {
+                    customerDashboard.Close();
+                    orderManagement.Close();
 
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_dashboard_Click(object sender, EventArgs e)
+        {
+            OpenDashboard();
+        }
+        private void OpenDashboard()
+        {
+            HideForm();
+            if (Program.CurrentUser is Admin ad)
+            {
+                ShowFormInPanel(adminDashboard);
+            }
+            else if (Program.CurrentUser is Employee emp)
+            {
+                ShowFormInPanel(employeeDashboard);
+            }
+            else if (Program.CurrentUser is Customer cust)
+            {
+                ShowFormInPanel(customerDashboard);
+            }
+
+        }
+
+        public void ShowEmployeeManagement()
+        {
+            HideForm();
+            ShowFormInPanel(employeeManagement);
+        }
+        public void ShowAdminManagement()
+        {
+            HideForm();
+            ShowFormInPanel(adminManagement);
+        }
+        public void ShowCustomerManagement()
+        {
+            HideForm();
+            ShowFormInPanel(customerManagement);
+        }
     }
 }

@@ -85,9 +85,21 @@ namespace SoftwareFirmManagement.BL
             this.amount = amount;
             this.bonus = bonus;
         }
-        public static List<Salary> GetSalarysByFilter(string search = null, string sortby = null, string direction = "ASC")
+        public static List<Salary> GetSalarysByFilter(string search = null, string sortby = null, string direction = "ASC" ,int empId = -1)
         {
-            List<Salary> filtered = SalaryDL.allSalaries;
+            List<Salary> filtered;
+            
+            if(Program.CurrentUser is Employee emp)
+            {
+                filtered = SalaryDL.allSalaries
+                                .OfType<Salary>()
+                                .Where(salary => (salary.Employee.EmployeeId == empId))
+                                .ToList();
+            }
+            else
+            {
+                filtered = SalaryDL.allSalaries;
+            }
 
             if (search == null && sortby == null)
             {

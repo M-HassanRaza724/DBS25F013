@@ -30,12 +30,20 @@ namespace SoftwareFirmManagement.UI
             }
             if (orderDisplay.OrderDetails.Status == "Completed" && !ReviewDL.ReviewExist(orderDisplay.OrderDetails.OrderId))
             {
-                btn_review.Visible = true;
+                if(Program.CurrentUser is Customer)
+                {
+                    btn_review.Visible = true;
+                }
             }
             else
             {
                 btn_review.Visible = false;
                 gbx_review_input.Visible = false;
+            }
+            if(Program.CurrentUser is Admin ad)
+            {
+                menuStrip_actions.Enabled = true;
+                menuStrip_actions.Visible = true;
             }
         }
 
@@ -135,7 +143,10 @@ namespace SoftwareFirmManagement.UI
                 }
                 if(orderDisplay.OrderDetails.Status == "Completed" && !ReviewDL.ReviewExist(orderDisplay.OrderDetails.OrderId))
                 {
-                    btn_review.Visible = true;
+                    if(Program.CurrentUser is Customer cust)
+                    {
+                        btn_review.Visible = true;
+                    }
                 }
                 else
                 {

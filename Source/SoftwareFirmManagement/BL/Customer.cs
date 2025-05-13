@@ -14,7 +14,7 @@ namespace SoftwareFirmManagement.BL
         private int customerId;
         private string name;
 
-        public static Customer defaultCustomer = new Customer(0, "Customer", "customer@gmail.com", "-----", 96, 0, "Customer");
+        public static Customer defaultCustomer = new Customer(0, "Customer", "customer@sfm.com", "-----", 96, 0, "Hounarable Customer");
 
         public override string ToString()
         {

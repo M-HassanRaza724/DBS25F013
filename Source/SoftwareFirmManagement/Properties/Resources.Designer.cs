@@ -73,6 +73,16 @@ namespace SoftwareFirmManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_Shopping_Cart {
+            get {
+                object obj = ResourceManager.GetObject("Add Shopping Cart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Available_Updates {
             get {
                 object obj = ResourceManager.GetObject("Available Updates", resourceCulture);
@@ -126,6 +136,16 @@ namespace SoftwareFirmManagement.Properties {
         internal static System.Drawing.Bitmap Cross_Mark {
             get {
                 object obj = ResourceManager.GetObject("Cross Mark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cross_Mark1 {
+            get {
+                object obj = ResourceManager.GetObject("Cross Mark1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

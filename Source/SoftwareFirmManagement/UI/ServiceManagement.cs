@@ -20,7 +20,8 @@ namespace SoftwareFirmManagement.UI
             InitializeComponent();
             LoadServices();
             disableGroupBoxes();
-            if(Program.user is Admin ad)
+            if(Program.CurrentUser
+                is Admin ad)
             {
                 menuStrip_filters.Visible = true;
             }
